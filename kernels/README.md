@@ -12,7 +12,7 @@ These C++/CUDA kernels are built into the root shared backend and are called fro
 
 Inputs are seeded synthetic FP32 tensors, including ragged matrix dimensions, constant rows, large offsets, masks and non-finite edge cases. The integrated model experiments use seed-0 synthetic inputs and fixed random model parameters, with non-trivial LayerNorm affine values. There is no training dataset. Tests measure numerical agreement; benchmarks measure execution time and preserve raw repeats.
 
-The current dispatch decisions and results are in the [root reports](../results/) and [README](../README.md). Generated code calls the backend only where the recorded policy selects it. The three-path model comparison uses identical inputs and weights. A graph-level GEMM choice reports the aggregate effect of all GEMM substitutions in that graph, rather than asserting that each isolated kernel wins.
+The current dispatch decisions and results are in the [root reports](../results/) and [README](../README.md). Generated code calls the backend only where the recorded policy selects it. The three-path model comparison uses identical inputs and weights. Graph-level GEMM results measure all substituted calls together.
 
 Build and test from the repository root:
 

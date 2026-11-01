@@ -94,7 +94,7 @@ For all four MLP/CNN configurations, auto retains codegen: the generated source 
 | 512³ | 1.878 | 0.494 | 3.80× | 3.64× |
 | 1024³ | 15.580 | 3.930 | 3.96× | 3.93× |
 
-The earlier 1024³ result was 3.93×, rather than a fixed sixfold ratio. [Earlier raw comparison](results/before/kernels3/torch_compare.md) · [new CPU samples and MKL build configuration](results/integrated_cpu.json). The integration leaves this slower GEMM available for inspection and chooses generated GEMM for the measured models.
+At 1024³, my GEMM is still about four times slower than MKL: 15.580 ms versus 3.930 ms in this run. [Earlier raw comparison](results/before/kernels3/torch_compare.md) · [new CPU samples and MKL build configuration](results/integrated_cpu.json). The integration keeps this GEMM available for inspection and chooses generated GEMM for the measured models.
 
 ## Timing layers
 
