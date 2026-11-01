@@ -1,0 +1,6 @@
+numpy>=1.26
+torch>=2.2
+pybind11>=2.12
+pytest>=8
+cmake>=3.24
+ninja

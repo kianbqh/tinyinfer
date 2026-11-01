@@ -1,0 +1,36 @@
+{
+  "run_date": "2026-10-31",
+  "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "cpu": "12th Gen Intel(R) Core(TM) i7-12700KF",
+  "omp_threads": 8,
+  "omp_proc_bind": "close",
+  "compiler": "c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "cmake": "cmake version 4.4.4",
+  "python": "3.12.3",
+  "packages": {
+    "numpy": "2.5.4",
+    "torch": "2.15.0",
+    "pybind11": "3.1.0",
+    "pytest": "9.2.0"
+  },
+  "torch_build": "2.15.0+cu132",
+  "torch_cuda": "13.2",
+  "nvcc": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2024 NVIDIA Corporation\nBuilt on Thu_Mar_28_02:18:24_PDT_2024\nCuda compilation tools, release 12.4, V12.4.131\nBuild cuda_12.4.r12.4/compiler.34097967_0",
+  "build": {
+    "directory": "build-gpu",
+    "type": "Release",
+    "native_cpu": true,
+    "cuda_enabled": true,
+    "cuda_architectures": "86"
+  },
+  "timing": {
+    "cpu": "Median wall-clock latency after warmup",
+    "gpu": "CUDA events over repeated launches; device-resident inputs; transfers excluded",
+    "gpu_submission": "Custom launches use a C++ loop; PyTorch launches use a Python loop; event intervals include gaps between launches",
+    "torch_matmul_tf32": false
+  },
+  "gpu": "NVIDIA GeForce RTX 3080",
+  "gpu_memory_bytes": 12884377600,
+  "compute_capability": "8.6",
+  "nvidia_driver": "621.01"
+}

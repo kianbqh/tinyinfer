@@ -1,0 +1,9 @@
+build/
+build-gpu/
+.venv
+.cache/
+.tmp/
+*.log
+__pycache__/
+.pytest_cache/
+*.so
