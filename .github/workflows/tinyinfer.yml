@@ -1,0 +1,36 @@
+name: tinyinfer
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      cuda_runner:
+        description: Run on an explicitly provisioned CUDA self-hosted runner
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  cpu:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install numpy scipy pytest pybind11 cmake ninja
+      - name: Unified CPU backend and compiler suite
+        run: bash scripts/test.sh
+  cuda:
+    if: github.event_name == 'workflow_dispatch' && inputs.cuda_runner
+    runs-on: [self-hosted, linux, x64, cuda]
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Actual CUDA backend and compiler suite
+        env:
+          TINYC_CUDA: 'ON'
+        run: bash scripts/test.sh

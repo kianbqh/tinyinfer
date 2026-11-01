@@ -5,8 +5,31 @@
 #include <cmath>
 #include <cstddef>
 #include <cstring>
+#include "tinyinfer_backend.h"
 
 namespace tc {
+template <class Epi>
+inline void gemm_hand(float* tmp, const float* a, const float* b, int m, int k, int n, Epi epi) {
+  ti_cpu_gemm(a, b, tmp, m, k, n);
+#pragma omp parallel for schedule(static) if ((long)m * n > 16384)
+  for (int i = 0; i < m; ++i) for (int j = 0; j < n; ++j) epi(i, j, tmp[(size_t)i*n+j]);
+}
+inline void softmax(const float* x,float* y,int rows,int cols) {
+#pragma omp parallel for schedule(static)
+  for(int r=0;r<rows;++r) { const float* p=x+(size_t)r*cols; float* q=y+(size_t)r*cols; float m=-FLT_MAX; double sum=0;
+    for(int c=0;c<cols;++c)m=std::max(m,p[c]);
+    for(int c=0;c<cols;++c){q[c]=std::exp(p[c]-m);sum+=q[c];}
+    for(int c=0;c<cols;++c)q[c]/=sum;
+  }
+}
+inline void layernorm(const float* x,const float* g,const float* b,float* y,int rows,int cols,float eps) {
+#pragma omp parallel for schedule(static)
+  for(int r=0;r<rows;++r) {const float* p=x+(size_t)r*cols;float* q=y+(size_t)r*cols;double mean=0,var=0;
+    for(int c=0;c<cols;++c)mean+=p[c]; mean/=cols;
+    for(int c=0;c<cols;++c){double d=p[c]-mean;var+=d*d;} float s=1/std::sqrt(var/cols+eps);
+    for(int c=0;c<cols;++c)q[c]=(p[c]-mean)*s*g[c]+b[c];
+  }
+}
 
 // C[M,N] = A[M,K] * B[K,N], then out = epi(i, j, acc). Register/cache tiling: 4 rows x 64 cols of
 // accumulators per task; the k-loop streams contiguous 64-float rows of B (vectorized by omp simd).

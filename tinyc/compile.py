@@ -7,6 +7,7 @@ import os
 import shutil
 import subprocess
 import tempfile
+import fcntl
 from pathlib import Path
 
 import numpy as np
@@ -16,6 +17,7 @@ from .capture import capture
 from .codegen_cpp import generate_cpp
 from .codegen_cuda import generate_cuda
 from .passes import PASSES, lower_required, optimize
+from .dispatch import apply_dispatch
 
 RUNTIME = Path(__file__).parent / "runtime"
 CACHE = Path(os.environ.get("TINYC_CACHE", Path(__file__).resolve().parent.parent / "build" / "kernels"))
@@ -76,17 +78,32 @@ def build(src: str, tag: str, backend: str = "cpp", compile_only: bool = False) 
     tool = cxx() if backend == "cpp" else nvcc()
     rt = "".join(f.read_text() for f in sorted(RUNTIME.iterdir()) if f.is_file())   # runtime edits invalidate cache
     h = hashlib.sha1((src + rt + tool + str(compile_only) + Path(__file__).read_text()).encode()).hexdigest()[:12]
-    ext = ".o" if compile_only else ".so"
+    ext = ".so"
     so = CACHE / f"{tag}_{h}{ext}"
     if not so.exists():
         srcf = CACHE / f"{tag}_{h}.{'cpp' if backend == 'cpp' else 'cu'}"
         srcf.write_text(src)
-        if backend == "cpp":
-            cmd = [cxx(), "-O3", "-march=native", "-fopenmp", "-fno-math-errno", "-mprefer-vector-width=512", "-std=c++17", "-shared", "-fPIC",
-                   f"-I{RUNTIME}", str(srcf), "-o", str(so)]
-        else:
-            cmd = nvcc_cmd(srcf, so, compile_only)
-        _run(cmd)
+        import ikernels
+        library = Path(ikernels.__file__).parent / 'libtinyinfer_backend.so'
+        if not library.is_file():
+            raise RuntimeError('Build the unified CMake backend before compiling a model')
+        build_dir = CACHE / f'cmake_{tag}_{h}'
+        # Both the native runtime and generated models use the repository's single CMake project.
+        so = so.with_suffix('.so')
+        cmd = [shutil.which('cmake') or 'cmake', '-S', str(RUNTIME.parents[1]), '-B', str(build_dir),
+               '-DCMAKE_BUILD_TYPE=Release', f'-DTINYC_JIT_SOURCE={srcf}', f'-DTINYC_JIT_NAME={so.stem}',
+               f'-DTINYC_JIT_OUTPUT={CACHE}', f'-DTINYC_BACKEND_LIBRARY={library}',
+               f'-DCMAKE_CXX_COMPILER={cxx()}', f'-DTINYC_CUDA={"ON" if backend == "cuda" else "OFF"}']
+        if backend == 'cuda':
+            cmd += [f'-DCMAKE_CUDA_COMPILER={nvcc()}', '-DCMAKE_CUDA_FLAGS=-allow-unsupported-compiler']
+        # Reuse compiler discovery across shapes; serialize reconfiguration/builds.
+        shared_build = CACHE / f'cmake_{backend}'
+        cmd[cmd.index('-B') + 1] = str(shared_build)
+        with (CACHE / f'cmake_{backend}.lock').open('w') as lock:
+            fcntl.flock(lock, fcntl.LOCK_EX)
+            if not so.exists():
+                _run(cmd)
+                _run([shutil.which('cmake') or 'cmake', '--build', str(shared_build), '-j', '2'])
     return so
 
 
@@ -102,14 +119,18 @@ def lower(model, example, opt=True, passes=None, log=None):
 
 
 def compile_model(model: torch.nn.Module, example: torch.Tensor, opt: bool = True, passes=None, tag="model",
-                  log: list | None = None, backend: str = "cpp", compile_only: bool = False):
+                  log: list | None = None, backend: str = "cpp", compile_only: bool = False, implementation: str = 'codegen'):
     """backend="cpp" -> OpenMP C++ .so; backend="cuda" -> nvcc .so (needs a GPU to run).
-    compile_only=True (cuda) just checks that the generated .cu compiles and returns the object path."""
+    compile_only=True checks compilation/linking without loading or executing the generated shared library;
+    it returns that shared-library artifact path."""
     g = lower(model, example, opt, passes, log)
+    decisions = apply_dispatch(g, backend, implementation)
     gen = generate_cpp if backend == "cpp" else generate_cuda
     src, blob, info = gen(g, reuse_memory=opt)
     so = build(src, f"{tag}_{backend}" + ("_O2" if opt else "_O0"), backend, compile_only)
     info["source"] = src
+    info['dispatch'] = decisions
+    info['implementation'] = implementation
     if compile_only:
         return so, info
     return CompiledModel(so, blob, example.shape, g.node(g.outputs[0]).shape if g.outputs[0] in [n.name for n in g.nodes]

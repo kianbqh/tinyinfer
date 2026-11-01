@@ -2,6 +2,7 @@
 #include <pybind11/numpy.h>
 #include <pybind11/pybind11.h>
 #include <stdexcept>
+#include <omp.h>
 #include "ik/cpu_kernels.hpp"
 #ifdef IK_HAVE_CUDA
 #include "ik/cuda_kernels.hpp"
@@ -49,7 +50,8 @@ static Arr layernorm(Arr x, Arr g, Arr b, float eps, bool fused) {
 }
 
 PYBIND11_MODULE(ikernels, m) {
-  m.doc() = "Hand-written C++/CUDA inference kernels";
+  m.doc() = "tinyinfer shared C++/CUDA backend";
+  m.def("openmp_threads", [] { return omp_get_max_threads(); });
   m.def("matmul", &matmul, py::arg("A"), py::arg("B"), py::arg("blocked") = true);
   m.def("softmax", &softmax, py::arg("x"), py::arg("fused") = true);
   m.def("layernorm", &layernorm, py::arg("x"), py::arg("gamma"), py::arg("beta"), py::arg("eps") = 1e-5f,

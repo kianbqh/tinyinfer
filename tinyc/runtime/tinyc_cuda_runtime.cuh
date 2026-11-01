@@ -3,11 +3,27 @@
 #include <cfloat>
 #include <cstdio>
 #include <cuda_runtime.h>
+#include "tinyinfer_backend.h"
 
 #define TC_CHECK(x) do { cudaError_t e_ = (x); if (e_ != cudaSuccess) { \
   std::fprintf(stderr, "CUDA %s at %s:%d\n", cudaGetErrorString(e_), __FILE__, __LINE__); return 1; } } while (0)
 
 namespace tc {
+template <class Epi>
+__global__ void epilogue_k(const float* tmp,int m,int n,Epi epi) {long i=blockIdx.x*(long)blockDim.x+threadIdx.x;if(i<(long)m*n)epi(i/n,i%n,tmp[i]);}
+template <class Epi>
+inline void gemm_hand(float* tmp,const float* a,const float* b,int m,int k,int n,Epi epi) {
+  ti_cuda_gemm(a,b,tmp,m,k,n); epilogue_k<<<((long)m*n+255)/256,256>>>(tmp,m,n,epi);
+}
+__global__ void softmax_serial(const float* x,float* y,int rows,int cols) {int r=blockIdx.x*blockDim.x+threadIdx.x;if(r>=rows)return;
+  const float* p=x+(long)r*cols;float* q=y+(long)r*cols;float mx=-FLT_MAX,s=0;
+  for(int c=0;c<cols;++c)mx=fmaxf(mx,p[c]);for(int c=0;c<cols;++c){q[c]=expf(p[c]-mx);s+=q[c];}for(int c=0;c<cols;++c)q[c]/=s;
+}
+__global__ void layernorm_serial(const float* x,const float* g,const float* b,float* y,int rows,int cols,float eps) {int r=blockIdx.x*blockDim.x+threadIdx.x;if(r>=rows)return;
+  const float* p=x+(long)r*cols;float* q=y+(long)r*cols;float mean=0,var=0;
+  for(int c=0;c<cols;++c)mean+=p[c];mean/=cols;for(int c=0;c<cols;++c){float d=p[c]-mean;var+=d*d;}float s=rsqrtf(var/cols+eps);
+  for(int c=0;c<cols;++c)q[c]=(p[c]-mean)*s*g[c]+b[c];
+}
 constexpr int TS = 16;
 // C[M,N] = A[M,K] B[K,N]; 16x16 shared-memory tiles; epilogue functor writes the result.
 template <class Epi>

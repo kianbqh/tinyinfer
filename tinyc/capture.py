@@ -68,6 +68,15 @@ def capture(model: nn.Module, example: torch.Tensor) -> Graph:
                 b = m.bias if m.bias is not None else torch.zeros(m.out_channels)
                 nodes.append(Node(fx.name, "conv2d", [x, const(m.weight.detach(), "w"), const(b.detach(), "b")], shape,
                                   {"stride": m.stride[0], "pad": m.padding[0], "k": m.kernel_size[0]}))
+            elif isinstance(m, nn.LayerNorm):
+                assert len(m.normalized_shape) == 1
+                c = m.normalized_shape[0]
+                gamma = m.weight.detach() if m.weight is not None else torch.ones(c)
+                beta = m.bias.detach() if m.bias is not None else torch.zeros(c)
+                nodes.append(Node(fx.name, "layernorm", [x, const(gamma, 'ln_g'), const(beta, 'ln_b')], shape, {'eps': m.eps}))
+            elif isinstance(m, nn.Softmax):
+                assert m.dim in (-1, len(shape) - 1)
+                nodes.append(Node(fx.name, "softmax", [x], shape))
             elif isinstance(m, nn.BatchNorm2d):
                 scale = (m.weight / torch.sqrt(m.running_var + m.eps)).detach()
                 shift = (m.bias - m.running_mean * scale).detach()

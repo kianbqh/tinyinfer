@@ -1,0 +1,1538 @@
+{
+  "meta": {
+    "device": "cpu",
+    "torch": "2.15.0+cu132",
+    "threads": 8,
+    "seed": 0,
+    "repeats": 7,
+    "iterations": 200,
+    "native_module": "/opt/codex-resume/consolidation-f2/build/ikernels.cpython-312-x86_64-linux-gnu.so",
+    "protocol": "CPU host per-call timer; eager returns Tensor, custom reuses output. GPU device-resident inputs, CUDA events around C++ enqueue loops(custom) or Python eager loops; 10 warmups/repeat, includes inter-launch gaps, excludes transfers/compile. Custom nvcc fast math; Torch TF32 disabled.",
+    "gpu": null,
+    "policy_rule": "hand median at least 3% faster in calibration; frozen before independent final timings",
+    "host_e2e_protocol": "Same CPU float32 Tensor input and fresh CPU NumPy result for all three paths; GPU weights preloaded. Eager copies input to GPU, evaluates, copies output to CPU; custom cm(x) copies through its preallocated device buffers, synchronizes and returns a host output copy. Host per-call timer, 20 warmups then 7 repeats of 200 calls; each repeat reports median. CPU case uses the same CPU-input/NumPy-output interface without transfers.",
+    "native_openmp_threads": 8
+  },
+  "calibration": [
+    {
+      "case": "mlp_b1",
+      "weights_sha256": "cdf924f2708db726f9a2a794a3b1d86d99b14c218012660cb5e47013c260aeba",
+      "input_sha256": "35d3f82e664112390576bee0018a857e2053199972593ac63618f37f4ccc64d2",
+      "codegen": {
+        "median_us": 23.822000000000003,
+        "min_us": 21.6225,
+        "max_us": 25.8905,
+        "repeats_us": [
+          22.2175,
+          25.8905,
+          25.880000000000003,
+          23.822000000000003,
+          22.548000000000002,
+          21.6225,
+          24.932000000000002
+        ],
+        "max_abs_error": 4.172325134277344e-07
+      },
+      "dispatch": [
+        {
+          "node": "fc1",
+          "op": "linear",
+          "key": "cpp:linear:1,512:1636d226d44e",
+          "implementation": "hand"
+        },
+        {
+          "node": "fc2",
+          "op": "linear",
+          "key": "cpp:linear:1,512:9a3c592c3e48",
+          "implementation": "hand"
+        },
+        {
+          "node": "fc3",
+          "op": "linear",
+          "key": "cpp:linear:1,10:8a51210c9800",
+          "implementation": "hand"
+        }
+      ],
+      "hand": {
+        "median_us": 51.0725,
+        "min_us": 48.098,
+        "max_us": 57.167,
+        "repeats_us": [
+          48.098,
+          51.0725,
+          57.167,
+          53.813,
+          51.933,
+          49.88,
+          50.378
+        ],
+        "max_abs_error": 4.172325134277344e-07
+      },
+      "winner": "codegen"
+    },
+    {
+      "case": "mlp_b64",
+      "weights_sha256": "719c6d42728e92f48848b26752f1162e9572968695aa18f08626ad924bad3eaa",
+      "input_sha256": "25a9b84df01df17681716ebc50afb012ec911b721ba987ab14c514f1f2d48f6c",
+      "codegen": {
+        "median_us": 313.37,
+        "min_us": 294.5615,
+        "max_us": 354.882,
+        "repeats_us": [
+          354.882,
+          333.22950000000003,
+          304.032,
+          316.22400000000005,
+          313.262,
+          294.5615,
+          313.37
+        ],
+        "max_abs_error": 5.364418029785156e-07
+      },
+      "dispatch": [
+        {
+          "node": "fc1",
+          "op": "linear",
+          "key": "cpp:linear:64,512:1d36a1ecb2d1",
+          "implementation": "hand"
+        },
+        {
+          "node": "fc2",
+          "op": "linear",
+          "key": "cpp:linear:64,512:b3aac01b44f7",
+          "implementation": "hand"
+        },
+        {
+          "node": "fc3",
+          "op": "linear",
+          "key": "cpp:linear:64,10:64c0ddaaba56",
+          "implementation": "hand"
+        }
+      ],
+      "hand": {
+        "median_us": 1833.682,
+        "min_us": 1801.938,
+        "max_us": 1866.3485,
+        "repeats_us": [
+          1802.825,
+          1801.938,
+          1812.9385,
+          1833.682,
+          1834.8780000000002,
+          1866.3485,
+          1844.313
+        ],
+        "max_abs_error": 5.364418029785156e-07
+      },
+      "winner": "codegen"
+    },
+    {
+      "case": "cnn_b1",
+      "weights_sha256": "bbce6034ab5d0f3363f56ff568d28b225f52d3f3cc99fe3ca8dce8ba3b731ce3",
+      "input_sha256": "a82ece246fc43360b894ac4f3239b58247c46555b1c2405262544b426f978588",
+      "codegen": {
+        "median_us": 84.56450000000001,
+        "min_us": 66.625,
+        "max_us": 85.751,
+        "repeats_us": [
+          85.3505,
+          84.56450000000001,
+          76.464,
+          85.21950000000001,
+          85.751,
+          81.629,
+          66.625
+        ],
+        "max_abs_error": 6.705522537231445e-08
+      },
+      "dispatch": [
+        {
+          "node": "c1",
+          "op": "conv2d",
+          "key": "cpp:conv2d:1,16,28,28:4f9e981865c1",
+          "implementation": "hand"
+        },
+        {
+          "node": "c2",
+          "op": "conv2d",
+          "key": "cpp:conv2d:1,32,14,14:b285da68390a",
+          "implementation": "hand"
+        },
+        {
+          "node": "fc1",
+          "op": "linear",
+          "key": "cpp:linear:1,128:67af5c29a02f",
+          "implementation": "hand"
+        },
+        {
+          "node": "fc2",
+          "op": "linear",
+          "key": "cpp:linear:1,10:da7fb7c36d78",
+          "implementation": "hand"
+        }
+      ],
+      "hand": {
+        "median_us": 171.1645,
+        "min_us": 161.0,
+        "max_us": 175.892,
+        "repeats_us": [
+          161.0,
+          171.1645,
+          175.892,
+          172.452,
+          169.7945,
+          161.179,
+          171.97750000000002
+        ],
+        "max_abs_error": 6.705522537231445e-08
+      },
+      "winner": "codegen"
+    },
+    {
+      "case": "cnn_b32",
+      "weights_sha256": "23125a701a5252f0066df9f8d08f02fe4cac0e8ed8e7ea6026a26544c50d2574",
+      "input_sha256": "11d6620c2d62b2b5bfcb590693871eef33adad0e304274676b031140d975fdac",
+      "codegen": {
+        "median_us": 893.207,
+        "min_us": 860.6514999999999,
+        "max_us": 918.664,
+        "repeats_us": [
+          893.207,
+          860.6514999999999,
+          871.5305000000001,
+          875.0509999999999,
+          898.7685,
+          901.8735,
+          918.664
+        ],
+        "max_abs_error": 1.434236764907837e-07
+      },
+      "dispatch": [
+        {
+          "node": "c1",
+          "op": "conv2d",
+          "key": "cpp:conv2d:32,16,28,28:0c852bf7a58b",
+          "implementation": "hand"
+        },
+        {
+          "node": "c2",
+          "op": "conv2d",
+          "key": "cpp:conv2d:32,32,14,14:95d49b0aff42",
+          "implementation": "hand"
+        },
+        {
+          "node": "fc1",
+          "op": "linear",
+          "key": "cpp:linear:32,128:2d3745d8a429",
+          "implementation": "hand"
+        },
+        {
+          "node": "fc2",
+          "op": "linear",
+          "key": "cpp:linear:32,10:009f4a6c6db5",
+          "implementation": "hand"
+        }
+      ],
+      "hand": {
+        "median_us": 1487.335,
+        "min_us": 1454.984,
+        "max_us": 1685.6145000000001,
+        "repeats_us": [
+          1454.984,
+          1467.7465,
+          1478.0295,
+          1487.335,
+          1555.578,
+          1685.6145000000001,
+          1674.513
+        ],
+        "max_abs_error": 1.434236764907837e-07
+      },
+      "winner": "codegen"
+    },
+    {
+      "case": "layernorm",
+      "weights_sha256": "43e96350e96b6d6e503d2f765bb27600ad27d549fd71762f5aba163b65ad4fcf",
+      "input_sha256": "f5c0d9080ef0a883b7a13ecda097f9a4fa7a6a4d1c2f6e97fbacd4c6a88a75e6",
+      "codegen": {
+        "median_us": 217.421,
+        "min_us": 213.469,
+        "max_us": 326.793,
+        "repeats_us": [
+          216.6205,
+          213.469,
+          225.67450000000002,
+          216.702,
+          217.421,
+          220.9955,
+          326.793
+        ],
+        "max_abs_error": 9.5367431640625e-07
+      },
+      "dispatch": [
+        {
+          "node": "_0",
+          "op": "layernorm",
+          "key": "cpp:layernorm:1024,1024:720f740c98c2",
+          "implementation": "hand"
+        }
+      ],
+      "hand": {
+        "median_us": 47.051500000000004,
+        "min_us": 42.7115,
+        "max_us": 68.79599999999999,
+        "repeats_us": [
+          47.741,
+          43.822,
+          46.9965,
+          42.7115,
+          48.4955,
+          47.051500000000004,
+          68.79599999999999
+        ],
+        "max_abs_error": 4.76837158203125e-06
+      },
+      "winner": "hand"
+    },
+    {
+      "case": "softmax",
+      "weights_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "input_sha256": "6abe522165524794d887a30a23973bf6b393876a0b1c6cebabcd68c7a7dfaeeb",
+      "codegen": {
+        "median_us": 684.0365,
+        "min_us": 680.7925,
+        "max_us": 690.5229999999999,
+        "repeats_us": [
+          681.3095000000001,
+          684.0365,
+          683.2905000000001,
+          687.2705,
+          690.5229999999999,
+          680.7925,
+          686.4415
+        ],
+        "max_abs_error": 7.450580596923828e-09
+      },
+      "dispatch": [
+        {
+          "node": "_0",
+          "op": "softmax",
+          "key": "cpp:softmax:1024,1024:9a9e475002e0",
+          "implementation": "hand"
+        }
+      ],
+      "hand": {
+        "median_us": 510.556,
+        "min_us": 502.31,
+        "max_us": 527.208,
+        "repeats_us": [
+          511.4725,
+          514.304,
+          510.556,
+          502.31,
+          503.413,
+          510.259,
+          527.208
+        ],
+        "max_abs_error": 3.725290298461914e-08
+      },
+      "winner": "hand"
+    }
+  ],
+  "policy": {
+    "cpp:linear:1,512:1636d226d44e": {
+      "winner": "codegen",
+      "source_case": "mlp_b1",
+      "scope": "matched whole graph; GEMM configuration toggled together",
+      "codegen_us": 23.822000000000003,
+      "hand_us": 51.0725,
+      "minimum_relative_win": 0.03
+    },
+    "cpp:linear:1,512:9a3c592c3e48": {
+      "winner": "codegen",
+      "source_case": "mlp_b1",
+      "scope": "matched whole graph; GEMM configuration toggled together",
+      "codegen_us": 23.822000000000003,
+      "hand_us": 51.0725,
+      "minimum_relative_win": 0.03
+    },
+    "cpp:linear:1,10:8a51210c9800": {
+      "winner": "codegen",
+      "source_case": "mlp_b1",
+      "scope": "matched whole graph; GEMM configuration toggled together",
+      "codegen_us": 23.822000000000003,
+      "hand_us": 51.0725,
+      "minimum_relative_win": 0.03
+    },
+    "cpp:linear:64,512:1d36a1ecb2d1": {
+      "winner": "codegen",
+      "source_case": "mlp_b64",
+      "scope": "matched whole graph; GEMM configuration toggled together",
+      "codegen_us": 313.37,
+      "hand_us": 1833.682,
+      "minimum_relative_win": 0.03
+    },
+    "cpp:linear:64,512:b3aac01b44f7": {
+      "winner": "codegen",
+      "source_case": "mlp_b64",
+      "scope": "matched whole graph; GEMM configuration toggled together",
+      "codegen_us": 313.37,
+      "hand_us": 1833.682,
+      "minimum_relative_win": 0.03
+    },
+    "cpp:linear:64,10:64c0ddaaba56": {
+      "winner": "codegen",
+      "source_case": "mlp_b64",
+      "scope": "matched whole graph; GEMM configuration toggled together",
+      "codegen_us": 313.37,
+      "hand_us": 1833.682,
+      "minimum_relative_win": 0.03
+    },
+    "cpp:conv2d:1,16,28,28:4f9e981865c1": {
+      "winner": "codegen",
+      "source_case": "cnn_b1",
+      "scope": "matched whole graph; GEMM configuration toggled together",
+      "codegen_us": 84.56450000000001,
+      "hand_us": 171.1645,
+      "minimum_relative_win": 0.03
+    },
+    "cpp:conv2d:1,32,14,14:b285da68390a": {
+      "winner": "codegen",
+      "source_case": "cnn_b1",
+      "scope": "matched whole graph; GEMM configuration toggled together",
+      "codegen_us": 84.56450000000001,
+      "hand_us": 171.1645,
+      "minimum_relative_win": 0.03
+    },
+    "cpp:linear:1,128:67af5c29a02f": {
+      "winner": "codegen",
+      "source_case": "cnn_b1",
+      "scope": "matched whole graph; GEMM configuration toggled together",
+      "codegen_us": 84.56450000000001,
+      "hand_us": 171.1645,
+      "minimum_relative_win": 0.03
+    },
+    "cpp:linear:1,10:da7fb7c36d78": {
+      "winner": "codegen",
+      "source_case": "cnn_b1",
+      "scope": "matched whole graph; GEMM configuration toggled together",
+      "codegen_us": 84.56450000000001,
+      "hand_us": 171.1645,
+      "minimum_relative_win": 0.03
+    },
+    "cpp:conv2d:32,16,28,28:0c852bf7a58b": {
+      "winner": "codegen",
+      "source_case": "cnn_b32",
+      "scope": "matched whole graph; GEMM configuration toggled together",
+      "codegen_us": 893.207,
+      "hand_us": 1487.335,
+      "minimum_relative_win": 0.03
+    },
+    "cpp:conv2d:32,32,14,14:95d49b0aff42": {
+      "winner": "codegen",
+      "source_case": "cnn_b32",
+      "scope": "matched whole graph; GEMM configuration toggled together",
+      "codegen_us": 893.207,
+      "hand_us": 1487.335,
+      "minimum_relative_win": 0.03
+    },
+    "cpp:linear:32,128:2d3745d8a429": {
+      "winner": "codegen",
+      "source_case": "cnn_b32",
+      "scope": "matched whole graph; GEMM configuration toggled together",
+      "codegen_us": 893.207,
+      "hand_us": 1487.335,
+      "minimum_relative_win": 0.03
+    },
+    "cpp:linear:32,10:009f4a6c6db5": {
+      "winner": "codegen",
+      "source_case": "cnn_b32",
+      "scope": "matched whole graph; GEMM configuration toggled together",
+      "codegen_us": 893.207,
+      "hand_us": 1487.335,
+      "minimum_relative_win": 0.03
+    },
+    "cpp:layernorm:1024,1024:720f740c98c2": {
+      "winner": "hand",
+      "source_case": "layernorm",
+      "scope": "single operator",
+      "codegen_us": 217.421,
+      "hand_us": 47.051500000000004,
+      "minimum_relative_win": 0.03
+    },
+    "cpp:softmax:1024,1024:9a9e475002e0": {
+      "winner": "hand",
+      "source_case": "softmax",
+      "scope": "single operator",
+      "codegen_us": 684.0365,
+      "hand_us": 510.556,
+      "minimum_relative_win": 0.03
+    }
+  },
+  "rows": [
+    {
+      "case": "mlp_b1",
+      "shape": [
+        1,
+        784
+      ],
+      "weights_sha256": "cdf924f2708db726f9a2a794a3b1d86d99b14c218012660cb5e47013c260aeba",
+      "input_sha256": "35d3f82e664112390576bee0018a857e2053199972593ac63618f37f4ccc64d2",
+      "host_e2e": {
+        "eager": {
+          "median_us": 60.34,
+          "min_us": 45.144000000000005,
+          "max_us": 65.242,
+          "repeats_us": [
+            62.040499999999994,
+            49.891,
+            45.144000000000005,
+            65.242,
+            61.0285,
+            46.9795,
+            60.34
+          ],
+          "max_abs_error": 0.0
+        },
+        "codegen": {
+          "median_us": 25.395000000000003,
+          "min_us": 22.986,
+          "max_us": 37.173500000000004,
+          "repeats_us": [
+            28.8595,
+            23.821,
+            37.173500000000004,
+            22.986,
+            24.613,
+            36.084500000000006,
+            25.395000000000003
+          ],
+          "max_abs_error": 4.172325134277344e-07
+        },
+        "auto": {
+          "median_us": 28.066,
+          "min_us": 22.993499999999997,
+          "max_us": 31.5265,
+          "repeats_us": [
+            31.5265,
+            29.377000000000002,
+            25.7805,
+            28.066,
+            29.2835,
+            27.641,
+            22.993499999999997
+          ],
+          "max_abs_error": 4.172325134277344e-07
+        }
+      },
+      "eager": {
+        "median_us": 46.237,
+        "min_us": 40.672,
+        "max_us": 60.437,
+        "repeats_us": [
+          53.3785,
+          44.032,
+          40.672,
+          60.437,
+          46.237,
+          46.908500000000004,
+          41.387
+        ]
+      },
+      "codegen": {
+        "median_us": 24.0335,
+        "min_us": 22.441499999999998,
+        "max_us": 24.996000000000002,
+        "repeats_us": [
+          24.996000000000002,
+          24.259,
+          22.441499999999998,
+          22.9735,
+          22.524,
+          24.0335,
+          24.9955
+        ],
+        "max_abs_error": 4.172325134277344e-07,
+        "dispatch": [
+          {
+            "node": "fc1",
+            "op": "linear",
+            "key": "cpp:linear:1,512:1636d226d44e",
+            "implementation": "codegen"
+          },
+          {
+            "node": "fc2",
+            "op": "linear",
+            "key": "cpp:linear:1,512:9a3c592c3e48",
+            "implementation": "codegen"
+          },
+          {
+            "node": "fc3",
+            "op": "linear",
+            "key": "cpp:linear:1,10:8a51210c9800",
+            "implementation": "codegen"
+          }
+        ],
+        "source_sha256": "54125e2ebc7a2f81ae8b267ee8bf7a4e4c43725a4b19ecc43748d67876aeaab8"
+      },
+      "auto": {
+        "median_us": 23.124000000000002,
+        "min_us": 17.525,
+        "max_us": 27.0415,
+        "repeats_us": [
+          17.525,
+          18.113,
+          22.356,
+          24.625,
+          23.124000000000002,
+          27.0415,
+          24.7435
+        ],
+        "max_abs_error": 4.172325134277344e-07,
+        "dispatch": [
+          {
+            "node": "fc1",
+            "op": "linear",
+            "key": "cpp:linear:1,512:1636d226d44e",
+            "implementation": "codegen"
+          },
+          {
+            "node": "fc2",
+            "op": "linear",
+            "key": "cpp:linear:1,512:9a3c592c3e48",
+            "implementation": "codegen"
+          },
+          {
+            "node": "fc3",
+            "op": "linear",
+            "key": "cpp:linear:1,10:8a51210c9800",
+            "implementation": "codegen"
+          }
+        ],
+        "source_sha256": "54125e2ebc7a2f81ae8b267ee8bf7a4e4c43725a4b19ecc43748d67876aeaab8"
+      }
+    },
+    {
+      "case": "mlp_b64",
+      "shape": [
+        64,
+        784
+      ],
+      "weights_sha256": "719c6d42728e92f48848b26752f1162e9572968695aa18f08626ad924bad3eaa",
+      "input_sha256": "25a9b84df01df17681716ebc50afb012ec911b721ba987ab14c514f1f2d48f6c",
+      "host_e2e": {
+        "eager": {
+          "median_us": 408.381,
+          "min_us": 395.952,
+          "max_us": 436.54449999999997,
+          "repeats_us": [
+            395.952,
+            431.375,
+            399.866,
+            436.54449999999997,
+            408.381,
+            404.221,
+            412.85850000000005
+          ],
+          "max_abs_error": 0.0
+        },
+        "codegen": {
+          "median_us": 321.378,
+          "min_us": 300.0,
+          "max_us": 344.4085,
+          "repeats_us": [
+            344.4085,
+            321.438,
+            335.913,
+            311.79200000000003,
+            300.0,
+            316.3615,
+            321.378
+          ],
+          "max_abs_error": 5.364418029785156e-07
+        },
+        "auto": {
+          "median_us": 314.39149999999995,
+          "min_us": 308.751,
+          "max_us": 317.63599999999997,
+          "repeats_us": [
+            308.751,
+            314.547,
+            317.63599999999997,
+            310.69550000000004,
+            314.39149999999995,
+            311.6055,
+            316.2385
+          ],
+          "max_abs_error": 5.364418029785156e-07
+        }
+      },
+      "eager": {
+        "median_us": 414.923,
+        "min_us": 367.76300000000003,
+        "max_us": 447.6085,
+        "repeats_us": [
+          427.06100000000004,
+          447.6085,
+          396.8165,
+          414.923,
+          423.105,
+          393.89,
+          367.76300000000003
+        ]
+      },
+      "codegen": {
+        "median_us": 324.84950000000003,
+        "min_us": 296.45000000000005,
+        "max_us": 330.83450000000005,
+        "repeats_us": [
+          330.83450000000005,
+          296.45000000000005,
+          301.46900000000005,
+          330.37649999999996,
+          324.84950000000003,
+          327.78700000000003,
+          319.488
+        ],
+        "max_abs_error": 5.364418029785156e-07,
+        "dispatch": [
+          {
+            "node": "fc1",
+            "op": "linear",
+            "key": "cpp:linear:64,512:1d36a1ecb2d1",
+            "implementation": "codegen"
+          },
+          {
+            "node": "fc2",
+            "op": "linear",
+            "key": "cpp:linear:64,512:b3aac01b44f7",
+            "implementation": "codegen"
+          },
+          {
+            "node": "fc3",
+            "op": "linear",
+            "key": "cpp:linear:64,10:64c0ddaaba56",
+            "implementation": "codegen"
+          }
+        ],
+        "source_sha256": "0f2462b75655d5d8de01be81e9873170507ed8771a5dd6e8e9169a2a26cc0810"
+      },
+      "auto": {
+        "median_us": 303.5855,
+        "min_us": 297.529,
+        "max_us": 312.903,
+        "repeats_us": [
+          311.81600000000003,
+          303.5855,
+          310.601,
+          299.9765,
+          297.529,
+          312.903,
+          298.25350000000003
+        ],
+        "max_abs_error": 5.364418029785156e-07,
+        "dispatch": [
+          {
+            "node": "fc1",
+            "op": "linear",
+            "key": "cpp:linear:64,512:1d36a1ecb2d1",
+            "implementation": "codegen"
+          },
+          {
+            "node": "fc2",
+            "op": "linear",
+            "key": "cpp:linear:64,512:b3aac01b44f7",
+            "implementation": "codegen"
+          },
+          {
+            "node": "fc3",
+            "op": "linear",
+            "key": "cpp:linear:64,10:64c0ddaaba56",
+            "implementation": "codegen"
+          }
+        ],
+        "source_sha256": "0f2462b75655d5d8de01be81e9873170507ed8771a5dd6e8e9169a2a26cc0810"
+      }
+    },
+    {
+      "case": "cnn_b1",
+      "shape": [
+        1,
+        1,
+        28,
+        28
+      ],
+      "weights_sha256": "bbce6034ab5d0f3363f56ff568d28b225f52d3f3cc99fe3ca8dce8ba3b731ce3",
+      "input_sha256": "a82ece246fc43360b894ac4f3239b58247c46555b1c2405262544b426f978588",
+      "host_e2e": {
+        "eager": {
+          "median_us": 134.489,
+          "min_us": 130.248,
+          "max_us": 170.8995,
+          "repeats_us": [
+            130.549,
+            138.61399999999998,
+            134.489,
+            141.8805,
+            170.8995,
+            130.248,
+            133.4535
+          ],
+          "max_abs_error": 0.0
+        },
+        "codegen": {
+          "median_us": 82.5735,
+          "min_us": 68.6135,
+          "max_us": 93.446,
+          "repeats_us": [
+            93.446,
+            86.857,
+            82.5735,
+            86.3005,
+            68.6135,
+            79.2945,
+            80.382
+          ],
+          "max_abs_error": 6.705522537231445e-08
+        },
+        "auto": {
+          "median_us": 81.8945,
+          "min_us": 65.654,
+          "max_us": 85.2855,
+          "repeats_us": [
+            85.2855,
+            65.654,
+            70.821,
+            81.8945,
+            69.892,
+            82.0155,
+            83.60249999999999
+          ],
+          "max_abs_error": 6.705522537231445e-08
+        }
+      },
+      "eager": {
+        "median_us": 133.3235,
+        "min_us": 120.2805,
+        "max_us": 140.06799999999998,
+        "repeats_us": [
+          133.55599999999998,
+          123.76849999999999,
+          135.553,
+          133.3235,
+          126.624,
+          120.2805,
+          140.06799999999998
+        ]
+      },
+      "codegen": {
+        "median_us": 83.648,
+        "min_us": 80.3925,
+        "max_us": 89.038,
+        "repeats_us": [
+          80.3925,
+          85.221,
+          82.122,
+          81.1615,
+          89.038,
+          86.3455,
+          83.648
+        ],
+        "max_abs_error": 6.705522537231445e-08,
+        "dispatch": [
+          {
+            "node": "c1",
+            "op": "conv2d",
+            "key": "cpp:conv2d:1,16,28,28:4f9e981865c1",
+            "implementation": "codegen"
+          },
+          {
+            "node": "c2",
+            "op": "conv2d",
+            "key": "cpp:conv2d:1,32,14,14:b285da68390a",
+            "implementation": "codegen"
+          },
+          {
+            "node": "fc1",
+            "op": "linear",
+            "key": "cpp:linear:1,128:67af5c29a02f",
+            "implementation": "codegen"
+          },
+          {
+            "node": "fc2",
+            "op": "linear",
+            "key": "cpp:linear:1,10:da7fb7c36d78",
+            "implementation": "codegen"
+          }
+        ],
+        "source_sha256": "c5d78c00975b8b6e3a792c9f8f5ee20f5ed41a714e311d132b96082d5f5ba95d"
+      },
+      "auto": {
+        "median_us": 80.9775,
+        "min_us": 65.43350000000001,
+        "max_us": 83.22999999999999,
+        "repeats_us": [
+          81.599,
+          83.22999999999999,
+          65.43350000000001,
+          80.9775,
+          80.6385,
+          79.41,
+          83.07249999999999
+        ],
+        "max_abs_error": 6.705522537231445e-08,
+        "dispatch": [
+          {
+            "node": "c1",
+            "op": "conv2d",
+            "key": "cpp:conv2d:1,16,28,28:4f9e981865c1",
+            "implementation": "codegen"
+          },
+          {
+            "node": "c2",
+            "op": "conv2d",
+            "key": "cpp:conv2d:1,32,14,14:b285da68390a",
+            "implementation": "codegen"
+          },
+          {
+            "node": "fc1",
+            "op": "linear",
+            "key": "cpp:linear:1,128:67af5c29a02f",
+            "implementation": "codegen"
+          },
+          {
+            "node": "fc2",
+            "op": "linear",
+            "key": "cpp:linear:1,10:da7fb7c36d78",
+            "implementation": "codegen"
+          }
+        ],
+        "source_sha256": "c5d78c00975b8b6e3a792c9f8f5ee20f5ed41a714e311d132b96082d5f5ba95d"
+      }
+    },
+    {
+      "case": "cnn_b32",
+      "shape": [
+        32,
+        1,
+        28,
+        28
+      ],
+      "weights_sha256": "23125a701a5252f0066df9f8d08f02fe4cac0e8ed8e7ea6026a26544c50d2574",
+      "input_sha256": "11d6620c2d62b2b5bfcb590693871eef33adad0e304274676b031140d975fdac",
+      "host_e2e": {
+        "eager": {
+          "median_us": 1045.7695,
+          "min_us": 1023.884,
+          "max_us": 1116.4845,
+          "repeats_us": [
+            1034.5030000000002,
+            1045.7695,
+            1049.8445000000002,
+            1028.683,
+            1023.884,
+            1102.1045,
+            1116.4845
+          ],
+          "max_abs_error": 0.0
+        },
+        "codegen": {
+          "median_us": 910.7909999999999,
+          "min_us": 894.869,
+          "max_us": 954.9739999999999,
+          "repeats_us": [
+            954.9739999999999,
+            912.7205,
+            907.6295,
+            918.5015000000001,
+            910.7909999999999,
+            894.869,
+            908.8365
+          ],
+          "max_abs_error": 1.434236764907837e-07
+        },
+        "auto": {
+          "median_us": 956.9275,
+          "min_us": 878.831,
+          "max_us": 972.806,
+          "repeats_us": [
+            878.831,
+            929.6945000000001,
+            961.328,
+            968.726,
+            972.806,
+            916.4735000000001,
+            956.9275
+          ],
+          "max_abs_error": 1.434236764907837e-07
+        }
+      },
+      "eager": {
+        "median_us": 1023.8969999999999,
+        "min_us": 997.7339999999999,
+        "max_us": 1083.0895,
+        "repeats_us": [
+          1011.5725,
+          1054.935,
+          1023.8969999999999,
+          1012.0165,
+          1080.6195,
+          1083.0895,
+          997.7339999999999
+        ]
+      },
+      "codegen": {
+        "median_us": 982.6705,
+        "min_us": 868.203,
+        "max_us": 1048.7185,
+        "repeats_us": [
+          991.185,
+          971.5889999999999,
+          1048.7185,
+          1031.7350000000001,
+          982.6705,
+          902.6025,
+          868.203
+        ],
+        "max_abs_error": 1.434236764907837e-07,
+        "dispatch": [
+          {
+            "node": "c1",
+            "op": "conv2d",
+            "key": "cpp:conv2d:32,16,28,28:0c852bf7a58b",
+            "implementation": "codegen"
+          },
+          {
+            "node": "c2",
+            "op": "conv2d",
+            "key": "cpp:conv2d:32,32,14,14:95d49b0aff42",
+            "implementation": "codegen"
+          },
+          {
+            "node": "fc1",
+            "op": "linear",
+            "key": "cpp:linear:32,128:2d3745d8a429",
+            "implementation": "codegen"
+          },
+          {
+            "node": "fc2",
+            "op": "linear",
+            "key": "cpp:linear:32,10:009f4a6c6db5",
+            "implementation": "codegen"
+          }
+        ],
+        "source_sha256": "bc1764f466b2d53877de5a81cb0a2389c06a6bc3d202737ce1884cedd5e7cb6f"
+      },
+      "auto": {
+        "median_us": 898.344,
+        "min_us": 883.781,
+        "max_us": 918.6955,
+        "repeats_us": [
+          906.9190000000001,
+          883.781,
+          918.6955,
+          890.9245000000001,
+          898.344,
+          906.52,
+          889.029
+        ],
+        "max_abs_error": 1.434236764907837e-07,
+        "dispatch": [
+          {
+            "node": "c1",
+            "op": "conv2d",
+            "key": "cpp:conv2d:32,16,28,28:0c852bf7a58b",
+            "implementation": "codegen"
+          },
+          {
+            "node": "c2",
+            "op": "conv2d",
+            "key": "cpp:conv2d:32,32,14,14:95d49b0aff42",
+            "implementation": "codegen"
+          },
+          {
+            "node": "fc1",
+            "op": "linear",
+            "key": "cpp:linear:32,128:2d3745d8a429",
+            "implementation": "codegen"
+          },
+          {
+            "node": "fc2",
+            "op": "linear",
+            "key": "cpp:linear:32,10:009f4a6c6db5",
+            "implementation": "codegen"
+          }
+        ],
+        "source_sha256": "bc1764f466b2d53877de5a81cb0a2389c06a6bc3d202737ce1884cedd5e7cb6f"
+      }
+    },
+    {
+      "case": "layernorm",
+      "shape": [
+        1024,
+        1024
+      ],
+      "weights_sha256": "43e96350e96b6d6e503d2f765bb27600ad27d549fd71762f5aba163b65ad4fcf",
+      "input_sha256": "f5c0d9080ef0a883b7a13ecda097f9a4fa7a6a4d1c2f6e97fbacd4c6a88a75e6",
+      "host_e2e": {
+        "eager": {
+          "median_us": 58.841499999999996,
+          "min_us": 55.172,
+          "max_us": 80.0895,
+          "repeats_us": [
+            58.841499999999996,
+            55.172,
+            58.718,
+            80.0895,
+            77.14150000000001,
+            65.149,
+            58.016999999999996
+          ],
+          "max_abs_error": 0.0
+        },
+        "codegen": {
+          "median_us": 535.6690000000001,
+          "min_us": 521.4,
+          "max_us": 564.2094999999999,
+          "repeats_us": [
+            521.4,
+            564.2094999999999,
+            526.352,
+            535.6690000000001,
+            545.105,
+            542.4490000000001,
+            527.6945000000001
+          ],
+          "max_abs_error": 9.5367431640625e-07
+        },
+        "auto": {
+          "median_us": 269.3705,
+          "min_us": 256.74,
+          "max_us": 294.52099999999996,
+          "repeats_us": [
+            294.52099999999996,
+            282.4755,
+            268.851,
+            271.58349999999996,
+            263.0005,
+            256.74,
+            269.3705
+          ],
+          "max_abs_error": 4.76837158203125e-06
+        }
+      },
+      "eager": {
+        "median_us": 55.36,
+        "min_us": 53.6745,
+        "max_us": 83.47,
+        "repeats_us": [
+          83.47,
+          54.376999999999995,
+          54.86,
+          62.259,
+          53.6745,
+          55.36,
+          56.1835
+        ]
+      },
+      "codegen": {
+        "median_us": 213.4515,
+        "min_us": 209.5455,
+        "max_us": 223.75,
+        "repeats_us": [
+          213.4515,
+          223.75,
+          215.986,
+          209.5455,
+          216.1465,
+          210.7065,
+          212.329
+        ],
+        "max_abs_error": 9.5367431640625e-07,
+        "dispatch": [
+          {
+            "node": "_0",
+            "op": "layernorm",
+            "key": "cpp:layernorm:1024,1024:720f740c98c2",
+            "implementation": "codegen"
+          }
+        ],
+        "source_sha256": "51076fbcb8f45d01df361b02cd93da2264349d5b1244da4b87ad028f86156c1f"
+      },
+      "auto": {
+        "median_us": 44.0675,
+        "min_us": 42.4845,
+        "max_us": 53.632000000000005,
+        "repeats_us": [
+          43.1055,
+          42.4845,
+          43.9945,
+          44.0675,
+          47.5195,
+          45.204,
+          53.632000000000005
+        ],
+        "max_abs_error": 4.76837158203125e-06,
+        "dispatch": [
+          {
+            "node": "_0",
+            "op": "layernorm",
+            "key": "cpp:layernorm:1024,1024:720f740c98c2",
+            "implementation": "hand"
+          }
+        ],
+        "source_sha256": "f4fa1a4cb4b9424467ad731cc410907b2629a682c3aeb22444f7e891623c16ac"
+      }
+    },
+    {
+      "case": "softmax",
+      "shape": [
+        1024,
+        1024
+      ],
+      "weights_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "input_sha256": "6abe522165524794d887a30a23973bf6b393876a0b1c6cebabcd68c7a7dfaeeb",
+      "host_e2e": {
+        "eager": {
+          "median_us": 148.15300000000002,
+          "min_us": 140.534,
+          "max_us": 168.15800000000002,
+          "repeats_us": [
+            150.7055,
+            155.58249999999998,
+            141.86599999999999,
+            168.15800000000002,
+            140.534,
+            147.77100000000002,
+            148.15300000000002
+          ],
+          "max_abs_error": 0.0
+        },
+        "codegen": {
+          "median_us": 1026.1815000000001,
+          "min_us": 992.799,
+          "max_us": 1084.257,
+          "repeats_us": [
+            1010.2385,
+            1006.813,
+            992.799,
+            1026.1815000000001,
+            1033.1765,
+            1040.0025,
+            1084.257
+          ],
+          "max_abs_error": 7.450580596923828e-09
+        },
+        "auto": {
+          "median_us": 831.067,
+          "min_us": 778.039,
+          "max_us": 856.4575,
+          "repeats_us": [
+            831.067,
+            836.3665,
+            803.5664999999999,
+            856.4575,
+            852.7645,
+            778.039,
+            818.7415
+          ],
+          "max_abs_error": 3.725290298461914e-08
+        }
+      },
+      "eager": {
+        "median_us": 146.15550000000002,
+        "min_us": 141.3515,
+        "max_us": 208.7635,
+        "repeats_us": [
+          146.257,
+          144.351,
+          208.7635,
+          141.3515,
+          149.9515,
+          142.87099999999998,
+          146.15550000000002
+        ]
+      },
+      "codegen": {
+        "median_us": 698.6855,
+        "min_us": 680.635,
+        "max_us": 793.135,
+        "repeats_us": [
+          793.135,
+          701.5799999999999,
+          680.635,
+          698.6855,
+          721.7090000000001,
+          687.7025,
+          681.0685
+        ],
+        "max_abs_error": 7.450580596923828e-09,
+        "dispatch": [
+          {
+            "node": "_0",
+            "op": "softmax",
+            "key": "cpp:softmax:1024,1024:9a9e475002e0",
+            "implementation": "codegen"
+          }
+        ],
+        "source_sha256": "b26fec3878d38755f77f6f4138343442182fc373cf2ca31bbd491f1946a5520a"
+      },
+      "auto": {
+        "median_us": 509.31,
+        "min_us": 499.178,
+        "max_us": 522.9575,
+        "repeats_us": [
+          510.52200000000005,
+          502.76800000000003,
+          509.31,
+          522.9575,
+          515.6700000000001,
+          499.178,
+          508.33450000000005
+        ],
+        "max_abs_error": 3.725290298461914e-08,
+        "dispatch": [
+          {
+            "node": "_0",
+            "op": "softmax",
+            "key": "cpp:softmax:1024,1024:9a9e475002e0",
+            "implementation": "hand"
+          }
+        ],
+        "source_sha256": "1fcf7ac463f666ac92de5b72e438919b1f54d908a8d97fda91fd67002af0c0ff"
+      }
+    },
+    {
+      "case": "norm_softmax",
+      "shape": [
+        1024,
+        1024
+      ],
+      "weights_sha256": "ca4ead382cfd0c6741cb2b51668c2a5f0b6d584a48b6b55ce805ed086b26a750",
+      "input_sha256": "8ac12ab6037c5d3c697acde9a469bb313b3675106a93d088f5a721d47dffe721",
+      "host_e2e": {
+        "eager": {
+          "median_us": 224.5995,
+          "min_us": 212.541,
+          "max_us": 289.4535,
+          "repeats_us": [
+            221.108,
+            289.4535,
+            224.5995,
+            232.712,
+            232.224,
+            212.541,
+            215.369
+          ],
+          "max_abs_error": 0.0
+        },
+        "codegen": {
+          "median_us": 1378.562,
+          "min_us": 1355.2655,
+          "max_us": 1472.2515,
+          "repeats_us": [
+            1356.2714999999998,
+            1390.88,
+            1355.2655,
+            1378.562,
+            1394.846,
+            1472.2515,
+            1361.2640000000001
+          ],
+          "max_abs_error": 1.1920928955078125e-07
+        },
+        "auto": {
+          "median_us": 930.9415,
+          "min_us": 898.4169999999999,
+          "max_us": 955.5564999999999,
+          "repeats_us": [
+            910.576,
+            906.8135,
+            947.0625,
+            930.9415,
+            898.4169999999999,
+            947.8265,
+            955.5564999999999
+          ],
+          "max_abs_error": 3.5762786865234375e-07
+        }
+      },
+      "eager": {
+        "median_us": 224.1615,
+        "min_us": 211.17450000000002,
+        "max_us": 285.69,
+        "repeats_us": [
+          264.711,
+          212.363,
+          221.777,
+          235.1155,
+          285.69,
+          224.1615,
+          211.17450000000002
+        ]
+      },
+      "codegen": {
+        "median_us": 932.5495000000001,
+        "min_us": 906.919,
+        "max_us": 973.1335,
+        "repeats_us": [
+          924.74,
+          973.1335,
+          927.809,
+          906.919,
+          932.5495000000001,
+          952.525,
+          938.4825000000001
+        ],
+        "max_abs_error": 1.1920928955078125e-07,
+        "dispatch": [
+          {
+            "node": "_0",
+            "op": "layernorm",
+            "key": "cpp:layernorm:1024,1024:720f740c98c2",
+            "implementation": "codegen"
+          },
+          {
+            "node": "_1",
+            "op": "softmax",
+            "key": "cpp:softmax:1024,1024:9a9e475002e0",
+            "implementation": "codegen"
+          }
+        ],
+        "source_sha256": "d27dbcfaab8e8c8af59493ca07540b2eb5506b4e7a08e9e1ee91216dfcd779e0"
+      },
+      "auto": {
+        "median_us": 581.8435,
+        "min_us": 564.435,
+        "max_us": 614.7725,
+        "repeats_us": [
+          614.7725,
+          606.6220000000001,
+          581.8435,
+          564.435,
+          566.5515,
+          578.5005,
+          589.086
+        ],
+        "max_abs_error": 3.5762786865234375e-07,
+        "dispatch": [
+          {
+            "node": "_0",
+            "op": "layernorm",
+            "key": "cpp:layernorm:1024,1024:720f740c98c2",
+            "implementation": "hand"
+          },
+          {
+            "node": "_1",
+            "op": "softmax",
+            "key": "cpp:softmax:1024,1024:9a9e475002e0",
+            "implementation": "hand"
+          }
+        ],
+        "source_sha256": "b85f7ce79b244b65c5f740f13448014980355dc16764f621f026f97bb697953c"
+      }
+    }
+  ],
+  "standalone_gemm": [
+    {
+      "n": 256,
+      "hand": {
+        "median_us": 416.7445,
+        "min_us": 293.988,
+        "max_us": 425.33,
+        "repeats_us": [
+          317.871,
+          416.7445,
+          425.33,
+          419.6005,
+          417.605,
+          391.42449999999997,
+          293.988
+        ]
+      },
+      "torch_mkl": {
+        "median_us": 99.66,
+        "min_us": 70.366,
+        "max_us": 106.746,
+        "repeats_us": [
+          77.335,
+          97.1805,
+          106.746,
+          100.15199999999999,
+          100.0955,
+          70.366,
+          99.66
+        ]
+      },
+      "hand_over_torch": 4.181662653020269,
+      "max_abs_error": 0.0
+    },
+    {
+      "n": 512,
+      "hand": {
+        "median_us": 1877.6599999999999,
+        "min_us": 1735.558,
+        "max_us": 1984.8055,
+        "repeats_us": [
+          1825.841,
+          1890.379,
+          1735.558,
+          1899.5815,
+          1863.841,
+          1877.6599999999999,
+          1984.8055
+        ]
+      },
+      "torch_mkl": {
+        "median_us": 493.642,
+        "min_us": 486.0485,
+        "max_us": 530.479,
+        "repeats_us": [
+          491.4045,
+          486.0485,
+          493.1285,
+          507.818,
+          530.479,
+          493.642,
+          494.174
+        ]
+      },
+      "hand_over_torch": 3.8036876927003775,
+      "max_abs_error": 8.392333984375e-05
+    },
+    {
+      "n": 1024,
+      "hand": {
+        "median_us": 15580.3705,
+        "min_us": 14906.4615,
+        "max_us": 15863.817,
+        "repeats_us": [
+          15396.2605,
+          15333.565999999999,
+          15680.9435,
+          15580.3705,
+          14906.4615,
+          15718.2595,
+          15863.817
+        ]
+      },
+      "torch_mkl": {
+        "median_us": 3929.7844999999998,
+        "min_us": 3887.0095,
+        "max_us": 4250.9490000000005,
+        "repeats_us": [
+          3970.9865,
+          3887.0095,
+          3929.7844999999998,
+          3902.7695,
+          3913.128,
+          4250.9490000000005,
+          3955.687
+        ]
+      },
+      "hand_over_torch": 3.9646882672574035,
+      "max_abs_error": 0.0002288818359375
+    }
+  ],
+  "torch_config": "PyTorch built with:\n  - GCC 13.3\n  - C++ Version: 202002\n  - Intel(R) oneAPI Math Kernel Library Version 2024.2-Product Build 20240605 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v3.13.3 (Git Hash b38f97eb6f2173513112f15a0481750b8a66e901)\n  - OpenMP 201511 (a.k.a. OpenMP 4.5)\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: AVX2\n  - CUDA Runtime 13.2\n  - NVCC architecture flags: -gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_90,code=sm_90;-gencode;arch=compute_100,code=sm_100;-gencode;arch=compute_120,code=sm_120\n  - CuDNN 92.6  (built against CUDA 13.4)\n  - Magma 2.6.1\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, COMMIT_SHA=d0f2af8b66b20da4baa50644c0cd3f887a2eae2e, CUDA_FLAGS= -DLIBCUDACXX_ENABLE_SIMPLIFIED_COMPLEX_OPERATIONS -Xfatbin -compress-all -DONNX_NAMESPACE=onnx_torch -gencode arch=compute_75,code=sm_75 -gencode arch=compute_80,code=sm_80 -gencode arch=compute_86,code=sm_86 -gencode arch=compute_90,code=sm_90 -gencode arch=compute_100,code=sm_100 -gencode arch=compute_120,code=sm_120 -Xcudafe --diag_suppress=cc_clobber_ignored,--diag_suppress=field_without_dll_interface,--diag_suppress=base_class_has_different_dll_interface,--diag_suppress=dll_interface_conflict_none_assumed,--diag_suppress=dll_interface_conflict_dllexport_assumed,--diag_suppress=bad_friend_decl --expt-relaxed-constexpr --expt-extended-lambda -Xfatbin -compress-all --threads 2 -compress-mode=size -Wno-deprecated-gpu-targets --expt-extended-lambda -DCUB_WRAPPED_NAMESPACE=at_cuda_detail -DDISABLE_CUSPARSE_DEPRECATED -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -DC10_NODEPRECATED, CUDA_VERSION=13.2, CUDNN_VERSION=9.26.0, CXX_COMPILER=/opt/rh/gcc-toolset-13/root/usr/bin/c++, CXX_FLAGS= -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DHAS_CUPTI -DUSE_FBGEMM -DUSE_MSLK -DUSE_PYTORCH_QNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -DC10_NODEPRECATED -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=range-loop-construct -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-unknown-pragmas -Wno-unused-parameter -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wsuggest-override -Wno-psabi -Wno-error=old-style-cast -faligned-new -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-dangling-reference -Wno-error=dangling-reference -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, TORCH_VERSION=2.15.0, USE_CUDA=1, USE_CUDNN=ON, USE_CUSPARSELT=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_HIPSPARSELT=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=ON, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, USE_XCCL=OFF, USE_XPU=OFF, \n"
+}

@@ -1,0 +1,19 @@
+-- Found pybind11: /opt/codex-resume/portfolio-ml/venv/lib/python3.12/site-packages/pybind11/include (found version "3.1.0")
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /opt/codex-resume/consolidation-f2/build
+ninja: no work to do.
+CALIBRATION mlp_b1 codegen 23.822000000000003 51.0725
+CALIBRATION mlp_b64 codegen 313.37 1833.682
+CALIBRATION cnn_b1 codegen 84.56450000000001 171.1645
+CALIBRATION cnn_b32 codegen 893.207 1487.335
+CALIBRATION layernorm hand 217.421 47.051500000000004
+CALIBRATION softmax hand 684.0365 510.556
+FINAL mlp_b1 {'eager': 46.237, 'codegen': 24.034, 'auto': 23.124}
+FINAL mlp_b64 {'eager': 414.923, 'codegen': 324.85, 'auto': 303.586}
+FINAL cnn_b1 {'eager': 133.323, 'codegen': 83.648, 'auto': 80.978}
+FINAL cnn_b32 {'eager': 1023.897, 'codegen': 982.67, 'auto': 898.344}
+FINAL layernorm {'eager': 55.36, 'codegen': 213.452, 'auto': 44.068}
+FINAL softmax {'eager': 146.156, 'codegen': 698.686, 'auto': 509.31}
+FINAL norm_softmax {'eager': 224.161, 'codegen': 932.55, 'auto': 581.843}
+INTEGRATED_BENCHMARK_COMPLETE cpu

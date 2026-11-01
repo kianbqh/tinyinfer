@@ -48,6 +48,12 @@ def _eval(n: Node, a):
         return _apply_epilogue(y, n, a, channel_axis=1)
     if n.op == "batchnorm":
         return a[0] * a[1][None, :, None, None] + a[2][None, :, None, None]
+    if n.op == 'layernorm':
+        x = a[0].astype(np.float64)
+        return ((x - x.mean(-1, keepdims=True)) / np.sqrt(x.var(-1, keepdims=True) + n.attrs['eps'])) * a[1] + a[2]
+    if n.op == 'softmax':
+        e = np.exp(a[0] - a[0].max(-1, keepdims=True))
+        return e / e.sum(-1, keepdims=True)
     if n.op == "maxpool2d":
         return F.max_pool2d(torch.from_numpy(a[0]), n.attrs["k"], n.attrs["stride"]).numpy()
     if n.op == "reshape":

@@ -1,0 +1,23 @@
+{
+  "start": "2026-10-31T23:11:03-07:00",
+  "gpu_complete": "2026-10-31T23:14:11-07:00",
+  "end": "2026-10-31T23:15:23-07:00",
+  "session": 14674,
+  "exit_code": 0,
+  "commands": [
+    "bash scripts/run_gpu.sh",
+    "bash scripts/run_cpu.sh"
+  ],
+  "ctest": {
+    "passed": 22,
+    "cpu": 12,
+    "cuda": 10
+  },
+  "pytest": {
+    "unified_passed": 57,
+    "frozen_policy_targeted_passed": 2
+  },
+  "timing_threads": 8,
+  "storage": "G-backed WSL native build/cache; G: source/results",
+  "mount_recovery": "Restored the existing G: drvfs mapping at /mnt/g before the run; no restart or WSL configuration change."
+}

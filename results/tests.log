@@ -1,0 +1,102 @@
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenMP_CXX: -fopenmp (found version "4.5")
+-- Found OpenMP: TRUE (found version "4.5")
+-- The CUDA compiler identification is NVIDIA 12.4.131 with host compiler GNU 13.3.0
+-- Detecting CUDA compiler ABI info
+-- Detecting CUDA compiler ABI info - done
+-- Check for working CUDA compiler: /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/bin/nvcc - skipped
+-- Detecting CUDA compile features
+-- Detecting CUDA compile features - done
+-- Found CUDAToolkit: /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/include (found version "12.4.131")
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Found Python3: /opt/codex-resume/consolidation-f2/venv/bin/python (found version "3.12.3") found components: Interpreter Development.Module
+-- Performing Test HAS_FLTO_AUTO
+-- Performing Test HAS_FLTO_AUTO - Success
+-- Found pybind11: /opt/codex-resume/portfolio-ml/venv/lib/python3.12/site-packages/pybind11/include (found version "3.1.0")
+-- The C compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done (85.0s)
+-- Generating done (1.4s)
+-- Build files have been written to: /opt/codex-resume/consolidation-f2/build
+[1/19] Building CXX object CMakeFiles/tinyinfer_backend.dir/backend/runtime.cpp.o
+[2/19] Building CXX object CMakeFiles/tinyinfer_backend.dir/kernels/src/cpu/softmax.cpp.o
+[3/19] Building CXX object CMakeFiles/tinyinfer_backend.dir/kernels/src/cpu/layernorm.cpp.o
+[4/19] Building CXX object CMakeFiles/tinyinfer_backend.dir/kernels/src/cpu/matmul.cpp.o
+[5/19] Building CUDA object CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/layernorm.cu.o
+[6/19] Building CUDA object CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/softmax.cu.o
+[7/19] Building CUDA object CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/matmul.cu.o
+[8/19] Building CUDA object CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/bench_api.cu.o
+[9/19] Linking CXX shared library libtinyinfer_backend.so
+[10/19] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[11/19] Building CXX object CMakeFiles/test_cpu.dir/kernels/tests/test_cpu.cpp.o
+[12/19] Building CXX object CMakeFiles/test_cuda.dir/kernels/tests/test_cuda.cpp.o
+[13/19] Building CXX object CMakeFiles/ikernels.dir/kernels/python/bindings.cpp.o
+[14/19] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[15/19] Linking CXX shared module ikernels.cpython-312-x86_64-linux-gnu.so
+[16/19] Linking CXX static library lib/libgtest.a
+[17/19] Linking CXX static library lib/libgtest_main.a
+[18/19] Linking CXX executable test_cuda
+[19/19] Linking CXX executable test_cpu
+Test project /opt/codex-resume/consolidation-f2/build
+      Start  1: Reference.NonFiniteOutputCannotPassComparison
+ 1/22 Test  #1: Reference.NonFiniteOutputCannotPassComparison ..........................   Passed    0.00 sec
+      Start  2: Softmax.MatchesReferenceAndRowsSumToOne
+ 2/22 Test  #2: Softmax.MatchesReferenceAndRowsSumToOne ................................   Passed    0.01 sec
+      Start  3: Softmax.NumericallyStableForLargeLogits
+ 3/22 Test  #3: Softmax.NumericallyStableForLargeLogits ................................   Passed    0.00 sec
+      Start  4: LayerNorm.MatchesReference
+ 4/22 Test  #4: LayerNorm.MatchesReference .............................................   Passed    0.00 sec
+      Start  5: LayerNorm.LargeOffsetInputIsStable
+ 5/22 Test  #5: LayerNorm.LargeOffsetInputIsStable .....................................   Passed    0.00 sec
+      Start  6: LayerNorm.ConstantRowGivesBeta
+ 6/22 Test  #6: LayerNorm.ConstantRowGivesBeta .........................................   Passed    0.00 sec
+      Start  7: Shapes/MatmulShapes.NaiveAndBlockedMatchFp64Reference/(1, 1, 1)
+ 7/22 Test  #7: Shapes/MatmulShapes.NaiveAndBlockedMatchFp64Reference/(1, 1, 1) ........   Passed    0.00 sec
+      Start  8: Shapes/MatmulShapes.NaiveAndBlockedMatchFp64Reference/(7, 13, 5)
+ 8/22 Test  #8: Shapes/MatmulShapes.NaiveAndBlockedMatchFp64Reference/(7, 13, 5) .......   Passed    0.00 sec
+      Start  9: Shapes/MatmulShapes.NaiveAndBlockedMatchFp64Reference/(64, 256, 256)
+ 9/22 Test  #9: Shapes/MatmulShapes.NaiveAndBlockedMatchFp64Reference/(64, 256, 256) ...   Passed    0.01 sec
+      Start 10: Shapes/MatmulShapes.NaiveAndBlockedMatchFp64Reference/(65, 257, 300)
+10/22 Test #10: Shapes/MatmulShapes.NaiveAndBlockedMatchFp64Reference/(65, 257, 300) ...   Passed    0.01 sec
+      Start 11: Shapes/MatmulShapes.NaiveAndBlockedMatchFp64Reference/(128, 96, 513)
+11/22 Test #11: Shapes/MatmulShapes.NaiveAndBlockedMatchFp64Reference/(128, 96, 513) ...   Passed    0.01 sec
+      Start 12: Shapes/MatmulShapes.NaiveAndBlockedMatchFp64Reference/(300, 1, 77)
+12/22 Test #12: Shapes/MatmulShapes.NaiveAndBlockedMatchFp64Reference/(300, 1, 77) .....   Passed    0.00 sec
+      Start 13: CudaSoftmax.MatchesReference
+13/22 Test #13: CudaSoftmax.MatchesReference ...........................................   Passed    0.70 sec
+      Start 14: CudaSoftmax.NegativeInfinityMaskHasZeroProbability
+14/22 Test #14: CudaSoftmax.NegativeInfinityMaskHasZeroProbability .....................   Passed    0.43 sec
+      Start 15: CudaLayerNorm.MatchesReference
+15/22 Test #15: CudaLayerNorm.MatchesReference .........................................   Passed    0.40 sec
+      Start 16: CudaLayerNorm.LargeOffsetInputIsStable
+16/22 Test #16: CudaLayerNorm.LargeOffsetInputIsStable .................................   Passed    0.40 sec
+      Start 17: CudaLayerNorm.ConstantRowGivesBeta
+17/22 Test #17: CudaLayerNorm.ConstantRowGivesBeta .....................................   Passed    0.47 sec
+      Start 18: Shapes/CudaMatmul.AllVariantsMatchReference/(1, 1, 1)
+18/22 Test #18: Shapes/CudaMatmul.AllVariantsMatchReference/(1, 1, 1) ..................   Passed    0.43 sec
+      Start 19: Shapes/CudaMatmul.AllVariantsMatchReference/(33, 65, 17)
+19/22 Test #19: Shapes/CudaMatmul.AllVariantsMatchReference/(33, 65, 17) ...............   Passed    0.33 sec
+      Start 20: Shapes/CudaMatmul.AllVariantsMatchReference/(64, 64, 64)
+20/22 Test #20: Shapes/CudaMatmul.AllVariantsMatchReference/(64, 64, 64) ...............   Passed    0.34 sec
+      Start 21: Shapes/CudaMatmul.AllVariantsMatchReference/(257, 130, 515)
+21/22 Test #21: Shapes/CudaMatmul.AllVariantsMatchReference/(257, 130, 515) ............   Passed    0.49 sec
+      Start 22: Shapes/CudaMatmul.AllVariantsMatchReference/(512, 512, 512)
+22/22 Test #22: Shapes/CudaMatmul.AllVariantsMatchReference/(512, 512, 512) ............   Passed    0.50 sec
+
+100% tests passed out of 22
+
+Total Test time (real) =   4.55 sec
+.........................................................                [100%]
+57 passed in 150.83s (0:02:30)
+UNIFIED_BUILD_AND_TEST_COMPLETE

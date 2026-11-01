@@ -1,0 +1,258 @@
+{
+  "cuda:linear:1,512:1636d226d44e": {
+    "winner": "codegen",
+    "source_case": "mlp_b1",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 81.17247372865677,
+    "hand_us": 207.8208029270172,
+    "minimum_relative_win": 0.03
+  },
+  "cuda:linear:1,512:9a3c592c3e48": {
+    "winner": "codegen",
+    "source_case": "mlp_b1",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 81.17247372865677,
+    "hand_us": 207.8208029270172,
+    "minimum_relative_win": 0.03
+  },
+  "cuda:linear:1,10:8a51210c9800": {
+    "winner": "codegen",
+    "source_case": "mlp_b1",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 81.17247372865677,
+    "hand_us": 207.8208029270172,
+    "minimum_relative_win": 0.03
+  },
+  "cuda:linear:64,512:1d36a1ecb2d1": {
+    "winner": "codegen",
+    "source_case": "mlp_b64",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 100.28544068336487,
+    "hand_us": 178.3807873725891,
+    "minimum_relative_win": 0.03
+  },
+  "cuda:linear:64,512:b3aac01b44f7": {
+    "winner": "codegen",
+    "source_case": "mlp_b64",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 100.28544068336487,
+    "hand_us": 178.3807873725891,
+    "minimum_relative_win": 0.03
+  },
+  "cuda:linear:64,10:64c0ddaaba56": {
+    "winner": "codegen",
+    "source_case": "mlp_b64",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 100.28544068336487,
+    "hand_us": 178.3807873725891,
+    "minimum_relative_win": 0.03
+  },
+  "cuda:conv2d:1,16,28,28:4f9e981865c1": {
+    "winner": "codegen",
+    "source_case": "cnn_b1",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 155.45856952667236,
+    "hand_us": 226.72384977340698,
+    "minimum_relative_win": 0.03
+  },
+  "cuda:conv2d:1,32,14,14:b285da68390a": {
+    "winner": "codegen",
+    "source_case": "cnn_b1",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 155.45856952667236,
+    "hand_us": 226.72384977340698,
+    "minimum_relative_win": 0.03
+  },
+  "cuda:linear:1,128:67af5c29a02f": {
+    "winner": "codegen",
+    "source_case": "cnn_b1",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 155.45856952667236,
+    "hand_us": 226.72384977340698,
+    "minimum_relative_win": 0.03
+  },
+  "cuda:linear:1,10:da7fb7c36d78": {
+    "winner": "codegen",
+    "source_case": "cnn_b1",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 155.45856952667236,
+    "hand_us": 226.72384977340698,
+    "minimum_relative_win": 0.03
+  },
+  "cuda:conv2d:32,16,28,28:0c852bf7a58b": {
+    "winner": "codegen",
+    "source_case": "cnn_b32",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 170.90047895908356,
+    "hand_us": 264.12031054496765,
+    "minimum_relative_win": 0.03
+  },
+  "cuda:conv2d:32,32,14,14:95d49b0aff42": {
+    "winner": "codegen",
+    "source_case": "cnn_b32",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 170.90047895908356,
+    "hand_us": 264.12031054496765,
+    "minimum_relative_win": 0.03
+  },
+  "cuda:linear:32,128:2d3745d8a429": {
+    "winner": "codegen",
+    "source_case": "cnn_b32",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 170.90047895908356,
+    "hand_us": 264.12031054496765,
+    "minimum_relative_win": 0.03
+  },
+  "cuda:linear:32,10:009f4a6c6db5": {
+    "winner": "codegen",
+    "source_case": "cnn_b32",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 170.90047895908356,
+    "hand_us": 264.12031054496765,
+    "minimum_relative_win": 0.03
+  },
+  "cuda:layernorm:1024,1024:720f740c98c2": {
+    "winner": "hand",
+    "source_case": "layernorm",
+    "scope": "single operator",
+    "codegen_us": 396.6822326183319,
+    "hand_us": 48.94720017910004,
+    "minimum_relative_win": 0.03
+  },
+  "cuda:softmax:1024,1024:9a9e475002e0": {
+    "winner": "hand",
+    "source_case": "softmax",
+    "scope": "single operator",
+    "codegen_us": 520.545244216919,
+    "hand_us": 20.904960110783577,
+    "minimum_relative_win": 0.03
+  },
+  "cpp:linear:1,512:1636d226d44e": {
+    "winner": "codegen",
+    "source_case": "mlp_b1",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 23.822000000000003,
+    "hand_us": 51.0725,
+    "minimum_relative_win": 0.03
+  },
+  "cpp:linear:1,512:9a3c592c3e48": {
+    "winner": "codegen",
+    "source_case": "mlp_b1",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 23.822000000000003,
+    "hand_us": 51.0725,
+    "minimum_relative_win": 0.03
+  },
+  "cpp:linear:1,10:8a51210c9800": {
+    "winner": "codegen",
+    "source_case": "mlp_b1",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 23.822000000000003,
+    "hand_us": 51.0725,
+    "minimum_relative_win": 0.03
+  },
+  "cpp:linear:64,512:1d36a1ecb2d1": {
+    "winner": "codegen",
+    "source_case": "mlp_b64",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 313.37,
+    "hand_us": 1833.682,
+    "minimum_relative_win": 0.03
+  },
+  "cpp:linear:64,512:b3aac01b44f7": {
+    "winner": "codegen",
+    "source_case": "mlp_b64",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 313.37,
+    "hand_us": 1833.682,
+    "minimum_relative_win": 0.03
+  },
+  "cpp:linear:64,10:64c0ddaaba56": {
+    "winner": "codegen",
+    "source_case": "mlp_b64",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 313.37,
+    "hand_us": 1833.682,
+    "minimum_relative_win": 0.03
+  },
+  "cpp:conv2d:1,16,28,28:4f9e981865c1": {
+    "winner": "codegen",
+    "source_case": "cnn_b1",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 84.56450000000001,
+    "hand_us": 171.1645,
+    "minimum_relative_win": 0.03
+  },
+  "cpp:conv2d:1,32,14,14:b285da68390a": {
+    "winner": "codegen",
+    "source_case": "cnn_b1",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 84.56450000000001,
+    "hand_us": 171.1645,
+    "minimum_relative_win": 0.03
+  },
+  "cpp:linear:1,128:67af5c29a02f": {
+    "winner": "codegen",
+    "source_case": "cnn_b1",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 84.56450000000001,
+    "hand_us": 171.1645,
+    "minimum_relative_win": 0.03
+  },
+  "cpp:linear:1,10:da7fb7c36d78": {
+    "winner": "codegen",
+    "source_case": "cnn_b1",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 84.56450000000001,
+    "hand_us": 171.1645,
+    "minimum_relative_win": 0.03
+  },
+  "cpp:conv2d:32,16,28,28:0c852bf7a58b": {
+    "winner": "codegen",
+    "source_case": "cnn_b32",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 893.207,
+    "hand_us": 1487.335,
+    "minimum_relative_win": 0.03
+  },
+  "cpp:conv2d:32,32,14,14:95d49b0aff42": {
+    "winner": "codegen",
+    "source_case": "cnn_b32",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 893.207,
+    "hand_us": 1487.335,
+    "minimum_relative_win": 0.03
+  },
+  "cpp:linear:32,128:2d3745d8a429": {
+    "winner": "codegen",
+    "source_case": "cnn_b32",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 893.207,
+    "hand_us": 1487.335,
+    "minimum_relative_win": 0.03
+  },
+  "cpp:linear:32,10:009f4a6c6db5": {
+    "winner": "codegen",
+    "source_case": "cnn_b32",
+    "scope": "matched whole graph; GEMM configuration toggled together",
+    "codegen_us": 893.207,
+    "hand_us": 1487.335,
+    "minimum_relative_win": 0.03
+  },
+  "cpp:layernorm:1024,1024:720f740c98c2": {
+    "winner": "hand",
+    "source_case": "layernorm",
+    "scope": "single operator",
+    "codegen_us": 217.421,
+    "hand_us": 47.051500000000004,
+    "minimum_relative_win": 0.03
+  },
+  "cpp:softmax:1024,1024:9a9e475002e0": {
+    "winner": "hand",
+    "source_case": "softmax",
+    "scope": "single operator",
+    "codegen_us": 684.0365,
+    "hand_us": 510.556,
+    "minimum_relative_win": 0.03
+  }
+}
