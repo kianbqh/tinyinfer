@@ -1,0 +1,34 @@
+name: CPU tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OMP_NUM_THREADS: 2
+      OMP_PROC_BIND: close
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install dependencies
+        run: |
+          python -m pip install numpy pybind11 pytest cmake ninja
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - name: Build
+        run: |
+          cmake -S . -B build -G Ninja -DIK_ENABLE_CUDA=OFF -DCMAKE_BUILD_TYPE=Release -DPython3_EXECUTABLE=$(which python)
+          cmake --build build -j 2
+      - name: C++ and Python tests
+        run: |
+          ctest --test-dir build --output-on-failure
+          python -m pytest -q tests/test_python.py

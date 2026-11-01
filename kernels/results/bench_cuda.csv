@@ -1,0 +1,14 @@
+op,shape,variant,ms,throughput
+matmul,1024^3,naive,1.57420,1.364
+matmul,1024^3,smem_tiled_32,1.10602,1.942
+matmul,1024^3,smem_reg_tiled_64x64_4x4,0.36941,5.813
+matmul,2048^3,naive,11.06156,1.553
+matmul,2048^3,smem_tiled_32,8.47713,2.027
+matmul,2048^3,smem_reg_tiled_64x64_4x4,1.98804,8.642
+matmul,4096^3,naive,83.63499,1.643
+matmul,4096^3,smem_tiled_32,66.51125,2.066
+matmul,4096^3,smem_reg_tiled_64x64_4x4,16.65188,8.254
+softmax,4096x1024,fused_online,0.04708,712.66
+layernorm,4096x1024,fused,0.05521,607.72
+softmax,8192x4096,fused_online,0.61528,436.28
+layernorm,8192x4096,fused,0.60457,444.01

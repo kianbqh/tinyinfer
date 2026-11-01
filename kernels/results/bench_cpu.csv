@@ -1,0 +1,15 @@
+op,shape,variant,ms,gflops_or_gbps,speedup
+matmul,256x256x256,naive,8.0578,4.16,1
+matmul,256x256x256,blocked_omp_simd,0.2683,125.08,30.04
+matmul,512x512x512,naive,117.3600,2.29,1
+matmul,512x512x512,blocked_omp_simd,1.8753,143.14,62.58
+matmul,1024x1024x1024,naive,2607.7502,0.82,1
+matmul,1024x1024x1024,blocked_omp_simd,15.7888,136.01,165.16
+softmax,4096x1024,naive,11.7605,2.85,1
+softmax,4096x1024,fused_omp_simd,1.8214,18.42,6.46
+layernorm,4096x1024,naive,4.5831,7.32,1
+layernorm,4096x1024,fused_omp_simd,0.4454,75.33,10.29
+softmax,8192x4096,naive,96.4145,2.78,1
+softmax,8192x4096,fused_omp_simd,15.7832,17.01,6.11
+layernorm,8192x4096,naive,38.0724,7.05,1
+layernorm,8192x4096,fused_omp_simd,7.2663,36.94,5.24
