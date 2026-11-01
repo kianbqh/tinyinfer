@@ -1,0 +1,363 @@
+{
+ "meta": {
+  "threads": 4,
+  "torch": "2.15.0+cu132",
+  "cpu": "Model name:                              12th Gen Intel(R) Core(TM) i7-12700KF",
+  "loadavg_start": [
+   1.21435546875,
+   1.966796875,
+   1.7841796875
+  ],
+  "repeats": 7,
+  "n": 200,
+  "warmup": 20,
+  "seed": 0,
+  "protocol": "Host perf_counter around each Python eager call or ctypes run_into; FP32 input preallocated for both; eager returns a new Tensor, tinyc reuses a preallocated output without copying the return value"
+ },
+ "rows": [
+  {
+   "model": "mlp",
+   "batch": 1,
+   "torch_eager": {
+    "median_us": 41.7,
+    "min_us": 39.8545,
+    "max_us": 42.0585,
+    "repeats": [
+     42.0585,
+     41.7,
+     41.7615,
+     41.8985,
+     40.744,
+     40.1665,
+     39.8545
+    ]
+   },
+   "tinyc_O0": {
+    "median_us": 39.8635,
+    "min_us": 29.473,
+    "max_us": 55.0645,
+    "repeats": [
+     31.2765,
+     32.7915,
+     29.473,
+     53.6945,
+     54.983,
+     55.0645,
+     39.8635
+    ],
+    "max_abs_err": 4.172325134277344e-07,
+    "kernels": 10,
+    "arena_bytes": 14464
+   },
+   "tinyc_O2": {
+    "median_us": 18.625,
+    "min_us": 16.9935,
+    "max_us": 19.0485,
+    "repeats": [
+     17.353,
+     16.9935,
+     18.6705,
+     18.625,
+     18.958,
+     19.0485,
+     18.5975
+    ],
+    "max_abs_err": 4.172325134277344e-07,
+    "kernels": 3,
+    "arena_bytes": 4096
+   },
+   "O2_no_fuse_epilogue": {
+    "median_us": 23.292,
+    "min_us": 22.8145,
+    "max_us": 23.839,
+    "repeats": [
+     23.3575,
+     23.156,
+     22.8145,
+     23.292,
+     23.472,
+     22.9895,
+     23.839
+    ],
+    "max_abs_err": 4.172325134277344e-07,
+    "kernels": 5,
+    "arena_bytes": 6144
+   },
+   "O2_no_fuse_elementwise": {
+    "median_us": 17.8935,
+    "min_us": 16.8975,
+    "max_us": 27.5205,
+    "repeats": [
+     17.8935,
+     17.39,
+     17.2095,
+     16.8975,
+     18.6115,
+     27.5205,
+     26.3085
+    ],
+    "max_abs_err": 4.172325134277344e-07,
+    "kernels": 3,
+    "arena_bytes": 4096
+   }
+  },
+  {
+   "model": "mlp",
+   "batch": 64,
+   "torch_eager": {
+    "median_us": 357.4965,
+    "min_us": 354.2825,
+    "max_us": 362.173,
+    "repeats": [
+     362.173,
+     354.2825,
+     357.5725,
+     357.4965,
+     354.6305,
+     360.4135,
+     356.484
+    ]
+   },
+   "tinyc_O0": {
+    "median_us": 509.739,
+    "min_us": 421.131,
+    "max_us": 528.9645,
+    "repeats": [
+     528.9645,
+     506.8735,
+     421.131,
+     508.175,
+     511.8495,
+     509.739,
+     512.3485
+    ],
+    "max_abs_err": 5.960464477539062e-07,
+    "kernels": 10,
+    "arena_bytes": 917632
+   },
+   "tinyc_O2": {
+    "median_us": 366.2915,
+    "min_us": 306.361,
+    "max_us": 372.0515,
+    "repeats": [
+     372.0515,
+     366.8075,
+     353.406,
+     359.523,
+     366.2915,
+     367.5445,
+     306.361
+    ],
+    "max_abs_err": 5.364418029785156e-07,
+    "kernels": 3,
+    "arena_bytes": 262144
+   },
+   "O2_no_fuse_epilogue": {
+    "median_us": 364.2415,
+    "min_us": 310.6515,
+    "max_us": 411.369,
+    "repeats": [
+     405.7045,
+     364.2415,
+     392.531,
+     313.451,
+     310.6515,
+     314.5485,
+     411.369
+    ],
+    "max_abs_err": 5.364418029785156e-07,
+    "kernels": 5,
+    "arena_bytes": 393216
+   },
+   "O2_no_fuse_elementwise": {
+    "median_us": 353.2365,
+    "min_us": 325.929,
+    "max_us": 359.7675,
+    "repeats": [
+     354.2315,
+     348.5945,
+     325.929,
+     356.472,
+     359.7675,
+     353.2365,
+     349.8305
+    ],
+    "max_abs_err": 5.364418029785156e-07,
+    "kernels": 3,
+    "arena_bytes": 262144
+   }
+  },
+  {
+   "model": "cnn",
+   "batch": 1,
+   "torch_eager": {
+    "median_us": 108.602,
+    "min_us": 97.6515,
+    "max_us": 110.444,
+    "repeats": [
+     107.6515,
+     97.6515,
+     108.911,
+     110.444,
+     108.602,
+     103.34,
+     108.8275
+    ]
+   },
+   "tinyc_O0": {
+    "median_us": 80.655,
+    "min_us": 77.429,
+    "max_us": 83.199,
+    "repeats": [
+     77.429,
+     78.471,
+     80.168,
+     80.655,
+     82.354,
+     83.199,
+     82.875
+    ],
+    "max_abs_err": 7.450580596923828e-08,
+    "kernels": 16,
+    "arena_bytes": 265472
+   },
+   "tinyc_O2": {
+    "median_us": 62.7855,
+    "min_us": 58.131,
+    "max_us": 65.58,
+    "repeats": [
+     58.131,
+     62.013,
+     63.237,
+     63.382,
+     62.7855,
+     62.4805,
+     65.58
+    ],
+    "max_abs_err": 6.705522537231445e-08,
+    "kernels": 7,
+    "arena_bytes": 62720
+   },
+   "O2_no_fuse_epilogue": {
+    "median_us": 71.0575,
+    "min_us": 69.7775,
+    "max_us": 76.136,
+    "repeats": [
+     70.401,
+     69.7775,
+     70.718,
+     76.136,
+     75.4955,
+     73.275,
+     71.0575
+    ],
+    "max_abs_err": 6.705522537231445e-08,
+    "kernels": 10,
+    "arena_bytes": 100352
+   },
+   "O2_no_fuse_elementwise": {
+    "median_us": 67.562,
+    "min_us": 64.5645,
+    "max_us": 70.2215,
+    "repeats": [
+     64.5645,
+     67.778,
+     67.143,
+     67.562,
+     69.4015,
+     70.2215,
+     67.295
+    ],
+    "max_abs_err": 6.705522537231445e-08,
+    "kernels": 9,
+    "arena_bytes": 62720
+   }
+  },
+  {
+   "model": "cnn",
+   "batch": 32,
+   "torch_eager": {
+    "median_us": 996.824,
+    "min_us": 993.333,
+    "max_us": 1039.43,
+    "repeats": [
+     1001.6435,
+     996.2405,
+     1007.744,
+     1039.43,
+     993.333,
+     996.824,
+     994.23
+    ]
+   },
+   "tinyc_O0": {
+    "median_us": 1041.675,
+    "min_us": 1023.256,
+    "max_us": 1092.982,
+    "repeats": [
+     1048.869,
+     1040.8585,
+     1041.675,
+     1092.982,
+     1073.9845,
+     1023.256,
+     1035.2945
+    ],
+    "max_abs_err": 1.4156103134155273e-07,
+    "kernels": 16,
+    "arena_bytes": 8495104
+   },
+   "tinyc_O2": {
+    "median_us": 951.311,
+    "min_us": 924.0615,
+    "max_us": 957.8765,
+    "repeats": [
+     951.7975,
+     957.8765,
+     952.154,
+     951.311,
+     935.1115,
+     924.0615,
+     927.168
+    ],
+    "max_abs_err": 1.2665987014770508e-07,
+    "kernels": 7,
+    "arena_bytes": 2007040
+   },
+   "O2_no_fuse_epilogue": {
+    "median_us": 987.378,
+    "min_us": 957.791,
+    "max_us": 997.6445,
+    "repeats": [
+     993.4405,
+     992.7615,
+     997.6445,
+     957.791,
+     964.836,
+     987.378,
+     972.2035
+    ],
+    "max_abs_err": 1.2665987014770508e-07,
+    "kernels": 10,
+    "arena_bytes": 3211264
+   },
+   "O2_no_fuse_elementwise": {
+    "median_us": 958.781,
+    "min_us": 943.77,
+    "max_us": 971.375,
+    "repeats": [
+     952.385,
+     968.3405,
+     964.413,
+     958.781,
+     955.556,
+     971.375,
+     943.77
+    ],
+    "max_abs_err": 1.2665987014770508e-07,
+    "kernels": 9,
+    "arena_bytes": 2007040
+   }
+  }
+ ]
+}

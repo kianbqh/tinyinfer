@@ -1,0 +1,48 @@
+== 2026-10-31T20:19:51-07:00  4 cpus  load: 1.08 2.05 1.80
+torch 2.15.0+cu132
+== pytest
+...........................                                              [100%]
+27 passed in 33.36s
+== pass log
+--- mlp: captured ops {'linear': 4, 'gelu': 1, 'sigmoid': 1, 'mul': 2, 'add': 1, 'relu': 1}
+  fold_batchnorm     nodes  10 ->  10
+  constant_fold      nodes  10 ->   8
+  dce                nodes   8 ->   7
+  fuse_epilogue      nodes   7 ->   3
+  fuse_elementwise   nodes   3 ->   3
+  pretranspose       nodes   3 ->   3
+%x = input() [1, 784] 
+%fc1 = linear(%x, %w.0, %b.1) [1, 512] {'epilogue': [('unary', 'gelu')], 'pretransposed': True}
+%fc2 = linear(%fc1, %w.4, %b.5, %mul, %fc1) [1, 512] {'epilogue': [('binary', 'mul', 3, False), ('binary', 'add', 4, False), ('unary', 'relu')], 'pretransposed': True}
+%fc3 = linear(%fc2, %w.7, %b.8) [1, 10] {'pretransposed': True}
+return ['fc3']
+--- cnn: captured ops {'conv2d': 2, 'batchnorm': 2, 'relu': 2, 'maxpool2d': 2, 'mul': 2, 'add': 1, 'tanh': 1, 'reshape': 1, 'linear': 2, 'sigmoid': 1, 'sub': 1}
+  fold_batchnorm     nodes  16 ->  14
+  constant_fold      nodes  14 ->  14
+  dce                nodes  14 ->  14
+  fuse_epilogue      nodes  14 ->   9
+  fuse_elementwise   nodes   9 ->   7
+  pretranspose       nodes   7 ->   7
+%x = input() [1, 1, 28, 28] 
+%c1 = conv2d(%x, %w.0, %b.1) [1, 16, 28, 28] {'stride': 1, 'pad': 1, 'k': 3, 'epilogue': [('unary', 'relu')]}
+%pool = maxpool2d(%c1) [1, 16, 14, 14] {'k': 2, 'stride': 2}
+%c2 = conv2d(%pool, %w.4, %b.5) [1, 32, 14, 14] {'stride': 1, 'pad': 1, 'k': 3, 'epilogue': [('unary', 'relu')]}
+%pool_1 = maxpool2d(%c2) [1, 32, 7, 7] {'k': 2, 'stride': 2}
+%tanh = fused_ew(%pool_1) [1, 32, 7, 7] {'tree': ('tanh', ('add', ('mul', ('in', 0), ('lit', 0.5)), ('lit', 0.10000000149011612)))}
+%flatten = reshape(%tanh) [1, 1568] 
+%fc1 = linear(%flatten, %w.10, %b.11, %s.12, %s.13) [1, 128] {'epilogue': [('unary', 'sigmoid'), ('binary', 'mul', 3, False), ('binary', 'sub', 4, False)], 'pretransposed': True}
+%fc2 = linear(%fc1, %w.14, %b.15) [1, 10] {'pretransposed': True}
+return ['fc2']
+== CPU benchmark
+mlp  bs=  1  eager      41.7us  O0      39.9us  O2      18.6us  O2 vs eager  2.24x  O2 vs O0  2.14x  kernels 10->3  arena 14464->4096 B  err 4.2e-07
+mlp  bs= 64  eager     357.5us  O0     509.7us  O2     366.3us  O2 vs eager  0.98x  O2 vs O0  1.39x  kernels 10->3  arena 917632->262144 B  err 5.4e-07
+cnn  bs=  1  eager     108.6us  O0      80.7us  O2      62.8us  O2 vs eager  1.73x  O2 vs O0  1.28x  kernels 16->7  arena 265472->62720 B  err 6.7e-08
+cnn  bs= 32  eager     996.8us  O0    1041.7us  O2     951.3us  O2 vs eager  1.05x  O2 vs O0  1.09x  kernels 16->7  arena 8495104->2007040 B  err 1.3e-07
+| model | batch | torch eager (us) | tinyc O0 (us) | tinyc O2 (us) | O2 no epilogue-fusion (us) | O2 no ew-fusion (us) | O2 vs eager | O2 vs O0 | kernels O0->O2 | arena O0->O2 (KB) | max abs err |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| mlp | 1 | 41.7 [39.9-42.1] | 39.9 [29.5-55.1] | 18.6 [17.0-19.0] | 23.3 [22.8-23.8] | 17.9 [16.9-27.5] | 2.24x | 2.14x | 10->3 | 14->4 | 4.2e-07 |
+| mlp | 64 | 357.5 [354.3-362.2] | 509.7 [421.1-529.0] | 366.3 [306.4-372.1] | 364.2 [310.7-411.4] | 353.2 [325.9-359.8] | 0.98x | 1.39x | 10->3 | 896->256 | 5.4e-07 |
+| cnn | 1 | 108.6 [97.7-110.4] | 80.7 [77.4-83.2] | 62.8 [58.1-65.6] | 71.1 [69.8-76.1] | 67.6 [64.6-70.2] | 1.73x | 1.28x | 16->7 | 259->61 | 6.7e-08 |
+| cnn | 32 | 996.8 [993.3-1039.4] | 1041.7 [1023.3-1093.0] | 951.3 [924.1-957.9] | 987.4 [957.8-997.6] | 958.8 [943.8-971.4] | 1.05x | 1.09x | 16->7 | 8296->1960 | 1.3e-07 |
+
+threads=4, 7 repeats x 200 calls; cell = median of per-repeat medians [min-max]. loadavg at start (1.21435546875, 1.966796875, 1.7841796875).
