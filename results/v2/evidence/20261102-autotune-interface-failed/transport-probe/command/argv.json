@@ -1,0 +1,19 @@
+[
+  "/opt/codex-resume/llm-risk-classifier/llama/llama-b12024/llama-completion",
+  "-m",
+  "/opt/codex-resume/llm-risk-classifier/weights/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+  "-ngl",
+  "0",
+  "--seed",
+  "17",
+  "-n",
+  "384",
+  "-c",
+  "8192",
+  "--temp",
+  "0.7",
+  "--no-display-prompt",
+  "--no-conversation",
+  "-f",
+  "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T224446Z-m2-autotune-venvfix/seed-17/llm/proposals/proposal-0000/prompt.txt"
+]

@@ -1,0 +1,118 @@
+test_actual_probe_extra_key_stays_rejected_after_cli_deframing (test_proposer_transport.ProposerTransportTests.test_actual_probe_extra_key_stays_rejected_after_cli_deframing) ... FAIL
+test_completion_stdout_survives_and_diagnostics_stay_separate (test_proposer_transport.ProposerTransportTests.test_completion_stdout_survives_and_diagnostics_stay_separate) ... FAIL
+test_decoder_leaves_middle_incomplete_and_crlf_trailers_untouched (test_proposer_transport.ProposerTransportTests.test_decoder_leaves_middle_incomplete_and_crlf_trailers_untouched) ... ERROR
+test_decoder_preserves_payload_whitespace_and_never_recurses (test_proposer_transport.ProposerTransportTests.test_decoder_preserves_payload_whitespace_and_never_recurses) ... ERROR
+test_exact_cli_trailer_allows_strict_json_without_changing_raw_stdout (test_proposer_transport.ProposerTransportTests.test_exact_cli_trailer_allows_strict_json_without_changing_raw_stdout) ... FAIL
+test_model_marker_and_cli_marker_remove_only_last_once (test_proposer_transport.ProposerTransportTests.test_model_marker_and_cli_marker_remove_only_last_once) ... FAIL
+test_non_json_generation_is_preserved_for_strict_rejection (test_proposer_transport.ProposerTransportTests.test_non_json_generation_is_preserved_for_strict_rejection) ... FAIL
+test_token_limit_truncation_without_cli_trailer_stays_unchanged (test_proposer_transport.ProposerTransportTests.test_token_limit_truncation_without_cli_trailer_stays_unchanged) ... FAIL
+
+======================================================================
+ERROR: test_decoder_leaves_middle_incomplete_and_crlf_trailers_untouched (test_proposer_transport.ProposerTransportTests.test_decoder_leaves_middle_incomplete_and_crlf_trailers_untouched)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/proposer-transport-fix/preimage/autotune/tests/test_proposer_transport.py", line 130, in test_decoder_leaves_middle_incomplete_and_crlf_trailers_untouched
+    decoder = proposer_module.decode_completion_stdout
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'autotune.proposer' has no attribute 'decode_completion_stdout'
+
+======================================================================
+ERROR: test_decoder_preserves_payload_whitespace_and_never_recurses (test_proposer_transport.ProposerTransportTests.test_decoder_preserves_payload_whitespace_and_never_recurses)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/proposer-transport-fix/preimage/autotune/tests/test_proposer_transport.py", line 141, in test_decoder_preserves_payload_whitespace_and_never_recurses
+    decoder = proposer_module.decode_completion_stdout
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'autotune.proposer' has no attribute 'decode_completion_stdout'
+
+======================================================================
+FAIL: test_actual_probe_extra_key_stays_rejected_after_cli_deframing (test_proposer_transport.ProposerTransportTests.test_actual_probe_extra_key_stays_rejected_after_cli_deframing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/proposer-transport-fix/preimage/autotune/tests/test_proposer_transport.py", line 109, in test_actual_probe_extra_key_stays_rejected_after_cli_deframing
+    returned = self.invoke(payload + CLI_TRAILER, expected=payload.strip())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/proposer-transport-fix/preimage/autotune/tests/test_proposer_transport.py", line 73, in invoke
+    self.assertEqual((out / 'stdout.txt').read_text(encoding='utf-8'), generated)
+AssertionError: '' != ' {"configuration_id": 2, "config_id": 2, [74 chars]\n\n'
++  {"configuration_id": 2, "config_id": 2, "tile": [64, 64, 32, 8], "stages": 2, "epilogue": "fused"} [end of text]
++ 
++ 
+
+
+======================================================================
+FAIL: test_completion_stdout_survives_and_diagnostics_stay_separate (test_proposer_transport.ProposerTransportTests.test_completion_stdout_survives_and_diagnostics_stay_separate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/proposer-transport-fix/preimage/autotune/tests/test_proposer_transport.py", line 92, in test_completion_stdout_survives_and_diagnostics_stay_separate
+    returned = self.invoke(generated)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/proposer-transport-fix/preimage/autotune/tests/test_proposer_transport.py", line 73, in invoke
+    self.assertEqual((out / 'stdout.txt').read_text(encoding='utf-8'), generated)
+AssertionError: '' != '  {"config_id": 1, "tile": [64, 32, 32, 8[34 chars]"}\n'
++   {"config_id": 1, "tile": [64, 32, 32, 8], "stages": 2, "epilogue": "fused"}
+
+
+======================================================================
+FAIL: test_exact_cli_trailer_allows_strict_json_without_changing_raw_stdout (test_proposer_transport.ProposerTransportTests.test_exact_cli_trailer_allows_strict_json_without_changing_raw_stdout)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/proposer-transport-fix/preimage/autotune/tests/test_proposer_transport.py", line 103, in test_exact_cli_trailer_allows_strict_json_without_changing_raw_stdout
+    returned = self.invoke(payload + CLI_TRAILER, expected=payload.strip())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/proposer-transport-fix/preimage/autotune/tests/test_proposer_transport.py", line 73, in invoke
+    self.assertEqual((out / 'stdout.txt').read_text(encoding='utf-8'), generated)
+AssertionError: '' != '  {"config_id": 1, "tile": [64, 32, 32, 8[52 chars]\n\n'
++   {"config_id": 1, "tile": [64, 32, 32, 8], "stages": 2, "epilogue": "fused"} [end of text]
++ 
++ 
+
+
+======================================================================
+FAIL: test_model_marker_and_cli_marker_remove_only_last_once (test_proposer_transport.ProposerTransportTests.test_model_marker_and_cli_marker_remove_only_last_once)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/proposer-transport-fix/preimage/autotune/tests/test_proposer_transport.py", line 116, in test_model_marker_and_cli_marker_remove_only_last_once
+    returned = self.invoke(payload + CLI_TRAILER, expected=payload.strip())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/proposer-transport-fix/preimage/autotune/tests/test_proposer_transport.py", line 73, in invoke
+    self.assertEqual((out / 'stdout.txt').read_text(encoding='utf-8'), generated)
+AssertionError: '' != '{"config_id": 1, "tile": [64, 32, 32, 8],[70 chars]\n\n'
++ {"config_id": 1, "tile": [64, 32, 32, 8], "stages": 2, "epilogue": "fused"} [end of text]
++ 
++ 
++  [end of text]
++ 
++ 
+
+
+======================================================================
+FAIL: test_non_json_generation_is_preserved_for_strict_rejection (test_proposer_transport.ProposerTransportTests.test_non_json_generation_is_preserved_for_strict_rejection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/proposer-transport-fix/preimage/autotune/tests/test_proposer_transport.py", line 97, in test_non_json_generation_is_preserved_for_strict_rejection
+    returned = self.invoke(generated)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/proposer-transport-fix/preimage/autotune/tests/test_proposer_transport.py", line 73, in invoke
+    self.assertEqual((out / 'stdout.txt').read_text(encoding='utf-8'), generated)
+AssertionError: '' != '{"config_id": 1, "tile": [64, 32, 32, 8],[46 chars]t]\n'
++ {"config_id": 1, "tile": [64, 32, 32, 8], "stages": 2, "epilogue": "fused"} [end of text]
+
+
+======================================================================
+FAIL: test_token_limit_truncation_without_cli_trailer_stays_unchanged (test_proposer_transport.ProposerTransportTests.test_token_limit_truncation_without_cli_trailer_stays_unchanged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/proposer-transport-fix/preimage/autotune/tests/test_proposer_transport.py", line 124, in test_token_limit_truncation_without_cli_trailer_stays_unchanged
+    returned = self.invoke(generated)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/proposer-transport-fix/preimage/autotune/tests/test_proposer_transport.py", line 73, in invoke
+    self.assertEqual((out / 'stdout.txt').read_text(encoding='utf-8'), generated)
+AssertionError: '' != '{"config_id": 2'
++ {"config_id": 2
+
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.302s
+
+FAILED (failures=6, errors=2)

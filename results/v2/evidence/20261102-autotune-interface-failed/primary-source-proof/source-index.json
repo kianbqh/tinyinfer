@@ -1,0 +1,33 @@
+{
+  "repository": "ggml-org/llama.cpp",
+  "ref": "ddf48f85c",
+  "fetched_via": "GitHub connector fetch_file; read-only official primary repository",
+  "files": [
+    {
+      "path": "tools/completion/completion.cpp",
+      "official_git_blob_sha": "b5b5daf2a6dcba53d60623e29dda43ddff142593",
+      "url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c/tools/completion/completion.cpp",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "common/log.h",
+      "official_git_blob_sha": "93ea58e76158add30c7050032d641261317af800",
+      "url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c/common/log.h",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "common/log.cpp",
+      "official_git_blob_sha": "25f12684e7a7d67382e8b1e760f895b796124549",
+      "url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c/common/log.cpp",
+      "encoding": "utf-8"
+    }
+  ],
+  "findings": {
+    "generation_output": "tools/completion/completion.cpp:703-709",
+    "cli_owned_eog_trailer": "tools/completion/completion.cpp:927-930",
+    "output_logger_macro": "common/log.h:119",
+    "stdout_routing": "common/log.cpp:100-103",
+    "paused_logger_discards": "common/log.cpp:240-247",
+    "pause_entry": "common/log.cpp:481-482"
+  }
+}

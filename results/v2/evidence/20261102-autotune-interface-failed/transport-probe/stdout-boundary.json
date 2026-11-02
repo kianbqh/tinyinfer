@@ -1,0 +1,9 @@
+{
+  "stdout_repr": "' {\"configuration_id\": 2, \"config_id\": 2, \"tile\": [64, 64, 32, 8], \"stages\": 2, \"epilogue\": \"fused\"} [end of text]\\n\\n\\n'",
+  "bytes": 116,
+  "sha256": "8aaed2d1c4774072382230ba5b8b0e51048644aaec0593b755a4dc92b9521073",
+  "trailing_lf_count": 3,
+  "raw_bytes_not_modified": true,
+  "strict_json_error": "Extra data: line 1 column 101 (char 100)",
+  "cli_trailer_source": "ggml-org/llama.cpp@ddf48f85c933c1f438212a02eb21e7b001d2d37d tools/completion/completion.cpp:927-930"
+}

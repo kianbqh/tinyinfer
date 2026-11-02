@@ -1,0 +1,118 @@
+{
+  "status": "interrupted_interface_failure_children_closed",
+  "started_utc": "2026-11-02T23:00:07.417700+00:00",
+  "reason": "Root STOP: repeated exit0/empty stdout indicates mechanical output-interface failure; not model-quality failure",
+  "checkpoint": "961eee603a27f4af3faf827eeaad84b091295fd2",
+  "parent_pid": 366477,
+  "signals": [
+    {
+      "pid": 366477,
+      "role": "orchestrator",
+      "signal": 15,
+      "start_ticks": "13481246"
+    },
+    {
+      "pid": 372127,
+      "role": "cpu_proposer",
+      "signal": 15,
+      "start_ticks": "13532018"
+    }
+  ],
+  "snapshots": [
+    {
+      "label": "before_stop",
+      "rows": [
+        {
+          "pid": 366477,
+          "state": "S",
+          "ppid": 366476,
+          "pgrp": 366477,
+          "session": 366477,
+          "start_ticks": "13481246",
+          "exe": "/usr/bin/python3.12",
+          "argv": [
+            "/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+            "-B",
+            "-m",
+            "autotune.run",
+            "--config",
+            "/opt/codex-resume/all-modules-v2/m2/runs/20261102T224446Z-m2-autotune-venvfix/autotune.json",
+            "--output",
+            "results/v2/20261102T224446Z-m2-autotune-venvfix"
+          ],
+          "role": "orchestrator"
+        },
+        {
+          "pid": 372127,
+          "state": "R",
+          "ppid": 366477,
+          "pgrp": 366477,
+          "session": 366477,
+          "start_ticks": "13532018",
+          "exe": "/opt/codex-resume/llm-risk-classifier/llama/llama-b12024/llama-completion",
+          "argv": [
+            "/opt/codex-resume/llm-risk-classifier/llama/llama-b12024/llama-completion",
+            "-m",
+            "/opt/codex-resume/llm-risk-classifier/weights/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+            "-ngl",
+            "0",
+            "--seed",
+            "32",
+            "-n",
+            "384",
+            "-c",
+            "8192",
+            "--temp",
+            "0.7",
+            "--no-display-prompt",
+            "--no-conversation",
+            "--log-disable",
+            "-f",
+            "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T224446Z-m2-autotune-venvfix/seed-17/llm/proposals/proposal-0015/prompt.txt"
+          ],
+          "role": "cpu_proposer"
+        }
+      ]
+    },
+    {
+      "label": "after_initial_signals",
+      "rows": [
+        {
+          "pid": 372127,
+          "state": "Z",
+          "ppid": 366477,
+          "pgrp": 366477,
+          "session": 366477,
+          "start_ticks": "13532018",
+          "role": "zombie"
+        }
+      ]
+    },
+    {
+      "label": "cleanup_poll",
+      "rows": []
+    },
+    {
+      "label": "final",
+      "rows": []
+    }
+  ],
+  "unknown": [],
+  "original_search_files_modified": false,
+  "remaining_scope_members": [],
+  "finished_utc": "2026-11-02T23:00:07.521282+00:00",
+  "original_search_status": "started",
+  "partial_llm": {
+    "status": "started",
+    "evaluations": 0,
+    "invalid": 15,
+    "proposal_errors": 0,
+    "attempt_count": 16,
+    "last_attempt": [
+      {
+        "attempt": 15,
+        "status": "proposing"
+      }
+    ]
+  }
+}

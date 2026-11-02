@@ -1,0 +1,23 @@
+{
+  "started_utc": "2026-11-02T23:09:37.695884+00:00",
+  "finished_utc": "2026-11-02T23:09:39.700368+00:00",
+  "argv": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "autotune/tests",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "cwd": "/mnt/g/ResumeProject/platforms/tinyinfer",
+  "exit_code": 0,
+  "wall_seconds": 2.0045124239986762,
+  "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "89afb67ee9094c80044a22500603092875bdfa2d8f26af5bc305e0bc51f20376",
+  "scope": "Actual integrated CPU autotuner regression suite; no model/GPU execution"
+}

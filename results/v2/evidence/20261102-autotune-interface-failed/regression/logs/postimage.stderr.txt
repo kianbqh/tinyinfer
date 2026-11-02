@@ -1,0 +1,13 @@
+test_actual_probe_extra_key_stays_rejected_after_cli_deframing (test_proposer_transport.ProposerTransportTests.test_actual_probe_extra_key_stays_rejected_after_cli_deframing) ... ok
+test_completion_stdout_survives_and_diagnostics_stay_separate (test_proposer_transport.ProposerTransportTests.test_completion_stdout_survives_and_diagnostics_stay_separate) ... ok
+test_decoder_leaves_middle_incomplete_and_crlf_trailers_untouched (test_proposer_transport.ProposerTransportTests.test_decoder_leaves_middle_incomplete_and_crlf_trailers_untouched) ... ok
+test_decoder_preserves_payload_whitespace_and_never_recurses (test_proposer_transport.ProposerTransportTests.test_decoder_preserves_payload_whitespace_and_never_recurses) ... ok
+test_exact_cli_trailer_allows_strict_json_without_changing_raw_stdout (test_proposer_transport.ProposerTransportTests.test_exact_cli_trailer_allows_strict_json_without_changing_raw_stdout) ... ok
+test_model_marker_and_cli_marker_remove_only_last_once (test_proposer_transport.ProposerTransportTests.test_model_marker_and_cli_marker_remove_only_last_once) ... ok
+test_non_json_generation_is_preserved_for_strict_rejection (test_proposer_transport.ProposerTransportTests.test_non_json_generation_is_preserved_for_strict_rejection) ... ok
+test_token_limit_truncation_without_cli_trailer_stays_unchanged (test_proposer_transport.ProposerTransportTests.test_token_limit_truncation_without_cli_trailer_stays_unchanged) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.035s
+
+OK

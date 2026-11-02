@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "status": "original_and_oneflag_preimages_fail_postimage_passes",
+  "interpreter": "/usr/bin/python3",
+  "python_version": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+  "temporary_root": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/proposer-transport-fix/tmp",
+  "results": [
+    {
+      "phase": "preimage",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "autotune/tests",
+        "-p",
+        "test_proposer_transport.py",
+        "-v"
+      ],
+      "cwd": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/proposer-transport-fix/preimage",
+      "started_at": "2026-11-02T23:08:09.205955+00:00",
+      "exit_code": 1,
+      "wall_seconds": 1.687888031010516,
+      "stdout_bytes": 0,
+      "stderr_bytes": 9682,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e57125d8560b9e0a1e91f5c628b9f30526f929a180095554b4967d1f94a6ca5f"
+    },
+    {
+      "phase": "transport_preimage",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "autotune/tests",
+        "-p",
+        "test_proposer_transport.py",
+        "-v"
+      ],
+      "cwd": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/proposer-transport-fix/transport_preimage",
+      "started_at": "2026-11-02T23:08:10.894012+00:00",
+      "exit_code": 1,
+      "wall_seconds": 1.479670440981863,
+      "stdout_bytes": 0,
+      "stderr_bytes": 8289,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "4abc0e79b5c97d99aa27c0ce50ce1ecba8dfb01f7460d50c51f3a40d08d25f8e"
+    },
+    {
+      "phase": "postimage",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "autotune/tests",
+        "-p",
+        "test_proposer_transport.py",
+        "-v"
+      ],
+      "cwd": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/proposer-transport-fix/postimage",
+      "started_at": "2026-11-02T23:08:12.373827+00:00",
+      "exit_code": 0,
+      "wall_seconds": 1.5001635199878365,
+      "stdout_bytes": 0,
+      "stderr_bytes": 1546,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "7a110e725827cde35f5f1f5d88cf0bcb7b7bcb631de19b4c027571181e3134ed"
+    }
+  ],
+  "no_ml_runtime": "Test imports stdlib-only control modules; executable fixture reads a text payload, not a model; no GPU/build/service invoked"
+}

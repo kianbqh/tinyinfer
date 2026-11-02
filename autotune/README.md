@@ -2,7 +2,7 @@
 
 This module compares a local llama.cpp proposer with seeded random search over the same12 GEMM choices. Proposals contain data only: exact catalog ID, tile, stages and epilogue. Candidate text never becomes code, shell or compiler flags.
 
-**Status:** private implementation candidate. Stdlib fake-proposer tests pass; real llama.cpp proposal, CUDA candidate compilation/correctness/timing and search comparisons are **not run**. There is no measured speedup or finding that one proposer is better.
+**Status:** the three-seed comparison is pending a fresh run after a completion-output fix. An earlier attempt reached real CUDA candidate tests and timing, then stopped when the CLI returned empty stdout. Its [interruption record](../results/v2/20261102T224446Z-m2-autotune-venvfix/interrupted.json) and [raw command evidence](../results/v2/evidence/20261102-autotune-interface-failed/) are retained. That interrupted run does not establish a comparison between proposers.
 
 ## Setup and execution
 
@@ -11,6 +11,8 @@ Root first integrates/tests the v2 kernel and native decoder changes after openi
 The proposer requires a locally installed llama.cpp **completion CLI** and local GGUF. The previously verified M1-A artifact is a candidate; the CLI executable and its supported flags still require checking with that exact build's `--help/--version`. Do not assume `llama-server` is interchangeable with a completion CLI. If the local build lacks this CLI, record that fact and coordinate a bounded build before attempting the experiment. No download, service startup or paid API is implicit.
 
 The fixed command uses `-ngl 0`, one prompt file, bounded output/context and process timeout. Every proposal process fully exits before the kernel build/evaluator starts. This explicitly uses CPU proposal inference; its overhead is reported separately and no GPU proposal speed is claimed. At execution, verify process flags and GPU telemetry to confirm no persistent LLM/context remains in the benchmark window. Do not point this path at an unrelated external server.
+
+The pinned `llama-completion` CLI sends generated tokens through its logger, so the command keeps logging enabled and captures diagnostics separately on stderr. Its program-generated terminal ` [end of text]` plus three line feeds is decoded once, only at the exact end of stdout. Raw stdout stays unchanged on disk, and the receipt records framing removal and the returned payload hash. Model prose, extra JSON fields and malformed output still fail the strict schema. [The transport probe and regression logs](../results/v2/evidence/20261102-autotune-interface-failed/) retain both the original failure and the fix.
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s autotune/tests -p 'test_*.py'
