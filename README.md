@@ -14,6 +14,10 @@ flowchart LR
     B --> J
     B --> Y[pybind11 API and kernel tests]
     J --> R[CPU-input / CPU-output model call]
+    B --> K[FP16 and INT8-weight kernels]
+    K --> L[Native GPT-2 and per-request KV cache]
+    L --> S[epoll server and dynamic batches]
+    A[Test-gated autotuner] --> K
 ```
 
 | Execution path | What runs |
@@ -111,3 +115,9 @@ The unified suite retains the original compiler tests, kernel CPU/CUDA tests and
 The local run passed 22 CTest cases (12 CPU and 10 CUDA), 57 unified Python cases and two targeted frozen-policy cases. [Suite log](results/tests.log) · [policy regression](results/test-policy.log). All final compiled models matched their reference outputs within `atol=rtol=1e-4`; the largest absolute model error across CPU/GPU was 4.77e-6. The separate 1024³ CPU GEMM had a 2.29e-4 maximum absolute error and passed its `1e-3` tolerance. [Result checks](results/validation.json) · [run record](results/run.json).
 
 The compiler history and the kernel subtree were merged without squash. Both original main commits remain ancestors; commands and source SHAs are in [history.md](docs/history.md). Earlier output snapshots live in `results/before/`; the GPU tables above use only the new integrated run.
+
+## Native decoder experiments
+
+I'm extending the backend with [WMMA GEMM and tiled attention](kernels/src/cuda/tc/README.md), a [native GPT-2 decoder](llm/README.md), an [epoll inference server](server/README.md), and a [test-gated kernel search](autotune/README.md). The decoder and server use the same C ABI and per-request KV slots. INT8 stores weights and dequantizes them for FP16 compute; it is not an INT8 Tensor Core path.
+
+These additions are under validation. Their GPU quality, speed, profiling and serving results are **not run** yet. The tables above retain the completed compiler experiment. New runs write separate paths under `results/v2/`; their commands and measurement boundaries are documented in each module.

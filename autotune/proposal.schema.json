@@ -1,0 +1,354 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Bounded tinyinfer GEMM proposal",
+  "oneOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "config_id",
+        "tile",
+        "stages",
+        "epilogue"
+      ],
+      "properties": {
+        "config_id": {
+          "const": 0
+        },
+        "tile": {
+          "const": [
+            32,
+            32,
+            16,
+            4
+          ]
+        },
+        "stages": {
+          "const": 2
+        },
+        "epilogue": {
+          "const": "fused"
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "config_id",
+        "tile",
+        "stages",
+        "epilogue"
+      ],
+      "properties": {
+        "config_id": {
+          "const": 1
+        },
+        "tile": {
+          "const": [
+            64,
+            32,
+            32,
+            8
+          ]
+        },
+        "stages": {
+          "const": 2
+        },
+        "epilogue": {
+          "const": "fused"
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "config_id",
+        "tile",
+        "stages",
+        "epilogue"
+      ],
+      "properties": {
+        "config_id": {
+          "const": 2
+        },
+        "tile": {
+          "const": [
+            64,
+            64,
+            32,
+            8
+          ]
+        },
+        "stages": {
+          "const": 2
+        },
+        "epilogue": {
+          "const": "fused"
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "config_id",
+        "tile",
+        "stages",
+        "epilogue"
+      ],
+      "properties": {
+        "config_id": {
+          "const": 3
+        },
+        "tile": {
+          "const": [
+            32,
+            32,
+            16,
+            4
+          ]
+        },
+        "stages": {
+          "const": 1
+        },
+        "epilogue": {
+          "const": "fused"
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "config_id",
+        "tile",
+        "stages",
+        "epilogue"
+      ],
+      "properties": {
+        "config_id": {
+          "const": 4
+        },
+        "tile": {
+          "const": [
+            64,
+            32,
+            32,
+            8
+          ]
+        },
+        "stages": {
+          "const": 1
+        },
+        "epilogue": {
+          "const": "fused"
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "config_id",
+        "tile",
+        "stages",
+        "epilogue"
+      ],
+      "properties": {
+        "config_id": {
+          "const": 5
+        },
+        "tile": {
+          "const": [
+            64,
+            64,
+            32,
+            8
+          ]
+        },
+        "stages": {
+          "const": 1
+        },
+        "epilogue": {
+          "const": "fused"
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "config_id",
+        "tile",
+        "stages",
+        "epilogue"
+      ],
+      "properties": {
+        "config_id": {
+          "const": 6
+        },
+        "tile": {
+          "const": [
+            32,
+            32,
+            16,
+            4
+          ]
+        },
+        "stages": {
+          "const": 2
+        },
+        "epilogue": {
+          "const": "separate"
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "config_id",
+        "tile",
+        "stages",
+        "epilogue"
+      ],
+      "properties": {
+        "config_id": {
+          "const": 7
+        },
+        "tile": {
+          "const": [
+            64,
+            32,
+            32,
+            8
+          ]
+        },
+        "stages": {
+          "const": 2
+        },
+        "epilogue": {
+          "const": "separate"
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "config_id",
+        "tile",
+        "stages",
+        "epilogue"
+      ],
+      "properties": {
+        "config_id": {
+          "const": 8
+        },
+        "tile": {
+          "const": [
+            64,
+            64,
+            32,
+            8
+          ]
+        },
+        "stages": {
+          "const": 2
+        },
+        "epilogue": {
+          "const": "separate"
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "config_id",
+        "tile",
+        "stages",
+        "epilogue"
+      ],
+      "properties": {
+        "config_id": {
+          "const": 9
+        },
+        "tile": {
+          "const": [
+            32,
+            32,
+            16,
+            4
+          ]
+        },
+        "stages": {
+          "const": 1
+        },
+        "epilogue": {
+          "const": "separate"
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "config_id",
+        "tile",
+        "stages",
+        "epilogue"
+      ],
+      "properties": {
+        "config_id": {
+          "const": 10
+        },
+        "tile": {
+          "const": [
+            64,
+            32,
+            32,
+            8
+          ]
+        },
+        "stages": {
+          "const": 1
+        },
+        "epilogue": {
+          "const": "separate"
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "config_id",
+        "tile",
+        "stages",
+        "epilogue"
+      ],
+      "properties": {
+        "config_id": {
+          "const": 11
+        },
+        "tile": {
+          "const": [
+            64,
+            64,
+            32,
+            8
+          ]
+        },
+        "stages": {
+          "const": 1
+        },
+        "epilogue": {
+          "const": "separate"
+        }
+      }
+    }
+  ]
+}

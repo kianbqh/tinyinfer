@@ -34,3 +34,42 @@ jobs:
         env:
           TINYC_CUDA: 'ON'
         run: bash scripts/test.sh
+  llm-cpu-contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: KV, quantization, token protocol and host ABI reference
+        run: python -B -m unittest discover -s llm/tests -p 'test_*.py' -v
+      - name: Native manifest parser and SHA256 vectors
+        run: |
+          mkdir -p "$RUNNER_TEMP/tinyinfer-v2-llm"
+          g++ -std=c++17 -O2 -Wall -Wextra -Illm/src llm/tests/test_artifact.cpp -o "$RUNNER_TEMP/tinyinfer-v2-llm/test-artifact"
+          "$RUNNER_TEMP/tinyinfer-v2-llm/test-artifact"
+  server-autotune-cpu:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Protocol, load generator and autotuner gates
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: python -m unittest discover -s server/tests -p 'test_*.py' && python -m unittest discover -s autotune/tests -p 'test_*.py'
+      - name: Native CPU server and contention checks
+        run: |
+          cmake -S server -B build-v2-server -DCMAKE_BUILD_TYPE=Debug
+          cmake --build build-v2-server --parallel 2
+          ctest --test-dir build-v2-server --output-on-failure
+      - name: ThreadSanitizer producer contention and sockets
+        env:
+          TSAN_OPTIONS: halt_on_error=1
+        run: |
+          cmake -S server -B build-v2-server-tsan -DCMAKE_BUILD_TYPE=Debug -DTI_SERVER_TSAN=ON
+          cmake --build build-v2-server-tsan --parallel 2
+          ctest --test-dir build-v2-server-tsan --output-on-failure
