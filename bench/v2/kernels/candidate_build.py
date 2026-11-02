@@ -59,7 +59,7 @@ def main():
                "-DTINYC_CUDA=ON","-DTINYC_V2_CUDA=ON",f"-DTINYC_V2_GEMM_CONFIG={identifier}",
                f"-DCMAKE_CUDA_COMPILER={nvcc}",f"-DCUDAToolkit_ROOT={nvcc.parent.parent}",
                f"-DCMAKE_CXX_COMPILER={Path(args.cxx).resolve()}",
-               f"-DPython3_EXECUTABLE={Path(args.python).resolve()}",
+               f"-DPython3_EXECUTABLE={Path(args.python).absolute()}",
                f"-DPython3_INCLUDE_DIR={Path(args.python_include).resolve()}",
                "-DFETCHCONTENT_FULLY_DISCONNECTED=ON",
                f"-DFETCHCONTENT_SOURCE_DIR_GOOGLETEST={Path(args.gtest_source).resolve()}"]
