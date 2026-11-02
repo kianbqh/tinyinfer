@@ -1,7 +1,7 @@
-"""Synthetic unit fixtures only: no profiler capture or measured result.
+"""Stdlib parser/provenance tests; never invoke profiler, main(), or render().
 
-All values, fake reports and fake command receipts in this file are invented
-for parser/provenance rejection tests. The test never calls main() or render().
+Synthetic values/receipts exercise rejection rules. One unchanged real Nsight
+CSV checks the captured raw schema and units, without a performance rerun.
 """
 from __future__ import annotations
 import csv
@@ -40,6 +40,20 @@ def wide(values=None, units=None, kid="0", name="void wmma_gemm<32, 32, 16, 4, f
 
 
 class ParserTests(unittest.TestCase):
+    def test_actual_ncu_2024_1_raw_gemm_schema_and_units(self):
+        fixture = HERE / "fixtures/ncu-2024.1-sm86-gemm-raw.csv"
+        self.assertEqual(p.sha256(fixture),
+                         "7ffa40988bba05aed987c5bca4900db1ed314f32a9fb472b5213db6ee00055bd")
+        text = fixture.read_text(encoding="utf-8")
+        self.assertEqual(len(next(csv.reader(io.StringIO(text)))), 518)
+        launches = p.parse_raw_wide(text)
+        self.assertEqual(len(launches), 1)
+        self.assertEqual(launches[0].kernel_id, "0")
+        self.assertEqual(launches[0].metrics[p.TENSOR_RATE], ("inst/cycle", "1.28"))
+        row, _ = p.derive(launches[0], "gemm", "actual-schema-fixture")
+        self.assertEqual(row["achieved_occupancy_pct"], 59.95)
+        self.assertEqual(row["roofline_model"], "tensor_sm86_x512")
+
     def test_tensor_section_arithmetic(self):
         launch = p.parse_raw_wide(wide())[0]
         result, metrics = p.derive(launch, "gemm", "synthetic-only")
@@ -251,7 +265,7 @@ class ManifestTests(unittest.TestCase):
         cap = self.recorded("capture", [str(ncu), "--launch-count", "1", "--export", str(report), str(exe), "gemm", "1024", "1", "64", "20"],
                             inputs=tool_inputs, outputs={"report": str(report)})
         export = self.recorded("export", [str(ncu), "--import", str(report), "--page", "raw", "--csv",
-                                            "--print-units", "base", "--print-metric-name", "name"], wide(),
+                                            "--print-units", "base"], wide(),
                                inputs={**tool_inputs, "report": str(report)})
         value = {"schema_version": 1, "evidence_kind": "measured", "checkpoint": "a" * 40,
                  "compute_capability": [8, 6], "source_root": str(root), "kernel_build_receipt": str(build_path),
@@ -266,7 +280,9 @@ class ManifestTests(unittest.TestCase):
         return path, {section.name: p.sha256(section)}, value
 
     def test_synthetic_manifest_validates_without_plotting(self):
-        path, sections, _ = self.make_manifest()
+        path, sections, value = self.make_manifest()
+        export = p.load_json(value["captures"][0]["export_command"])
+        self.assertNotIn("--print-metric-name", export["argv"])
         with mock.patch.dict(p.SECTIONS, sections, clear=True):
             rows, evidence = p.verify_inputs(path)
         self.assertEqual(len(rows), 1)

@@ -364,8 +364,7 @@ def verify_inputs(manifest_path):
         require(argv[target + 1] == capture["operation"], "profile operation differs from manifest")
         require(option(exported["argv"], "--import") == capture["report"]
                 and option(exported["argv"], "--page") == "raw" and "--csv" in exported["argv"]
-                and option(exported["argv"], "--print-units") == "base"
-                and option(exported["argv"], "--print-metric-name") == "name", "export raw/name/base command required")
+                and option(exported["argv"], "--print-units") == "base", "export raw/base command required")
         launches = parse_raw_wide(Path(raw["path"]).read_text(encoding="utf-8-sig"))
         require(len(launches) == 1, "one launch per capture; no silent omission of extra launches")
         launch = launches[0]
