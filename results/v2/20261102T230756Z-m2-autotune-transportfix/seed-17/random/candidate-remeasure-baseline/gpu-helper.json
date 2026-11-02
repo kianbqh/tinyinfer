@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+    "-m",
+    "autotune.evaluate",
+    "--config",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T230756Z-m2-autotune-transportfix/seed-17/random/candidate-remeasure-baseline/fixture.json",
+    "--proposal",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T230756Z-m2-autotune-transportfix/seed-17/random/candidate-remeasure-baseline/proposal.json",
+    "--build-manifest",
+    "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T230756Z-transportfix/20261102T230756Z-m2-autotune-transportfix/seed-17/random/candidate-remeasure-baseline/build-manifest.json",
+    "--output",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T230756Z-m2-autotune-transportfix/seed-17/random/candidate-remeasure-baseline/gpu-evaluation"
+  ],
+  "exit_code": 0,
+  "finished_timestamp": "2026-11-02T23:17:42.403078+00:00",
+  "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "status": "completed",
+  "timestamp": "2026-11-02T23:17:36.261649+00:00",
+  "wall_seconds": 6.137044239003444
+}

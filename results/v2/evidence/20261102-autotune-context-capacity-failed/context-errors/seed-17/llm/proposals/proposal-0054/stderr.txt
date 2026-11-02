@@ -1,0 +1,8 @@
+0.00.017.321 I llama_completion: llama backend init
+0.00.017.344 I llama_completion: load the model and apply lora adapter, if any
+0.00.216.298 W load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.00.638.383 I cmn          init: llama threadpool init, n_threads = 10
+0.00.710.595 I 
+0.00.710.675 I system_info: n_threads = 10 (n_threads_batch = 10) / 20 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX_VNNI = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | 
+0.00.710.676 I 
+0.00.712.894 E llama_completion: prompt is too long (8710 tokens, max 8188)

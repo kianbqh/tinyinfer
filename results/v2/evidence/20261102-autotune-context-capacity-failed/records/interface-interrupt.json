@@ -1,0 +1,93 @@
+{
+  "status": "interrupted_interface_failure_children_closed",
+  "started_utc": "2026-11-02T23:37:15.178324+00:00",
+  "reason": "Root STOP: accumulated full search history exceeds the fixed8192 context; interface capacity failure, no matched-budget completion claim",
+  "checkpoint": "91ae0821a1a1e1129beeabbed0aa6ff1d2e4e947",
+  "parent_pid": 373810,
+  "signals": [
+    {
+      "pid": 373810,
+      "role": "orchestrator",
+      "signal": 15,
+      "start_ticks": "13619578"
+    }
+  ],
+  "snapshots": [
+    {
+      "label": "before_stop",
+      "rows": [
+        {
+          "pid": 373810,
+          "state": "R",
+          "ppid": 373809,
+          "pgrp": 373810,
+          "session": 373810,
+          "start_ticks": "13619578",
+          "exe": "/usr/bin/python3.12",
+          "argv": [
+            "/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+            "-B",
+            "-m",
+            "autotune.run",
+            "--config",
+            "/opt/codex-resume/all-modules-v2/m2/runs/20261102T230756Z-m2-autotune-transportfix/autotune.json",
+            "--output",
+            "results/v2/20261102T230756Z-m2-autotune-transportfix"
+          ],
+          "role": "orchestrator"
+        }
+      ]
+    },
+    {
+      "label": "after_initial_signals",
+      "rows": [
+        {
+          "pid": 373810,
+          "state": "R",
+          "ppid": 373809,
+          "pgrp": 373810,
+          "session": 373810,
+          "start_ticks": "13619578",
+          "exe": "/usr/bin/python3.12",
+          "argv": [
+            "/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+            "-B",
+            "-m",
+            "autotune.run",
+            "--config",
+            "/opt/codex-resume/all-modules-v2/m2/runs/20261102T230756Z-m2-autotune-transportfix/autotune.json",
+            "--output",
+            "results/v2/20261102T230756Z-m2-autotune-transportfix"
+          ],
+          "role": "orchestrator"
+        }
+      ]
+    },
+    {
+      "label": "cleanup_poll",
+      "rows": []
+    },
+    {
+      "label": "final",
+      "rows": []
+    }
+  ],
+  "unknown": [],
+  "original_search_files_modified": false,
+  "remaining_scope_members": [],
+  "finished_utc": "2026-11-02T23:37:15.281365+00:00",
+  "original_search_status": "started",
+  "partial_llm": {
+    "status": "started",
+    "evaluations": 1,
+    "invalid": 3,
+    "proposal_errors": 0,
+    "attempt_count": 7,
+    "last_attempt": [
+      {
+        "attempt": 6,
+        "status": "proposing"
+      }
+    ]
+  }
+}

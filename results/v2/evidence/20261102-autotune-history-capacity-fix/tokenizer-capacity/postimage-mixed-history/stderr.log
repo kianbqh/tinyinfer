@@ -1,0 +1,3 @@
+warn: LLAMA_ARG_OFFLINE environment variable is set, but will be overwritten by command line argument --offline
+0.00.108.119 W load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.00.138.223 W llama_context: n_ctx_seq (512) > n_ctx_train (0) -- possible training context overflow

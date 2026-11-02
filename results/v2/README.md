@@ -13,6 +13,8 @@ These runs use an RTX 3080 12 GB and i7-12700KF in WSL2. The native CUDA build i
 | Native server batching off/on | [Matched Poisson load](20261102T132951Z-m2-native-headers-serving-comparison/comparison.json) |
 | Nsight counters and plots | [Readable-label result](20261102T221317Z-m2-profile-enabled-profile-labels/results.json) |
 | Autotuner first attempt | [Initial baseline failure](20261102T132951Z-m2-native-headers-autotune/search.json) |
+| Autotuner output transport | [Interrupted run](20261102T224446Z-m2-autotune-venvfix/interrupted.json) |
+| Autotuner history capacity | [Interrupted run](20261102T230756Z-m2-autotune-transportfix/interrupted.json) |
 
 The [first GEMM attempt](20261102T132951Z-m2-native-headers-gemm/run.json) retains the missing-header errors before the successful retry. The three-seed autotuner comparison is still pending. The first profiling rendering is also retained; the readable-label version changes only display labels.
 

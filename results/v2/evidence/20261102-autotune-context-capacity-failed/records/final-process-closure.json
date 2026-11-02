@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-11-02T23:37:57.965293+00:00",
+  "overall_outcome": "interrupted_history_context_capacity_failure_not_completed",
+  "outer": {
+    "status": "failed",
+    "pid": 373810,
+    "exit_code": -15,
+    "finished_at": "2026-11-02T23:37:15.247519+00:00",
+    "wall_seconds": 1356.538384073996
+  },
+  "known_pids_present": [],
+  "gpu_compute_apps_stdout": "",
+  "gpu_query_exit_code": 0
+}

@@ -41,9 +41,9 @@ assert '--no-display-prompt' in args and '--no-conversation' in args
 prompt = Path(value('-f')).read_text(encoding='utf-8')
 catalog = json.loads(next(line.removeprefix('CATALOG=') for line in prompt.splitlines() if line.startswith('CATALOG=')))
 history = json.loads(next(line.removeprefix('PREVIOUS_RESULTS=') for line in prompt.splitlines() if line.startswith('PREVIOUS_RESULTS=')))
-assert len(catalog) == 12 and history[0]['status'] == 'initial_baseline'
-assert history[0]['proposal'] == catalog[0]
-assert history[0]['samples_ms'] == [1.0] * 7
+assert len(catalog) == 12
+assert history['columns'] == ['attempt', 'config_id', 'status', 'median_ms', 'correctness_pass', 'error_type']
+assert history['rows'] == [[-1, 0, 'initial_baseline', 1.0, None, None]]
 assert prompt.endswith('\nJSON:\n')
 generated = Path(value('-m')).read_bytes().decode('utf-8')
 if '--log-disable' not in args:

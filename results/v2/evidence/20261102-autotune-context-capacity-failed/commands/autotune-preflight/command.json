@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "argv": [
+    "/usr/bin/env",
+    "LD_LIBRARY_PATH=/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers:/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib:/usr/lib/wsl/lib",
+    "PYTHONPATH=/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers:/mnt/g/ResumeProject/platforms/tinyinfer",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "TINYC_GIT=/opt/codex-resume/all-modules-v2/m1a/tools/git-native/usr/bin/git",
+    "/usr/bin/env",
+    "CPATH=/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include/python3.12:/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include",
+    "CXXFLAGS=-I/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include",
+    "M2_AUTOTUNE_CHECKPOINT=91ae0821a1a1e1129beeabbed0aa6ff1d2e4e947",
+    "/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+    "-B",
+    "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/autotune-next-20261102T230756Z/preflight.py"
+  ],
+  "cwd": "/mnt/g/ResumeProject/platforms/tinyinfer",
+  "started_at": "2026-11-02T23:14:07.083226+00:00",
+  "timeout_seconds": 600,
+  "pid": 373744,
+  "exit_code": 0,
+  "finished_at": "2026-11-02T23:14:14.864208+00:00",
+  "wall_seconds": 7.780984918004833,
+  "stdout.log_sha256": "27b23b6805704b3a1a9bbe1097eec6200be09511e3fd80c05410af10df69b1dd",
+  "stderr.log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}
