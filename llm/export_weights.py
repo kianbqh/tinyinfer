@@ -137,10 +137,18 @@ def quantized_bytes(values, columns):
     return q.tobytes(), scales.tobytes()
 
 
-def export(source, destination, precision):
+def export(source, destination, precision, host_codec=None):
     started = time.perf_counter()
     if precision not in ('fp16', 'int8'):
         raise ValueError('precision must be fp16/int8')
+    if precision == 'int8' and host_codec is None:
+        raise ValueError('INT8 export requires --host-codec; no silent Python fallback')
+    def encode(values, columns):
+        actual = host_codec.quantized_bytes(values, columns)
+        reference = quantized_bytes(values, columns)  # independent original implementation
+        if actual != reference:
+            raise ValueError('native/reference INT8 bytes differ; export rejected')
+        return actual
     source = Path(source).resolve()
     actual = sha256_file(source)
     if actual != MODEL_SHA256:
@@ -165,7 +173,7 @@ def export(source, destination, precision):
                 values = half_values(reader.read(name, shape))
                 is_linear = len(shape) == 2 and '.h.' in name and name.endswith('.weight')
                 if precision == 'int8' and is_linear:
-                    q, scales = quantized_bytes(values, shape[1])
+                    q, scales = encode(values, shape[1])
                     write(name, 'int8', shape, q)
                     write(name + '.scales', 'float32', [shape[1]], scales)
                 else:
@@ -176,7 +184,7 @@ def export(source, destination, precision):
             head = array.array('f', (embedding[o * 768 + i]
                                     for i in range(768) for o in range(50257)))
             if precision == 'int8':
-                q, scales = quantized_bytes(head, 50257)
+                q, scales = encode(head, 50257)
                 write('lm_head.weight', 'int8', [768, 50257], q)
                 write('lm_head.weight.scales', 'float32', [50257], scales)
             else:
@@ -190,7 +198,10 @@ def export(source, destination, precision):
                     'tied_head': 'transpose_of_fp16_transformer.wte.weight_then_optional_quantization',
                     'tensors': tensor_entries, 'export_command': sys.argv,
                     'export_python': sys.version, 'export_timestamp': dt.datetime.now(dt.timezone.utc).isoformat(),
-                    'export_wall_seconds': time.perf_counter() - started}
+                    'export_wall_seconds': time.perf_counter() - started,
+                     'host_codec': ({'abi_version': 1, 'library_sha256': sha256_file(host_codec.path),
+                                     'reference_parity': 'byte_exact_q_and_fp32_scales'}
+                                    if precision == 'int8' else None)}
         (destination / 'manifest.json').write_text(json.dumps(manifest, indent=2, allow_nan=False) + '\n', encoding='ascii')
     finally:
         reader.close()
@@ -202,8 +213,11 @@ def main():
     parser.add_argument('--safetensors', required=True)
     parser.add_argument('--output', required=True)
     parser.add_argument('--precision', required=True, choices=['fp16', 'int8'])
+    parser.add_argument('--host-codec', help='explicit host-only codec shared library (required for INT8)')
     args = parser.parse_args()
-    manifest = export(args.safetensors, args.output, args.precision)
+    from .host_codec import HostCodec
+    codec = HostCodec(args.host_codec) if args.host_codec else None
+    manifest = export(args.safetensors, args.output, args.precision, codec)
     print(json.dumps({'manifest': str(Path(args.output).resolve() / 'manifest.json'),
                       'binary_sha256': manifest['binary_sha256']}))
 

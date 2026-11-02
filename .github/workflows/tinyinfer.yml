@@ -73,3 +73,33 @@ jobs:
           cmake -S server -B build-v2-server-tsan -DCMAKE_BUILD_TYPE=Debug -DTI_SERVER_TSAN=ON
           cmake --build build-v2-server-tsan --parallel 2
           ctest --test-dir build-v2-server-tsan --output-on-failure
+  robustness:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build instrumented project code
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python -B fuzz/build.py --cxx "$(command -v clang++)" --output-parent "$RUNNER_TEMP/tinyinfer-robustness"
+          echo "FUZZ_RECEIPT=$(find "$RUNNER_TEMP/tinyinfer-robustness" -maxdepth 2 -name build.json -print -quit)" >> "$GITHUB_ENV"
+      - name: Exact host codec and rejected-input checks
+        run: |
+          cmake -S backend/host_codec -B "$RUNNER_TEMP/tinyinfer-host-codec" -DCMAKE_BUILD_TYPE=Release
+          cmake --build "$RUNNER_TEMP/tinyinfer-host-codec" --parallel 2
+          python -B fuzz/check_codec.py --library "$RUNNER_TEMP/tinyinfer-host-codec/libtinyinfer_host_codec.so" > "$RUNNER_TEMP/tinyinfer-robustness/codec-parity.json"
+      - name: Replay retained regressions and initial corpus
+        run: python -B fuzz/replay_regressions.py --build-receipt "$FUZZ_RECEIPT" --include-seeds --output-parent "$RUNNER_TEMP/tinyinfer-robustness"
+      - name: Short random-input run
+        run: python -B fuzz/run_campaign.py --config fuzz/configs/ci.json --build-receipt "$FUZZ_RECEIPT" --output-parent "$RUNNER_TEMP/tinyinfer-robustness"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tinyinfer-robustness-${{ github.sha }}
+          path: ${{ runner.temp }}/tinyinfer-robustness
+          retention-days: 14
+          if-no-files-found: error

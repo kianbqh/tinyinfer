@@ -16,14 +16,14 @@ The PPL source is the test split of [Salesforce/wikitext](https://huggingface.co
 
 Use the M2 private WSL2 environment and G-backed paths. CUDA12.4 builds this standalone C ABI; Torch's installed CUDA major need not match the compiler at build time because no Torch header/library is linked. Actual cross-runtime context/stream correctness must pass the separate kernel GPU gate. Pin and record the chosen Transformers/tokenizers/safetensors/pyarrow versions in the private environment; no script here downloads or installs packages implicitly.
 
-Root CMake must add `tinyinfer_llm` after the additive v2 kernel target. Configure with `TINYC_CUDA=ON`, `TINYC_V2_CUDA=ON`, `TINYC_LLM=ON`, actual sm86 flags and `CMAKE_EXPORT_COMPILE_COMMANDS=ON`. Keep the complete build log and record it with `python -m llm.build_receipt --help`. The receipt verifies the actual model compilation record and standalone linkage, and binds the library/backend/source hashes.
+The root CMake build adds `tinyinfer_llm` after the v2 kernel target. Configure with `TINYC_CUDA=ON`, `TINYC_V2_CUDA=ON`, `TINYC_LLM=ON`, `TINYC_HOST_CODEC=ON`, actual sm86 flags and `CMAKE_EXPORT_COMPILE_COMMANDS=ON`. Keep the complete build log and record it with `python -m llm.build_receipt --help`. The receipt verifies the actual model compilation record and standalone linkage, and binds the library/backend/source hashes. The host codec can also be built independently with `cmake -S backend/host_codec -B "$M2_ROOT/host-codec"` and `cmake --build "$M2_ROOT/host-codec"`.
 
 After the local official model/tokenizer files and test parquet are present:
 
 ```bash
 M2_ROOT=/opt/codex-resume/all-modules-v2/m2
 python -m llm.export_weights --safetensors "$M2_ROOT/hf-gpt2/model.safetensors" --precision fp16 --output "$M2_ROOT/weights/gpt2-fp16"
-python -m llm.export_weights --safetensors "$M2_ROOT/hf-gpt2/model.safetensors" --precision int8 --output "$M2_ROOT/weights/gpt2-int8"
+python -m llm.export_weights --safetensors "$M2_ROOT/hf-gpt2/model.safetensors" --precision int8 --host-codec "$M2_ROOT/host-codec/libtinyinfer_host_codec.so" --output "$M2_ROOT/weights/gpt2-int8"
 python -m llm.freeze_tokens --parquet "$M2_ROOT/data/wikitext-2-raw-test.parquet" --tokenizer "$M2_ROOT/hf-gpt2" --output "$M2_ROOT/data/frozen-wt2-16384.json" --rows 4358 --max-tokens 16384 --context 1024 --stride 512
 python -B -m unittest discover -s llm/tests -p 'test_*.py' -v
 ```

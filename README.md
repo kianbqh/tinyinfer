@@ -121,3 +121,9 @@ The compiler history and the kernel subtree were merged without squash. Both ori
 I'm extending the backend with [WMMA GEMM and tiled attention](kernels/src/cuda/tc/README.md), a [native GPT-2 decoder](llm/README.md), an [epoll inference server](server/README.md), and a [test-gated kernel search](autotune/README.md). The decoder and server use the same C ABI and per-request KV slots. INT8 stores weights and dequantizes them for FP16 compute; it is not an INT8 Tensor Core path.
 
 These additions are under validation. Their GPU quality, speed, profiling and serving results are **not run** yet. The tables above retain the completed compiler experiment. New runs write separate paths under `results/v2/`; their commands and measurement boundaries are documented in each module.
+
+The [robustness suite](fuzz/README.md) feeds random inputs to the model/weight
+parser, shape checks, operator entry validators and the actual host quantization
+codec. Each PR runs a short libFuzzer job with ASan and UBSan. Run logs, input
+corpora and any failure artifacts are retained; measured outcomes will be linked
+from `results/robustness/` after the first completed run.

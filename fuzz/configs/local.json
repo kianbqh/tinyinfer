@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "name": "finite-local-host-memory-safety",
+  "targets": ["json", "artifact", "host_validation", "cpu_ops", "codec"],
+  "seed": 20261102,
+  "runs": 100000,
+  "max_total_time_seconds_per_target": 120,
+  "timeout_seconds_per_input": 2,
+  "max_len": 65536,
+  "rss_limit_mb": 512,
+  "malloc_limit_mb": 64,
+  "workers": 1,
+  "jobs": 0
+}

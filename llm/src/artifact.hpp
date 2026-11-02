@@ -149,17 +149,34 @@ struct Artifact {
   std::vector<uint8_t> binary;
   std::map<std::string,TensorInfo> tensors;
   std::string precision;
-  explicit Artifact(const std::string& path) {
-    auto raw=read_bytes(path,1024*1024);std::string text(raw.begin(),raw.end());Json manifest=Parser(text).run();
+  struct Input { Json manifest; std::vector<uint8_t> binary; };
+  static Json parse_manifest(const std::string& text) {
+    if(text.size()>1024*1024) throw Invalid("artifact exceeds size limit");
+    Json manifest=Parser(text).run();
     if(manifest.at("schema_version").integer()!=1||manifest.at("alignment").integer()!=256||manifest.at("binary").str()!="weights.bin"||
        manifest.at("model_id").str()!="openai-community/gpt2"||manifest.at("revision").str()!="607a30d783dfa663caf39e06633721c8d4cfcd7e"||
        manifest.at("source_sha256").str()!="248dfc3911869ec493c76e65bf2fcf7f615828b0254c12b473182f0f81d3a707")throw Invalid("unrecognized artifact identity");
     auto& a=manifest.at("architecture");
     if(a.at("layers").integer()!=12||a.at("heads").integer()!=12||a.at("hidden").integer()!=768||a.at("vocab").integer()!=50257||
        a.at("capacity").integer()!=1024||a.at("gelu").str()!="gelu_new"||a.at("layer_norm_eps").real()!=1e-5)throw Invalid("only pinned GPT-2 124M supported");
-    precision=manifest.at("precision").str();if(precision!="fp16"&&precision!="int8")throw Invalid("unknown precision");
+    auto precision=manifest.at("precision").str();if(precision!="fp16"&&precision!="int8")throw Invalid("unknown precision");
+    return manifest;
+  }
+  static Input file_input(const std::string& path) {
+    auto raw=read_bytes(path,1024*1024);
+    auto manifest=parse_manifest(std::string(raw.begin(),raw.end()));
     auto slash=path.find_last_of("/\\");std::string parent=slash==std::string::npos?"":path.substr(0,slash+1);
-    binary=read_bytes(parent+"weights.bin",1024ull*1024*1024);
+    return {std::move(manifest),read_bytes(parent+"weights.bin",1024ull*1024*1024)};
+  }
+  explicit Artifact(const std::string& path):Artifact(file_input(path)) {}
+  // Same production parser and checks, with caller-owned in-memory input.
+  static Artifact from_memory(const std::string& text,std::vector<uint8_t> weights) {
+    if(weights.size()>1024ull*1024*1024) throw Invalid("artifact exceeds size limit");
+    return Artifact(Input{parse_manifest(text),std::move(weights)});
+  }
+ private:
+  explicit Artifact(Input input):binary(std::move(input.binary)) {
+    const Json& manifest=input.manifest;precision=manifest.at("precision").str();
     if(binary.size()!=manifest.at("binary_bytes").integer()||Sha256::digest(binary.data(),binary.size())!=manifest.at("binary_sha256").str())throw Invalid("weights binary SHA256/length mismatch");
     auto& entries=manifest.at("tensors");if(entries.kind!=Json::Array||entries.array.size()>256)throw Invalid("invalid tensor list");
     std::vector<std::pair<uint64_t,uint64_t>> ranges;
@@ -180,6 +197,7 @@ struct Artifact {
     }
     std::sort(ranges.begin(),ranges.end());for(size_t i=1;i<ranges.size();++i)if(ranges[i-1].second>ranges[i].first)throw Invalid("overlapping weights");
   }
+ public:
   const TensorInfo& require(const std::string& name,const std::vector<int>& shape,const std::string& dtype) const {
     auto it=tensors.find(name);if(it==tensors.end()||it->second.shape!=shape||it->second.dtype!=dtype)throw Invalid("tensor schema mismatch: "+name);return it->second;
   }

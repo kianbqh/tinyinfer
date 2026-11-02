@@ -15,7 +15,8 @@ def build_source_paths(root):
     """Include CMake fragments and shared host headers used by native builds."""
     root=Path(root)
     paths=[root/"CMakeLists.txt",root/"backend/runtime_v2.cu"]
-    for pattern in ("cmake/*.cmake","backend/include/*.h","backend/*.cpp",
+    for pattern in ("cmake/*.cmake","backend/include/*.h","backend/include/*.hpp","backend/*.cpp",
+                    "backend/host_codec/CMakeLists.txt",
                     "kernels/src/cuda/tc/*.cu","kernels/src/cuda/tc/*.cuh"):
         paths.extend(root.glob(pattern))
     return sorted(set(paths))

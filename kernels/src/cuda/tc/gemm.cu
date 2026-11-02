@@ -1,5 +1,6 @@
 #include "launchers.cuh"
 #include "catalog.cuh"
+#include "tinyinfer_quantization_scalar.h"
 #include <mma.h>
 #include <cstddef>
 namespace ti::v2 {
@@ -17,7 +18,7 @@ __device__ void load_stage(half* as,half* bs,const half* a,const void* b,const f
     int64_t r=k0+i/BN,c=int64_t(col)+i%BN;
     float value=0.f;
     if(r<k && c<n) {
-      if constexpr(INT8) value=float(static_cast<const int8_t*>(b)[size_t(r)*n+c])*scales[c];
+      if constexpr(INT8) value=ti::host::dequantize_scalar(static_cast<const int8_t*>(b)[size_t(r)*n+c],scales[c]);
       else value=__half2float(static_cast<const half*>(b)[size_t(r)*n+c]);
     }
     bs[i]=__float2half_rn(value);

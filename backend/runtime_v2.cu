@@ -1,4 +1,5 @@
 #include "tinyinfer_backend_v2.h"
+#include "tinyinfer_host_validation.hpp"
 #include "tc/launchers.cuh"
 #include "tc/catalog.cuh"
 #include <cmath>
@@ -12,14 +13,8 @@ int fail(int status,const char* text) { std::snprintf(error_text,sizeof(error_te
 int cuda_status(cudaError_t status) {
   return status==cudaSuccess?TI_V2_OK:fail(TI_V2_CUDA_ERROR,cudaGetErrorString(status));
 }
-bool aligned(const void* p,size_t bytes) { return p && reinterpret_cast<uintptr_t>(p)%bytes==0; }
-bool shape_fits(std::initializer_list<int> dims,size_t bytes) {
-  uint64_t product=bytes;
-  for(int d:dims) {
-    if(d<=0 || product>uint64_t(std::numeric_limits<int64_t>::max())/uint64_t(d)) return false;
-    product*=uint64_t(d);
-  }
-  return true;
+int host_check(ti::host::Check check) {
+  return check.status?fail(check.status,check.message):TI_V2_OK;
 }
 int begin(int device) {
   error_text[0]='\0';
@@ -30,13 +25,7 @@ int begin(int device) {
 }
 int check_gemm(const void* a,const void* b,const void* bias,void* y,int m,int n,int k,int dtype,int config,int device,bool int8) {
   int status=begin(device);if(status) return status;
-  if(!ti::v2::config_available(config)) return fail(TI_V2_UNSUPPORTED_CONFIG,"GEMM config absent from this compiled allow-list");
-  int bm=ti::v2::config_tile(config)==0?32:64;
-  if((dtype!=0 && dtype!=1) || !aligned(a,2) || !aligned(b,int8?1:2) || !aligned(y,dtype==0?2:4) ||
-     (bias && !aligned(bias,2)) || !shape_fits({m,k},2) || !shape_fits({k,n},int8?1:2) ||
-     !shape_fits({m,n},dtype==0?2:4) || (m-1)/bm+1>65535)
-    return fail(TI_V2_INVALID_ARGUMENT,"invalid GEMM shape, pointers, alignment, output dtype or grid");
-  return TI_V2_OK;
+  return host_check(ti::host::gemm(a,b,bias,y,m,n,k,dtype,config,int8));
 }
 }
 extern "C" int ti_v2_abi_version(void) { return 2; }
@@ -73,35 +62,28 @@ extern "C" int ti_v2_gemm_i8(const uint16_t* a,const int8_t* b,const float* scal
 extern "C" int ti_v2_gemm_ex_f16(const uint16_t* a,const uint16_t* b,const uint16_t* bias,void* y,float* workspace,
                                  int m,int n,int k,int dtype,int config,uintptr_t stream,int device) {
   int status=check_gemm(a,b,bias,y,m,n,k,dtype,config,device,false);if(status) return status;
-  if(ti::v2::config_separate(config) && (!aligned(workspace,4) || !shape_fits({m,n},4)))
-    return fail(TI_V2_INVALID_ARGUMENT,"separate epilogue requires caller-owned FP32[M,N] workspace");
+  status=host_check(ti::host::workspace(workspace,m,n,config));if(status) return status;
   return cuda_status(ti::v2::gemm(reinterpret_cast<const half*>(a),b,nullptr,reinterpret_cast<const half*>(bias),y,workspace,
                                  m,n,k,dtype,config,false,reinterpret_cast<cudaStream_t>(stream)));
 }
 extern "C" int ti_v2_gemm_ex_i8(const uint16_t* a,const int8_t* b,const float* scales,const uint16_t* bias,void* y,float* workspace,
                                 int m,int n,int k,int dtype,int config,uintptr_t stream,int device) {
   int status=check_gemm(a,b,bias,y,m,n,k,dtype,config,device,true);if(status) return status;
-  if(!aligned(scales,4)) return fail(TI_V2_INVALID_ARGUMENT,"scales pointer must be nonnull aligned FP32[N]");
-  if(ti::v2::config_separate(config) && (!aligned(workspace,4) || !shape_fits({m,n},4)))
-    return fail(TI_V2_INVALID_ARGUMENT,"separate epilogue requires caller-owned FP32[M,N] workspace");
+  status=host_check(ti::host::scales(scales));if(status) return status;
+  status=host_check(ti::host::workspace(workspace,m,n,config));if(status) return status;
   return cuda_status(ti::v2::gemm(reinterpret_cast<const half*>(a),b,scales,reinterpret_cast<const half*>(bias),y,workspace,
                                  m,n,k,dtype,config,true,reinterpret_cast<cudaStream_t>(stream)));
 }
 extern "C" int ti_v2_legacy_gemm_f32(const float* a,const float* b,float* y,int m,int n,int k,uintptr_t stream,int device) {
   int status=begin(device);if(status) return status;
-  if(!aligned(a,4) || !aligned(b,4) || !aligned(y,4) || !shape_fits({m,k},4) || !shape_fits({k,n},4) ||
-     !shape_fits({m,n},4) || (m-1)/64+1>65535) return fail(TI_V2_INVALID_ARGUMENT,"invalid FP32 GEMM arguments");
+  status=host_check(ti::host::legacy_gemm(a,b,y,m,n,k));if(status) return status;
   return cuda_status(ti::v2::legacy_gemm(a,b,y,m,n,k,reinterpret_cast<cudaStream_t>(stream)));
 }
 extern "C" int ti_v2_attention_f16(const uint16_t* q,const uint16_t* k,const uint16_t* v,uint16_t* y,
                                    const int32_t* ql,const int32_t* kl,const int32_t* offsets,
                                    int b,int h,int nq,int nk,int d,int causal,int config,uintptr_t stream,int device) {
   int status=begin(device);if(status) return status;
-  if(config<0 || config>1) return fail(TI_V2_UNSUPPORTED_CONFIG,"attention config must be 0,1");
-  if((d!=64 && d!=128) || (causal!=0 && causal!=1) || b>65535 || h>65535 ||
-     !shape_fits({b,h,nq,d},2) || !shape_fits({b,h,nk,d},2) ||
-     !aligned(q,2) || !aligned(k,2) || !aligned(v,2) || !aligned(y,2) ||
-     !aligned(ql,4) || !aligned(kl,4) || !aligned(offsets,4)) return fail(TI_V2_INVALID_ARGUMENT,"invalid attention arguments");
+  status=host_check(ti::host::attention(q,k,v,y,ql,kl,offsets,b,h,nq,nk,d,causal,config));if(status) return status;
   return cuda_status(ti::v2::attention(reinterpret_cast<const half*>(q),reinterpret_cast<const half*>(k),
                                       reinterpret_cast<const half*>(v),reinterpret_cast<half*>(y),ql,kl,offsets,
                                       b,h,nq,nk,d,causal!=0,config,reinterpret_cast<cudaStream_t>(stream)));
@@ -109,19 +91,17 @@ extern "C" int ti_v2_attention_f16(const uint16_t* q,const uint16_t* k,const uin
 extern "C" int ti_v2_layernorm_f16(const uint16_t* x,const uint16_t* g,const uint16_t* b,uint16_t* y,
                                    int rows,int cols,float eps,uintptr_t stream,int device) {
   int status=begin(device);if(status) return status;
-  if(!shape_fits({rows,cols},2) || !std::isfinite(eps) || eps<=0.f || !aligned(x,2) || !aligned(g,2) ||
-     !aligned(b,2) || !aligned(y,2)) return fail(TI_V2_INVALID_ARGUMENT,"invalid LayerNorm arguments");
+  status=host_check(ti::host::layernorm(x,g,b,y,rows,cols,eps));if(status) return status;
   return cuda_status(ti::v2::layernorm(reinterpret_cast<const half*>(x),reinterpret_cast<const half*>(g),
                                       reinterpret_cast<const half*>(b),reinterpret_cast<half*>(y),rows,cols,eps,reinterpret_cast<cudaStream_t>(stream)));
 }
 extern "C" int ti_v2_gelu_new_f16(const uint16_t* x,uint16_t* y,int64_t count,uintptr_t stream,int device) {
   int status=begin(device);if(status) return status;
-  if(count<=0 || count>std::numeric_limits<int64_t>::max()/2 || !aligned(x,2) || !aligned(y,2))
-    return fail(TI_V2_INVALID_ARGUMENT,"invalid GELU arguments");
+  status=host_check(ti::host::gelu(x,y,count));if(status) return status;
   return cuda_status(ti::v2::gelu_new(reinterpret_cast<const half*>(x),reinterpret_cast<half*>(y),count,reinterpret_cast<cudaStream_t>(stream)));
 }
 extern "C" int ti_v2_softmax_f16(const uint16_t* x,uint16_t* y,int rows,int cols,uintptr_t stream,int device) {
   int status=begin(device);if(status) return status;
-  if(!shape_fits({rows,cols},2) || !aligned(x,2) || !aligned(y,2)) return fail(TI_V2_INVALID_ARGUMENT,"invalid softmax arguments");
+  status=host_check(ti::host::softmax(x,y,rows,cols));if(status) return status;
   return cuda_status(ti::v2::softmax(reinterpret_cast<const half*>(x),reinterpret_cast<half*>(y),rows,cols,reinterpret_cast<cudaStream_t>(stream)));
 }
