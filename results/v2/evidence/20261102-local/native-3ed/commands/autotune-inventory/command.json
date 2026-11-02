@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "argv": [
+    "/usr/bin/env",
+    "LD_LIBRARY_PATH=/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers:/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib:/usr/lib/wsl/lib",
+    "PYTHONPATH=/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers:/mnt/g/ResumeProject/platforms/tinyinfer",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "TINYC_GIT=/opt/codex-resume/all-modules-v2/m1a/tools/git-native/usr/bin/git",
+    "/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+    "-B",
+    "-c",
+    "import pathlib,json; root=pathlib.Path(\"/opt/codex-resume/llm-risk-classifier/llama/llama-b12024\"); print(json.dumps({\"llama_root\":str(root),\"files\":[{\"name\":p.name,\"bytes\":p.stat().st_size} for p in sorted(root.iterdir()) if p.is_file()]})); print(\"OWNED_SERVER_PIDS_REMAIN\",[pid for pid in (312959,312966,313014,313380,313405,313435) if pathlib.Path(\"/proc\",str(pid)).exists()])"
+  ],
+  "cwd": "/mnt/g/ResumeProject/platforms/tinyinfer",
+  "started_at": "2026-11-02T14:43:03.303307+00:00",
+  "timeout_seconds": 60,
+  "pid": 313769,
+  "exit_code": 0,
+  "finished_at": "2026-11-02T14:43:03.467636+00:00",
+  "wall_seconds": 0.16432940799859352,
+  "stdout.log_sha256": "95db296fc9128fdfd8514b32b87323876a0d053b2040b40b6e689daaf2a574ee",
+  "stderr.log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

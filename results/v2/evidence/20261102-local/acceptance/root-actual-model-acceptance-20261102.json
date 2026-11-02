@@ -1,0 +1,24 @@
+{
+  "accepted": true,
+  "utc": "2026-11-02T14:00:57.351869+00:00",
+  "model_gate_sha256": "d7ad8c7048491ca01877c7221de5c4338da0033255bd3955c88d735668f56d1b",
+  "source_files_verified": 38,
+  "small_input_hashes_verified": 8,
+  "gpu_compute_processes": "",
+  "models": {
+    "fp16": {
+      "cached_vs_prefix_max_abs": 0.0,
+      "hf_last_logits_max_abs": 0.13155364990234375,
+      "hf_last_logits_mean_abs": 0.05303998291492462,
+      "hf_greedy_agreement": 1.0
+    },
+    "int8": {
+      "cached_vs_prefix_max_abs": 0.0,
+      "hf_last_logits_max_abs": 2.04534912109375,
+      "hf_last_logits_mean_abs": 0.6318784952163696,
+      "hf_greedy_agreement": 1.0
+    }
+  },
+  "scope": "Actual closed correctness gate; INT8 HF error is descriptive; PPL and formal speed measurements pending",
+  "large_weights": "Input hash equality was enforced at the original gate start/end; no redundant large-file rehash in this small audit"
+}

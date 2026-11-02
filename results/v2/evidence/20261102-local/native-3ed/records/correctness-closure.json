@@ -1,0 +1,93 @@
+{
+  "at": "2026-11-02T13:58:01.978119+00:00",
+  "command": {
+    "status": "completed",
+    "pid": 307785,
+    "exit_code": 0,
+    "started_at": "2026-11-02T13:53:27.630234+00:00",
+    "finished_at": "2026-11-02T13:53:42.954835+00:00",
+    "wall_seconds": 15.32460406399332
+  },
+  "gate_status": "passed",
+  "source_unchanged": true,
+  "inputs_unchanged": true,
+  "models": {
+    "fp16": {
+      "batched_vs_single_max_abs": 0.0,
+      "cached_vs_prefix_max_abs": 0.0,
+      "reset_isolation_max_abs": 0.0,
+      "hf_last_logits_max_abs": 0.13155364990234375,
+      "hf_last_logits_mean_abs": 0.05303998291492462,
+      "hf_greedy_agreement": 1.0,
+      "invalid_batches_transactional": true,
+      "scoring_public_slots_unchanged": true,
+      "mixed_greedy_matches_independent": true,
+      "actual_call_trace": {
+        "forward_calls": 16,
+        "embedding": 16,
+        "gemm_fp16": 785,
+        "gemm_int8": 0,
+        "layernorm": 400,
+        "gelu": 192,
+        "attention": 192,
+        "residual": 384,
+        "kv_scatter_gather": 192,
+        "lm_head": 17,
+        "argmax": 13,
+        "nll": 4
+      }
+    },
+    "int8": {
+      "batched_vs_single_max_abs": 0.0,
+      "cached_vs_prefix_max_abs": 0.0,
+      "reset_isolation_max_abs": 0.0,
+      "hf_last_logits_max_abs": 2.04534912109375,
+      "hf_last_logits_mean_abs": 0.6318784952163696,
+      "hf_greedy_agreement": 1.0,
+      "invalid_batches_transactional": true,
+      "scoring_public_slots_unchanged": true,
+      "mixed_greedy_matches_independent": true,
+      "actual_call_trace": {
+        "forward_calls": 16,
+        "embedding": 16,
+        "gemm_fp16": 0,
+        "gemm_int8": 785,
+        "layernorm": 400,
+        "gelu": 192,
+        "attention": 192,
+        "residual": 384,
+        "kv_scatter_gather": 192,
+        "lm_head": 17,
+        "argmax": 13,
+        "nll": 4
+      }
+    }
+  },
+  "pids": [
+    {
+      "pid": 305534,
+      "alive": false
+    },
+    {
+      "pid": 305731,
+      "alive": false
+    },
+    {
+      "pid": 305733,
+      "alive": false
+    },
+    {
+      "pid": 307216,
+      "alive": false
+    },
+    {
+      "pid": 307466,
+      "alive": false
+    },
+    {
+      "pid": 307785,
+      "alive": false
+    }
+  ],
+  "nvidia_compute_apps": ""
+}

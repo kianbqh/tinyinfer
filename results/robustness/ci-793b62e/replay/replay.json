@@ -1,0 +1,451 @@
+{
+  "build_receipt_sha256": "9cc99cabd3dbe7f14e6ba95659bd4a5b273aa55dda135622ae7678b77c531cc7",
+  "cases": [
+    {
+      "argv": [
+        "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_json",
+        "/home/runner/work/tinyinfer/tinyinfer/fuzz/corpus/json/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "-runs=1",
+        "-max_len=65536",
+        "-timeout=2",
+        "-rss_limit_mb=512"
+      ],
+      "end_utc": "2026-11-02T12:21:49.415436+00:00",
+      "exit_code": 0,
+      "input": {
+        "path": "fuzz/corpus/json/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "target": "json"
+      },
+      "log": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122149Z-regression-81ceb7c0/0.log",
+      "log_sha256": "4360fe839282486fcea59aaf77eee26167e7394796fcf454df9e7fb5c27644f0",
+      "start_utc": "2026-11-02T12:21:49.383588+00:00",
+      "wall_seconds": 0.031858595999999295
+    },
+    {
+      "argv": [
+        "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_json",
+        "/home/runner/work/tinyinfer/tinyinfer/fuzz/corpus/json/44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "-runs=1",
+        "-max_len=65536",
+        "-timeout=2",
+        "-rss_limit_mb=512"
+      ],
+      "end_utc": "2026-11-02T12:21:49.450922+00:00",
+      "exit_code": 0,
+      "input": {
+        "path": "fuzz/corpus/json/44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "target": "json"
+      },
+      "log": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122149Z-regression-81ceb7c0/1.log",
+      "log_sha256": "5e2375dbbc48f18eaa8afd0650b3df89fc22318819396fcab2e3c6b877c7f816",
+      "start_utc": "2026-11-02T12:21:49.418804+00:00",
+      "wall_seconds": 0.032127122999995095
+    },
+    {
+      "argv": [
+        "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_json",
+        "/home/runner/work/tinyinfer/tinyinfer/fuzz/corpus/json/4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "-runs=1",
+        "-max_len=65536",
+        "-timeout=2",
+        "-rss_limit_mb=512"
+      ],
+      "end_utc": "2026-11-02T12:21:49.485979+00:00",
+      "exit_code": 0,
+      "input": {
+        "path": "fuzz/corpus/json/4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "target": "json"
+      },
+      "log": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122149Z-regression-81ceb7c0/2.log",
+      "log_sha256": "f6ed32063b42952d838ee50b5e646861ae766718ea16ff93816bc09b68ee6b59",
+      "start_utc": "2026-11-02T12:21:49.453391+00:00",
+      "wall_seconds": 0.03259128999999916
+    },
+    {
+      "argv": [
+        "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_json",
+        "/home/runner/work/tinyinfer/tinyinfer/fuzz/corpus/json/8bc9309217fd274ca954370bb5262f9a12d878771913cad405c572de98f64cd6",
+        "-runs=1",
+        "-max_len=65536",
+        "-timeout=2",
+        "-rss_limit_mb=512"
+      ],
+      "end_utc": "2026-11-02T12:21:49.520722+00:00",
+      "exit_code": 0,
+      "input": {
+        "path": "fuzz/corpus/json/8bc9309217fd274ca954370bb5262f9a12d878771913cad405c572de98f64cd6",
+        "sha256": "8bc9309217fd274ca954370bb5262f9a12d878771913cad405c572de98f64cd6",
+        "target": "json"
+      },
+      "log": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122149Z-regression-81ceb7c0/3.log",
+      "log_sha256": "f3f416f30021823a5a8d261afaa81b9466c3086bcce35ffe22e0364b6c02a37d",
+      "start_utc": "2026-11-02T12:21:49.488529+00:00",
+      "wall_seconds": 0.03220698299999469
+    },
+    {
+      "argv": [
+        "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_json",
+        "/home/runner/work/tinyinfer/tinyinfer/fuzz/corpus/json/2cdb26265b4dc65e3b44d694f121fd6de99b9e4b8ae7f08d84bfa9537635ae43",
+        "-runs=1",
+        "-max_len=65536",
+        "-timeout=2",
+        "-rss_limit_mb=512"
+      ],
+      "end_utc": "2026-11-02T12:21:49.588029+00:00",
+      "exit_code": 0,
+      "input": {
+        "path": "fuzz/corpus/json/2cdb26265b4dc65e3b44d694f121fd6de99b9e4b8ae7f08d84bfa9537635ae43",
+        "sha256": "2cdb26265b4dc65e3b44d694f121fd6de99b9e4b8ae7f08d84bfa9537635ae43",
+        "target": "json"
+      },
+      "log": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122149Z-regression-81ceb7c0/4.log",
+      "log_sha256": "12fcb9e757796daf3df8f4ccdfd4a39c746aadef9caa2c1131b4b27b73726a90",
+      "start_utc": "2026-11-02T12:21:49.523609+00:00",
+      "wall_seconds": 0.06442775800000078
+    },
+    {
+      "argv": [
+        "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_artifact",
+        "/home/runner/work/tinyinfer/tinyinfer/fuzz/corpus/artifact/0a18cc441aac315b6e24d7ec0d853a0d1381ea00040b6ebab67fb4f2609f883e",
+        "-runs=1",
+        "-max_len=65536",
+        "-timeout=2",
+        "-rss_limit_mb=512"
+      ],
+      "end_utc": "2026-11-02T12:21:49.624526+00:00",
+      "exit_code": 0,
+      "input": {
+        "path": "fuzz/corpus/artifact/0a18cc441aac315b6e24d7ec0d853a0d1381ea00040b6ebab67fb4f2609f883e",
+        "sha256": "0a18cc441aac315b6e24d7ec0d853a0d1381ea00040b6ebab67fb4f2609f883e",
+        "target": "artifact"
+      },
+      "log": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122149Z-regression-81ceb7c0/5.log",
+      "log_sha256": "f857eaf7756f90037873917347865de522265a004d6a12a9f241eb471edb3a1b",
+      "start_utc": "2026-11-02T12:21:49.592459+00:00",
+      "wall_seconds": 0.03207777000000078
+    },
+    {
+      "argv": [
+        "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_artifact",
+        "/home/runner/work/tinyinfer/tinyinfer/fuzz/corpus/artifact/cf73b2e5eae58e22203177584647ce753669b09e2793f5cb9374335b97191175",
+        "-runs=1",
+        "-max_len=65536",
+        "-timeout=2",
+        "-rss_limit_mb=512"
+      ],
+      "end_utc": "2026-11-02T12:21:49.660805+00:00",
+      "exit_code": 0,
+      "input": {
+        "path": "fuzz/corpus/artifact/cf73b2e5eae58e22203177584647ce753669b09e2793f5cb9374335b97191175",
+        "sha256": "cf73b2e5eae58e22203177584647ce753669b09e2793f5cb9374335b97191175",
+        "target": "artifact"
+      },
+      "log": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122149Z-regression-81ceb7c0/6.log",
+      "log_sha256": "266972cbb8cc26b7a7ce2d856c35b34d3bd2a60e553dcd148b1b2ba6ebe1b31d",
+      "start_utc": "2026-11-02T12:21:49.628567+00:00",
+      "wall_seconds": 0.032247150999999974
+    },
+    {
+      "argv": [
+        "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_artifact",
+        "/home/runner/work/tinyinfer/tinyinfer/fuzz/corpus/artifact/a88d1a75d6131c15222b2be102cc36fb6b18059138f71d839e99c9ee5d9528bb",
+        "-runs=1",
+        "-max_len=65536",
+        "-timeout=2",
+        "-rss_limit_mb=512"
+      ],
+      "end_utc": "2026-11-02T12:21:49.729911+00:00",
+      "exit_code": 0,
+      "input": {
+        "path": "fuzz/corpus/artifact/a88d1a75d6131c15222b2be102cc36fb6b18059138f71d839e99c9ee5d9528bb",
+        "sha256": "a88d1a75d6131c15222b2be102cc36fb6b18059138f71d839e99c9ee5d9528bb",
+        "target": "artifact"
+      },
+      "log": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122149Z-regression-81ceb7c0/7.log",
+      "log_sha256": "ff5faeede686970fc4046452862bd4ec01f85cd5b50c6c4d067744ac6abd86ac",
+      "start_utc": "2026-11-02T12:21:49.664263+00:00",
+      "wall_seconds": 0.06565380199999993
+    },
+    {
+      "argv": [
+        "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_cpu_ops",
+        "/home/runner/work/tinyinfer/tinyinfer/fuzz/corpus/cpu_ops/bff51a6d513395979e3a870c8483769a5a70002e6e32c146c53e1d2edc467002",
+        "-runs=1",
+        "-max_len=65536",
+        "-timeout=2",
+        "-rss_limit_mb=512"
+      ],
+      "end_utc": "2026-11-02T12:21:49.798850+00:00",
+      "exit_code": 0,
+      "input": {
+        "path": "fuzz/corpus/cpu_ops/bff51a6d513395979e3a870c8483769a5a70002e6e32c146c53e1d2edc467002",
+        "sha256": "bff51a6d513395979e3a870c8483769a5a70002e6e32c146c53e1d2edc467002",
+        "target": "cpu_ops"
+      },
+      "log": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122149Z-regression-81ceb7c0/8.log",
+      "log_sha256": "0e9d38f4152602280fb83f7330156fe85803e5085b4e739db04c9e8a0ae3f5c7",
+      "start_utc": "2026-11-02T12:21:49.732599+00:00",
+      "wall_seconds": 0.06625948900000367
+    },
+    {
+      "argv": [
+        "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_cpu_ops",
+        "/home/runner/work/tinyinfer/tinyinfer/fuzz/corpus/cpu_ops/dc64a19a4ef8d065126c7db0b7ce0e7f9348761995a069d398f42ee39bca1101",
+        "-runs=1",
+        "-max_len=65536",
+        "-timeout=2",
+        "-rss_limit_mb=512"
+      ],
+      "end_utc": "2026-11-02T12:21:49.833739+00:00",
+      "exit_code": 0,
+      "input": {
+        "path": "fuzz/corpus/cpu_ops/dc64a19a4ef8d065126c7db0b7ce0e7f9348761995a069d398f42ee39bca1101",
+        "sha256": "dc64a19a4ef8d065126c7db0b7ce0e7f9348761995a069d398f42ee39bca1101",
+        "target": "cpu_ops"
+      },
+      "log": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122149Z-regression-81ceb7c0/9.log",
+      "log_sha256": "1e85ab21bf6d0ca5456775359923b6b635edd64117051ab19c35698137fab417",
+      "start_utc": "2026-11-02T12:21:49.801640+00:00",
+      "wall_seconds": 0.03211009099999984
+    },
+    {
+      "argv": [
+        "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_cpu_ops",
+        "/home/runner/work/tinyinfer/tinyinfer/fuzz/corpus/cpu_ops/aee04a0510558011802f92fa220b6c78ed466036c3b9898df5a4d71cfd92bd94",
+        "-runs=1",
+        "-max_len=65536",
+        "-timeout=2",
+        "-rss_limit_mb=512"
+      ],
+      "end_utc": "2026-11-02T12:21:49.868307+00:00",
+      "exit_code": 0,
+      "input": {
+        "path": "fuzz/corpus/cpu_ops/aee04a0510558011802f92fa220b6c78ed466036c3b9898df5a4d71cfd92bd94",
+        "sha256": "aee04a0510558011802f92fa220b6c78ed466036c3b9898df5a4d71cfd92bd94",
+        "target": "cpu_ops"
+      },
+      "log": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122149Z-regression-81ceb7c0/10.log",
+      "log_sha256": "6e0f4257462a1c5db6fa05a5cc9909f1d0b909d8fa82665164da6152b961991e",
+      "start_utc": "2026-11-02T12:21:49.836266+00:00",
+      "wall_seconds": 0.032055094000000395
+    },
+    {
+      "argv": [
+        "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_codec",
+        "/home/runner/work/tinyinfer/tinyinfer/fuzz/corpus/codec/df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "-runs=1",
+        "-max_len=65536",
+        "-timeout=2",
+        "-rss_limit_mb=512"
+      ],
+      "end_utc": "2026-11-02T12:21:49.903929+00:00",
+      "exit_code": 0,
+      "input": {
+        "path": "fuzz/corpus/codec/df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "target": "codec"
+      },
+      "log": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122149Z-regression-81ceb7c0/11.log",
+      "log_sha256": "937790c9df7bba7993844aa0042fca416e635f7c15643f58dd320bdf3b93936e",
+      "start_utc": "2026-11-02T12:21:49.871120+00:00",
+      "wall_seconds": 0.03281778099999855
+    },
+    {
+      "argv": [
+        "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_codec",
+        "/home/runner/work/tinyinfer/tinyinfer/fuzz/corpus/codec/6d58692645c9d1cfaf13541cbd258f86193ef63c2f1d38f6bbca9617372d7bd6",
+        "-runs=1",
+        "-max_len=65536",
+        "-timeout=2",
+        "-rss_limit_mb=512"
+      ],
+      "end_utc": "2026-11-02T12:21:49.938467+00:00",
+      "exit_code": 0,
+      "input": {
+        "path": "fuzz/corpus/codec/6d58692645c9d1cfaf13541cbd258f86193ef63c2f1d38f6bbca9617372d7bd6",
+        "sha256": "6d58692645c9d1cfaf13541cbd258f86193ef63c2f1d38f6bbca9617372d7bd6",
+        "target": "codec"
+      },
+      "log": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122149Z-regression-81ceb7c0/12.log",
+      "log_sha256": "391d40b2cdcdf34dba471f7c2bafa4c63641b12bb298720d396eed5bd908fa2e",
+      "start_utc": "2026-11-02T12:21:49.906479+00:00",
+      "wall_seconds": 0.031998952999998664
+    },
+    {
+      "argv": [
+        "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_codec",
+        "/home/runner/work/tinyinfer/tinyinfer/fuzz/corpus/codec/4082763076bdaee3a85e52eb5893169d45d057397616251e0e699e6403238e66",
+        "-runs=1",
+        "-max_len=65536",
+        "-timeout=2",
+        "-rss_limit_mb=512"
+      ],
+      "end_utc": "2026-11-02T12:21:49.973046+00:00",
+      "exit_code": 0,
+      "input": {
+        "path": "fuzz/corpus/codec/4082763076bdaee3a85e52eb5893169d45d057397616251e0e699e6403238e66",
+        "sha256": "4082763076bdaee3a85e52eb5893169d45d057397616251e0e699e6403238e66",
+        "target": "codec"
+      },
+      "log": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122149Z-regression-81ceb7c0/13.log",
+      "log_sha256": "154e4d4ba10b0d361007938a4141b87b2a067b3dcdb0e08d438e339e0c4c0b8e",
+      "start_utc": "2026-11-02T12:21:49.940984+00:00",
+      "wall_seconds": 0.032072870000000364
+    },
+    {
+      "argv": [
+        "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_codec",
+        "/home/runner/work/tinyinfer/tinyinfer/fuzz/corpus/codec/a3f6fa56d901c5c2d830fad46595ddddedd2fb485c03199b7b288706a84a2999",
+        "-runs=1",
+        "-max_len=65536",
+        "-timeout=2",
+        "-rss_limit_mb=512"
+      ],
+      "end_utc": "2026-11-02T12:21:50.007515+00:00",
+      "exit_code": 0,
+      "input": {
+        "path": "fuzz/corpus/codec/a3f6fa56d901c5c2d830fad46595ddddedd2fb485c03199b7b288706a84a2999",
+        "sha256": "a3f6fa56d901c5c2d830fad46595ddddedd2fb485c03199b7b288706a84a2999",
+        "target": "codec"
+      },
+      "log": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122149Z-regression-81ceb7c0/14.log",
+      "log_sha256": "5031943c95900f9aa396d2750b9df0c4cc8432e3fbb975f31229b8fc7bccaaea",
+      "start_utc": "2026-11-02T12:21:49.975571+00:00",
+      "wall_seconds": 0.03195591600000114
+    },
+    {
+      "argv": [
+        "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_codec",
+        "/home/runner/work/tinyinfer/tinyinfer/fuzz/corpus/codec/c70439d27ba78a04d3c3fe3df2091f315d9fc902805afdc58e37a055dc6f7642",
+        "-runs=1",
+        "-max_len=65536",
+        "-timeout=2",
+        "-rss_limit_mb=512"
+      ],
+      "end_utc": "2026-11-02T12:21:50.042615+00:00",
+      "exit_code": 0,
+      "input": {
+        "path": "fuzz/corpus/codec/c70439d27ba78a04d3c3fe3df2091f315d9fc902805afdc58e37a055dc6f7642",
+        "sha256": "c70439d27ba78a04d3c3fe3df2091f315d9fc902805afdc58e37a055dc6f7642",
+        "target": "codec"
+      },
+      "log": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122149Z-regression-81ceb7c0/15.log",
+      "log_sha256": "a31679f274d459208cb33b3545cf23e9863186720aba92eff34003ae3f7568c1",
+      "start_utc": "2026-11-02T12:21:50.010050+00:00",
+      "wall_seconds": 0.03257803300000006
+    },
+    {
+      "argv": [
+        "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_codec",
+        "/home/runner/work/tinyinfer/tinyinfer/fuzz/corpus/codec/6b1e73a0094b7b812d3b9e22cffb4f8239319847522c4fa103753b6950020f93",
+        "-runs=1",
+        "-max_len=65536",
+        "-timeout=2",
+        "-rss_limit_mb=512"
+      ],
+      "end_utc": "2026-11-02T12:21:50.077824+00:00",
+      "exit_code": 0,
+      "input": {
+        "path": "fuzz/corpus/codec/6b1e73a0094b7b812d3b9e22cffb4f8239319847522c4fa103753b6950020f93",
+        "sha256": "6b1e73a0094b7b812d3b9e22cffb4f8239319847522c4fa103753b6950020f93",
+        "target": "codec"
+      },
+      "log": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122149Z-regression-81ceb7c0/16.log",
+      "log_sha256": "451829830646674ee3bb9484d46bda17e5472faceb7b3ca969f8d0a9bfc4749b",
+      "start_utc": "2026-11-02T12:21:50.045556+00:00",
+      "wall_seconds": 0.03226963399999505
+    },
+    {
+      "argv": [
+        "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_host_validation",
+        "/home/runner/work/tinyinfer/tinyinfer/fuzz/corpus/host_validation/3048b10d2cc8d14c0329e9347fbcfec3d72fa504b263bf533ee79c2ebb388c5d",
+        "-runs=1",
+        "-max_len=65536",
+        "-timeout=2",
+        "-rss_limit_mb=512"
+      ],
+      "end_utc": "2026-11-02T12:21:50.112689+00:00",
+      "exit_code": 0,
+      "input": {
+        "path": "fuzz/corpus/host_validation/3048b10d2cc8d14c0329e9347fbcfec3d72fa504b263bf533ee79c2ebb388c5d",
+        "sha256": "3048b10d2cc8d14c0329e9347fbcfec3d72fa504b263bf533ee79c2ebb388c5d",
+        "target": "host_validation"
+      },
+      "log": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122149Z-regression-81ceb7c0/17.log",
+      "log_sha256": "d5a3b62ee0291dbba307a054a0a37dccdc45b114d8eb35202171cc29f185d17f",
+      "start_utc": "2026-11-02T12:21:50.080580+00:00",
+      "wall_seconds": 0.032122893000000374
+    },
+    {
+      "argv": [
+        "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_host_validation",
+        "/home/runner/work/tinyinfer/tinyinfer/fuzz/corpus/host_validation/e95bd419a41b6e68a8c2098dbb27d9f422a2afb2c5ebe7ecd005ae7c05afe56f",
+        "-runs=1",
+        "-max_len=65536",
+        "-timeout=2",
+        "-rss_limit_mb=512"
+      ],
+      "end_utc": "2026-11-02T12:21:50.147960+00:00",
+      "exit_code": 0,
+      "input": {
+        "path": "fuzz/corpus/host_validation/e95bd419a41b6e68a8c2098dbb27d9f422a2afb2c5ebe7ecd005ae7c05afe56f",
+        "sha256": "e95bd419a41b6e68a8c2098dbb27d9f422a2afb2c5ebe7ecd005ae7c05afe56f",
+        "target": "host_validation"
+      },
+      "log": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122149Z-regression-81ceb7c0/18.log",
+      "log_sha256": "f659a1035e3c2f1749a6db215f12ac924574c933978cf4b60eddd7b90adcc311",
+      "start_utc": "2026-11-02T12:21:50.115611+00:00",
+      "wall_seconds": 0.032358119999997825
+    },
+    {
+      "argv": [
+        "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_host_validation",
+        "/home/runner/work/tinyinfer/tinyinfer/fuzz/corpus/host_validation/affe6fbf18fb733d2e57f1dafb346ed67cb1b26b97ab832b2f4147f2ad8c3ef4",
+        "-runs=1",
+        "-max_len=65536",
+        "-timeout=2",
+        "-rss_limit_mb=512"
+      ],
+      "end_utc": "2026-11-02T12:21:50.182750+00:00",
+      "exit_code": 0,
+      "input": {
+        "path": "fuzz/corpus/host_validation/affe6fbf18fb733d2e57f1dafb346ed67cb1b26b97ab832b2f4147f2ad8c3ef4",
+        "sha256": "affe6fbf18fb733d2e57f1dafb346ed67cb1b26b97ab832b2f4147f2ad8c3ef4",
+        "target": "host_validation"
+      },
+      "log": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122149Z-regression-81ceb7c0/19.log",
+      "log_sha256": "332dc0222895b664057efa32d3c2abb731e807bea1ce583cda8aa229a1a4117d",
+      "start_utc": "2026-11-02T12:21:50.150701+00:00",
+      "wall_seconds": 0.032062893999999176
+    },
+    {
+      "argv": [
+        "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_host_validation",
+        "/home/runner/work/tinyinfer/tinyinfer/fuzz/corpus/host_validation/70f86133c06b03d5fe28b939cb612c4a046b7c735e0c8cd7552ae32f6bb50a05",
+        "-runs=1",
+        "-max_len=65536",
+        "-timeout=2",
+        "-rss_limit_mb=512"
+      ],
+      "end_utc": "2026-11-02T12:21:50.250342+00:00",
+      "exit_code": 0,
+      "input": {
+        "path": "fuzz/corpus/host_validation/70f86133c06b03d5fe28b939cb612c4a046b7c735e0c8cd7552ae32f6bb50a05",
+        "sha256": "70f86133c06b03d5fe28b939cb612c4a046b7c735e0c8cd7552ae32f6bb50a05",
+        "target": "host_validation"
+      },
+      "log": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122149Z-regression-81ceb7c0/20.log",
+      "log_sha256": "ac2a66a05953eeb8659e2d37ae07b6db43de4996a59f49df2934c287b7ed1481",
+      "start_utc": "2026-11-02T12:21:50.185547+00:00",
+      "wall_seconds": 0.0648097989999954
+    }
+  ],
+  "end_utc": "2026-11-02T12:21:50.251804+00:00",
+  "include_seeds": true,
+  "schema_version": 1,
+  "start_utc": "2026-11-02T12:21:49.380323+00:00",
+  "status": "passed"
+}

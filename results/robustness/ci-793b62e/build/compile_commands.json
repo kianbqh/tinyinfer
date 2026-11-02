@@ -1,0 +1,56 @@
+[
+{
+  "directory": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary",
+  "command": "/usr/bin/clang++  -I/home/runner/work/tinyinfer/tinyinfer/backend/include -I/home/runner/work/tinyinfer/tinyinfer/kernels/include -O2 -g -DNDEBUG -O1 -g -fno-omit-frame-pointer -fno-fast-math -fsanitize=fuzzer-no-link,address,undefined -fno-sanitize-recover=undefined -Wno-unknown-pragmas -o CMakeFiles/ti_fuzz_production.dir/home/runner/work/tinyinfer/tinyinfer/backend/host_codec.cpp.o -c /home/runner/work/tinyinfer/tinyinfer/backend/host_codec.cpp",
+  "file": "/home/runner/work/tinyinfer/tinyinfer/backend/host_codec.cpp",
+  "output": "CMakeFiles/ti_fuzz_production.dir/home/runner/work/tinyinfer/tinyinfer/backend/host_codec.cpp.o"
+},
+{
+  "directory": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary",
+  "command": "/usr/bin/clang++  -I/home/runner/work/tinyinfer/tinyinfer/backend/include -I/home/runner/work/tinyinfer/tinyinfer/kernels/include -O2 -g -DNDEBUG -O1 -g -fno-omit-frame-pointer -fno-fast-math -fsanitize=fuzzer-no-link,address,undefined -fno-sanitize-recover=undefined -Wno-unknown-pragmas -o CMakeFiles/ti_fuzz_production.dir/home/runner/work/tinyinfer/tinyinfer/kernels/src/cpu/matmul.cpp.o -c /home/runner/work/tinyinfer/tinyinfer/kernels/src/cpu/matmul.cpp",
+  "file": "/home/runner/work/tinyinfer/tinyinfer/kernels/src/cpu/matmul.cpp",
+  "output": "CMakeFiles/ti_fuzz_production.dir/home/runner/work/tinyinfer/tinyinfer/kernels/src/cpu/matmul.cpp.o"
+},
+{
+  "directory": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary",
+  "command": "/usr/bin/clang++  -I/home/runner/work/tinyinfer/tinyinfer/backend/include -I/home/runner/work/tinyinfer/tinyinfer/kernels/include -O2 -g -DNDEBUG -O1 -g -fno-omit-frame-pointer -fno-fast-math -fsanitize=fuzzer-no-link,address,undefined -fno-sanitize-recover=undefined -Wno-unknown-pragmas -o CMakeFiles/ti_fuzz_production.dir/home/runner/work/tinyinfer/tinyinfer/kernels/src/cpu/softmax.cpp.o -c /home/runner/work/tinyinfer/tinyinfer/kernels/src/cpu/softmax.cpp",
+  "file": "/home/runner/work/tinyinfer/tinyinfer/kernels/src/cpu/softmax.cpp",
+  "output": "CMakeFiles/ti_fuzz_production.dir/home/runner/work/tinyinfer/tinyinfer/kernels/src/cpu/softmax.cpp.o"
+},
+{
+  "directory": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary",
+  "command": "/usr/bin/clang++  -I/home/runner/work/tinyinfer/tinyinfer/backend/include -I/home/runner/work/tinyinfer/tinyinfer/kernels/include -O2 -g -DNDEBUG -O1 -g -fno-omit-frame-pointer -fno-fast-math -fsanitize=fuzzer-no-link,address,undefined -fno-sanitize-recover=undefined -Wno-unknown-pragmas -o CMakeFiles/ti_fuzz_production.dir/home/runner/work/tinyinfer/tinyinfer/kernels/src/cpu/layernorm.cpp.o -c /home/runner/work/tinyinfer/tinyinfer/kernels/src/cpu/layernorm.cpp",
+  "file": "/home/runner/work/tinyinfer/tinyinfer/kernels/src/cpu/layernorm.cpp",
+  "output": "CMakeFiles/ti_fuzz_production.dir/home/runner/work/tinyinfer/tinyinfer/kernels/src/cpu/layernorm.cpp.o"
+},
+{
+  "directory": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary",
+  "command": "/usr/bin/clang++  -I/home/runner/work/tinyinfer/tinyinfer/llm/src -I/home/runner/work/tinyinfer/tinyinfer/backend/include -I/home/runner/work/tinyinfer/tinyinfer/kernels/include -O2 -g -DNDEBUG -O1 -g -fno-omit-frame-pointer -fno-fast-math -fsanitize=fuzzer-no-link,address,undefined -fno-sanitize-recover=undefined -o CMakeFiles/fuzz_json.dir/harnesses/json.cpp.o -c /home/runner/work/tinyinfer/tinyinfer/fuzz/harnesses/json.cpp",
+  "file": "/home/runner/work/tinyinfer/tinyinfer/fuzz/harnesses/json.cpp",
+  "output": "CMakeFiles/fuzz_json.dir/harnesses/json.cpp.o"
+},
+{
+  "directory": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary",
+  "command": "/usr/bin/clang++  -I/home/runner/work/tinyinfer/tinyinfer/llm/src -I/home/runner/work/tinyinfer/tinyinfer/backend/include -I/home/runner/work/tinyinfer/tinyinfer/kernels/include -O2 -g -DNDEBUG -O1 -g -fno-omit-frame-pointer -fno-fast-math -fsanitize=fuzzer-no-link,address,undefined -fno-sanitize-recover=undefined -o CMakeFiles/fuzz_artifact.dir/harnesses/artifact.cpp.o -c /home/runner/work/tinyinfer/tinyinfer/fuzz/harnesses/artifact.cpp",
+  "file": "/home/runner/work/tinyinfer/tinyinfer/fuzz/harnesses/artifact.cpp",
+  "output": "CMakeFiles/fuzz_artifact.dir/harnesses/artifact.cpp.o"
+},
+{
+  "directory": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary",
+  "command": "/usr/bin/clang++  -I/home/runner/work/tinyinfer/tinyinfer/llm/src -I/home/runner/work/tinyinfer/tinyinfer/backend/include -I/home/runner/work/tinyinfer/tinyinfer/kernels/include -O2 -g -DNDEBUG -O1 -g -fno-omit-frame-pointer -fno-fast-math -fsanitize=fuzzer-no-link,address,undefined -fno-sanitize-recover=undefined -o CMakeFiles/fuzz_host_validation.dir/harnesses/host_validation.cpp.o -c /home/runner/work/tinyinfer/tinyinfer/fuzz/harnesses/host_validation.cpp",
+  "file": "/home/runner/work/tinyinfer/tinyinfer/fuzz/harnesses/host_validation.cpp",
+  "output": "CMakeFiles/fuzz_host_validation.dir/harnesses/host_validation.cpp.o"
+},
+{
+  "directory": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary",
+  "command": "/usr/bin/clang++  -I/home/runner/work/tinyinfer/tinyinfer/llm/src -I/home/runner/work/tinyinfer/tinyinfer/backend/include -I/home/runner/work/tinyinfer/tinyinfer/kernels/include -O2 -g -DNDEBUG -O1 -g -fno-omit-frame-pointer -fno-fast-math -fsanitize=fuzzer-no-link,address,undefined -fno-sanitize-recover=undefined -o CMakeFiles/fuzz_cpu_ops.dir/harnesses/cpu_ops.cpp.o -c /home/runner/work/tinyinfer/tinyinfer/fuzz/harnesses/cpu_ops.cpp",
+  "file": "/home/runner/work/tinyinfer/tinyinfer/fuzz/harnesses/cpu_ops.cpp",
+  "output": "CMakeFiles/fuzz_cpu_ops.dir/harnesses/cpu_ops.cpp.o"
+},
+{
+  "directory": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary",
+  "command": "/usr/bin/clang++  -I/home/runner/work/tinyinfer/tinyinfer/llm/src -I/home/runner/work/tinyinfer/tinyinfer/backend/include -I/home/runner/work/tinyinfer/tinyinfer/kernels/include -O2 -g -DNDEBUG -O1 -g -fno-omit-frame-pointer -fno-fast-math -fsanitize=fuzzer-no-link,address,undefined -fno-sanitize-recover=undefined -o CMakeFiles/fuzz_codec.dir/harnesses/codec.cpp.o -c /home/runner/work/tinyinfer/tinyinfer/fuzz/harnesses/codec.cpp",
+  "file": "/home/runner/work/tinyinfer/tinyinfer/fuzz/harnesses/codec.cpp",
+  "output": "CMakeFiles/fuzz_codec.dir/harnesses/codec.cpp.o"
+}
+]

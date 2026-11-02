@@ -1,0 +1,2035 @@
+{
+  "utc": "2026-11-02T14:26:57.421798+00:00",
+  "scope": "Closed raw samples/statistics and accepted library/build binding; no new measurement",
+  "run": "20261102T132951Z-m2-native-headers-attention-cpath",
+  "group": "attention",
+  "run_sha256": "cd92151b3cc3fa2d8fc39b1d65ac21486600210ee290118f9bbd400deb61951e",
+  "status": "accepted",
+  "completed_cases": 72,
+  "optional_not_run": [],
+  "raw_samples_reconciled": 5040,
+  "git": {
+    "executable": "/opt/codex-resume/all-modules-v2/m1a/tools/git-native/usr/bin/git",
+    "sha": "3edcfebd24d5efbf5da81cda13f2bf684031b35e",
+    "status_porcelain": "?? results/v2/",
+    "version": "git version 2.43.0"
+  },
+  "cases": [
+    {
+      "method": "sdpa_forced_math",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 128,
+        "Q": 128,
+        "causal": true
+      },
+      "max_abs_error": 0.0,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.6311526429653168,
+        "p50_ms": 0.32256001234054565,
+        "p95_ms": 1.4996480166912078,
+        "p99_ms": 1.5737548792362213,
+        "std_population_ms": 0.47151306780069235
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.92610885,
+        "p50_ms": 0.8420565,
+        "p95_ms": 1.674233,
+        "p99_ms": 1.684721,
+        "std_population_ms": 0.46133722230872237
+      }
+    },
+    {
+      "method": "sdpa_forced_flash",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 128,
+        "Q": 128,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.10670080088078976,
+        "p50_ms": 0.03276799991726875,
+        "p95_ms": 0.5165056016296127,
+        "p99_ms": 1.2554035353660582,
+        "std_population_ms": 0.2616323034269486
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.3418436,
+        "p50_ms": 0.1374785,
+        "p95_ms": 1.132818,
+        "p99_ms": 1.2391571999999997,
+        "std_population_ms": 0.37310688697535455
+      }
+    },
+    {
+      "method": "sdpa_forced_efficient",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 128,
+        "Q": 128,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.14495743997395039,
+        "p50_ms": 0.03891199827194214,
+        "p95_ms": 1.0118656188249582,
+        "p99_ms": 1.300439040660858,
+        "std_population_ms": 0.32158831716210295
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.23155045,
+        "p50_ms": 0.09065100000000001,
+        "p95_ms": 1.15006805,
+        "p99_ms": 1.1952888099999999,
+        "std_population_ms": 0.3415906722945571
+      }
+    },
+    {
+      "method": "naive_materialized_fp16_attention",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 128,
+        "Q": 128,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.23953407995402812,
+        "p50_ms": 0.11008000001311302,
+        "p95_ms": 1.1565055847167969,
+        "p99_ms": 1.2781056106090545,
+        "std_population_ms": 0.3216938551812836
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.51096545,
+        "p50_ms": 0.26307499999999995,
+        "p95_ms": 1.239689,
+        "p99_ms": 1.3966289999999997,
+        "std_population_ms": 0.39859677760156004
+      }
+    },
+    {
+      "method": "cuda_online_attention_c0",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 128,
+        "Q": 128,
+        "causal": true
+      },
+      "max_abs_error": 0.000244140625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.590438397526741,
+        "p50_ms": 0.2959359884262085,
+        "p95_ms": 3.086540699005127,
+        "p99_ms": 3.1001702427864073,
+        "std_population_ms": 0.793013329869161
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.64034025,
+        "p50_ms": 0.35974799999999996,
+        "p95_ms": 2.086221450000001,
+        "p99_ms": 2.9543762899999986,
+        "std_population_ms": 0.724672091841743
+      }
+    },
+    {
+      "method": "cuda_online_attention_c1",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 128,
+        "Q": 128,
+        "causal": true
+      },
+      "max_abs_error": 0.000244140625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.64677887737751,
+        "p50_ms": 0.2959359884262085,
+        "p95_ms": 3.108710467815399,
+        "p99_ms": 3.1337880587577818,
+        "std_population_ms": 0.8823944442526861
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.6369598,
+        "p50_ms": 0.3478145,
+        "p95_ms": 3.1648653999999996,
+        "p99_ms": 3.18771708,
+        "std_population_ms": 0.847530899715438
+      }
+    },
+    {
+      "method": "sdpa_forced_math",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 256,
+        "Q": 256,
+        "causal": true
+      },
+      "max_abs_error": 0.0,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.7400652760267258,
+        "p50_ms": 0.3543039858341217,
+        "p95_ms": 1.6191487848758697,
+        "p99_ms": 1.630269455909729,
+        "std_population_ms": 0.530149828398339
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.6119911,
+        "p50_ms": 0.3500855,
+        "p95_ms": 1.5144305,
+        "p99_ms": 1.5749948999999999,
+        "std_population_ms": 0.45779481244405773
+      }
+    },
+    {
+      "method": "sdpa_forced_flash",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 256,
+        "Q": 256,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.07843840092420579,
+        "p50_ms": 0.035840000957250595,
+        "p95_ms": 0.07075840160250663,
+        "p99_ms": 1.0277580964565276,
+        "std_population_ms": 0.19421617429436577
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.08911405,
+        "p50_ms": 0.068788,
+        "p95_ms": 0.10014070000000025,
+        "p99_ms": 0.3697233399999995,
+        "std_population_ms": 0.07995168112458612
+      }
+    },
+    {
+      "method": "sdpa_forced_efficient",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 256,
+        "Q": 256,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.07524351797997951,
+        "p50_ms": 0.03276799991726875,
+        "p95_ms": 0.06461439952254294,
+        "p99_ms": 1.0270924329757691,
+        "std_population_ms": 0.1944448634386667
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.18703265,
+        "p50_ms": 0.07256850000000001,
+        "p95_ms": 0.9108240500000001,
+        "p99_ms": 0.98428641,
+        "std_population_ms": 0.2707201410206258
+      }
+    },
+    {
+      "method": "naive_materialized_fp16_attention",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 256,
+        "Q": 256,
+        "causal": true
+      },
+      "max_abs_error": 0.001953125,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.1458182403445244,
+        "p50_ms": 0.10444799810647964,
+        "p95_ms": 0.4023007884621613,
+        "p99_ms": 0.9929769939184185,
+        "std_population_ms": 0.18956886344745585
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.2284388,
+        "p50_ms": 0.1142895,
+        "p95_ms": 0.9302367500000002,
+        "p99_ms": 1.0663793499999996,
+        "std_population_ms": 0.27549922128485227
+      }
+    },
+    {
+      "method": "cuda_online_attention_c0",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 256,
+        "Q": 256,
+        "causal": true
+      },
+      "max_abs_error": 6.103515625e-05,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.5164851224422455,
+        "p50_ms": 0.27852800488471985,
+        "p95_ms": 2.3354367971420276,
+        "p99_ms": 2.5093427538871764,
+        "std_population_ms": 0.6236987577306778
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.55215395,
+        "p50_ms": 0.328217,
+        "p95_ms": 2.5487731499999997,
+        "p99_ms": 2.55707463,
+        "std_population_ms": 0.6673213417885325
+      }
+    },
+    {
+      "method": "cuda_online_attention_c1",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 256,
+        "Q": 256,
+        "causal": true
+      },
+      "max_abs_error": 6.103515625e-05,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.4709990382194519,
+        "p50_ms": 0.2734079957008362,
+        "p95_ms": 2.095206338167188,
+        "p99_ms": 2.572216346263885,
+        "std_population_ms": 0.5750227807791313
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.51166965,
+        "p50_ms": 0.34244,
+        "p95_ms": 1.4320944000000009,
+        "p99_ms": 2.3392972799999985,
+        "std_population_ms": 0.5225675285189729
+      }
+    },
+    {
+      "method": "sdpa_forced_math",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 512,
+        "Q": 512,
+        "causal": true
+      },
+      "max_abs_error": 0.0,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.4946201640367508,
+        "p50_ms": 0.19974399358034134,
+        "p95_ms": 1.5105023980140664,
+        "p99_ms": 5.24090379476546,
+        "std_population_ms": 1.1661329341353697
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.341442,
+        "p50_ms": 0.3161505,
+        "p95_ms": 0.42214505,
+        "p99_ms": 0.45277380999999994,
+        "std_population_ms": 0.043503738248568936
+      }
+    },
+    {
+      "method": "sdpa_forced_flash",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 512,
+        "Q": 512,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.06282879993319511,
+        "p50_ms": 0.047120001167058945,
+        "p95_ms": 0.14612480029463762,
+        "p99_ms": 0.17022975802421564,
+        "std_population_ms": 0.037257689644860106
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.0725179,
+        "p50_ms": 0.055802500000000005,
+        "p95_ms": 0.11433385000000014,
+        "p99_ms": 0.2689003699999997,
+        "std_population_ms": 0.055020971643456096
+      }
+    },
+    {
+      "method": "sdpa_forced_efficient",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 512,
+        "Q": 512,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.14401856020092965,
+        "p50_ms": 0.1432799994945526,
+        "p95_ms": 0.16349919587373732,
+        "p99_ms": 0.2854809628427024,
+        "std_population_ms": 0.04498600101191743
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.12658695,
+        "p50_ms": 0.11142250000000001,
+        "p95_ms": 0.1398977000000002,
+        "p99_ms": 0.3464307399999996,
+        "std_population_ms": 0.0623974523810668
+      }
+    },
+    {
+      "method": "naive_materialized_fp16_attention",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 512,
+        "Q": 512,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.11895679987967014,
+        "p50_ms": 0.11283199861645699,
+        "p95_ms": 0.18913279697298999,
+        "p99_ms": 0.2400665591657161,
+        "std_population_ms": 0.03902469550975344
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.1500083,
+        "p50_ms": 0.1175205,
+        "p95_ms": 0.2364815000000001,
+        "p99_ms": 0.3475554999999998,
+        "std_population_ms": 0.06274940100678253
+      }
+    },
+    {
+      "method": "cuda_online_attention_c0",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 512,
+        "Q": 512,
+        "causal": true
+      },
+      "max_abs_error": 0.000244140625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.34503872036933897,
+        "p50_ms": 0.3256320059299469,
+        "p95_ms": 0.5009071990847581,
+        "p99_ms": 0.6031360030174255,
+        "std_population_ms": 0.06585510050227479
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.3881178,
+        "p50_ms": 0.37300750000000005,
+        "p95_ms": 0.41273800000000016,
+        "p99_ms": 0.5889059999999997,
+        "std_population_ms": 0.05684802374190328
+      }
+    },
+    {
+      "method": "cuda_online_attention_c1",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 512,
+        "Q": 512,
+        "causal": true
+      },
+      "max_abs_error": 0.000244140625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.3864799988269806,
+        "p50_ms": 0.3635199964046478,
+        "p95_ms": 0.5812224000692364,
+        "p99_ms": 0.6463897627592087,
+        "std_population_ms": 0.07159597151144259
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.45684025,
+        "p50_ms": 0.4142855,
+        "p95_ms": 0.7175734,
+        "p99_ms": 0.8247090799999999,
+        "std_population_ms": 0.11176464212928658
+      }
+    },
+    {
+      "method": "sdpa_forced_math",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 1024,
+        "Q": 1024,
+        "causal": true
+      },
+      "max_abs_error": 0.0,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.4997772800922394,
+        "p50_ms": 0.4776960015296936,
+        "p95_ms": 0.7730688124895095,
+        "p99_ms": 0.7890022277832032,
+        "std_population_ms": 0.08374098532397843
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.6036526,
+        "p50_ms": 0.5763050000000001,
+        "p95_ms": 0.7383863,
+        "p99_ms": 0.7915300599999999,
+        "std_population_ms": 0.0704389505120569
+      }
+    },
+    {
+      "method": "sdpa_forced_flash",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 1024,
+        "Q": 1024,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.0550796802341938,
+        "p50_ms": 0.04966400004923344,
+        "p95_ms": 0.0726336009800434,
+        "p99_ms": 0.22091296069323965,
+        "std_population_ms": 0.04355003762927675
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.0762468,
+        "p50_ms": 0.07432849999999999,
+        "p95_ms": 0.0858999,
+        "p99_ms": 0.08852797999999999,
+        "std_population_ms": 0.00426370885028516
+      }
+    },
+    {
+      "method": "sdpa_forced_efficient",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 1024,
+        "Q": 1024,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.06033728078007698,
+        "p50_ms": 0.058368001133203506,
+        "p95_ms": 0.06451199948787689,
+        "p99_ms": 0.10193919725716113,
+        "std_population_ms": 0.008641466876531003
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.1139626,
+        "p50_ms": 0.099338,
+        "p95_ms": 0.13156145000000016,
+        "p99_ms": 0.3060794899999997,
+        "std_population_ms": 0.05446914288053374
+      }
+    },
+    {
+      "method": "naive_materialized_fp16_attention",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 1024,
+        "Q": 1024,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.1354905581474304,
+        "p50_ms": 0.12339199706912041,
+        "p95_ms": 0.16564320251345632,
+        "p99_ms": 0.3381923180818551,
+        "std_population_ms": 0.05346930748752658
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.19863795,
+        "p50_ms": 0.1728535,
+        "p95_ms": 0.32164605000000007,
+        "p99_ms": 0.3886788099999999,
+        "std_population_ms": 0.05795982485090427
+      }
+    },
+    {
+      "method": "cuda_online_attention_c0",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 1024,
+        "Q": 1024,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.8466483187675476,
+        "p50_ms": 0.7951359748840332,
+        "p95_ms": 1.1561472356319427,
+        "p99_ms": 1.1653529512882232,
+        "std_population_ms": 0.12298099693473795
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.8457621,
+        "p50_ms": 0.8028420000000001,
+        "p95_ms": 1.1070994,
+        "p99_ms": 1.11019108,
+        "std_population_ms": 0.10846317422097698
+      }
+    },
+    {
+      "method": "cuda_online_attention_c1",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 1024,
+        "Q": 1024,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.861017599105835,
+        "p50_ms": 0.8069120049476624,
+        "p95_ms": 1.1472895681858062,
+        "p99_ms": 1.190666241645813,
+        "std_population_ms": 0.11557431811464271
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.92013565,
+        "p50_ms": 0.8757999999999999,
+        "p95_ms": 1.17978535,
+        "p99_ms": 1.20433867,
+        "std_population_ms": 0.10802542804232483
+      }
+    },
+    {
+      "method": "sdpa_forced_math",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 2048,
+        "Q": 2048,
+        "causal": true
+      },
+      "max_abs_error": 0.0,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 1.3959852862358093,
+        "p50_ms": 1.3015040159225464,
+        "p95_ms": 1.7044479846954346,
+        "p99_ms": 1.7168076980113982,
+        "std_population_ms": 0.15926670932887022
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 1.53883975,
+        "p50_ms": 1.4875425,
+        "p95_ms": 1.8232005500000001,
+        "p99_ms": 1.91291931,
+        "std_population_ms": 0.16053347553107888
+      }
+    },
+    {
+      "method": "sdpa_forced_flash",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 2048,
+        "Q": 2048,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.08473343878984452,
+        "p50_ms": 0.08396799862384796,
+        "p95_ms": 0.08499199897050858,
+        "p99_ms": 0.10477568186819547,
+        "std_population_ms": 0.005202487611114821
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.1342692,
+        "p50_ms": 0.11962600000000001,
+        "p95_ms": 0.16726020000000014,
+        "p99_ms": 0.3154176399999998,
+        "std_population_ms": 0.050809307191301084
+      }
+    },
+    {
+      "method": "sdpa_forced_efficient",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 2048,
+        "Q": 2048,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.12800000309944154,
+        "p50_ms": 0.11980800330638885,
+        "p95_ms": 0.12459840178489684,
+        "p99_ms": 0.3306230428814884,
+        "std_population_ms": 0.04545223899734143
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.19321585,
+        "p50_ms": 0.165019,
+        "p95_ms": 0.3214335000000001,
+        "p99_ms": 0.41593949999999985,
+        "std_population_ms": 0.0669826578520702
+      }
+    },
+    {
+      "method": "naive_materialized_fp16_attention",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 2048,
+        "Q": 2048,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.4557772821187973,
+        "p50_ms": 0.4285439997911453,
+        "p95_ms": 0.6989312171936035,
+        "p99_ms": 0.8097484749555587,
+        "std_population_ms": 0.08972272368278066
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.5377386,
+        "p50_ms": 0.49503149999999996,
+        "p95_ms": 0.81685725,
+        "p99_ms": 0.82184665,
+        "std_population_ms": 0.10071348313974648
+      }
+    },
+    {
+      "method": "cuda_online_attention_c0",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 2048,
+        "Q": 2048,
+        "causal": true
+      },
+      "max_abs_error": 0.000244140625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 2.4269606494903564,
+        "p50_ms": 2.315279960632324,
+        "p95_ms": 2.6968064308166504,
+        "p99_ms": 2.736373732089996,
+        "std_population_ms": 0.1875856871578356
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 2.47376565,
+        "p50_ms": 2.3852225000000002,
+        "p95_ms": 2.7624458499999998,
+        "p99_ms": 2.77758277,
+        "std_population_ms": 0.17434480516501627
+      }
+    },
+    {
+      "method": "cuda_online_attention_c1",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 2048,
+        "Q": 2048,
+        "causal": true
+      },
+      "max_abs_error": 0.000244140625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 2.665701766014099,
+        "p50_ms": 2.6583040952682495,
+        "p95_ms": 2.884608030319214,
+        "p99_ms": 2.911477756500244,
+        "std_population_ms": 0.16509301333835466
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 2.73101965,
+        "p50_ms": 2.6645865,
+        "p95_ms": 3.0267072500000003,
+        "p99_ms": 3.04171345,
+        "std_population_ms": 0.17212941272492482
+      }
+    },
+    {
+      "method": "sdpa_forced_math",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 4096,
+        "Q": 4096,
+        "causal": true
+      },
+      "max_abs_error": 0.0,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 5.371755466461182,
+        "p50_ms": 5.413887977600098,
+        "p95_ms": 5.44721930027008,
+        "p99_ms": 5.509100160598755,
+        "std_population_ms": 0.1213340869995038
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 5.52946,
+        "p50_ms": 5.5035935,
+        "p95_ms": 5.8716885,
+        "p99_ms": 5.8971257,
+        "std_population_ms": 0.15575442650884758
+      }
+    },
+    {
+      "method": "sdpa_forced_flash",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 4096,
+        "Q": 4096,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.2903475147485733,
+        "p50_ms": 0.2764799892902374,
+        "p95_ms": 0.3100671991705893,
+        "p99_ms": 0.5883187294006348,
+        "std_population_ms": 0.06138210523751492
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.38456195,
+        "p50_ms": 0.3632725,
+        "p95_ms": 0.5442768,
+        "p99_ms": 0.5749929599999999,
+        "std_population_ms": 0.06555003542140538
+      }
+    },
+    {
+      "method": "sdpa_forced_efficient",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 4096,
+        "Q": 4096,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.3475923228263855,
+        "p50_ms": 0.3266560137271881,
+        "p95_ms": 0.5204991936683647,
+        "p99_ms": 0.6728499466180802,
+        "std_population_ms": 0.07941489060268782
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.3883351,
+        "p50_ms": 0.3759995,
+        "p95_ms": 0.4229260500000001,
+        "p99_ms": 0.5591036099999998,
+        "std_population_ms": 0.04830930210621967
+      }
+    },
+    {
+      "method": "naive_materialized_fp16_attention",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 4096,
+        "Q": 4096,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 1.9431481599807738,
+        "p50_ms": 1.8166239857673645,
+        "p95_ms": 2.218564736843109,
+        "p99_ms": 2.5515622305870056,
+        "std_population_ms": 0.2040720223368341
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 2.0667797,
+        "p50_ms": 1.981749,
+        "p95_ms": 2.3310682,
+        "p99_ms": 2.3353880399999998,
+        "std_population_ms": 0.16165286658178998
+      }
+    },
+    {
+      "method": "cuda_online_attention_c0",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 4096,
+        "Q": 4096,
+        "causal": true
+      },
+      "max_abs_error": 6.103515625e-05,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 8.613192920684815,
+        "p50_ms": 8.59494400024414,
+        "p95_ms": 8.862705373764038,
+        "p99_ms": 8.955361394882202,
+        "std_population_ms": 0.1869230310838323
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 8.7666355,
+        "p50_ms": 8.740782,
+        "p95_ms": 9.0356477,
+        "p99_ms": 9.17355274,
+        "std_population_ms": 0.18112421152940864
+      }
+    },
+    {
+      "method": "cuda_online_attention_c1",
+      "shape": {
+        "B": 1,
+        "D": 64,
+        "H": 4,
+        "K": 4096,
+        "Q": 4096,
+        "causal": true
+      },
+      "max_abs_error": 6.103515625e-05,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 9.763866291046142,
+        "p50_ms": 9.83193588256836,
+        "p95_ms": 9.979443264007568,
+        "p99_ms": 10.072996120452881,
+        "std_population_ms": 0.18176461947705208
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 9.8851678,
+        "p50_ms": 9.877690000000001,
+        "p95_ms": 10.18290805,
+        "p99_ms": 10.21131761,
+        "std_population_ms": 0.1891213259589199
+      }
+    },
+    {
+      "method": "sdpa_forced_math",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 128,
+        "Q": 128,
+        "causal": true
+      },
+      "max_abs_error": 0.0,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.47494335800409315,
+        "p50_ms": 0.5586400032043457,
+        "p95_ms": 0.6463488012552261,
+        "p99_ms": 0.7220121693611143,
+        "std_population_ms": 0.16043110887138104
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.46243175,
+        "p50_ms": 0.485917,
+        "p95_ms": 0.6218919500000001,
+        "p99_ms": 0.7310423899999998,
+        "std_population_ms": 0.1449937723024251
+      }
+    },
+    {
+      "method": "sdpa_forced_flash",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 128,
+        "Q": 128,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.043326719906181095,
+        "p50_ms": 0.03678400069475174,
+        "p95_ms": 0.12974079549312562,
+        "p99_ms": 0.25810943007469156,
+        "std_population_ms": 0.051989984967301575
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.04935955,
+        "p50_ms": 0.04482,
+        "p95_ms": 0.06539110000000002,
+        "p99_ms": 0.08594301999999995,
+        "std_population_ms": 0.010925989627832346
+      }
+    },
+    {
+      "method": "sdpa_forced_efficient",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 128,
+        "Q": 128,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.05403071977198124,
+        "p50_ms": 0.04782399907708168,
+        "p95_ms": 0.09431039802730078,
+        "p99_ms": 0.20529952287673914,
+        "std_population_ms": 0.040420792420090924
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.0538167,
+        "p50_ms": 0.052254,
+        "p95_ms": 0.0722077,
+        "p99_ms": 0.07410314,
+        "std_population_ms": 0.008095368163956474
+      }
+    },
+    {
+      "method": "naive_materialized_fp16_attention",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 128,
+        "Q": 128,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.12898303892463445,
+        "p50_ms": 0.10265599936246872,
+        "p95_ms": 0.2790304064750671,
+        "p99_ms": 0.29494078785181044,
+        "std_population_ms": 0.07159735893733392
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.11266055,
+        "p50_ms": 0.108101,
+        "p95_ms": 0.12582245000000003,
+        "p99_ms": 0.15974048999999996,
+        "std_population_ms": 0.014520820543189013
+      }
+    },
+    {
+      "method": "cuda_online_attention_c0",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 128,
+        "Q": 128,
+        "causal": true
+      },
+      "max_abs_error": 0.000244140625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.17631744027137755,
+        "p50_ms": 0.1515520066022873,
+        "p95_ms": 0.2564095951616762,
+        "p99_ms": 0.47569917798042277,
+        "std_population_ms": 0.06684870933188623
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.27337855,
+        "p50_ms": 0.23773850000000002,
+        "p95_ms": 0.38153780000000015,
+        "p99_ms": 0.5477011599999997,
+        "std_population_ms": 0.09410989369958667
+      }
+    },
+    {
+      "method": "cuda_online_attention_c1",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 128,
+        "Q": 128,
+        "causal": true
+      },
+      "max_abs_error": 0.000244140625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.248259839117527,
+        "p50_ms": 0.1664000004529953,
+        "p95_ms": 0.6457279831171036,
+        "p99_ms": 0.8547532618045799,
+        "std_population_ms": 0.17653427435199326
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.23369494999999998,
+        "p50_ms": 0.20277499999999998,
+        "p95_ms": 0.40724015000000013,
+        "p99_ms": 0.5367160299999998,
+        "std_population_ms": 0.08842485221388555
+      }
+    },
+    {
+      "method": "sdpa_forced_math",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 256,
+        "Q": 256,
+        "causal": true
+      },
+      "max_abs_error": 0.0,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.4040217611193657,
+        "p50_ms": 0.3375519961118698,
+        "p95_ms": 0.7749040156602858,
+        "p99_ms": 0.8296835219860077,
+        "std_population_ms": 0.17642798956131586
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.3446839,
+        "p50_ms": 0.30116449999999995,
+        "p95_ms": 0.4696833500000002,
+        "p99_ms": 0.6986006699999996,
+        "std_population_ms": 0.10327634351190984
+      }
+    },
+    {
+      "method": "sdpa_forced_flash",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 256,
+        "Q": 256,
+        "causal": true
+      },
+      "max_abs_error": 0.001953125,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.04732096020132303,
+        "p50_ms": 0.04612800106406212,
+        "p95_ms": 0.07848960012197494,
+        "p99_ms": 0.11632991760969148,
+        "std_population_ms": 0.021933597670508842
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.05876985,
+        "p50_ms": 0.05464,
+        "p95_ms": 0.07474530000000001,
+        "p99_ms": 0.08383945999999998,
+        "std_population_ms": 0.00882096079956713
+      }
+    },
+    {
+      "method": "sdpa_forced_efficient",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 256,
+        "Q": 256,
+        "causal": true
+      },
+      "max_abs_error": 0.001953125,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.16052799984812738,
+        "p50_ms": 0.14431999623775482,
+        "p95_ms": 0.17784640416502945,
+        "p99_ms": 0.6200758233666408,
+        "std_population_ms": 0.11389925119818996
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.11013885,
+        "p50_ms": 0.10804549999999999,
+        "p95_ms": 0.1209951,
+        "p99_ms": 0.12216702,
+        "std_population_ms": 0.004879048342402441
+      }
+    },
+    {
+      "method": "naive_materialized_fp16_attention",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 256,
+        "Q": 256,
+        "causal": true
+      },
+      "max_abs_error": 0.001953125,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.11205184027552605,
+        "p50_ms": 0.10779200121760368,
+        "p95_ms": 0.1528016038239002,
+        "p99_ms": 0.23357151731848685,
+        "std_population_ms": 0.03621108980136446
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.11279745,
+        "p50_ms": 0.110141,
+        "p95_ms": 0.1343288,
+        "p99_ms": 0.13452336,
+        "std_population_ms": 0.007605572019743155
+      }
+    },
+    {
+      "method": "cuda_online_attention_c0",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 256,
+        "Q": 256,
+        "causal": true
+      },
+      "max_abs_error": 0.0001220703125,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.29942015796899796,
+        "p50_ms": 0.29337599873542786,
+        "p95_ms": 0.4437504038214682,
+        "p99_ms": 0.5816422241926192,
+        "std_population_ms": 0.08114240872914111
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.3951669,
+        "p50_ms": 0.37096450000000003,
+        "p95_ms": 0.4691499000000002,
+        "p99_ms": 0.6255411799999997,
+        "std_population_ms": 0.06631733042795072
+      }
+    },
+    {
+      "method": "cuda_online_attention_c1",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 256,
+        "Q": 256,
+        "causal": true
+      },
+      "max_abs_error": 0.0001220703125,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.24449472039937972,
+        "p50_ms": 0.21913599967956543,
+        "p95_ms": 0.3830783933401105,
+        "p99_ms": 0.5012582421302796,
+        "std_population_ms": 0.06494588343218263
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.3067528,
+        "p50_ms": 0.2837095,
+        "p95_ms": 0.3907186500000002,
+        "p99_ms": 0.6174973299999996,
+        "std_population_ms": 0.08812266371348519
+      }
+    },
+    {
+      "method": "sdpa_forced_math",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 512,
+        "Q": 512,
+        "causal": true
+      },
+      "max_abs_error": 0.0,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.3013990384340286,
+        "p50_ms": 0.2739199995994568,
+        "p95_ms": 0.48807679414749106,
+        "p99_ms": 0.8024985283613196,
+        "std_population_ms": 0.12305052300280095
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.3283608,
+        "p50_ms": 0.321159,
+        "p95_ms": 0.3714101000000001,
+        "p99_ms": 0.42914121999999993,
+        "std_population_ms": 0.031133857728524426
+      }
+    },
+    {
+      "method": "sdpa_forced_flash",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 512,
+        "Q": 512,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.0535340803861618,
+        "p50_ms": 0.05119999870657921,
+        "p95_ms": 0.07328000143170353,
+        "p99_ms": 0.09834495969116687,
+        "std_population_ms": 0.011884895379259729
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.09588769999999999,
+        "p50_ms": 0.0779765,
+        "p95_ms": 0.15717910000000013,
+        "p99_ms": 0.2728222199999998,
+        "std_population_ms": 0.051651753851248844
+      }
+    },
+    {
+      "method": "sdpa_forced_efficient",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 512,
+        "Q": 512,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.05909248024225235,
+        "p50_ms": 0.062463998794555664,
+        "p95_ms": 0.07075840160250663,
+        "p99_ms": 0.1234124843776225,
+        "std_population_ms": 0.019288346469580827
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.089175,
+        "p50_ms": 0.072935,
+        "p95_ms": 0.11093280000000018,
+        "p99_ms": 0.2961721599999997,
+        "std_population_ms": 0.05900898471504149
+      }
+    },
+    {
+      "method": "naive_materialized_fp16_attention",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 512,
+        "Q": 512,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.1105747202038765,
+        "p50_ms": 0.1085439994931221,
+        "p95_ms": 0.143286395072937,
+        "p99_ms": 0.24950784191489186,
+        "std_population_ms": 0.037407927477762094
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.1266474,
+        "p50_ms": 0.120277,
+        "p95_ms": 0.15618475,
+        "p99_ms": 0.17632094999999995,
+        "std_population_ms": 0.015509748445413288
+      }
+    },
+    {
+      "method": "cuda_online_attention_c0",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 512,
+        "Q": 512,
+        "causal": true
+      },
+      "max_abs_error": 0.000244140625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.4464652800559998,
+        "p50_ms": 0.4183039963245392,
+        "p95_ms": 0.6682112216949463,
+        "p99_ms": 0.6989414232969283,
+        "std_population_ms": 0.07883449186848329
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.5087687,
+        "p50_ms": 0.47658,
+        "p95_ms": 0.7305839000000001,
+        "p99_ms": 0.73549198,
+        "std_population_ms": 0.08195462827998186
+      }
+    },
+    {
+      "method": "cuda_online_attention_c1",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 512,
+        "Q": 512,
+        "causal": true
+      },
+      "max_abs_error": 0.000244140625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.4810348814725876,
+        "p50_ms": 0.45824000239372253,
+        "p95_ms": 0.6497280150651926,
+        "p99_ms": 0.7393484765291214,
+        "std_population_ms": 0.06831440547317712
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.5415502,
+        "p50_ms": 0.507213,
+        "p95_ms": 0.7430398500000001,
+        "p99_ms": 0.8108447699999999,
+        "std_population_ms": 0.08503002900187674
+      }
+    },
+    {
+      "method": "sdpa_forced_math",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 1024,
+        "Q": 1024,
+        "causal": true
+      },
+      "max_abs_error": 0.0,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.5118207997083664,
+        "p50_ms": 0.4915199875831604,
+        "p95_ms": 0.7659519910812378,
+        "p99_ms": 0.7921151810884476,
+        "std_population_ms": 0.08129839123207248
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.59647925,
+        "p50_ms": 0.560252,
+        "p95_ms": 0.7620322500000001,
+        "p99_ms": 0.78427365,
+        "std_population_ms": 0.07222387139504155
+      }
+    },
+    {
+      "method": "sdpa_forced_flash",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 1024,
+        "Q": 1024,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.05307967953383923,
+        "p50_ms": 0.050175998359918594,
+        "p95_ms": 0.0775792025029659,
+        "p99_ms": 0.08346623845398426,
+        "std_population_ms": 0.008472047892386253
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.0997285,
+        "p50_ms": 0.0874465,
+        "p95_ms": 0.11241190000000015,
+        "p99_ms": 0.26865117999999977,
+        "std_population_ms": 0.04787368574749599
+      }
+    },
+    {
+      "method": "sdpa_forced_efficient",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 1024,
+        "Q": 1024,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.06860928028821946,
+        "p50_ms": 0.060416001826524734,
+        "p95_ms": 0.06835200078785418,
+        "p99_ms": 0.25182207480072916,
+        "std_population_ms": 0.04743607445701758
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.1007107,
+        "p50_ms": 0.099328,
+        "p95_ms": 0.114489,
+        "p99_ms": 0.11763539999999999,
+        "std_population_ms": 0.005665954430632142
+      }
+    },
+    {
+      "method": "naive_materialized_fp16_attention",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 1024,
+        "Q": 1024,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.16707775950431825,
+        "p50_ms": 0.1443839967250824,
+        "p95_ms": 0.26803199797868726,
+        "p99_ms": 0.5151334348320958,
+        "std_population_ms": 0.07639539300685602
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.2062508,
+        "p50_ms": 0.1896735,
+        "p95_ms": 0.24251785000000017,
+        "p99_ms": 0.41006516999999976,
+        "std_population_ms": 0.057406815204816934
+      }
+    },
+    {
+      "method": "cuda_online_attention_c0",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 1024,
+        "Q": 1024,
+        "causal": true
+      },
+      "max_abs_error": 0.0001220703125,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 1.1366668939590454,
+        "p50_ms": 1.0803200006484985,
+        "p95_ms": 1.4014144003391265,
+        "p99_ms": 1.4570803260803222,
+        "std_population_ms": 0.13743415137503914
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 1.20952215,
+        "p50_ms": 1.183541,
+        "p95_ms": 1.46707125,
+        "p99_ms": 1.52662865,
+        "std_population_ms": 0.1417671932836631
+      }
+    },
+    {
+      "method": "cuda_online_attention_c1",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 1024,
+        "Q": 1024,
+        "causal": true
+      },
+      "max_abs_error": 0.0001220703125,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 1.4161625576019288,
+        "p50_ms": 1.346560001373291,
+        "p95_ms": 1.6655872464179993,
+        "p99_ms": 1.67632896900177,
+        "std_population_ms": 0.14562151129437934
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 1.42335565,
+        "p50_ms": 1.3718975,
+        "p95_ms": 1.6672126,
+        "p99_ms": 1.71684972,
+        "std_population_ms": 0.13910900065929419
+      }
+    },
+    {
+      "method": "sdpa_forced_math",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 2048,
+        "Q": 2048,
+        "causal": true
+      },
+      "max_abs_error": 0.0,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 1.5347603011131286,
+        "p50_ms": 1.4346239566802979,
+        "p95_ms": 1.849702352285385,
+        "p99_ms": 1.8590822100639344,
+        "std_population_ms": 0.16983166744934686
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 1.63992225,
+        "p50_ms": 1.516488,
+        "p95_ms": 2.0123245499999998,
+        "p99_ms": 2.1354529099999997,
+        "std_population_ms": 0.2099194383114329
+      }
+    },
+    {
+      "method": "sdpa_forced_flash",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 2048,
+        "Q": 2048,
+        "causal": true
+      },
+      "max_abs_error": 0.001953125,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.16173248261213302,
+        "p50_ms": 0.14745600521564484,
+        "p95_ms": 0.17925120443105694,
+        "p99_ms": 0.4819865480065345,
+        "std_population_ms": 0.0656830365023463
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.18133975,
+        "p50_ms": 0.179564,
+        "p95_ms": 0.1876314,
+        "p99_ms": 0.20020787999999998,
+        "std_population_ms": 0.0055748617460435745
+      }
+    },
+    {
+      "method": "sdpa_forced_efficient",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 2048,
+        "Q": 2048,
+        "causal": true
+      },
+      "max_abs_error": 0.001953125,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.19663615852594377,
+        "p50_ms": 0.18227200210094452,
+        "p95_ms": 0.20495359748601905,
+        "p99_ms": 0.5153382277488708,
+        "std_population_ms": 0.06527188660809902
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.23026435,
+        "p50_ms": 0.22454849999999998,
+        "p95_ms": 0.27196385,
+        "p99_ms": 0.27927277,
+        "std_population_ms": 0.016394989863598573
+      }
+    },
+    {
+      "method": "naive_materialized_fp16_attention",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 2048,
+        "Q": 2048,
+        "causal": true
+      },
+      "max_abs_error": 0.001953125,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.4885350465774536,
+        "p50_ms": 0.4556800127029419,
+        "p95_ms": 0.8333312213420867,
+        "p99_ms": 0.8678863960504531,
+        "std_population_ms": 0.10705723852327913
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.5518817,
+        "p50_ms": 0.5131515,
+        "p95_ms": 0.8366309999999999,
+        "p99_ms": 0.8392453999999999,
+        "std_population_ms": 0.09875380019680254
+      }
+    },
+    {
+      "method": "cuda_online_attention_c0",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 2048,
+        "Q": 2048,
+        "causal": true
+      },
+      "max_abs_error": 0.000244140625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 3.663924479484558,
+        "p50_ms": 3.7381120920181274,
+        "p95_ms": 3.928371179103851,
+        "p99_ms": 4.0201071357727045,
+        "std_population_ms": 0.1860229103362897
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 3.7144416,
+        "p50_ms": 3.7968694999999997,
+        "p95_ms": 3.9544453,
+        "p99_ms": 3.95634986,
+        "std_population_ms": 0.18381483253165398
+      }
+    },
+    {
+      "method": "cuda_online_attention_c1",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 2048,
+        "Q": 2048,
+        "causal": true
+      },
+      "max_abs_error": 0.000244140625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 4.61031358718872,
+        "p50_ms": 4.640255928039551,
+        "p95_ms": 4.921672034263611,
+        "p99_ms": 4.9682041454315184,
+        "std_population_ms": 0.1661756865007669
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 4.6745888,
+        "p50_ms": 4.6775715,
+        "p95_ms": 4.93865195,
+        "p99_ms": 4.94094639,
+        "std_population_ms": 0.1764493008029784
+      }
+    },
+    {
+      "method": "sdpa_forced_math",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 4096,
+        "Q": 4096,
+        "causal": true
+      },
+      "max_abs_error": 0.0,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 5.818718719482422,
+        "p50_ms": 5.895679950714111,
+        "p95_ms": 6.151167798042297,
+        "p99_ms": 6.250117144584656,
+        "std_population_ms": 0.20242663226656207
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 5.9539428,
+        "p50_ms": 6.028267,
+        "p95_ms": 6.2863430000000005,
+        "p99_ms": 6.3491342,
+        "std_population_ms": 0.21865450805039444
+      }
+    },
+    {
+      "method": "sdpa_forced_flash",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 4096,
+        "Q": 4096,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.465804797410965,
+        "p50_ms": 0.42444799840450287,
+        "p95_ms": 0.7421951830387115,
+        "p99_ms": 0.7823769569396972,
+        "std_population_ms": 0.1159848440991813
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.51995585,
+        "p50_ms": 0.5097005,
+        "p95_ms": 0.6390532000000001,
+        "p99_ms": 0.7825290399999998,
+        "std_population_ms": 0.07853580179400665
+      }
+    },
+    {
+      "method": "sdpa_forced_efficient",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 4096,
+        "Q": 4096,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.5743219041824341,
+        "p50_ms": 0.5457919836044312,
+        "p95_ms": 0.8796335935592652,
+        "p99_ms": 0.8817001420259476,
+        "std_population_ms": 0.09079449081030296
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.65318015,
+        "p50_ms": 0.632924,
+        "p95_ms": 0.8163345500000001,
+        "p99_ms": 0.9069045099999998,
+        "std_population_ms": 0.08227882837964759
+      }
+    },
+    {
+      "method": "naive_materialized_fp16_attention",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 4096,
+        "Q": 4096,
+        "causal": true
+      },
+      "max_abs_error": 0.0009765625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 2.1774880123138427,
+        "p50_ms": 2.040832042694092,
+        "p95_ms": 2.444595217704773,
+        "p99_ms": 2.4515175104141234,
+        "std_population_ms": 0.18406929828507332
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 2.28169375,
+        "p50_ms": 2.21745,
+        "p95_ms": 2.587803,
+        "p99_ms": 2.6689558,
+        "std_population_ms": 0.18416409657418978
+      }
+    },
+    {
+      "method": "cuda_online_attention_c0",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 4096,
+        "Q": 4096,
+        "causal": true
+      },
+      "max_abs_error": 0.000244140625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 13.250508804321289,
+        "p50_ms": 13.239295959472656,
+        "p95_ms": 13.608630418777466,
+        "p99_ms": 13.629163703918456,
+        "std_population_ms": 0.2238837768205161
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 13.32351415,
+        "p50_ms": 13.3287555,
+        "p95_ms": 13.533126099999999,
+        "p99_ms": 13.77546122,
+        "std_population_ms": 0.1832139268749173
+      }
+    },
+    {
+      "method": "cuda_online_attention_c1",
+      "shape": {
+        "B": 1,
+        "D": 128,
+        "H": 4,
+        "K": 4096,
+        "Q": 4096,
+        "causal": true
+      },
+      "max_abs_error": 0.000244140625,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 17.08085765838623,
+        "p50_ms": 17.053695678710938,
+        "p95_ms": 17.50615005493164,
+        "p99_ms": 17.724530181884766,
+        "std_population_ms": 0.22388519092140136
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 17.1640875,
+        "p50_ms": 17.183085,
+        "p95_ms": 17.5017339,
+        "p99_ms": 17.51293478,
+        "std_population_ms": 0.21146185810223586
+      }
+    }
+  ]
+}

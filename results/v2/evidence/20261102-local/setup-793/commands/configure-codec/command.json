@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "argv": [
+    "/opt/codex-resume/portfolio-ml/venv/bin/cmake",
+    "-S",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/backend/host_codec",
+    "-B",
+    "/opt/codex-resume/all-modules-v2/m2/builds/20261102T131700Z-m2-setup-host-codec",
+    "-G",
+    "Ninja",
+    "-DCMAKE_MAKE_PROGRAM=/opt/codex-resume/portfolio-ml/venv/bin/ninja",
+    "-DCMAKE_BUILD_TYPE=Release",
+    "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+    "-DCMAKE_CXX_COMPILER=/usr/bin/g++"
+  ],
+  "cwd": "/mnt/g/ResumeProject/platforms/tinyinfer",
+  "started_at": "2026-11-02T13:21:05.585205+00:00",
+  "timeout_seconds": 180,
+  "pid": 301174,
+  "exit_code": 0,
+  "finished_at": "2026-11-02T13:21:07.542608+00:00",
+  "wall_seconds": 1.9574038660066435,
+  "stdout.log_sha256": "9e5e01a1d54cf73d293985e18af5ad0175b299e29c056b7bbb4d9feba4ffdab6",
+  "stderr.log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

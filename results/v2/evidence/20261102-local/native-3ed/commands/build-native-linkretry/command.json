@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "argv": [
+    "/usr/bin/env",
+    "LD_LIBRARY_PATH=/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers:/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib:/usr/lib/wsl/lib",
+    "/opt/codex-resume/portfolio-ml/venv/bin/cmake",
+    "--build",
+    "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers",
+    "--parallel",
+    "2"
+  ],
+  "cwd": "/mnt/g/ResumeProject",
+  "started_at": "2026-11-02T13:36:31.994720+00:00",
+  "timeout_seconds": 1800,
+  "pid": 304373,
+  "exit_code": 0,
+  "finished_at": "2026-11-02T13:36:35.817854+00:00",
+  "wall_seconds": 3.823128196003381,
+  "stdout.log_sha256": "308efaa9fc64bf9a363581c8bed58a0862e4ed6ef33b29bc8476c1c62a170356",
+  "stderr.log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

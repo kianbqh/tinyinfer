@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "argv": [
+    "/usr/bin/env",
+    "LD_LIBRARY_PATH=/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers:/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib:/usr/lib/wsl/lib",
+    "PYTHONPATH=/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers:/mnt/g/ResumeProject/platforms/tinyinfer",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "TINYC_GIT=/opt/codex-resume/all-modules-v2/m1a/tools/git-native/usr/bin/git",
+    "/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "server/tests",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "cwd": "/mnt/g/ResumeProject/platforms/tinyinfer",
+  "started_at": "2026-11-02T13:45:06.593187+00:00",
+  "timeout_seconds": 180,
+  "pid": 305538,
+  "exit_code": 0,
+  "finished_at": "2026-11-02T13:45:08.210577+00:00",
+  "wall_seconds": 1.6173917919950327,
+  "stdout.log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr.log_sha256": "7cbf71ff09ca031a51a6c63d4c5774877c2b89e6ce5ed3a39d82a36a4b585907"
+}

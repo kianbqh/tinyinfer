@@ -1,0 +1,54 @@
+{
+  "cases": [
+    {
+      "case": 0,
+      "expected": [
+        1849
+      ],
+      "length": 8,
+      "new_tokens": 1,
+      "offset": 0,
+      "prompt_sha256": "2ebb4b0fa8bdc1a71f1d8f80085e1bce95143d945df3c2c45f09f7a96af649bb"
+    },
+    {
+      "case": 1,
+      "expected": [
+        905,
+        366,
+        464
+      ],
+      "length": 17,
+      "new_tokens": 3,
+      "offset": 19,
+      "prompt_sha256": "113a42899e6294f72a1d1e65fc151144542cf04c0847290785b85d3a8bc85037"
+    },
+    {
+      "case": 2,
+      "expected": [
+        13,
+        198,
+        198,
+        464,
+        2646
+      ],
+      "length": 33,
+      "new_tokens": 5,
+      "offset": 53,
+      "prompt_sha256": "ba754d67df5d00d75a73fe3c3ae72a39d012b9a18d27c9a62aca2a596fc83043"
+    }
+  ],
+  "trace": {
+    "argmax": 9,
+    "attention": 108,
+    "embedding": 9,
+    "forward_calls": 9,
+    "gelu": 108,
+    "gemm_fp16": 441,
+    "gemm_int8": 0,
+    "kv_scatter_gather": 108,
+    "layernorm": 225,
+    "lm_head": 9,
+    "nll": 0,
+    "residual": 216
+  }
+}

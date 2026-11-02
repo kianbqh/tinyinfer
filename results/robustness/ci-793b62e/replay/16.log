@@ -1,0 +1,11 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 1525957893
+INFO: Loaded 1 modules   (221 inline 8-bit counters): 221 [0x561fd25f7238, 0x561fd25f7315), 
+INFO: Loaded 1 PC tables (221 PCs): 221 [0x561fd25f7318,0x561fd25f80e8), 
+/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_codec: Running 1 inputs 1 time(s) each.
+Running: /home/runner/work/tinyinfer/tinyinfer/fuzz/corpus/codec/6b1e73a0094b7b812d3b9e22cffb4f8239319847522c4fa103753b6950020f93
+Executed /home/runner/work/tinyinfer/tinyinfer/fuzz/corpus/codec/6b1e73a0094b7b812d3b9e22cffb4f8239319847522c4fa103753b6950020f93 in 0 ms
+***
+*** NOTE: fuzzing was not performed, you have only
+***       executed the target code on a fixed set of inputs.
+***

@@ -1,0 +1,276 @@
+{
+  "audit_mode": "Artifact, raw-log, hash and committed-source inspection only; no local target execution",
+  "campaign": {
+    "all_21_initial_inputs_preserved": true,
+    "config": {
+      "jobs": 0,
+      "malloc_limit_mb": 64,
+      "max_len": 65536,
+      "max_total_time_seconds_per_target": 20,
+      "name": "short-pr-host-memory-safety",
+      "rss_limit_mb": 512,
+      "runs": 10000,
+      "schema_version": 1,
+      "seed": 20261102,
+      "targets": [
+        "json",
+        "artifact",
+        "host_validation",
+        "cpu_ops",
+        "codec"
+      ],
+      "timeout_seconds_per_input": 2,
+      "workers": 1
+    },
+    "confirmed_issues": 0,
+    "corpus_count_note": "Retained disk files include original/redundant seeds and differ from libFuzzer's final active corpus",
+    "crash_artifacts": 0,
+    "durable_corpus_archive": {
+      "all_member_hashes_verified": true,
+      "bytes": 27508,
+      "member_bytes": 60522,
+      "members": 530,
+      "note": "Derived deterministic packaging; every member is copied byte for byte from the retained CI artifact",
+      "path": "preserved-corpus.tar.gz",
+      "sha256": "1b5ec76dc314c0c22e83d01c37bbead2452ab59f8c62f180096fa4897fa3239d"
+    },
+    "end_utc": "2026-11-02T12:21:52.929347+00:00",
+    "excluded_code_review_findings": [
+      "prior socket receive allowance and epoll registration identity fixes"
+    ],
+    "final_active_corpus_inputs": 501,
+    "fixed_issues": 0,
+    "retained_corpus_bytes": 60522,
+    "retained_corpus_files": 530,
+    "run_count_note": "libFuzzer execution counters include seed initialization; they are not distinct random-input counts",
+    "sanitizer_diagnostics": 0,
+    "start_utc": "2026-11-02T12:21:50.325374+00:00",
+    "targets": [
+      {
+        "cov_counter": 282,
+        "crash_artifacts": 0,
+        "exit_code": 0,
+        "feature_counter": 578,
+        "final_active_corpus_inputs": 89,
+        "initial_nonempty_seed_files_reported_by_libfuzzer": 4,
+        "initial_seed_files": 5,
+        "libfuzzer_runs": 10000,
+        "raw_log_sha256": "cc1c44a6ed991f00d86fae0ac628b00bcb8c836c30549ef27a8076203393a197",
+        "retained_corpus_bytes": 1105,
+        "retained_corpus_files": 91,
+        "sanitizer_diagnostics": 0,
+        "target": "json",
+        "wall_seconds": 0.6152417800000052
+      },
+      {
+        "cov_counter": 720,
+        "crash_artifacts": 0,
+        "exit_code": 0,
+        "feature_counter": 1626,
+        "final_active_corpus_inputs": 138,
+        "initial_nonempty_seed_files_reported_by_libfuzzer": 3,
+        "initial_seed_files": 3,
+        "libfuzzer_runs": 10000,
+        "raw_log_sha256": "d0c84631cc4f4abcf36414467504109517f8a30dc9ae04aa17d389452b464ea3",
+        "retained_corpus_bytes": 53007,
+        "retained_corpus_files": 138,
+        "sanitizer_diagnostics": 0,
+        "target": "artifact",
+        "wall_seconds": 0.666054330999998
+      },
+      {
+        "cov_counter": 265,
+        "crash_artifacts": 0,
+        "exit_code": 0,
+        "feature_counter": 403,
+        "final_active_corpus_inputs": 105,
+        "initial_nonempty_seed_files_reported_by_libfuzzer": 4,
+        "initial_seed_files": 4,
+        "libfuzzer_runs": 10000,
+        "raw_log_sha256": "1f4356e2cebd823bbcbed17008fdb7d91cd14d6e25d701f9dd14731bedd846b6",
+        "retained_corpus_bytes": 4216,
+        "retained_corpus_files": 111,
+        "sanitizer_diagnostics": 0,
+        "target": "host_validation",
+        "wall_seconds": 0.11469773299999986
+      },
+      {
+        "cov_counter": 105,
+        "crash_artifacts": 0,
+        "exit_code": 0,
+        "feature_counter": 461,
+        "final_active_corpus_inputs": 94,
+        "initial_nonempty_seed_files_reported_by_libfuzzer": 3,
+        "initial_seed_files": 3,
+        "libfuzzer_runs": 10000,
+        "raw_log_sha256": "abc24c60a7d6d65bb327c503687e0e8e299ac58b8c03376936f7dc71892ada82",
+        "retained_corpus_bytes": 1412,
+        "retained_corpus_files": 113,
+        "sanitizer_diagnostics": 0,
+        "target": "cpu_ops",
+        "wall_seconds": 0.8168317069999986
+      },
+      {
+        "cov_counter": 102,
+        "crash_artifacts": 0,
+        "exit_code": 0,
+        "feature_counter": 449,
+        "final_active_corpus_inputs": 75,
+        "initial_nonempty_seed_files_reported_by_libfuzzer": 6,
+        "initial_seed_files": 6,
+        "libfuzzer_runs": 10000,
+        "raw_log_sha256": "222fdc9ffae86d13ad3e694a586da34696bb3224bfd6124f0180def870aecedb",
+        "retained_corpus_bytes": 782,
+        "retained_corpus_files": 77,
+        "sanitizer_diagnostics": 0,
+        "target": "codec",
+        "wall_seconds": 0.31604410299999586
+      }
+    ],
+    "total_libfuzzer_runs": 50000,
+    "wall_seconds": 2.6039849020000005
+  },
+  "ci_contract": {
+    "artifact_retention_days": 14,
+    "artifact_upload_always": true,
+    "pull_request_trigger": true,
+    "seed_replay_before_random_run": true,
+    "timeout_minutes": 10,
+    "unconditional_robustness_job": true
+  },
+  "fixed_input_replay": {
+    "by_target": {
+      "artifact": 3,
+      "codec": 6,
+      "cpu_ops": 3,
+      "host_validation": 4,
+      "json": 5
+    },
+    "note": "These are deterministic initial fixtures, not crash-derived regressions or additional random runs",
+    "passed": 21,
+    "registered_confirmed_regressions": 0,
+    "seed_inputs": 21
+  },
+  "limits": [
+    "Finite host memory-safety evidence; no CUDA device instructions or GPU correctness/performance coverage",
+    "A zero issue count applies to this run; it is not proof that no defects exist",
+    "Replays are fixed inputs, and an empty confirmed-regression manifest is not a regression discovery count",
+    "Native codec parity library and compiler executable were not retained; their binary hashes cannot be independently rechecked from this artifact",
+    "The native parity oracle llm/quantization.py and workflow are pinned by commit but absent from CI's 61-file source hash map"
+  ],
+  "native_codec_parity": {
+    "dequantization_exact_half_bytes": true,
+    "finite_fp16_bit_patterns_checked": 63488,
+    "invalid_extent_overlap_nonfinite_overflow_failure_atomicity": true,
+    "library_binary_or_hash_retained": false,
+    "library_built_and_checked_in_job_log": true,
+    "quantization_cases": [
+      {
+        "columns": 32,
+        "elements": 63488,
+        "exact_q_and_fp32_scales": true
+      },
+      {
+        "columns": 1,
+        "elements": 10,
+        "exact_q_and_fp32_scales": true
+      },
+      {
+        "columns": 3,
+        "elements": 6,
+        "exact_q_and_fp32_scales": true
+      },
+      {
+        "columns": 2,
+        "elements": 6,
+        "exact_q_and_fp32_scales": true
+      }
+    ],
+    "separate_from_sanitized_fuzzer": true,
+    "status": "passed"
+  },
+  "production_entry_mapping": "production-entry-map.json",
+  "provenance": {
+    "artifact_files": 663,
+    "artifact_id": 13140933607,
+    "artifact_uncompressed_bytes": 14188127,
+    "artifact_url": "https://github.com/kianbqh/tinyinfer/actions/runs/41444025668/artifacts/13140933607",
+    "artifact_zip_bytes": 4911627,
+    "artifact_zip_sha256": "6c23b4a23deb84a3c4b4dbd2e647e02894da34e3cf18d82e5a13c83bebc711ea",
+    "ci_checkout_merge": "6db431a04425089915544791a173ed27634119e5",
+    "job_id": 125272576550,
+    "job_url": "https://github.com/kianbqh/tinyinfer/actions/runs/41444025668/job/125272576550",
+    "repository": "https://github.com/kianbqh/tinyinfer",
+    "run_url": "https://github.com/kianbqh/tinyinfer/actions/runs/41444025668",
+    "source_head": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+    "workflow_run_id": 41444025668
+  },
+  "schema_version": 1,
+  "scope": [
+    "Production JSON/model-weight parser in llm/src/artifact.hpp, via its shared in-memory path",
+    "Production tensor extents/alignment/metadata validators shared with GEMM and attention CUDA C ABI entry paths",
+    "Production CPU GEMM, softmax and LayerNorm implementations",
+    "Production host FP16/INT8 quantization and dequantization codec used by the exporter"
+  ],
+  "source_verification": {
+    "additional_commit_read_dependencies": [
+      {
+        "note": "Read from the pinned source commit; not in CI's 61-file source hash map",
+        "path": ".github/workflows/tinyinfer.yml",
+        "sha256": "89f2f53334cb10b39084c8f790d88e8bfa50f4857cd8d6888e9dbf8a1b364cf7"
+      },
+      {
+        "note": "Read from the pinned source commit; not in CI's 61-file source hash map",
+        "path": "llm/quantization.py",
+        "sha256": "9b5509ad9f2f28c5c2d411c62f70730734c8cb9c84c8205e6da406406aed4091"
+      },
+      {
+        "note": "Production parser caller read from the pinned source commit; not in CI's 61-file source hash map",
+        "path": "llm/src/runtime.cu",
+        "sha256": "c9782e9f28ebfbd86166f8b39e54b0dcb12326c3dded37fd03ec45eb80ca4793"
+      }
+    ],
+    "all_four_build_campaign_snapshots_identical": true,
+    "branch_head_at_initial_audit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+    "branch_head_at_packaging": "3edcfebd24d5efbf5da81cda13f2bf684031b35e",
+    "ci_checkout_clean_in_receipts": true,
+    "ci_recorded_files": 61,
+    "current_branch_head_matches_at_initial_audit": true,
+    "followup_source_identity_check": {
+      "ci_recorded_host_source_files_unchanged": 61,
+      "commit": "3edcfebd24d5efbf5da81cda13f2bf684031b35e",
+      "comparison": "Exact committed Git blob SHA256, against original 793b62e CI hashes",
+      "scope": "Source identity only; the historical CI did not compile the two changed CUDA translation units or test the new includes"
+    },
+    "head_coverage_note": "This historical artifact verifies source 793b62e and its CI merge only. The branch advanced during packaging; final-head CI is a separate requirement.",
+    "matched_committed_lf_blobs": 61
+  },
+  "status": "accepted_bounded_host_ci_evidence",
+  "toolchain": {
+    "actual_compile_sanitizer_flags": [
+      "-fsanitize=fuzzer-no-link,address,undefined",
+      "-fno-sanitize-recover=undefined"
+    ],
+    "actual_link_sanitizer_flags": [
+      "-fsanitize=fuzzer,address,undefined",
+      "-fno-sanitize-recover=undefined"
+    ],
+    "asan": true,
+    "compiler": "Ubuntu clang version 18.1.3 (1ubuntu1)\nTarget: x86_64-pc-linux-gnu\nThread model: posix\nInstalledDir: /usr/bin",
+    "compiler_binary_retained": false,
+    "compiler_path_recorded": "/usr/bin/clang++",
+    "compiler_sha256_recorded": "8ef402d453d1ba4902e4ee0f0f847f6cfa01400c95aa43c24e97818b9c0e3f45",
+    "cuda_used": false,
+    "instrumented_compile_commands": 9,
+    "python": "3.12.15",
+    "retained_fuzzer_binary_hashes_verified": 5,
+    "runner_os": "Ubuntu 24.04.5",
+    "runtime_sanitizer_environment": {
+      "ASAN_OPTIONS": "abort_on_error=1:detect_leaks=1",
+      "UBSAN_OPTIONS": "halt_on_error=1:print_stacktrace=1"
+    },
+    "ubsan": true,
+    "ubsan_recover": false,
+    "verified_fuzzer_link_commands": 5
+  }
+}

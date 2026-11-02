@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "argv": [
+    "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+    "--section",
+    "SpeedOfLight",
+    "--section",
+    "Occupancy",
+    "--section",
+    "SpeedOfLight_RooflineChart",
+    "--metrics",
+    "sm__warps_active.avg.pct_of_peak_sustained_active,sm__throughput.avg.pct_of_peak_sustained_elapsed,gpu__compute_memory_throughput.avg.pct_of_peak_sustained_elapsed,gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed,sm__cycles_elapsed.avg.per_second,smsp__cycles_elapsed.avg.per_second,dram__cycles_elapsed.avg.per_second,dram__bytes.sum.peak_sustained,dram__bytes.sum.per_second,sm__sass_thread_inst_executed_op_ffma_pred_on.sum.peak_sustained,smsp__sass_thread_inst_executed_op_fadd_pred_on.sum.per_cycle_elapsed,smsp__sass_thread_inst_executed_op_fmul_pred_on.sum.per_cycle_elapsed,smsp__sass_thread_inst_executed_op_ffma_pred_on.sum.per_cycle_elapsed",
+    "--kernel-name-base",
+    "demangled",
+    "--kernel-name",
+    "regex:.*online_attention.*",
+    "--launch-skip",
+    "5",
+    "--launch-count",
+    "1",
+    "--cache-control",
+    "all",
+    "--clock-control",
+    "none",
+    "--export",
+    "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention",
+    "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/profile_v2",
+    "attention",
+    "1024",
+    "1",
+    "64",
+    "20"
+  ],
+  "cwd": "/mnt/g/ResumeProject/platforms/tinyinfer",
+  "started_at": "2026-11-02T22:17:04.433201+00:00",
+  "timeout_seconds": 900,
+  "artifact_bindings_request": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention-capture-bindings.json",
+  "artifact_bindings": {
+    "schema_version": 1,
+    "status": "verified",
+    "specification_before": {
+      "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention-capture-bindings.json",
+      "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention-capture-bindings.json",
+      "sha256": "df9c78da5fb7ea9a10fce02831fc51242f3516f94ecd9597c307287a06fd2e9e",
+      "bytes": 421
+    },
+    "recorder_source_before": {
+      "requested_path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+      "path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+      "sha256": "a61978863450d6d110e2db6e286dd496481e5674669568e7098ecff9f04bb697",
+      "bytes": 8193
+    },
+    "inputs_before": {
+      "ncu": {
+        "requested_path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+        "path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+        "sha256": "acc7ba9df698dca6f97032ffdaa028b3d571b51b8c47db36576a86924956d96c",
+        "bytes": 88968432
+      },
+      "version_receipt": {
+        "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+        "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+        "sha256": "1ffc4fb3cf08e8a635f6e8317355616b4fbb475dab52fe504d82546e770a7073",
+        "bytes": 3152
+      }
+    },
+    "inputs_after": {
+      "ncu": {
+        "requested_path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+        "path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+        "sha256": "acc7ba9df698dca6f97032ffdaa028b3d571b51b8c47db36576a86924956d96c",
+        "bytes": 88968432
+      },
+      "version_receipt": {
+        "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+        "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+        "sha256": "1ffc4fb3cf08e8a635f6e8317355616b4fbb475dab52fe504d82546e770a7073",
+        "bytes": 3152
+      }
+    },
+    "outputs_before_absent": {
+      "report": {
+        "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention.ncu-rep",
+        "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention.ncu-rep",
+        "absent": true
+      }
+    },
+    "outputs_after": {
+      "report": {
+        "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention.ncu-rep",
+        "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention.ncu-rep",
+        "sha256": "fd9492d864c0c59824fdf0b4ed1a884022166b9a13cac4fa9c0c5a6170485680",
+        "bytes": 151722
+      }
+    },
+    "specification_after": {
+      "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention-capture-bindings.json",
+      "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention-capture-bindings.json",
+      "sha256": "df9c78da5fb7ea9a10fce02831fc51242f3516f94ecd9597c307287a06fd2e9e",
+      "bytes": 421
+    },
+    "recorder_source_after": {
+      "requested_path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+      "path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+      "sha256": "a61978863450d6d110e2db6e286dd496481e5674669568e7098ecff9f04bb697",
+      "bytes": 8193
+    }
+  },
+  "pid": 362579,
+  "exit_code": 0,
+  "finished_at": "2026-11-02T22:17:05.704331+00:00",
+  "wall_seconds": 1.2711301700037438,
+  "stdout.log_sha256": "11fdfd0852aaf1eb9ee1c9e269cfb387ed89301750634c4d3a36b71205ab0b28",
+  "stderr.log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

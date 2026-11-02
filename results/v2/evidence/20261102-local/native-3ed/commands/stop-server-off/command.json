@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "argv": [
+    "/usr/bin/env",
+    "LD_LIBRARY_PATH=/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers:/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib:/usr/lib/wsl/lib",
+    "PYTHONPATH=/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers:/mnt/g/ResumeProject/platforms/tinyinfer",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "TINYC_GIT=/opt/codex-resume/all-modules-v2/m1a/tools/git-native/usr/bin/git",
+    "/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+    "-B",
+    "-c",
+    "import pathlib,json,os,signal; base=pathlib.Path(\"/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/commands\"); launch=json.loads((base/\"serve-off/command.json\").read_text()); record=json.loads(pathlib.Path(\"/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T132951Z-m2-native-headers-server-off/server.json\").read_text()); pid=record[\"pid\"]; proc=pathlib.Path(\"/proc\",str(pid)); fd=os.pidfd_open(pid); before=(proc/\"stat\").read_text().rsplit(\")\",1)[1].split(); exe=str((proc/\"exe\").resolve(strict=True)); argv=[os.fsdecode(v) for v in (proc/\"cmdline\").read_bytes().rstrip(b\"\\0\").split(b\"\\0\")]; after=(proc/\"stat\").read_text().rsplit(\")\",1)[1].split(); assert record[\"status\"]==\"running_startup_unverified\" and launch[\"pid\"]==312959 and pid==312966; assert exe==str(pathlib.Path(record[\"binary\"]).resolve()) and argv==record[\"server_argv\"]; assert before[1:4]==after[1:4]==[str(launch[\"pid\"])]*3 and before[19]==after[19]; signal.pidfd_send_signal(fd,signal.SIGTERM); os.close(fd); print(json.dumps({\"signal\":\"SIGTERM\",\"verified_native_pid\":pid,\"launcher_pid\":launch[\"pid\"],\"exact_argv\":argv,\"start_ticks\":before[19]}))"
+  ],
+  "cwd": "/mnt/g/ResumeProject/platforms/tinyinfer",
+  "started_at": "2026-11-02T14:39:40.777398+00:00",
+  "timeout_seconds": 60,
+  "pid": 313353,
+  "exit_code": 0,
+  "finished_at": "2026-11-02T14:39:40.841748+00:00",
+  "wall_seconds": 0.06435232200601604,
+  "stdout.log_sha256": "e7d75fb586078475d272940279bbc2101c7b275e70a8d88cd85a9b6cd57d9ad4",
+  "stderr.log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

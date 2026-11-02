@@ -1,0 +1,7 @@
+[
+  "/opt/codex-resume/portfolio-ml/venv/bin/cmake",
+  "--build",
+  "/opt/codex-resume/all-modules-v2/m2/builds/20261102T131700Z-m2-setup-host-codec",
+  "--parallel",
+  "2"
+]

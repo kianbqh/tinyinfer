@@ -1,0 +1,1110 @@
+{
+  "cases": [
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.4901161193847656e-08,
+        "rtol": 0.02
+      },
+      "name": "gemm_1_7_3_config0_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 0.0,
+        "rtol": 0.02
+      },
+      "name": "gemm_1_7_3_config0_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 2.384185791015625e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_17_33_19_config0_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.1920928955078125e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_17_33_19_config0_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 5.960464477539062e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_65_67_63_config0_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 7.152557373046875e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_65_67_63_config0_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.5497207641601562e-06,
+        "rtol": 0.02
+      },
+      "name": "gemm_128_128_128_config0_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.430511474609375e-06,
+        "rtol": 0.02
+      },
+      "name": "gemm_128_128_128_config0_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 0.0,
+        "rtol": 0.02
+      },
+      "name": "gemm_1_7_3_config1_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 0.0,
+        "rtol": 0.02
+      },
+      "name": "gemm_1_7_3_config1_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.1920928955078125e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_17_33_19_config1_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.7881393432617188e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_17_33_19_config1_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 5.960464477539062e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_65_67_63_config1_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 7.152557373046875e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_65_67_63_config1_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.430511474609375e-06,
+        "rtol": 0.02
+      },
+      "name": "gemm_128_128_128_config1_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.5497207641601562e-06,
+        "rtol": 0.02
+      },
+      "name": "gemm_128_128_128_config1_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 3.725290298461914e-09,
+        "rtol": 0.02
+      },
+      "name": "gemm_1_7_3_config2_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 7.450580596923828e-09,
+        "rtol": 0.02
+      },
+      "name": "gemm_1_7_3_config2_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.7881393432617188e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_17_33_19_config2_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.7881393432617188e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_17_33_19_config2_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 7.152557373046875e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_65_67_63_config2_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 5.960464477539062e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_65_67_63_config2_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.9073486328125e-06,
+        "rtol": 0.02
+      },
+      "name": "gemm_128_128_128_config2_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.6689300537109375e-06,
+        "rtol": 0.02
+      },
+      "name": "gemm_128_128_128_config2_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 0.0,
+        "rtol": 0.02
+      },
+      "name": "gemm_1_7_3_config3_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 2.9802322387695312e-08,
+        "rtol": 0.02
+      },
+      "name": "gemm_1_7_3_config3_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.1920928955078125e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_17_33_19_config3_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.7881393432617188e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_17_33_19_config3_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 7.152557373046875e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_65_67_63_config3_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 7.152557373046875e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_65_67_63_config3_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 2.1457672119140625e-06,
+        "rtol": 0.02
+      },
+      "name": "gemm_128_128_128_config3_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.6689300537109375e-06,
+        "rtol": 0.02
+      },
+      "name": "gemm_128_128_128_config3_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 0.0,
+        "rtol": 0.02
+      },
+      "name": "gemm_1_7_3_config4_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 0.0,
+        "rtol": 0.02
+      },
+      "name": "gemm_1_7_3_config4_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.7881393432617188e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_17_33_19_config4_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.7881393432617188e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_17_33_19_config4_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 5.960464477539062e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_65_67_63_config4_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 5.960464477539062e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_65_67_63_config4_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.6689300537109375e-06,
+        "rtol": 0.02
+      },
+      "name": "gemm_128_128_128_config4_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.1920928955078125e-06,
+        "rtol": 0.02
+      },
+      "name": "gemm_128_128_128_config4_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 0.0,
+        "rtol": 0.02
+      },
+      "name": "gemm_1_7_3_config5_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 2.9802322387695312e-08,
+        "rtol": 0.02
+      },
+      "name": "gemm_1_7_3_config5_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 3.5762786865234375e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_17_33_19_config5_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.7881393432617188e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_17_33_19_config5_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 8.344650268554688e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_65_67_63_config5_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 8.344650268554688e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_65_67_63_config5_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.6689300537109375e-06,
+        "rtol": 0.02
+      },
+      "name": "gemm_128_128_128_config5_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.6689300537109375e-06,
+        "rtol": 0.02
+      },
+      "name": "gemm_128_128_128_config5_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.4901161193847656e-08,
+        "rtol": 0.02
+      },
+      "name": "gemm_1_7_3_config6_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 0.0,
+        "rtol": 0.02
+      },
+      "name": "gemm_1_7_3_config6_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.7881393432617188e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_17_33_19_config6_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.7881393432617188e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_17_33_19_config6_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 7.152557373046875e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_65_67_63_config6_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 7.152557373046875e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_65_67_63_config6_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.9073486328125e-06,
+        "rtol": 0.02
+      },
+      "name": "gemm_128_128_128_config6_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.9073486328125e-06,
+        "rtol": 0.02
+      },
+      "name": "gemm_128_128_128_config6_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 7.450580596923828e-09,
+        "rtol": 0.02
+      },
+      "name": "gemm_1_7_3_config7_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 0.0,
+        "rtol": 0.02
+      },
+      "name": "gemm_1_7_3_config7_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.1920928955078125e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_17_33_19_config7_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.1920928955078125e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_17_33_19_config7_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 5.960464477539062e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_65_67_63_config7_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 7.152557373046875e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_65_67_63_config7_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.430511474609375e-06,
+        "rtol": 0.02
+      },
+      "name": "gemm_128_128_128_config7_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.9073486328125e-06,
+        "rtol": 0.02
+      },
+      "name": "gemm_128_128_128_config7_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 0.0,
+        "rtol": 0.02
+      },
+      "name": "gemm_1_7_3_config8_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.862645149230957e-09,
+        "rtol": 0.02
+      },
+      "name": "gemm_1_7_3_config8_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.1920928955078125e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_17_33_19_config8_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.7881393432617188e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_17_33_19_config8_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 7.152557373046875e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_65_67_63_config8_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 7.152557373046875e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_65_67_63_config8_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.9073486328125e-06,
+        "rtol": 0.02
+      },
+      "name": "gemm_128_128_128_config8_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.6689300537109375e-06,
+        "rtol": 0.02
+      },
+      "name": "gemm_128_128_128_config8_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 2.9802322387695312e-08,
+        "rtol": 0.02
+      },
+      "name": "gemm_1_7_3_config9_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 0.0,
+        "rtol": 0.02
+      },
+      "name": "gemm_1_7_3_config9_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.7881393432617188e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_17_33_19_config9_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.7881393432617188e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_17_33_19_config9_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 7.152557373046875e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_65_67_63_config9_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 4.76837158203125e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_65_67_63_config9_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.430511474609375e-06,
+        "rtol": 0.02
+      },
+      "name": "gemm_128_128_128_config9_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.6689300537109375e-06,
+        "rtol": 0.02
+      },
+      "name": "gemm_128_128_128_config9_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 0.0,
+        "rtol": 0.02
+      },
+      "name": "gemm_1_7_3_config10_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.4901161193847656e-08,
+        "rtol": 0.02
+      },
+      "name": "gemm_1_7_3_config10_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.1920928955078125e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_17_33_19_config10_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.1920928955078125e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_17_33_19_config10_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 7.152557373046875e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_65_67_63_config10_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 7.152557373046875e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_65_67_63_config10_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 2.2649765014648438e-06,
+        "rtol": 0.02
+      },
+      "name": "gemm_128_128_128_config10_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.430511474609375e-06,
+        "rtol": 0.02
+      },
+      "name": "gemm_128_128_128_config10_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 7.450580596923828e-09,
+        "rtol": 0.02
+      },
+      "name": "gemm_1_7_3_config11_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 0.0,
+        "rtol": 0.02
+      },
+      "name": "gemm_1_7_3_config11_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 2.384185791015625e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_17_33_19_config11_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.1920928955078125e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_17_33_19_config11_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 8.344650268554688e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_65_67_63_config11_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 7.152557373046875e-07,
+        "rtol": 0.02
+      },
+      "name": "gemm_65_67_63_config11_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.6689300537109375e-06,
+        "rtol": 0.02
+      },
+      "name": "gemm_128_128_128_config11_int8False",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 1.6689300537109375e-06,
+        "rtol": 0.02
+      },
+      "name": "gemm_128_128_128_config11_int8True",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 0.0,
+        "rtol": 0.02
+      },
+      "name": "attention_d64_q17_k33_c0_causalTrue",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 5.960464477539063e-08,
+        "rtol": 0.02
+      },
+      "name": "attention_d64_q1_k31_c0_causalTrue",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 4.76837158203125e-07,
+        "rtol": 0.02
+      },
+      "name": "attention_d64_q5_k19_c0_causalTrue",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 0.0,
+        "rtol": 0.02
+      },
+      "name": "attention_d64_q9_k11_c0_causalFalse",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 9.5367431640625e-07,
+        "rtol": 0.02
+      },
+      "name": "attention_d64_q17_k33_c1_causalTrue",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 3.0517578125e-05,
+        "rtol": 0.02
+      },
+      "name": "attention_d64_q1_k31_c1_causalTrue",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 0.0,
+        "rtol": 0.02
+      },
+      "name": "attention_d64_q5_k19_c1_causalTrue",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 0.0,
+        "rtol": 0.02
+      },
+      "name": "attention_d64_q9_k11_c1_causalFalse",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 3.814697265625e-06,
+        "rtol": 0.02
+      },
+      "name": "attention_d128_q17_k33_c0_causalTrue",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 0.0,
+        "rtol": 0.02
+      },
+      "name": "attention_d128_q1_k31_c0_causalTrue",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 9.5367431640625e-07,
+        "rtol": 0.02
+      },
+      "name": "attention_d128_q5_k19_c0_causalTrue",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 0.00048828125,
+        "rtol": 0.02
+      },
+      "name": "attention_d128_q9_k11_c0_causalFalse",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 0.0001220703125,
+        "rtol": 0.02
+      },
+      "name": "attention_d128_q17_k33_c1_causalTrue",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 3.0517578125e-05,
+        "rtol": 0.02
+      },
+      "name": "attention_d128_q1_k31_c1_causalTrue",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 0.0001220703125,
+        "rtol": 0.02
+      },
+      "name": "attention_d128_q5_k19_c1_causalTrue",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 3.0517578125e-05,
+        "rtol": 0.02
+      },
+      "name": "attention_d128_q9_k11_c1_causalFalse",
+      "status": "passed"
+    },
+    {
+      "detail": [
+        {
+          "atol": 0.02,
+          "max_abs_error": 0.0,
+          "rtol": 0.02
+        },
+        {
+          "atol": 0.02,
+          "max_abs_error": 2.6524066925048828e-05,
+          "rtol": 0.02
+        },
+        {
+          "atol": 0.02,
+          "max_abs_error": 0.0,
+          "rtol": 0.02
+        },
+        {
+          "atol": 0.02,
+          "max_abs_error": 0.0006000995635986328,
+          "rtol": 0.02
+        },
+        {
+          "atol": 0.02,
+          "max_abs_error": 0.0004875659942626953,
+          "rtol": 0.02
+        },
+        {
+          "atol": 0.02,
+          "max_abs_error": 9.369850158691406e-05,
+          "rtol": 0.02
+        },
+        {
+          "atol": 0.02,
+          "max_abs_error": 0.0018744468688964844,
+          "rtol": 0.02
+        },
+        {
+          "atol": 0.02,
+          "max_abs_error": 0.0009720325469970703,
+          "rtol": 0.02
+        },
+        {
+          "atol": 0.02,
+          "max_abs_error": 6.249174475669861e-06,
+          "rtol": 0.02
+        },
+        {
+          "atol": 0.02,
+          "max_abs_error": 0.0018892288208007812,
+          "rtol": 0.02
+        },
+        {
+          "atol": 0.02,
+          "max_abs_error": 0.0009627342224121094,
+          "rtol": 0.02
+        },
+        {
+          "atol": 0.02,
+          "max_abs_error": 5.759298801422119e-06,
+          "rtol": 0.02
+        },
+        {
+          "atol": 0.02,
+          "max_abs_error": 0.0019178390502929688,
+          "rtol": 0.02
+        },
+        {
+          "atol": 0.02,
+          "max_abs_error": 0.0009684562683105469,
+          "rtol": 0.02
+        },
+        {
+          "atol": 0.02,
+          "max_abs_error": 3.7821009755134583e-06,
+          "rtol": 0.02
+        }
+      ],
+      "name": "layernorm_gelu_new_softmax",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "atol": 0.02,
+        "max_abs_error": 3.814697265625e-06,
+        "rtol": 0.02
+      },
+      "name": "non_default_stream_and_input_lifetime",
+      "status": "passed"
+    },
+    {
+      "detail": {
+        "rejected": 11
+      },
+      "name": "invalid_tensor_contracts",
+      "status": "passed"
+    }
+  ],
+  "status": "passed"
+}

@@ -1,0 +1,57 @@
+Test project /opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers
+      Start  1: Reference.NonFiniteOutputCannotPassComparison
+ 1/26 Test  #1: Reference.NonFiniteOutputCannotPassComparison ..........................   Passed    0.03 sec
+      Start  2: Softmax.MatchesReferenceAndRowsSumToOne
+ 2/26 Test  #2: Softmax.MatchesReferenceAndRowsSumToOne ................................   Passed    0.00 sec
+      Start  3: Softmax.NumericallyStableForLargeLogits
+ 3/26 Test  #3: Softmax.NumericallyStableForLargeLogits ................................   Passed    0.00 sec
+      Start  4: LayerNorm.MatchesReference
+ 4/26 Test  #4: LayerNorm.MatchesReference .............................................   Passed    0.00 sec
+      Start  5: LayerNorm.LargeOffsetInputIsStable
+ 5/26 Test  #5: LayerNorm.LargeOffsetInputIsStable .....................................   Passed    0.00 sec
+      Start  6: LayerNorm.ConstantRowGivesBeta
+ 6/26 Test  #6: LayerNorm.ConstantRowGivesBeta .........................................   Passed    0.00 sec
+      Start  7: Shapes/MatmulShapes.NaiveAndBlockedMatchFp64Reference/(1, 1, 1)
+ 7/26 Test  #7: Shapes/MatmulShapes.NaiveAndBlockedMatchFp64Reference/(1, 1, 1) ........   Passed    0.00 sec
+      Start  8: Shapes/MatmulShapes.NaiveAndBlockedMatchFp64Reference/(7, 13, 5)
+ 8/26 Test  #8: Shapes/MatmulShapes.NaiveAndBlockedMatchFp64Reference/(7, 13, 5) .......   Passed    0.00 sec
+      Start  9: Shapes/MatmulShapes.NaiveAndBlockedMatchFp64Reference/(64, 256, 256)
+ 9/26 Test  #9: Shapes/MatmulShapes.NaiveAndBlockedMatchFp64Reference/(64, 256, 256) ...   Passed    0.01 sec
+      Start 10: Shapes/MatmulShapes.NaiveAndBlockedMatchFp64Reference/(65, 257, 300)
+10/26 Test #10: Shapes/MatmulShapes.NaiveAndBlockedMatchFp64Reference/(65, 257, 300) ...   Passed    0.01 sec
+      Start 11: Shapes/MatmulShapes.NaiveAndBlockedMatchFp64Reference/(128, 96, 513)
+11/26 Test #11: Shapes/MatmulShapes.NaiveAndBlockedMatchFp64Reference/(128, 96, 513) ...   Passed    0.01 sec
+      Start 12: Shapes/MatmulShapes.NaiveAndBlockedMatchFp64Reference/(300, 1, 77)
+12/26 Test #12: Shapes/MatmulShapes.NaiveAndBlockedMatchFp64Reference/(300, 1, 77) .....   Passed    0.00 sec
+      Start 13: CudaSoftmax.MatchesReference
+13/26 Test #13: CudaSoftmax.MatchesReference ...........................................   Passed    0.47 sec
+      Start 14: CudaSoftmax.NegativeInfinityMaskHasZeroProbability
+14/26 Test #14: CudaSoftmax.NegativeInfinityMaskHasZeroProbability .....................   Passed    0.40 sec
+      Start 15: CudaLayerNorm.MatchesReference
+15/26 Test #15: CudaLayerNorm.MatchesReference .........................................   Passed    0.27 sec
+      Start 16: CudaLayerNorm.LargeOffsetInputIsStable
+16/26 Test #16: CudaLayerNorm.LargeOffsetInputIsStable .................................   Passed    0.24 sec
+      Start 17: CudaLayerNorm.ConstantRowGivesBeta
+17/26 Test #17: CudaLayerNorm.ConstantRowGivesBeta .....................................   Passed    0.26 sec
+      Start 18: Shapes/CudaMatmul.AllVariantsMatchReference/(1, 1, 1)
+18/26 Test #18: Shapes/CudaMatmul.AllVariantsMatchReference/(1, 1, 1) ..................   Passed    0.27 sec
+      Start 19: Shapes/CudaMatmul.AllVariantsMatchReference/(33, 65, 17)
+19/26 Test #19: Shapes/CudaMatmul.AllVariantsMatchReference/(33, 65, 17) ...............   Passed    0.27 sec
+      Start 20: Shapes/CudaMatmul.AllVariantsMatchReference/(64, 64, 64)
+20/26 Test #20: Shapes/CudaMatmul.AllVariantsMatchReference/(64, 64, 64) ...............   Passed    0.26 sec
+      Start 21: Shapes/CudaMatmul.AllVariantsMatchReference/(257, 130, 515)
+21/26 Test #21: Shapes/CudaMatmul.AllVariantsMatchReference/(257, 130, 515) ............   Passed    0.27 sec
+      Start 22: Shapes/CudaMatmul.AllVariantsMatchReference/(512, 512, 512)
+22/26 Test #22: Shapes/CudaMatmul.AllVariantsMatchReference/(512, 512, 512) ............   Passed    0.36 sec
+      Start 23: v2_artifact_parser
+23/26 Test #23: v2_artifact_parser .....................................................   Passed    0.02 sec
+      Start 24: v2_server_queue_protocol
+24/26 Test #24: v2_server_queue_protocol ...............................................   Passed    0.02 sec
+      Start 25: v2_server_transport_regressions
+25/26 Test #25: v2_server_transport_regressions ........................................   Passed    0.00 sec
+      Start 26: v2_server_e2e
+26/26 Test #26: v2_server_e2e ..........................................................   Passed    0.61 sec
+
+100% tests passed out of 26
+
+Total Test time (real) =   3.91 sec

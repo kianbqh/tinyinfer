@@ -1,0 +1,82 @@
+{
+  "utc": "2026-11-02T22:17:02.291762+00:00",
+  "status": "accepted",
+  "scope": "Closed matched workloads, per-request status/tokens/timestamps, histogram bins/percentiles and throughput denominators; socket frame consistency",
+  "comparison_sha256": "dcf00f48713ad3924d7430608177c96ad323fd8bd1955b04737f0455c44b8cfa",
+  "completed_requests_per_mode": 1084,
+  "rows": [
+    {
+      "mode": "off",
+      "rate": 1,
+      "completed": 24,
+      "p50_ms": 85.46158771101571,
+      "p99_ms": 385.025063146777,
+      "p99_9_ms": 409.312031791403,
+      "per_full_drain_second": 0.7964411705129537
+    },
+    {
+      "mode": "off",
+      "rate": 5,
+      "completed": 159,
+      "p50_ms": 79.25761050991058,
+      "p99_ms": 239.2550379517991,
+      "p99_9_ms": 271.1831810672988,
+      "per_full_drain_second": 5.273296719728187
+    },
+    {
+      "mode": "off",
+      "rate": 10,
+      "completed": 314,
+      "p50_ms": 86.91997732529592,
+      "p99_ms": 547.7796986115145,
+      "p99_9_ms": 580.1385047780523,
+      "per_full_drain_second": 10.38406501852228
+    },
+    {
+      "mode": "off",
+      "rate": 20,
+      "completed": 587,
+      "p50_ms": 2219.091347088364,
+      "p99_ms": 4302.398597488453,
+      "p99_9_ms": 4372.495679582475,
+      "per_full_drain_second": 17.12234509065285
+    },
+    {
+      "mode": "on",
+      "rate": 1,
+      "completed": 24,
+      "p50_ms": 81.83866068394374,
+      "p99_ms": 302.15619457812437,
+      "p99_9_ms": 303.03480828809006,
+      "per_full_drain_second": 0.7954869365450884
+    },
+    {
+      "mode": "on",
+      "rate": 5,
+      "completed": 159,
+      "p50_ms": 79.5077757595787,
+      "p99_ms": 151.55161622485454,
+      "p99_9_ms": 162.14292796392607,
+      "per_full_drain_second": 5.290476848758207
+    },
+    {
+      "mode": "on",
+      "rate": 10,
+      "completed": 314,
+      "p50_ms": 80.74572886609079,
+      "p99_ms": 155.44729328882585,
+      "p99_9_ms": 158.2045768069439,
+      "per_full_drain_second": 10.466013684049761
+    },
+    {
+      "mode": "on",
+      "rate": 20,
+      "completed": 587,
+      "p50_ms": 82.63310116828536,
+      "p99_ms": 157.20280460950633,
+      "p99_9_ms": 160.6537933026626,
+      "per_full_drain_second": 19.485977780147092
+    }
+  ],
+  "new_service_or_gpu_work": false
+}

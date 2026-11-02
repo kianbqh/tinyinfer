@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "quantization_cases": [
+    {
+      "elements": 63488,
+      "columns": 32,
+      "exact_q_and_fp32_scales": true
+    },
+    {
+      "elements": 10,
+      "columns": 1,
+      "exact_q_and_fp32_scales": true
+    },
+    {
+      "elements": 6,
+      "columns": 3,
+      "exact_q_and_fp32_scales": true
+    },
+    {
+      "elements": 6,
+      "columns": 2,
+      "exact_q_and_fp32_scales": true
+    }
+  ],
+  "dequantization_exact_half_bytes": true,
+  "invalid_extent_overlap_nonfinite_overflow_failure_atomicity": true
+}

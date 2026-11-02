@@ -1,0 +1,355 @@
+{
+  "limits": [
+    "The parser harness calls the shared production in-memory path, not filesystem I/O",
+    "GEMM/attention fuzzing calls shared host metadata routines, not the device-selection prelude or CUDA launch/device instructions",
+    "runtime.cu and workflow caller references are commit-pinned but absent from CI's 61-file source hash map"
+  ],
+  "mapping": {
+    "artifact": [
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 16,
+        "matched_ci_source_hash": true,
+        "path": "fuzz/harnesses/artifact.cpp",
+        "source_sha256": "18bb7c0b6370765d7712ee6861228abd045038f013d07a7df42d87c04d3b4374",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/fuzz/harnesses/artifact.cpp#L16",
+        "symbol_or_call": "Artifact::from_memory"
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 173,
+        "matched_ci_source_hash": true,
+        "path": "llm/src/artifact.hpp",
+        "source_sha256": "b66af831eebb872d0e66caabaf3ef010b1d7e336be2f847acf051f834a6c08e3",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/llm/src/artifact.hpp#L173",
+        "symbol_or_call": "static Artifact from_memory"
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 178,
+        "matched_ci_source_hash": true,
+        "path": "llm/src/artifact.hpp",
+        "source_sha256": "b66af831eebb872d0e66caabaf3ef010b1d7e336be2f847acf051f834a6c08e3",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/llm/src/artifact.hpp#L178",
+        "symbol_or_call": "explicit Artifact(Input input)"
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 171,
+        "matched_ci_source_hash": true,
+        "path": "llm/src/artifact.hpp",
+        "source_sha256": "b66af831eebb872d0e66caabaf3ef010b1d7e336be2f847acf051f834a6c08e3",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/llm/src/artifact.hpp#L171",
+        "symbol_or_call": "explicit Artifact(const std::string& path)"
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 182,
+        "matched_ci_source_hash": false,
+        "path": "llm/src/runtime.cu",
+        "source_sha256": "c9782e9f28ebfbd86166f8b39e54b0dcb12326c3dded37fd03ec45eb80ca4793",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/llm/src/runtime.cu#L182",
+        "symbol_or_call": "Artifact artifact(path)"
+      }
+    ],
+    "ci": [
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 4,
+        "matched_ci_source_hash": false,
+        "path": ".github/workflows/tinyinfer.yml",
+        "source_sha256": "89f2f53334cb10b39084c8f790d88e8bfa50f4857cd8d6888e9dbf8a1b364cf7",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/.github/workflows/tinyinfer.yml#L4",
+        "symbol_or_call": "  pull_request:"
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 76,
+        "matched_ci_source_hash": false,
+        "path": ".github/workflows/tinyinfer.yml",
+        "source_sha256": "89f2f53334cb10b39084c8f790d88e8bfa50f4857cd8d6888e9dbf8a1b364cf7",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/.github/workflows/tinyinfer.yml#L76",
+        "symbol_or_call": "  robustness:"
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 40,
+        "matched_ci_source_hash": true,
+        "path": "fuzz/run_campaign.py",
+        "source_sha256": "21aaa2d89942a3a24652a52d95092135bd395c4e7ef794944aafc1da6da14687",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/fuzz/run_campaign.py#L40",
+        "symbol_or_call": "ASAN_OPTIONS='abort_on_error=1:detect_leaks=1'"
+      }
+    ],
+    "codec": [
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 11,
+        "matched_ci_source_hash": true,
+        "path": "fuzz/harnesses/codec.cpp",
+        "source_sha256": "fc8acd006fb053bf7f3dbef98f1347e4762606e981b17034124aab288985382f",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/fuzz/harnesses/codec.cpp#L11",
+        "symbol_or_call": "ti_host_quantize_f16("
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 13,
+        "matched_ci_source_hash": true,
+        "path": "fuzz/harnesses/codec.cpp",
+        "source_sha256": "fc8acd006fb053bf7f3dbef98f1347e4762606e981b17034124aab288985382f",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/fuzz/harnesses/codec.cpp#L13",
+        "symbol_or_call": "ti_host_dequantize_i8("
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 58,
+        "matched_ci_source_hash": true,
+        "path": "backend/host_codec.cpp",
+        "source_sha256": "eccf21660ee7e84e93cf7ff5663775b760afa782341e391b5552889cbadfbd19",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/backend/host_codec.cpp#L58",
+        "symbol_or_call": "extern \"C\" int ti_host_quantize_f16("
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 86,
+        "matched_ci_source_hash": true,
+        "path": "backend/host_codec.cpp",
+        "source_sha256": "eccf21660ee7e84e93cf7ff5663775b760afa782341e391b5552889cbadfbd19",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/backend/host_codec.cpp#L86",
+        "symbol_or_call": "extern \"C\" int ti_host_dequantize_i8("
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 37,
+        "matched_ci_source_hash": true,
+        "path": "llm/host_codec.py",
+        "source_sha256": "ae1b3e4f06354dd8523111f05b94369ca597c7146c2f10c17807dc98ba60004b",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/llm/host_codec.py#L37",
+        "symbol_or_call": "status = self.lib.ti_host_quantize_f16("
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 51,
+        "matched_ci_source_hash": true,
+        "path": "llm/host_codec.py",
+        "source_sha256": "ae1b3e4f06354dd8523111f05b94369ca597c7146c2f10c17807dc98ba60004b",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/llm/host_codec.py#L51",
+        "symbol_or_call": "status = self.lib.ti_host_dequantize_i8("
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 147,
+        "matched_ci_source_hash": true,
+        "path": "llm/export_weights.py",
+        "source_sha256": "898d2feec69ae713fabace2c23d9a684d4f1dd597ebf577e2edb158c3a2e96d0",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/llm/export_weights.py#L147",
+        "symbol_or_call": "actual = host_codec.quantized_bytes("
+      }
+    ],
+    "cpu_ops": [
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 11,
+        "matched_ci_source_hash": true,
+        "path": "fuzz/harnesses/cpu_ops.cpp",
+        "source_sha256": "5daadf081126c6fbd111d1e4103e09c102178cb12171c931a0191517d0f62541",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/fuzz/harnesses/cpu_ops.cpp#L11",
+        "symbol_or_call": "ik::cpu::matmul_naive("
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 17,
+        "matched_ci_source_hash": true,
+        "path": "fuzz/harnesses/cpu_ops.cpp",
+        "source_sha256": "5daadf081126c6fbd111d1e4103e09c102178cb12171c931a0191517d0f62541",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/fuzz/harnesses/cpu_ops.cpp#L17",
+        "symbol_or_call": "ik::cpu::softmax_naive("
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 21,
+        "matched_ci_source_hash": true,
+        "path": "fuzz/harnesses/cpu_ops.cpp",
+        "source_sha256": "5daadf081126c6fbd111d1e4103e09c102178cb12171c931a0191517d0f62541",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/fuzz/harnesses/cpu_ops.cpp#L21",
+        "symbol_or_call": "ik::cpu::layernorm_naive("
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 7,
+        "matched_ci_source_hash": true,
+        "path": "kernels/src/cpu/matmul.cpp",
+        "source_sha256": "1ad04432d9f1f8e35641a7179b968d828098594ac9611a45558996408b3eae6f",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/kernels/src/cpu/matmul.cpp#L7",
+        "symbol_or_call": "void matmul_naive("
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 22,
+        "matched_ci_source_hash": true,
+        "path": "kernels/src/cpu/matmul.cpp",
+        "source_sha256": "1ad04432d9f1f8e35641a7179b968d828098594ac9611a45558996408b3eae6f",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/kernels/src/cpu/matmul.cpp#L22",
+        "symbol_or_call": "void matmul_blocked("
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 7,
+        "matched_ci_source_hash": true,
+        "path": "kernels/src/cpu/softmax.cpp",
+        "source_sha256": "c2a3a086188d1a5dcedad03ef9bf1b3394dc03aef14054346cc2db060366dec3",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/kernels/src/cpu/softmax.cpp#L7",
+        "symbol_or_call": "void softmax_naive("
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 19,
+        "matched_ci_source_hash": true,
+        "path": "kernels/src/cpu/softmax.cpp",
+        "source_sha256": "c2a3a086188d1a5dcedad03ef9bf1b3394dc03aef14054346cc2db060366dec3",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/kernels/src/cpu/softmax.cpp#L19",
+        "symbol_or_call": "void softmax_fused("
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 6,
+        "matched_ci_source_hash": true,
+        "path": "kernels/src/cpu/layernorm.cpp",
+        "source_sha256": "0d077487c755be1838d6dd6141f58cfe5bfdd3712db47b9e62e4d04c069ecfde",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/kernels/src/cpu/layernorm.cpp#L6",
+        "symbol_or_call": "void layernorm_naive("
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 22,
+        "matched_ci_source_hash": true,
+        "path": "kernels/src/cpu/layernorm.cpp",
+        "source_sha256": "0d077487c755be1838d6dd6141f58cfe5bfdd3712db47b9e62e4d04c069ecfde",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/kernels/src/cpu/layernorm.cpp#L22",
+        "symbol_or_call": "void layernorm_fused("
+      }
+    ],
+    "host_validation": [
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 18,
+        "matched_ci_source_hash": true,
+        "path": "fuzz/harnesses/host_validation.cpp",
+        "source_sha256": "99c907216c560a3daf9b19a45f4c34a148943407173ee60ff465ff6b68f61ddd",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/fuzz/harnesses/host_validation.cpp#L18",
+        "symbol_or_call": "ti::host::gemm("
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 23,
+        "matched_ci_source_hash": true,
+        "path": "fuzz/harnesses/host_validation.cpp",
+        "source_sha256": "99c907216c560a3daf9b19a45f4c34a148943407173ee60ff465ff6b68f61ddd",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/fuzz/harnesses/host_validation.cpp#L23",
+        "symbol_or_call": "ti::host::attention("
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 23,
+        "matched_ci_source_hash": true,
+        "path": "backend/include/tinyinfer_host_validation.hpp",
+        "source_sha256": "30b2f99d98418959a434936d1fa8d704faaccc5ee01c037180b488177b5e32ea",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/backend/include/tinyinfer_host_validation.hpp#L23",
+        "symbol_or_call": "inline Check gemm("
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 47,
+        "matched_ci_source_hash": true,
+        "path": "backend/include/tinyinfer_host_validation.hpp",
+        "source_sha256": "30b2f99d98418959a434936d1fa8d704faaccc5ee01c037180b488177b5e32ea",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/backend/include/tinyinfer_host_validation.hpp#L47",
+        "symbol_or_call": "inline Check attention("
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 15,
+        "matched_ci_source_hash": true,
+        "path": "backend/include/tinyinfer_host_validation.hpp",
+        "source_sha256": "30b2f99d98418959a434936d1fa8d704faaccc5ee01c037180b488177b5e32ea",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/backend/include/tinyinfer_host_validation.hpp#L15",
+        "symbol_or_call": "inline bool shape_fits("
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 28,
+        "matched_ci_source_hash": true,
+        "path": "backend/runtime_v2.cu",
+        "source_sha256": "3616b5117022217d5ec138e244bec95376c0b4f82ebfe0f2acfebc0582782008",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/backend/runtime_v2.cu#L28",
+        "symbol_or_call": "return host_check(ti::host::gemm("
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 86,
+        "matched_ci_source_hash": true,
+        "path": "backend/runtime_v2.cu",
+        "source_sha256": "3616b5117022217d5ec138e244bec95376c0b4f82ebfe0f2acfebc0582782008",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/backend/runtime_v2.cu#L86",
+        "symbol_or_call": "host_check(ti::host::attention("
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 62,
+        "matched_ci_source_hash": true,
+        "path": "backend/runtime_v2.cu",
+        "source_sha256": "3616b5117022217d5ec138e244bec95376c0b4f82ebfe0f2acfebc0582782008",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/backend/runtime_v2.cu#L62",
+        "symbol_or_call": "extern \"C\" int ti_v2_gemm_ex_f16("
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 69,
+        "matched_ci_source_hash": true,
+        "path": "backend/runtime_v2.cu",
+        "source_sha256": "3616b5117022217d5ec138e244bec95376c0b4f82ebfe0f2acfebc0582782008",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/backend/runtime_v2.cu#L69",
+        "symbol_or_call": "extern \"C\" int ti_v2_gemm_ex_i8("
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 82,
+        "matched_ci_source_hash": true,
+        "path": "backend/runtime_v2.cu",
+        "source_sha256": "3616b5117022217d5ec138e244bec95376c0b4f82ebfe0f2acfebc0582782008",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/backend/runtime_v2.cu#L82",
+        "symbol_or_call": "extern \"C\" int ti_v2_attention_f16("
+      }
+    ],
+    "json": [
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 10,
+        "matched_ci_source_hash": true,
+        "path": "fuzz/harnesses/json.cpp",
+        "source_sha256": "f0ec3e5d14a01c0d52c4b1e482e9badddb825d0290f6c39002d4ce8a5830adf6",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/fuzz/harnesses/json.cpp#L10",
+        "symbol_or_call": "ti_llm_detail::Parser(text).run()"
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 47,
+        "matched_ci_source_hash": true,
+        "path": "llm/src/artifact.hpp",
+        "source_sha256": "b66af831eebb872d0e66caabaf3ef010b1d7e336be2f847acf051f834a6c08e3",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/llm/src/artifact.hpp#L47",
+        "symbol_or_call": "class Parser {"
+      },
+      {
+        "commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+        "line": 100,
+        "matched_ci_source_hash": true,
+        "path": "llm/src/artifact.hpp",
+        "source_sha256": "b66af831eebb872d0e66caabaf3ef010b1d7e336be2f847acf051f834a6c08e3",
+        "source_url": "https://github.com/kianbqh/tinyinfer/blob/793b62ecf694e6eae6c7f590bf886cd139fb65c8/llm/src/artifact.hpp#L100",
+        "symbol_or_call": "Json run()"
+      }
+    ]
+  },
+  "source_head": "793b62ecf694e6eae6c7f590bf886cd139fb65c8"
+}

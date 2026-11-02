@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "status": "failed",
+  "argv": [
+    "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+    "--import",
+    "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm.ncu-rep",
+    "--page",
+    "raw",
+    "--csv",
+    "--print-units",
+    "base",
+    "--print-metric-name",
+    "name"
+  ],
+  "cwd": "/mnt/g/ResumeProject/platforms/tinyinfer",
+  "started_at": "2026-11-02T22:15:59.566274+00:00",
+  "timeout_seconds": 180,
+  "artifact_bindings_request": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm-export-bindings.json",
+  "artifact_bindings": {
+    "schema_version": 1,
+    "status": "command_failed",
+    "specification_before": {
+      "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm-export-bindings.json",
+      "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm-export-bindings.json",
+      "sha256": "e4b713d6ad1079876104ce7dde3b69f36294b3dd13ca21ec2bfef0871bf0aeb7",
+      "bytes": 414
+    },
+    "recorder_source_before": {
+      "requested_path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+      "path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+      "sha256": "a61978863450d6d110e2db6e286dd496481e5674669568e7098ecff9f04bb697",
+      "bytes": 8193
+    },
+    "inputs_before": {
+      "ncu": {
+        "requested_path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+        "path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+        "sha256": "acc7ba9df698dca6f97032ffdaa028b3d571b51b8c47db36576a86924956d96c",
+        "bytes": 88968432
+      },
+      "version_receipt": {
+        "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+        "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+        "sha256": "1ffc4fb3cf08e8a635f6e8317355616b4fbb475dab52fe504d82546e770a7073",
+        "bytes": 3152
+      },
+      "report": {
+        "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm.ncu-rep",
+        "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm.ncu-rep",
+        "sha256": "567de8bf32238f60230ba00e950b6f1759aa2dbdfb2f21b978b5ec0b6354688a",
+        "bytes": 358940
+      }
+    },
+    "inputs_after": {
+      "ncu": {
+        "requested_path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+        "path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+        "sha256": "acc7ba9df698dca6f97032ffdaa028b3d571b51b8c47db36576a86924956d96c",
+        "bytes": 88968432
+      },
+      "version_receipt": {
+        "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+        "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+        "sha256": "1ffc4fb3cf08e8a635f6e8317355616b4fbb475dab52fe504d82546e770a7073",
+        "bytes": 3152
+      },
+      "report": {
+        "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm.ncu-rep",
+        "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm.ncu-rep",
+        "sha256": "567de8bf32238f60230ba00e950b6f1759aa2dbdfb2f21b978b5ec0b6354688a",
+        "bytes": 358940
+      }
+    },
+    "outputs_before_absent": {},
+    "outputs_after": {},
+    "specification_after": {
+      "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm-export-bindings.json",
+      "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm-export-bindings.json",
+      "sha256": "e4b713d6ad1079876104ce7dde3b69f36294b3dd13ca21ec2bfef0871bf0aeb7",
+      "bytes": 414
+    },
+    "recorder_source_after": {
+      "requested_path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+      "path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+      "sha256": "a61978863450d6d110e2db6e286dd496481e5674669568e7098ecff9f04bb697",
+      "bytes": 8193
+    }
+  },
+  "pid": 362424,
+  "exit_code": 1,
+  "finished_at": "2026-11-02T22:15:59.683102+00:00",
+  "wall_seconds": 0.11682720799581148,
+  "stdout.log_sha256": "011fe7811305421fff895a92c052b4f0dacb444f170a4a38e84cb1765678c753",
+  "stderr.log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

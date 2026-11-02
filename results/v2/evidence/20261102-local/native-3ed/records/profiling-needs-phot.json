@@ -1,0 +1,8 @@
+{
+  "status": "Needs Phot",
+  "actual_error": "ERR_NVGPUCTRPERM",
+  "probe_receipt": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/commands/ncu-probe/command.json",
+  "raw_stdout": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/commands/ncu-probe/stdout.log",
+  "dependent_captures": "not_run_counter_denial",
+  "system_settings_changed": false
+}

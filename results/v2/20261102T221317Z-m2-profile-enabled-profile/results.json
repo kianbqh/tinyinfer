@@ -1,0 +1,1367 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "evidence_kind": "measured",
+  "adapter": "ncu_raw_wide_unit_row_v1",
+  "provenance": {
+    "manifest": {
+      "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/profile-captures.json",
+      "sha256": "26a901ff60c8a06ca7b839d1f27e617e59341aeaa14f2357ab46fcb0bdd5c2a7",
+      "bytes": 4616
+    },
+    "checkpoint": "3edcfebd24d5efbf5da81cda13f2bf684031b35e",
+    "compute_capability": [
+      8,
+      6
+    ],
+    "kernel_build_receipt": {
+      "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/kernel-build.json",
+      "sha256": "f4e740b5d854bbbdd81d51e410e06e9bf47b635b4c4b819651fc600a2f010943",
+      "bytes": 7875
+    },
+    "build_command": {
+      "receipt": {
+        "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/commands/build-native-linkretry/command.json",
+        "sha256": "a9568bf4de86a65753a77d09824f6e71c701c6f2512f53a7a0224d337ae2ea6c",
+        "bytes": 863
+      },
+      "argv_file": {
+        "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/commands/build-native-linkretry/argv.json",
+        "sha256": "65b9cce351fe0a2d7ad82b4e76337c61645d578515cc32fb3f07da6725517067",
+        "bytes": 366
+      },
+      "record": {
+        "schema_version": 1,
+        "status": "completed",
+        "argv": [
+          "/usr/bin/env",
+          "LD_LIBRARY_PATH=/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers:/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib:/usr/lib/wsl/lib",
+          "/opt/codex-resume/portfolio-ml/venv/bin/cmake",
+          "--build",
+          "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers",
+          "--parallel",
+          "2"
+        ],
+        "cwd": "/mnt/g/ResumeProject",
+        "started_at": "2026-11-02T13:36:31.994720+00:00",
+        "timeout_seconds": 1800,
+        "pid": 304373,
+        "exit_code": 0,
+        "finished_at": "2026-11-02T13:36:35.817854+00:00",
+        "wall_seconds": 3.823128196003381,
+        "stdout.log_sha256": "308efaa9fc64bf9a363581c8bed58a0862e4ed6ef33b29bc8476c1c62a170356",
+        "stderr.log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout.log": {
+        "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/commands/build-native-linkretry/stdout.log",
+        "sha256": "308efaa9fc64bf9a363581c8bed58a0862e4ed6ef33b29bc8476c1c62a170356",
+        "bytes": 160
+      },
+      "stderr.log": {
+        "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/commands/build-native-linkretry/stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    "backend_library": {
+      "path": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_backend.so",
+      "sha256": "897434e4f360b1bbe87926e22f668f5bf28ec100443153fd9a8827cb7a5a7d6c",
+      "bytes": 704752
+    },
+    "build_source_sha256": {
+      "CMakeLists.txt": "db0c115bef4fe0111b0ae89412cb232bc969ce91cc76f6a9bb59c945e37dc7b0",
+      "backend/host_codec.cpp": "eccf21660ee7e84e93cf7ff5663775b760afa782341e391b5552889cbadfbd19",
+      "backend/host_codec/CMakeLists.txt": "3389bb92826e119788cc642219e23f7be84872532639407a079df31d6dc39c43",
+      "backend/include/tinyinfer_backend.h": "622b340666f7f6749325b56fd6da06536106253f7faa232c5713a94cec738841",
+      "backend/include/tinyinfer_backend_v2.h": "7b9b63c52b22587924a89687b58911b0759808d84242bc96ae27d273b41aaacd",
+      "backend/include/tinyinfer_host_codec.h": "e0731deeb9842d74938f4b663e7c73669cf9fde2be864ac3c7de25fb0ce1358f",
+      "backend/include/tinyinfer_host_validation.hpp": "30b2f99d98418959a434936d1fa8d704faaccc5ee01c037180b488177b5e32ea",
+      "backend/include/tinyinfer_quantization_scalar.h": "5cce4305bfc36baac1b7ce369529b6f4db42931cf64626fc7da42084239b08f7",
+      "backend/runtime.cpp": "509f824730a061857efc3a9388a97ec31381176ec75a8c9a23020a88e28c459e",
+      "backend/runtime_v2.cu": "3616b5117022217d5ec138e244bec95376c0b4f82ebfe0f2acfebc0582782008",
+      "bench/v2/kernels/profile.cu": "d021519bf632719b31c96dd7777eab0a5d1896d3705ae7de40bc6cc1d3984f53",
+      "cmake/HostCodec.cmake": "4012e47011e09ba2b53466db80b0823b4ec38fa9a8cf16e86104d511a3076597",
+      "cmake/V2Kernels.cmake": "f279d80aba5ae5e11681019ff84c4f894cead9c1914cdaaa3e79dda50acb057e",
+      "cmake/V2LLM.cmake": "38f5cb5dad94d0921caf5c793851e9695b56e762461c7d73a94a20a16d9f65de",
+      "cmake/V2Server.cmake": "473cee99124969cc9d38cbfe5a4691b0630929dd330e624148e786fbf0999f48",
+      "kernels/src/cuda/tc/attention.cu": "7cb99aef148213352b6cf7eff7783e6a2c62bcd1a48a2294b8b10afa81954a66",
+      "kernels/src/cuda/tc/catalog.cuh": "e494ab87e879f88517a3ee26fd7a9f8af2399600f0fea53e4d47a75c21337f15",
+      "kernels/src/cuda/tc/elementwise.cu": "0eb57bea34b7f321c1e639d0778010d835c0707962908f5e076778145e0110b2",
+      "kernels/src/cuda/tc/gemm.cu": "3bdb812e4b9455a7f972513e96c644dc4e91392dca27eade0d85f21158a19535",
+      "kernels/src/cuda/tc/launchers.cuh": "1fe42cce9ff4bfd6742983a4e0b65418d4d5aa39280f221f2652dd413a43ebd6"
+    },
+    "profile_source": {
+      "path": "/mnt/g/ResumeProject/platforms/tinyinfer/bench/v2/kernels/profile.cu",
+      "sha256": "d021519bf632719b31c96dd7777eab0a5d1896d3705ae7de40bc6cc1d3984f53",
+      "bytes": 4674
+    },
+    "profile_executable": {
+      "path": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/profile_v2",
+      "sha256": "6246008983f2201aad30b5672e48631aaad255b680288a70f2adfec402884ce1",
+      "bytes": 37208
+    },
+    "profile_compile_record": {
+      "directory": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers",
+      "command": "/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/bin/nvcc -forward-unknown-to-host-compiler -DIK_HAVE_CUDA=1 -I/mnt/g/ResumeProject/platforms/tinyinfer/kernels/include -I/mnt/g/ResumeProject/platforms/tinyinfer/backend/include -isystem /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/include -O3 -DNDEBUG \"--generate-code=arch=compute_86,code=[compute_86,sm_86]\" -Xcompiler=-fPIE -O3 -allow-unsupported-compiler -x cu -c /mnt/g/ResumeProject/platforms/tinyinfer/bench/v2/kernels/profile.cu -o CMakeFiles/profile_v2.dir/bench/v2/kernels/profile.cu.o",
+      "file": "/mnt/g/ResumeProject/platforms/tinyinfer/bench/v2/kernels/profile.cu",
+      "output": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/CMakeFiles/profile_v2.dir/bench/v2/kernels/profile.cu.o"
+    },
+    "compile_commands": {
+      "path": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/compile_commands.json",
+      "sha256": "4af99b681f988edc0b7eeecb8c9ea2e78f359c2c264d6e7ce6f447a4289fe473",
+      "bytes": 20780
+    },
+    "ncu_executable": {
+      "path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+      "sha256": "acc7ba9df698dca6f97032ffdaa028b3d571b51b8c47db36576a86924956d96c",
+      "bytes": 88968432
+    },
+    "ncu_version_command": {
+      "receipt": {
+        "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+        "sha256": "1ffc4fb3cf08e8a635f6e8317355616b4fbb475dab52fe504d82546e770a7073",
+        "bytes": 3152
+      },
+      "argv_file": {
+        "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/argv.json",
+        "sha256": "d27d6b2df844563e5aa96491572a3792fefaaa2488c076017731caed124acbed",
+        "bytes": 118
+      },
+      "record": {
+        "schema_version": 1,
+        "status": "completed",
+        "argv": [
+          "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+          "--version"
+        ],
+        "cwd": "/mnt/g/ResumeProject/platforms/tinyinfer",
+        "started_at": "2026-11-02T22:14:59.230857+00:00",
+        "timeout_seconds": 60,
+        "artifact_bindings_request": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/ncu-version-bindings.json",
+        "artifact_bindings": {
+          "schema_version": 1,
+          "status": "verified",
+          "specification_before": {
+            "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/ncu-version-bindings.json",
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/ncu-version-bindings.json",
+            "sha256": "038d176b05b6cf52fbd1ac6241ccdf2962e31595e9718e62d66729b0ec681669",
+            "bytes": 170
+          },
+          "recorder_source_before": {
+            "requested_path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+            "path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+            "sha256": "a61978863450d6d110e2db6e286dd496481e5674669568e7098ecff9f04bb697",
+            "bytes": 8193
+          },
+          "inputs_before": {
+            "ncu": {
+              "requested_path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+              "path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+              "sha256": "acc7ba9df698dca6f97032ffdaa028b3d571b51b8c47db36576a86924956d96c",
+              "bytes": 88968432
+            }
+          },
+          "inputs_after": {
+            "ncu": {
+              "requested_path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+              "path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+              "sha256": "acc7ba9df698dca6f97032ffdaa028b3d571b51b8c47db36576a86924956d96c",
+              "bytes": 88968432
+            }
+          },
+          "outputs_before_absent": {},
+          "outputs_after": {},
+          "specification_after": {
+            "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/ncu-version-bindings.json",
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/ncu-version-bindings.json",
+            "sha256": "038d176b05b6cf52fbd1ac6241ccdf2962e31595e9718e62d66729b0ec681669",
+            "bytes": 170
+          },
+          "recorder_source_after": {
+            "requested_path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+            "path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+            "sha256": "a61978863450d6d110e2db6e286dd496481e5674669568e7098ecff9f04bb697",
+            "bytes": 8193
+          }
+        },
+        "pid": 362269,
+        "exit_code": 0,
+        "finished_at": "2026-11-02T22:15:00.219677+00:00",
+        "wall_seconds": 0.9888232510129455,
+        "stdout.log_sha256": "278c16b34bf2a0841a02b434972ad7d120153f3f5607420faec231c2b7e01c54",
+        "stderr.log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout.log": {
+        "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/stdout.log",
+        "sha256": "278c16b34bf2a0841a02b434972ad7d120153f3f5607420faec231c2b7e01c54",
+        "bytes": 144
+      },
+      "stderr.log": {
+        "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    "sections": {
+      "SpeedOfLight_RooflineChart.section": {
+        "path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/sections/SpeedOfLight_RooflineChart.section",
+        "sha256": "aa2e015a035fcaf400b71fc7a1a95be7c7ec471e278aeef1dc056ea4016c41bf",
+        "bytes": 9129
+      },
+      "SpeedOfLight_HierarchicalTensorRooflineChart.section": {
+        "path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/sections/SpeedOfLight_HierarchicalTensorRooflineChart.section",
+        "sha256": "aa625ad01e9d20d79633c43b55c445455eab9a15da8e97f02a3579381eaa8c45",
+        "bytes": 11400
+      },
+      "Occupancy.section": {
+        "path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/sections/Occupancy.section",
+        "sha256": "60923f104984b71d7b1b94344ebe78e00951c7fcb9096106f53f3b7f44fe46e9",
+        "bytes": 5512
+      },
+      "SpeedOfLight.section": {
+        "path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/sections/SpeedOfLight.section",
+        "sha256": "fd72e6755dbe9a0ad2a3064bcef84dfd90713a05e84fba5c96cb935f79c84b68",
+        "bytes": 3865
+      }
+    },
+    "captures": [
+      {
+        "label": "fp16-gemm-1024-config0",
+        "raw_csv": {
+          "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-gemm-csv-raw/stdout.log",
+          "sha256": "7ffa40988bba05aed987c5bca4900db1ed314f32a9fb472b5213db6ee00055bd",
+          "bytes": 31056
+        },
+        "report": {
+          "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm.ncu-rep",
+          "sha256": "567de8bf32238f60230ba00e950b6f1759aa2dbdfb2f21b978b5ec0b6354688a",
+          "bytes": 358940
+        },
+        "capture_command": {
+          "receipt": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-gemm/command.json",
+            "sha256": "e98300c44883384c621805b1ee327fda1b8afb246a801d7d2f5a6fa137c0995e",
+            "bytes": 5745
+          },
+          "argv_file": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-gemm/argv.json",
+            "sha256": "f19afb67cac961665fc86041d3303dbf24fc3563d1a39f13765107a65a684ba8",
+            "bytes": 1172
+          },
+          "record": {
+            "schema_version": 1,
+            "status": "completed",
+            "argv": [
+              "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+              "--section",
+              "SpeedOfLight",
+              "--section",
+              "Occupancy",
+              "--section",
+              "SpeedOfLight_HierarchicalTensorRooflineChart",
+              "--metrics",
+              "sm__warps_active.avg.pct_of_peak_sustained_active,sm__throughput.avg.pct_of_peak_sustained_elapsed,gpu__compute_memory_throughput.avg.pct_of_peak_sustained_elapsed,gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed,sm__cycles_elapsed.avg.per_second,smsp__cycles_elapsed.avg.per_second,dram__cycles_elapsed.avg.per_second,dram__bytes.sum.peak_sustained,dram__bytes.sum.per_second,sm__inst_executed_pipe_tensor.sum.peak_sustained,smsp__inst_executed_pipe_tensor.sum.per_cycle_elapsed",
+              "--kernel-name-base",
+              "demangled",
+              "--kernel-name",
+              "regex:.*wmma_gemm.*",
+              "--launch-skip",
+              "5",
+              "--launch-count",
+              "1",
+              "--cache-control",
+              "all",
+              "--clock-control",
+              "none",
+              "--export",
+              "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm",
+              "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/profile_v2",
+              "gemm",
+              "1024",
+              "1",
+              "64",
+              "20"
+            ],
+            "cwd": "/mnt/g/ResumeProject/platforms/tinyinfer",
+            "started_at": "2026-11-02T22:15:36.345648+00:00",
+            "timeout_seconds": 900,
+            "artifact_bindings_request": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm-capture-bindings.json",
+            "artifact_bindings": {
+              "schema_version": 1,
+              "status": "verified",
+              "specification_before": {
+                "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm-capture-bindings.json",
+                "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm-capture-bindings.json",
+                "sha256": "c690b4b65aacf4164163d0d04a3922024befde83fb9f03e398b03e1d434b8339",
+                "bytes": 416
+              },
+              "recorder_source_before": {
+                "requested_path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+                "path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+                "sha256": "a61978863450d6d110e2db6e286dd496481e5674669568e7098ecff9f04bb697",
+                "bytes": 8193
+              },
+              "inputs_before": {
+                "ncu": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+                  "sha256": "acc7ba9df698dca6f97032ffdaa028b3d571b51b8c47db36576a86924956d96c",
+                  "bytes": 88968432
+                },
+                "version_receipt": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+                  "sha256": "1ffc4fb3cf08e8a635f6e8317355616b4fbb475dab52fe504d82546e770a7073",
+                  "bytes": 3152
+                }
+              },
+              "inputs_after": {
+                "ncu": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+                  "sha256": "acc7ba9df698dca6f97032ffdaa028b3d571b51b8c47db36576a86924956d96c",
+                  "bytes": 88968432
+                },
+                "version_receipt": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+                  "sha256": "1ffc4fb3cf08e8a635f6e8317355616b4fbb475dab52fe504d82546e770a7073",
+                  "bytes": 3152
+                }
+              },
+              "outputs_before_absent": {
+                "report": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm.ncu-rep",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm.ncu-rep",
+                  "absent": true
+                }
+              },
+              "outputs_after": {
+                "report": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm.ncu-rep",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm.ncu-rep",
+                  "sha256": "567de8bf32238f60230ba00e950b6f1759aa2dbdfb2f21b978b5ec0b6354688a",
+                  "bytes": 358940
+                }
+              },
+              "specification_after": {
+                "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm-capture-bindings.json",
+                "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm-capture-bindings.json",
+                "sha256": "c690b4b65aacf4164163d0d04a3922024befde83fb9f03e398b03e1d434b8339",
+                "bytes": 416
+              },
+              "recorder_source_after": {
+                "requested_path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+                "path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+                "sha256": "a61978863450d6d110e2db6e286dd496481e5674669568e7098ecff9f04bb697",
+                "bytes": 8193
+              }
+            },
+            "pid": 362336,
+            "exit_code": 0,
+            "finished_at": "2026-11-02T22:15:37.427208+00:00",
+            "wall_seconds": 1.0815623829839751,
+            "stdout.log_sha256": "77f9e6f3ee14c0dbfec062509e45a8e72673751998ca95ab7494608bb4db9d58",
+            "stderr.log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout.log": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-gemm/stdout.log",
+            "sha256": "77f9e6f3ee14c0dbfec062509e45a8e72673751998ca95ab7494608bb4db9d58",
+            "bytes": 718
+          },
+          "stderr.log": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-gemm/stderr.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "bytes": 0
+          }
+        },
+        "export_command": {
+          "receipt": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-gemm-csv-raw/command.json",
+            "sha256": "9bb865669c2ac8d823d16b9d560cedcf1bbd2bf64995a021eba463b445cec03a",
+            "bytes": 4879
+          },
+          "argv_file": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-gemm-csv-raw/argv.json",
+            "sha256": "1334dc861dd01b1616e2bfe320b42cc80fe77ae7723a2b6d930e58344d78ffe3",
+            "bytes": 273
+          },
+          "record": {
+            "schema_version": 1,
+            "status": "completed",
+            "argv": [
+              "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+              "--import",
+              "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm.ncu-rep",
+              "--page",
+              "raw",
+              "--csv",
+              "--print-units",
+              "base"
+            ],
+            "cwd": "/mnt/g/ResumeProject/platforms/tinyinfer",
+            "started_at": "2026-11-02T22:17:52.899519+00:00",
+            "timeout_seconds": 180,
+            "artifact_bindings_request": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm-export-bindings.json",
+            "artifact_bindings": {
+              "schema_version": 1,
+              "status": "verified",
+              "specification_before": {
+                "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm-export-bindings.json",
+                "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm-export-bindings.json",
+                "sha256": "e4b713d6ad1079876104ce7dde3b69f36294b3dd13ca21ec2bfef0871bf0aeb7",
+                "bytes": 414
+              },
+              "recorder_source_before": {
+                "requested_path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+                "path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+                "sha256": "a61978863450d6d110e2db6e286dd496481e5674669568e7098ecff9f04bb697",
+                "bytes": 8193
+              },
+              "inputs_before": {
+                "ncu": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+                  "sha256": "acc7ba9df698dca6f97032ffdaa028b3d571b51b8c47db36576a86924956d96c",
+                  "bytes": 88968432
+                },
+                "version_receipt": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+                  "sha256": "1ffc4fb3cf08e8a635f6e8317355616b4fbb475dab52fe504d82546e770a7073",
+                  "bytes": 3152
+                },
+                "report": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm.ncu-rep",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm.ncu-rep",
+                  "sha256": "567de8bf32238f60230ba00e950b6f1759aa2dbdfb2f21b978b5ec0b6354688a",
+                  "bytes": 358940
+                }
+              },
+              "inputs_after": {
+                "ncu": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+                  "sha256": "acc7ba9df698dca6f97032ffdaa028b3d571b51b8c47db36576a86924956d96c",
+                  "bytes": 88968432
+                },
+                "version_receipt": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+                  "sha256": "1ffc4fb3cf08e8a635f6e8317355616b4fbb475dab52fe504d82546e770a7073",
+                  "bytes": 3152
+                },
+                "report": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm.ncu-rep",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm.ncu-rep",
+                  "sha256": "567de8bf32238f60230ba00e950b6f1759aa2dbdfb2f21b978b5ec0b6354688a",
+                  "bytes": 358940
+                }
+              },
+              "outputs_before_absent": {},
+              "outputs_after": {},
+              "specification_after": {
+                "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm-export-bindings.json",
+                "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm-export-bindings.json",
+                "sha256": "e4b713d6ad1079876104ce7dde3b69f36294b3dd13ca21ec2bfef0871bf0aeb7",
+                "bytes": 414
+              },
+              "recorder_source_after": {
+                "requested_path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+                "path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+                "sha256": "a61978863450d6d110e2db6e286dd496481e5674669568e7098ecff9f04bb697",
+                "bytes": 8193
+              }
+            },
+            "pid": 362701,
+            "exit_code": 0,
+            "finished_at": "2026-11-02T22:17:53.174600+00:00",
+            "wall_seconds": 0.27508066201698966,
+            "stdout.log_sha256": "7ffa40988bba05aed987c5bca4900db1ed314f32a9fb472b5213db6ee00055bd",
+            "stderr.log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout.log": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-gemm-csv-raw/stdout.log",
+            "sha256": "7ffa40988bba05aed987c5bca4900db1ed314f32a9fb472b5213db6ee00055bd",
+            "bytes": 31056
+          },
+          "stderr.log": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-gemm-csv-raw/stderr.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "bytes": 0
+          }
+        },
+        "selected_kernel_id": "0",
+        "selected_kernel_name": "void ti::v2::<unnamed>::wmma_gemm<(int)32, (int)32, (int)16, (int)4, (bool)0, (int)2>(const __half *, const void *, const float *, const __half *, void *, int, int, int, int)",
+        "metrics_used": {
+          "sm__warps_active.avg.pct_of_peak_sustained_active": {
+            "unit": "%",
+            "raw_value": "59.95",
+            "value": 59.95
+          },
+          "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+            "unit": "%",
+            "raw_value": "68.40",
+            "value": 68.4
+          },
+          "gpu__compute_memory_throughput.avg.pct_of_peak_sustained_elapsed": {
+            "unit": "%",
+            "raw_value": "45.09",
+            "value": 45.09
+          },
+          "gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed": {
+            "unit": "%",
+            "raw_value": "3.17",
+            "value": 3.17
+          },
+          "sm__cycles_elapsed.avg.per_second": {
+            "unit": "cycle/second",
+            "raw_value": "1766230603.96",
+            "value": 1766230603.96
+          },
+          "smsp__cycles_elapsed.avg.per_second": {
+            "unit": "cycle/second",
+            "raw_value": "1766230603.96",
+            "value": 1766230603.96
+          },
+          "dram__cycles_elapsed.avg.per_second": {
+            "unit": "cycle/second",
+            "raw_value": "9241923641.70",
+            "value": 9241923641.7
+          },
+          "dram__bytes.sum.peak_sustained": {
+            "unit": "byte/cycle",
+            "raw_value": "96",
+            "value": 96.0
+          },
+          "dram__bytes.sum.per_second": {
+            "unit": "byte/second",
+            "raw_value": "28138766519.82",
+            "value": 28138766519.82
+          },
+          "sm__inst_executed_pipe_tensor.sum.peak_sustained": {
+            "unit": "inst/cycle",
+            "raw_value": "70",
+            "value": 70.0
+          },
+          "smsp__inst_executed_pipe_tensor.sum.per_cycle_elapsed": {
+            "unit": "inst/cycle",
+            "raw_value": "1.28",
+            "value": 1.28
+          }
+        }
+      },
+      {
+        "label": "weight-only-int8-gemm-1024-config0",
+        "raw_csv": {
+          "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-int8-csv-raw/stdout.log",
+          "sha256": "b441384eb389231c8103887f57dc9df85877a88af801ab8bbeca9e414161e6cd",
+          "bytes": 31068
+        },
+        "report": {
+          "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/int8.ncu-rep",
+          "sha256": "3812dd6fa6d20c4dd65f6ffed956e28e9fb8fc917cdd51936947247f801ddb4f",
+          "bytes": 358563
+        },
+        "capture_command": {
+          "receipt": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-int8/command.json",
+            "sha256": "9e624d45d376f95bf0d4178d5596fcebd022fa84fc251f49ffc20117fea9015d",
+            "bytes": 5745
+          },
+          "argv_file": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-int8/argv.json",
+            "sha256": "bbedc0bcdc8a84f9c44729b751af5bfbd9e51f4d01619350c67445129bd5a723",
+            "bytes": 1172
+          },
+          "record": {
+            "schema_version": 1,
+            "status": "completed",
+            "argv": [
+              "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+              "--section",
+              "SpeedOfLight",
+              "--section",
+              "Occupancy",
+              "--section",
+              "SpeedOfLight_HierarchicalTensorRooflineChart",
+              "--metrics",
+              "sm__warps_active.avg.pct_of_peak_sustained_active,sm__throughput.avg.pct_of_peak_sustained_elapsed,gpu__compute_memory_throughput.avg.pct_of_peak_sustained_elapsed,gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed,sm__cycles_elapsed.avg.per_second,smsp__cycles_elapsed.avg.per_second,dram__cycles_elapsed.avg.per_second,dram__bytes.sum.peak_sustained,dram__bytes.sum.per_second,sm__inst_executed_pipe_tensor.sum.peak_sustained,smsp__inst_executed_pipe_tensor.sum.per_cycle_elapsed",
+              "--kernel-name-base",
+              "demangled",
+              "--kernel-name",
+              "regex:.*wmma_gemm.*",
+              "--launch-skip",
+              "5",
+              "--launch-count",
+              "1",
+              "--cache-control",
+              "all",
+              "--clock-control",
+              "none",
+              "--export",
+              "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/int8",
+              "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/profile_v2",
+              "int8",
+              "1024",
+              "1",
+              "64",
+              "20"
+            ],
+            "cwd": "/mnt/g/ResumeProject/platforms/tinyinfer",
+            "started_at": "2026-11-02T22:16:54.140453+00:00",
+            "timeout_seconds": 900,
+            "artifact_bindings_request": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/int8-capture-bindings.json",
+            "artifact_bindings": {
+              "schema_version": 1,
+              "status": "verified",
+              "specification_before": {
+                "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/int8-capture-bindings.json",
+                "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/int8-capture-bindings.json",
+                "sha256": "f284499fe72870feace70df79723c7d895f365d40efa8b1a288e4de722135a58",
+                "bytes": 416
+              },
+              "recorder_source_before": {
+                "requested_path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+                "path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+                "sha256": "a61978863450d6d110e2db6e286dd496481e5674669568e7098ecff9f04bb697",
+                "bytes": 8193
+              },
+              "inputs_before": {
+                "ncu": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+                  "sha256": "acc7ba9df698dca6f97032ffdaa028b3d571b51b8c47db36576a86924956d96c",
+                  "bytes": 88968432
+                },
+                "version_receipt": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+                  "sha256": "1ffc4fb3cf08e8a635f6e8317355616b4fbb475dab52fe504d82546e770a7073",
+                  "bytes": 3152
+                }
+              },
+              "inputs_after": {
+                "ncu": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+                  "sha256": "acc7ba9df698dca6f97032ffdaa028b3d571b51b8c47db36576a86924956d96c",
+                  "bytes": 88968432
+                },
+                "version_receipt": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+                  "sha256": "1ffc4fb3cf08e8a635f6e8317355616b4fbb475dab52fe504d82546e770a7073",
+                  "bytes": 3152
+                }
+              },
+              "outputs_before_absent": {
+                "report": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/int8.ncu-rep",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/int8.ncu-rep",
+                  "absent": true
+                }
+              },
+              "outputs_after": {
+                "report": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/int8.ncu-rep",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/int8.ncu-rep",
+                  "sha256": "3812dd6fa6d20c4dd65f6ffed956e28e9fb8fc917cdd51936947247f801ddb4f",
+                  "bytes": 358563
+                }
+              },
+              "specification_after": {
+                "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/int8-capture-bindings.json",
+                "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/int8-capture-bindings.json",
+                "sha256": "f284499fe72870feace70df79723c7d895f365d40efa8b1a288e4de722135a58",
+                "bytes": 416
+              },
+              "recorder_source_after": {
+                "requested_path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+                "path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+                "sha256": "a61978863450d6d110e2db6e286dd496481e5674669568e7098ecff9f04bb697",
+                "bytes": 8193
+              }
+            },
+            "pid": 362528,
+            "exit_code": 0,
+            "finished_at": "2026-11-02T22:16:55.215043+00:00",
+            "wall_seconds": 1.0745911059784703,
+            "stdout.log_sha256": "a396672c7ae9fa8f2be623545b4329079ddc566e1bc168ce6b50732435aab1eb",
+            "stderr.log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout.log": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-int8/stdout.log",
+            "sha256": "a396672c7ae9fa8f2be623545b4329079ddc566e1bc168ce6b50732435aab1eb",
+            "bytes": 718
+          },
+          "stderr.log": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-int8/stderr.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "bytes": 0
+          }
+        },
+        "export_command": {
+          "receipt": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-int8-csv-raw/command.json",
+            "sha256": "be9bfe8d428cdc3f642950034e7c20a47dd333593c2afe4a73d421d1983ffa56",
+            "bytes": 4879
+          },
+          "argv_file": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-int8-csv-raw/argv.json",
+            "sha256": "d630d31d13ae0bbd032b44149aecb069ce91583dda11ed35c1e09cc058a48119",
+            "bytes": 273
+          },
+          "record": {
+            "schema_version": 1,
+            "status": "completed",
+            "argv": [
+              "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+              "--import",
+              "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/int8.ncu-rep",
+              "--page",
+              "raw",
+              "--csv",
+              "--print-units",
+              "base"
+            ],
+            "cwd": "/mnt/g/ResumeProject/platforms/tinyinfer",
+            "started_at": "2026-11-02T22:18:39.300682+00:00",
+            "timeout_seconds": 180,
+            "artifact_bindings_request": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/int8-export-bindings.json",
+            "artifact_bindings": {
+              "schema_version": 1,
+              "status": "verified",
+              "specification_before": {
+                "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/int8-export-bindings.json",
+                "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/int8-export-bindings.json",
+                "sha256": "c3adb1ae8aff97eaa2e201aaca167ae7ce56f2a3ee2a800dcba3f23fa2302748",
+                "bytes": 414
+              },
+              "recorder_source_before": {
+                "requested_path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+                "path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+                "sha256": "a61978863450d6d110e2db6e286dd496481e5674669568e7098ecff9f04bb697",
+                "bytes": 8193
+              },
+              "inputs_before": {
+                "ncu": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+                  "sha256": "acc7ba9df698dca6f97032ffdaa028b3d571b51b8c47db36576a86924956d96c",
+                  "bytes": 88968432
+                },
+                "version_receipt": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+                  "sha256": "1ffc4fb3cf08e8a635f6e8317355616b4fbb475dab52fe504d82546e770a7073",
+                  "bytes": 3152
+                },
+                "report": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/int8.ncu-rep",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/int8.ncu-rep",
+                  "sha256": "3812dd6fa6d20c4dd65f6ffed956e28e9fb8fc917cdd51936947247f801ddb4f",
+                  "bytes": 358563
+                }
+              },
+              "inputs_after": {
+                "ncu": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+                  "sha256": "acc7ba9df698dca6f97032ffdaa028b3d571b51b8c47db36576a86924956d96c",
+                  "bytes": 88968432
+                },
+                "version_receipt": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+                  "sha256": "1ffc4fb3cf08e8a635f6e8317355616b4fbb475dab52fe504d82546e770a7073",
+                  "bytes": 3152
+                },
+                "report": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/int8.ncu-rep",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/int8.ncu-rep",
+                  "sha256": "3812dd6fa6d20c4dd65f6ffed956e28e9fb8fc917cdd51936947247f801ddb4f",
+                  "bytes": 358563
+                }
+              },
+              "outputs_before_absent": {},
+              "outputs_after": {},
+              "specification_after": {
+                "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/int8-export-bindings.json",
+                "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/int8-export-bindings.json",
+                "sha256": "c3adb1ae8aff97eaa2e201aaca167ae7ce56f2a3ee2a800dcba3f23fa2302748",
+                "bytes": 414
+              },
+              "recorder_source_after": {
+                "requested_path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+                "path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+                "sha256": "a61978863450d6d110e2db6e286dd496481e5674669568e7098ecff9f04bb697",
+                "bytes": 8193
+              }
+            },
+            "pid": 362788,
+            "exit_code": 0,
+            "finished_at": "2026-11-02T22:18:39.573330+00:00",
+            "wall_seconds": 0.27264828799525276,
+            "stdout.log_sha256": "b441384eb389231c8103887f57dc9df85877a88af801ab8bbeca9e414161e6cd",
+            "stderr.log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout.log": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-int8-csv-raw/stdout.log",
+            "sha256": "b441384eb389231c8103887f57dc9df85877a88af801ab8bbeca9e414161e6cd",
+            "bytes": 31068
+          },
+          "stderr.log": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-int8-csv-raw/stderr.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "bytes": 0
+          }
+        },
+        "selected_kernel_id": "0",
+        "selected_kernel_name": "void ti::v2::<unnamed>::wmma_gemm<(int)32, (int)32, (int)16, (int)4, (bool)1, (int)2>(const __half *, const void *, const float *, const __half *, void *, int, int, int, int)",
+        "metrics_used": {
+          "sm__warps_active.avg.pct_of_peak_sustained_active": {
+            "unit": "%",
+            "raw_value": "49.73",
+            "value": 49.73
+          },
+          "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+            "unit": "%",
+            "raw_value": "58.04",
+            "value": 58.04
+          },
+          "gpu__compute_memory_throughput.avg.pct_of_peak_sustained_elapsed": {
+            "unit": "%",
+            "raw_value": "38.42",
+            "value": 38.42
+          },
+          "gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed": {
+            "unit": "%",
+            "raw_value": "2.27",
+            "value": 2.27
+          },
+          "sm__cycles_elapsed.avg.per_second": {
+            "unit": "cycle/second",
+            "raw_value": "1781353710.11",
+            "value": 1781353710.11
+          },
+          "smsp__cycles_elapsed.avg.per_second": {
+            "unit": "cycle/second",
+            "raw_value": "1781353710.11",
+            "value": 1781353710.11
+          },
+          "dram__cycles_elapsed.avg.per_second": {
+            "unit": "cycle/second",
+            "raw_value": "9241707234.24",
+            "value": 9241707234.24
+          },
+          "dram__bytes.sum.peak_sustained": {
+            "unit": "byte/cycle",
+            "raw_value": "96",
+            "value": 96.0
+          },
+          "dram__bytes.sum.per_second": {
+            "unit": "byte/second",
+            "raw_value": "20129514321.30",
+            "value": 20129514321.3
+          },
+          "sm__inst_executed_pipe_tensor.sum.peak_sustained": {
+            "unit": "inst/cycle",
+            "raw_value": "70",
+            "value": 70.0
+          },
+          "smsp__inst_executed_pipe_tensor.sum.per_cycle_elapsed": {
+            "unit": "inst/cycle",
+            "raw_value": "1.04",
+            "value": 1.04
+          }
+        }
+      },
+      {
+        "label": "online-attention-1024-d64-config0",
+        "raw_csv": {
+          "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-attention-csv-raw/stdout.log",
+          "sha256": "3b726701b23eebb27b4266d52d5198f568dee5fc3ce6a3c8b661f4d19ca2abaa",
+          "bytes": 31132
+        },
+        "report": {
+          "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention.ncu-rep",
+          "sha256": "fd9492d864c0c59824fdf0b4ed1a884022166b9a13cac4fa9c0c5a6170485680",
+          "bytes": 151722
+        },
+        "capture_command": {
+          "receipt": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-attention/command.json",
+            "sha256": "01d975a11ac6e9330f2f45ad0b0b0b5b4e05810c7a5c920d667286ab9db31928",
+            "bytes": 5961
+          },
+          "argv_file": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-attention/argv.json",
+            "sha256": "85a39b1af3cd795f010089a97fc9dfe0d15c1cc9b58724e8147348b5bbf894df",
+            "bytes": 1343
+          },
+          "record": {
+            "schema_version": 1,
+            "status": "completed",
+            "argv": [
+              "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+              "--section",
+              "SpeedOfLight",
+              "--section",
+              "Occupancy",
+              "--section",
+              "SpeedOfLight_RooflineChart",
+              "--metrics",
+              "sm__warps_active.avg.pct_of_peak_sustained_active,sm__throughput.avg.pct_of_peak_sustained_elapsed,gpu__compute_memory_throughput.avg.pct_of_peak_sustained_elapsed,gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed,sm__cycles_elapsed.avg.per_second,smsp__cycles_elapsed.avg.per_second,dram__cycles_elapsed.avg.per_second,dram__bytes.sum.peak_sustained,dram__bytes.sum.per_second,sm__sass_thread_inst_executed_op_ffma_pred_on.sum.peak_sustained,smsp__sass_thread_inst_executed_op_fadd_pred_on.sum.per_cycle_elapsed,smsp__sass_thread_inst_executed_op_fmul_pred_on.sum.per_cycle_elapsed,smsp__sass_thread_inst_executed_op_ffma_pred_on.sum.per_cycle_elapsed",
+              "--kernel-name-base",
+              "demangled",
+              "--kernel-name",
+              "regex:.*online_attention.*",
+              "--launch-skip",
+              "5",
+              "--launch-count",
+              "1",
+              "--cache-control",
+              "all",
+              "--clock-control",
+              "none",
+              "--export",
+              "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention",
+              "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/profile_v2",
+              "attention",
+              "1024",
+              "1",
+              "64",
+              "20"
+            ],
+            "cwd": "/mnt/g/ResumeProject/platforms/tinyinfer",
+            "started_at": "2026-11-02T22:17:04.433201+00:00",
+            "timeout_seconds": 900,
+            "artifact_bindings_request": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention-capture-bindings.json",
+            "artifact_bindings": {
+              "schema_version": 1,
+              "status": "verified",
+              "specification_before": {
+                "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention-capture-bindings.json",
+                "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention-capture-bindings.json",
+                "sha256": "df9c78da5fb7ea9a10fce02831fc51242f3516f94ecd9597c307287a06fd2e9e",
+                "bytes": 421
+              },
+              "recorder_source_before": {
+                "requested_path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+                "path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+                "sha256": "a61978863450d6d110e2db6e286dd496481e5674669568e7098ecff9f04bb697",
+                "bytes": 8193
+              },
+              "inputs_before": {
+                "ncu": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+                  "sha256": "acc7ba9df698dca6f97032ffdaa028b3d571b51b8c47db36576a86924956d96c",
+                  "bytes": 88968432
+                },
+                "version_receipt": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+                  "sha256": "1ffc4fb3cf08e8a635f6e8317355616b4fbb475dab52fe504d82546e770a7073",
+                  "bytes": 3152
+                }
+              },
+              "inputs_after": {
+                "ncu": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+                  "sha256": "acc7ba9df698dca6f97032ffdaa028b3d571b51b8c47db36576a86924956d96c",
+                  "bytes": 88968432
+                },
+                "version_receipt": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+                  "sha256": "1ffc4fb3cf08e8a635f6e8317355616b4fbb475dab52fe504d82546e770a7073",
+                  "bytes": 3152
+                }
+              },
+              "outputs_before_absent": {
+                "report": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention.ncu-rep",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention.ncu-rep",
+                  "absent": true
+                }
+              },
+              "outputs_after": {
+                "report": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention.ncu-rep",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention.ncu-rep",
+                  "sha256": "fd9492d864c0c59824fdf0b4ed1a884022166b9a13cac4fa9c0c5a6170485680",
+                  "bytes": 151722
+                }
+              },
+              "specification_after": {
+                "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention-capture-bindings.json",
+                "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention-capture-bindings.json",
+                "sha256": "df9c78da5fb7ea9a10fce02831fc51242f3516f94ecd9597c307287a06fd2e9e",
+                "bytes": 421
+              },
+              "recorder_source_after": {
+                "requested_path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+                "path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+                "sha256": "a61978863450d6d110e2db6e286dd496481e5674669568e7098ecff9f04bb697",
+                "bytes": 8193
+              }
+            },
+            "pid": 362579,
+            "exit_code": 0,
+            "finished_at": "2026-11-02T22:17:05.704331+00:00",
+            "wall_seconds": 1.2711301700037438,
+            "stdout.log_sha256": "11fdfd0852aaf1eb9ee1c9e269cfb387ed89301750634c4d3a36b71205ab0b28",
+            "stderr.log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout.log": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-attention/stdout.log",
+            "sha256": "11fdfd0852aaf1eb9ee1c9e269cfb387ed89301750634c4d3a36b71205ab0b28",
+            "bytes": 730
+          },
+          "stderr.log": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-attention/stderr.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "bytes": 0
+          }
+        },
+        "export_command": {
+          "receipt": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-attention-csv-raw/command.json",
+            "sha256": "92269c023965601a6db5d1e32e7db5454062670dbdd243e7fc977c87c0b188cf",
+            "bytes": 4929
+          },
+          "argv_file": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-attention-csv-raw/argv.json",
+            "sha256": "9e22609b2f22e6fb4d445f0524e5101c5c548f676af2cc073e7ff096a92caa59",
+            "bytes": 278
+          },
+          "record": {
+            "schema_version": 1,
+            "status": "completed",
+            "argv": [
+              "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+              "--import",
+              "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention.ncu-rep",
+              "--page",
+              "raw",
+              "--csv",
+              "--print-units",
+              "base"
+            ],
+            "cwd": "/mnt/g/ResumeProject/platforms/tinyinfer",
+            "started_at": "2026-11-02T22:18:48.292720+00:00",
+            "timeout_seconds": 180,
+            "artifact_bindings_request": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention-export-bindings.json",
+            "artifact_bindings": {
+              "schema_version": 1,
+              "status": "verified",
+              "specification_before": {
+                "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention-export-bindings.json",
+                "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention-export-bindings.json",
+                "sha256": "2b8c6ccec71127bb5bab8265f098399f5a9eb39d74567ce2655172f472a42dfe",
+                "bytes": 419
+              },
+              "recorder_source_before": {
+                "requested_path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+                "path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+                "sha256": "a61978863450d6d110e2db6e286dd496481e5674669568e7098ecff9f04bb697",
+                "bytes": 8193
+              },
+              "inputs_before": {
+                "ncu": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+                  "sha256": "acc7ba9df698dca6f97032ffdaa028b3d571b51b8c47db36576a86924956d96c",
+                  "bytes": 88968432
+                },
+                "version_receipt": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+                  "sha256": "1ffc4fb3cf08e8a635f6e8317355616b4fbb475dab52fe504d82546e770a7073",
+                  "bytes": 3152
+                },
+                "report": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention.ncu-rep",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention.ncu-rep",
+                  "sha256": "fd9492d864c0c59824fdf0b4ed1a884022166b9a13cac4fa9c0c5a6170485680",
+                  "bytes": 151722
+                }
+              },
+              "inputs_after": {
+                "ncu": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+                  "sha256": "acc7ba9df698dca6f97032ffdaa028b3d571b51b8c47db36576a86924956d96c",
+                  "bytes": 88968432
+                },
+                "version_receipt": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+                  "sha256": "1ffc4fb3cf08e8a635f6e8317355616b4fbb475dab52fe504d82546e770a7073",
+                  "bytes": 3152
+                },
+                "report": {
+                  "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention.ncu-rep",
+                  "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention.ncu-rep",
+                  "sha256": "fd9492d864c0c59824fdf0b4ed1a884022166b9a13cac4fa9c0c5a6170485680",
+                  "bytes": 151722
+                }
+              },
+              "outputs_before_absent": {},
+              "outputs_after": {},
+              "specification_after": {
+                "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention-export-bindings.json",
+                "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention-export-bindings.json",
+                "sha256": "2b8c6ccec71127bb5bab8265f098399f5a9eb39d74567ce2655172f472a42dfe",
+                "bytes": 419
+              },
+              "recorder_source_after": {
+                "requested_path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+                "path": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+                "sha256": "a61978863450d6d110e2db6e286dd496481e5674669568e7098ecff9f04bb697",
+                "bytes": 8193
+              }
+            },
+            "pid": 362817,
+            "exit_code": 0,
+            "finished_at": "2026-11-02T22:18:48.576757+00:00",
+            "wall_seconds": 0.28403534201788716,
+            "stdout.log_sha256": "3b726701b23eebb27b4266d52d5198f568dee5fc3ce6a3c8b661f4d19ca2abaa",
+            "stderr.log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout.log": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-attention-csv-raw/stdout.log",
+            "sha256": "3b726701b23eebb27b4266d52d5198f568dee5fc3ce6a3c8b661f4d19ca2abaa",
+            "bytes": 31132
+          },
+          "stderr.log": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-attention-csv-raw/stderr.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "bytes": 0
+          }
+        },
+        "selected_kernel_id": "0",
+        "selected_kernel_name": "void ti::v2::<unnamed>::online_attention<(int)64, (int)32>(const __half *, const __half *, const __half *, __half *, const int *, const int *, const int *, int, int, int, bool)",
+        "metrics_used": {
+          "sm__warps_active.avg.pct_of_peak_sustained_active": {
+            "unit": "%",
+            "raw_value": "17.95",
+            "value": 17.95
+          },
+          "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+            "unit": "%",
+            "raw_value": "31.31",
+            "value": 31.31
+          },
+          "gpu__compute_memory_throughput.avg.pct_of_peak_sustained_elapsed": {
+            "unit": "%",
+            "raw_value": "31.31",
+            "value": 31.31
+          },
+          "gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed": {
+            "unit": "%",
+            "raw_value": "0.90",
+            "value": 0.9
+          },
+          "sm__cycles_elapsed.avg.per_second": {
+            "unit": "cycle/second",
+            "raw_value": "1776008048.84",
+            "value": 1776008048.84
+          },
+          "smsp__cycles_elapsed.avg.per_second": {
+            "unit": "cycle/second",
+            "raw_value": "1776008048.84",
+            "value": 1776008048.84
+          },
+          "dram__cycles_elapsed.avg.per_second": {
+            "unit": "cycle/second",
+            "raw_value": "9241879876.61",
+            "value": 9241879876.61
+          },
+          "dram__bytes.sum.peak_sustained": {
+            "unit": "byte/cycle",
+            "raw_value": "96",
+            "value": 96.0
+          },
+          "dram__bytes.sum.per_second": {
+            "unit": "byte/second",
+            "raw_value": "8020685900.93",
+            "value": 8020685900.93
+          },
+          "sm__sass_thread_inst_executed_op_ffma_pred_on.sum.peak_sustained": {
+            "unit": "inst/cycle",
+            "raw_value": "8960",
+            "value": 8960.0
+          },
+          "smsp__sass_thread_inst_executed_op_fadd_pred_on.sum.per_cycle_elapsed": {
+            "unit": "inst/cycle",
+            "raw_value": "241.18",
+            "value": 241.18
+          },
+          "smsp__sass_thread_inst_executed_op_fmul_pred_on.sum.per_cycle_elapsed": {
+            "unit": "inst/cycle",
+            "raw_value": "134.00",
+            "value": 134.0
+          },
+          "smsp__sass_thread_inst_executed_op_ffma_pred_on.sum.per_cycle_elapsed": {
+            "unit": "inst/cycle",
+            "raw_value": "348.84",
+            "value": 348.84
+          }
+        }
+      }
+    ],
+    "processor_sources": {
+      "__init__.py": {
+        "path": "/mnt/g/ResumeProject/platforms/tinyinfer/bench/v2/profiling/__init__.py",
+        "sha256": "3a3aad37b831357ac7a472c5c856f73dd9bd80d5774ce1541926cf2158ad2cdf",
+        "bytes": 79
+      },
+      "postprocess.py": {
+        "path": "/mnt/g/ResumeProject/platforms/tinyinfer/bench/v2/profiling/postprocess.py",
+        "sha256": "4fe45132d4fa57bd7bbe8ded266e0148978270b828bb301ed0f87d5c3eea6fe3",
+        "bytes": 28364
+      },
+      "test_postprocess.py": {
+        "path": "/mnt/g/ResumeProject/platforms/tinyinfer/bench/v2/profiling/test_postprocess.py",
+        "sha256": "cbe7f18cf6c22be2832f7062f163536210f6232e887af27c5d0c6b42cdf64bdf",
+        "bytes": 20777
+      }
+    }
+  },
+  "formulas": {
+    "tensor_sm86_x512": {
+      "achieved_flop_per_second": "512 * smsp__inst_executed_pipe_tensor.sum.per_cycle_elapsed * smsp__cycles_elapsed.avg.per_second",
+      "peak_compute_flop_per_second": "512 * sm__inst_executed_pipe_tensor.sum.peak_sustained * sm__cycles_elapsed.avg.per_second",
+      "section": "SpeedOfLight_HierarchicalTensorRooflineChart.section"
+    },
+    "fp32_fadd_fmul_ffma": {
+      "achieved_flop_per_second": "(smsp__sass_thread_inst_executed_op_fadd_pred_on.sum.per_cycle_elapsed + smsp__sass_thread_inst_executed_op_fmul_pred_on.sum.per_cycle_elapsed + 2 * smsp__sass_thread_inst_executed_op_ffma_pred_on.sum.per_cycle_elapsed) * smsp__cycles_elapsed.avg.per_second",
+      "peak_compute_flop_per_second": "2 * sm__sass_thread_inst_executed_op_ffma_pred_on.sum.peak_sustained * sm__cycles_elapsed.avg.per_second",
+      "section": "SpeedOfLight_RooflineChart.section"
+    },
+    "common": {
+      "achieved_dram_byte_per_second": "dram__bytes.sum.per_second",
+      "peak_dram_byte_per_second": "dram__bytes.sum.peak_sustained * dram__cycles_elapsed.avg.per_second",
+      "arithmetic_intensity_flop_per_byte": "achieved_flop_per_second / achieved_dram_byte_per_second",
+      "ridge_flop_per_byte": "peak_compute_flop_per_second / peak_dram_byte_per_second",
+      "ceiling_at_point_flop_per_second": "min(peak_compute_flop_per_second, arithmetic_intensity_flop_per_byte * peak_dram_byte_per_second)",
+      "pct_of_roofline": "100 * achieved_flop_per_second / ceiling_at_point_flop_per_second",
+      "achieved_occupancy_pct": "sm__warps_active.avg.pct_of_peak_sustained_active [%], Occupancy.section",
+      "sm_throughput_pct": "sm__throughput.avg.pct_of_peak_sustained_elapsed [%], SpeedOfLight.section",
+      "memory_throughput_pct": "gpu__compute_memory_throughput.avg.pct_of_peak_sustained_elapsed [%], SpeedOfLight.section",
+      "dram_throughput_pct": "gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed [%], SpeedOfLight.section"
+    }
+  },
+  "counting_limits": [
+    "Tensor: section x512 instruction accounting for SM86; INT8 is weight-only FP16 WMMA, not INT8 compute.",
+    "FP32: predicated-on FADD + FMUL + 2 FFMA only; excludes special functions, FP16/conversion, integer and control work.",
+    "DRAM traffic only; no L1/L2 hierarchical roofline is claimed.",
+    "Occupancy uses active-cycle denominator; SOL throughput uses elapsed-cycle denominators.",
+    "Each point is one profiler replayed launch, not the event benchmark or an averaged end-to-end operator.",
+    "A retained successful receipt is provenance; root independently accepts correctness, build/linkage and capture identity."
+  ],
+  "launches": [
+    {
+      "label": "fp16-gemm-1024-config0",
+      "operation": "gemm",
+      "kernel_id": "0",
+      "kernel_name": "void ti::v2::<unnamed>::wmma_gemm<(int)32, (int)32, (int)16, (int)4, (bool)0, (int)2>(const __half *, const void *, const float *, const __half *, void *, int, int, int, int)",
+      "roofline_model": "tensor_sm86_x512",
+      "achieved_occupancy_pct": 59.95,
+      "sm_throughput_pct": 68.4,
+      "memory_throughput_pct": 45.09,
+      "dram_throughput_pct": 3.17,
+      "achieved_flop_per_second": 1157516888611.2256,
+      "peak_compute_flop_per_second": 63301704845926.4,
+      "achieved_dram_byte_per_second": 28138766519.82,
+      "peak_dram_byte_per_second": 887224669603.2001,
+      "arithmetic_intensity_flop_per_byte": 41.13602093382131,
+      "ridge_flop_per_byte": 71.34799900710298,
+      "ceiling_at_point_flop_per_second": 36496892581799.93,
+      "pct_of_roofline": 3.1715491559093714,
+      "raw_csv_sha256": "7ffa40988bba05aed987c5bca4900db1ed314f32a9fb472b5213db6ee00055bd",
+      "report_sha256": "567de8bf32238f60230ba00e950b6f1759aa2dbdfb2f21b978b5ec0b6354688a",
+      "raw_csv_relative_path": "raw/capture-000.csv"
+    },
+    {
+      "label": "weight-only-int8-gemm-1024-config0",
+      "operation": "int8",
+      "kernel_id": "0",
+      "kernel_name": "void ti::v2::<unnamed>::wmma_gemm<(int)32, (int)32, (int)16, (int)4, (bool)1, (int)2>(const __half *, const void *, const float *, const __half *, void *, int, int, int, int)",
+      "roofline_model": "tensor_sm86_x512",
+      "achieved_occupancy_pct": 49.73,
+      "sm_throughput_pct": 58.04,
+      "memory_throughput_pct": 38.42,
+      "dram_throughput_pct": 2.27,
+      "achieved_flop_per_second": 948535223559.3728,
+      "peak_compute_flop_per_second": 63843716970342.4,
+      "achieved_dram_byte_per_second": 20129514321.3,
+      "peak_dram_byte_per_second": 887203894487.04,
+      "arithmetic_intensity_flop_per_byte": 47.121614978841414,
+      "ridge_flop_per_byte": 71.96059143457131,
+      "ceiling_at_point_flop_per_second": 41806480323746.945,
+      "pct_of_roofline": 2.2688712759695897,
+      "raw_csv_sha256": "b441384eb389231c8103887f57dc9df85877a88af801ab8bbeca9e414161e6cd",
+      "report_sha256": "3812dd6fa6d20c4dd65f6ffed956e28e9fb8fc917cdd51936947247f801ddb4f",
+      "raw_csv_relative_path": "raw/capture-001.csv"
+    },
+    {
+      "label": "online-attention-1024-d64-config0",
+      "operation": "attention",
+      "kernel_id": "0",
+      "kernel_name": "void ti::v2::<unnamed>::online_attention<(int)64, (int)32>(const __half *, const __half *, const __half *, __half *, const int *, const int *, const int *, int, int, int, bool)",
+      "roofline_model": "fp32_fadd_fmul_ffma",
+      "achieved_occupancy_pct": 17.95,
+      "sm_throughput_pct": 31.31,
+      "memory_throughput_pct": 31.31,
+      "dram_throughput_pct": 0.9,
+      "achieved_flop_per_second": 1905407995278.4822,
+      "peak_compute_flop_per_second": 31826064235212.797,
+      "achieved_dram_byte_per_second": 8020685900.93,
+      "peak_dram_byte_per_second": 887220468154.56,
+      "arithmetic_intensity_flop_per_byte": 237.56172711582556,
+      "ridge_flop_per_byte": 35.871652399331786,
+      "ceiling_at_point_flop_per_second": 31826064235212.797,
+      "pct_of_roofline": 5.986941964285714,
+      "raw_csv_sha256": "3b726701b23eebb27b4266d52d5198f568dee5fc3ce6a3c8b661f4d19ca2abaa",
+      "report_sha256": "fd9492d864c0c59824fdf0b4ed1a884022166b9a13cac4fa9c0c5a6170485680",
+      "raw_csv_relative_path": "raw/capture-002.csv"
+    }
+  ],
+  "outputs": {
+    "raw/capture-000.csv": {
+      "path": "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T221317Z-m2-profile-enabled-profile/raw/capture-000.csv",
+      "sha256": "7ffa40988bba05aed987c5bca4900db1ed314f32a9fb472b5213db6ee00055bd",
+      "bytes": 31056
+    },
+    "raw/capture-001.csv": {
+      "path": "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T221317Z-m2-profile-enabled-profile/raw/capture-001.csv",
+      "sha256": "b441384eb389231c8103887f57dc9df85877a88af801ab8bbeca9e414161e6cd",
+      "bytes": 31068
+    },
+    "raw/capture-002.csv": {
+      "path": "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T221317Z-m2-profile-enabled-profile/raw/capture-002.csv",
+      "sha256": "3b726701b23eebb27b4266d52d5198f568dee5fc3ce6a3c8b661f4d19ca2abaa",
+      "bytes": 31132
+    },
+    "summary.csv": {
+      "path": "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T221317Z-m2-profile-enabled-profile/summary.csv",
+      "sha256": "60eb97a3e2888071b585033de231f2f7a04a7e6ad5db1b41c01767979862c749",
+      "bytes": 2052
+    },
+    "roofline.png": {
+      "path": "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T221317Z-m2-profile-enabled-profile/roofline.png",
+      "sha256": "0a7d85d4921fdcb80fb880d2d00d17ec55713eccd67966f1dd23192e395c3fb8",
+      "bytes": 170891
+    },
+    "occupancy.png": {
+      "path": "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T221317Z-m2-profile-enabled-profile/occupancy.png",
+      "sha256": "0e596c00bbb7f744ab5afb33dc38eee474c7edd3c7c12852c165ea310d11599c",
+      "bytes": 81538
+    }
+  }
+}

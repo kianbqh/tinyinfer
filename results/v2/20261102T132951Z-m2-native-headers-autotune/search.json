@@ -1,0 +1,77 @@
+{
+  "budget_policy": "per method: same proposal cap and same unique nonbaseline evaluation cap; invalid/duplicate/error proposals consume proposal attempts; compile/test failures consume unique evaluations; initial baseline and independent remeasurement are separately reported",
+  "command_argv": [
+    "/mnt/g/ResumeProject/platforms/tinyinfer/autotune/run.py",
+    "--config",
+    "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/autotune.json",
+    "--output",
+    "results/v2/20261102T132951Z-m2-native-headers-autotune"
+  ],
+  "config": {
+    "baseline_id": 0,
+    "build_timeout_seconds": 900,
+    "evaluation_budget": 8,
+    "evaluation_timeout_seconds": 900,
+    "fixture": {
+      "K": 512,
+      "M": 512,
+      "N": 512,
+      "atol": 0.02,
+      "fixture_seed": 193,
+      "host_repeats": 21,
+      "repeats": 101,
+      "rtol": 0.02,
+      "warmups": 20
+    },
+    "llama": {
+      "context_tokens": 8192,
+      "executable": "/opt/codex-resume/llm-risk-classifier/llama/llama-b12024/llama-completion",
+      "executable_sha256": "15472995c69d23fd6350f84b1fb73156698bab77b20438b617bcd8e1e9a9a11f",
+      "max_output_tokens": 384,
+      "model": "/opt/codex-resume/llm-risk-classifier/weights/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+      "model_sha256": "6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e",
+      "timeout_seconds": 180
+    },
+    "proposal_budget": 64,
+    "schema_version": 1,
+    "scratch_base": "/opt/codex-resume/all-modules-v2/m2/autotune",
+    "seeds": [
+      17,
+      41,
+      73
+    ],
+    "toolchain": {
+      "cmake": "/opt/codex-resume/portfolio-ml/venv/bin/cmake",
+      "cxx": "/usr/bin/g++",
+      "gtest_source": "/opt/codex-resume/cpp-cuda-inference-kernels/googletest",
+      "ninja": "/opt/codex-resume/portfolio-ml/venv/bin/ninja",
+      "nvcc": "/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/bin/nvcc",
+      "python": "/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+      "python_include": "/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include/python3.12"
+    }
+  },
+  "config_canonical_sha256": "1e60df79bf30aeddea2e301f2a750046bd38ef6c61e67f74989d0424c9d15610",
+  "config_sha256": "4937112b0fe9183f4f1d13993f515326babeef9e7a5c22c5df8a99e07380fc42",
+  "environment": {
+    "cpu": "12th Gen Intel(R) Core(TM) i7-12700KF",
+    "cuda_scope": "driver/device reported by nvidia-smi; exact build toolkit belongs to supplied build receipt",
+    "environment": "WSL2",
+    "git": {
+      "sha": "3edcfebd24d5efbf5da81cda13f2bf684031b35e",
+      "status_porcelain": "?? results/v2/",
+      "version": "git version 2.43.0"
+    },
+    "nvidia_smi": "NVIDIA GeForce RTX 3080, 621.01, 12288 MiB",
+    "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+    "python_executable": "/opt/codex-resume/all-modules-v2/m2/venv/bin/python"
+  },
+  "error": "initial baseline failed correctness/build; search not meaningful",
+  "error_type": "RuntimeError",
+  "finished_timestamp": "2026-11-02T14:47:45.472605+00:00",
+  "proposer_gpu_policy": "local llama.cpp CPU process (-ngl 0), fully exits before each compile/test/timing process; no external LLM server allowed",
+  "seeds": [],
+  "status": "failed",
+  "timestamp": "2026-11-02T14:47:34.646321+00:00",
+  "wall_seconds": 10.826296847997583
+}

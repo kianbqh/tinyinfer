@@ -1,0 +1,1296 @@
+{
+  "argv": [
+    "/mnt/g/ResumeProject/platforms/tinyinfer/server/tests/native_correctness.py",
+    "--execute",
+    "--config",
+    "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/server-off.json",
+    "--binary",
+    "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/server/tinyinfer_server",
+    "--build-receipt",
+    "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/server-build.json",
+    "--model-build-receipt",
+    "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/model-build.json",
+    "--model-config",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/llm/configs/evaluation.json",
+    "--model-gate",
+    "results/v2/20261102T132951Z-m2-native-headers-model-gate/results.json",
+    "--kernel-gate",
+    "results/v2/20261102T132951Z-m2-native-headers-kernel-gate/correctness.json",
+    "--frozen-tokens",
+    "/opt/codex-resume/all-modules-v2/m2/data/frozen-wt2-20261102T132951Z-m2-native-headers.json",
+    "--output",
+    "results/v2/20261102T132951Z-m2-native-headers-native-socket-gate-off",
+    "--server-output",
+    "results/v2/20261102T132951Z-m2-native-headers-native-socket-server-off",
+    "--startup-timeout",
+    "180",
+    "--request-timeout",
+    "60"
+  ],
+  "cases": [
+    {
+      "case": 0,
+      "expected": [
+        1849
+      ],
+      "length": 8,
+      "new_tokens": 1,
+      "offset": 0,
+      "prompt_sha256": "2ebb4b0fa8bdc1a71f1d8f80085e1bce95143d945df3c2c45f09f7a96af649bb"
+    },
+    {
+      "case": 1,
+      "expected": [
+        905,
+        366,
+        464
+      ],
+      "length": 17,
+      "new_tokens": 3,
+      "offset": 19,
+      "prompt_sha256": "113a42899e6294f72a1d1e65fc151144542cf04c0847290785b85d3a8bc85037"
+    },
+    {
+      "case": 2,
+      "expected": [
+        13,
+        198,
+        198,
+        464,
+        2646
+      ],
+      "length": 33,
+      "new_tokens": 5,
+      "offset": 53,
+      "prompt_sha256": "ba754d67df5d00d75a73fe3c3ae72a39d012b9a18d27c9a62aca2a596fc83043"
+    }
+  ],
+  "cleanup_snapshots": [
+    {
+      "at": "2026-11-02T14:35:25.647034+00:00",
+      "confirmed": [
+        {
+          "argv": [
+            "/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+            "-B",
+            "-m",
+            "server.run",
+            "--config",
+            "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/server-off.json",
+            "--binary",
+            "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/server/tinyinfer_server",
+            "--build-receipt",
+            "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/server-build.json",
+            "--output",
+            "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T132951Z-m2-native-headers-native-socket-server-off"
+          ],
+          "exe": "/usr/bin/python3.12",
+          "pgrp": 312801,
+          "pid": 312801,
+          "ppid": 312764,
+          "role": "launcher",
+          "session": 312801,
+          "start_ticks": 10503850,
+          "state": "S"
+        },
+        {
+          "argv": [
+            "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/server/tinyinfer_server",
+            "--host",
+            "127.0.0.1",
+            "--port",
+            "8093",
+            "--model",
+            "native",
+            "--manifest",
+            "/opt/codex-resume/all-modules-v2/m2/weights/20261102T132951Z-m2-native-headers-fp16/manifest.json",
+            "--max-batch",
+            "1",
+            "--max-wait-us",
+            "0",
+            "--capacity",
+            "1024",
+            "--max-new-tokens",
+            "128",
+            "--max-pending",
+            "256",
+            "--max-connections",
+            "256",
+            "--per-connection",
+            "32",
+            "--max-output-bytes",
+            "1048576",
+            "--max-ids",
+            "100000",
+            "--send-chunk-bytes",
+            "65536",
+            "--device",
+            "0",
+            "--gemm-config",
+            "0",
+            "--attention-config",
+            "0"
+          ],
+          "exe": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/server/tinyinfer_server",
+          "pgrp": 312801,
+          "pid": 312808,
+          "ppid": 312801,
+          "role": "native",
+          "session": 312801,
+          "start_ticks": 10503913,
+          "state": "S"
+        }
+      ],
+      "label": "native_readiness",
+      "scan_complete": true,
+      "scan_errors": [],
+      "unknown": [],
+      "zombies": []
+    },
+    {
+      "at": "2026-11-02T14:35:25.782015+00:00",
+      "confirmed": [
+        {
+          "argv": [
+            "/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+            "-B",
+            "-m",
+            "server.run",
+            "--config",
+            "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/server-off.json",
+            "--binary",
+            "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/server/tinyinfer_server",
+            "--build-receipt",
+            "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/server-build.json",
+            "--output",
+            "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T132951Z-m2-native-headers-native-socket-server-off"
+          ],
+          "exe": "/usr/bin/python3.12",
+          "pgrp": 312801,
+          "pid": 312801,
+          "ppid": 312764,
+          "role": "launcher",
+          "session": 312801,
+          "start_ticks": 10503850,
+          "state": "S"
+        },
+        {
+          "argv": [
+            "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/server/tinyinfer_server",
+            "--host",
+            "127.0.0.1",
+            "--port",
+            "8093",
+            "--model",
+            "native",
+            "--manifest",
+            "/opt/codex-resume/all-modules-v2/m2/weights/20261102T132951Z-m2-native-headers-fp16/manifest.json",
+            "--max-batch",
+            "1",
+            "--max-wait-us",
+            "0",
+            "--capacity",
+            "1024",
+            "--max-new-tokens",
+            "128",
+            "--max-pending",
+            "256",
+            "--max-connections",
+            "256",
+            "--per-connection",
+            "32",
+            "--max-output-bytes",
+            "1048576",
+            "--max-ids",
+            "100000",
+            "--send-chunk-bytes",
+            "65536",
+            "--device",
+            "0",
+            "--gemm-config",
+            "0",
+            "--attention-config",
+            "0"
+          ],
+          "exe": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/server/tinyinfer_server",
+          "pgrp": 312801,
+          "pid": 312808,
+          "ppid": 312801,
+          "role": "native",
+          "session": 312801,
+          "start_ticks": 10503913,
+          "state": "S"
+        }
+      ],
+      "label": "before_cleanup",
+      "scan_complete": true,
+      "scan_errors": [],
+      "unknown": [],
+      "zombies": []
+    },
+    {
+      "at": "2026-11-02T14:35:25.937460+00:00",
+      "confirmed": [],
+      "label": "after_cleanup",
+      "scan_complete": true,
+      "scan_errors": [],
+      "unknown": [],
+      "zombies": []
+    }
+  ],
+  "direct_trace": {
+    "argmax": 9,
+    "attention": 108,
+    "embedding": 9,
+    "forward_calls": 9,
+    "gelu": 108,
+    "gemm_fp16": 441,
+    "gemm_int8": 0,
+    "kv_scatter_gather": 108,
+    "layernorm": 225,
+    "lm_head": 9,
+    "nll": 0,
+    "residual": 216
+  },
+  "end_tracked_status": {
+    "argv": [
+      "/opt/codex-resume/all-modules-v2/m1a/tools/git-native/usr/bin/git",
+      "-C",
+      "/mnt/g/ResumeProject/platforms/tinyinfer",
+      "status",
+      "--porcelain",
+      "--untracked-files=no"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  "environment": {
+    "cpu": "12th Gen Intel(R) Core(TM) i7-12700KF",
+    "cuda": "not used",
+    "environment": "WSL2",
+    "git": {
+      "sha": "3edcfebd24d5efbf5da81cda13f2bf684031b35e",
+      "status_porcelain": "?? results/v2/",
+      "version": "git version 2.43.0"
+    },
+    "gpu": "not queried; CPU execution",
+    "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+    "python_executable": "/opt/codex-resume/all-modules-v2/m2/venv/bin/python"
+  },
+  "events": [
+    {
+      "at": "2026-11-02T14:35:22.830257+00:00",
+      "event": "direct_context_closed_before_server_start"
+    },
+    {
+      "at": "2026-11-02T14:35:22.874615+00:00",
+      "event": "server_launcher_started",
+      "pid": 312801
+    },
+    {
+      "at": "2026-11-02T14:35:25.638208+00:00",
+      "event": "native_server_ready",
+      "model": "native",
+      "port": 8093,
+      "ready": true
+    },
+    {
+      "at": "2026-11-02T14:35:25.648516+00:00",
+      "event": "requests_sent",
+      "group": "mixed_coalesced",
+      "ids": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "at": "2026-11-02T14:35:25.655659+00:00",
+      "event": "socket_response",
+      "group": "mixed_coalesced",
+      "response": {
+        "batch_size": 1,
+        "first_ns": 6950560,
+        "id": 1,
+        "infer_ns": 6950560,
+        "kind": 32770,
+        "queue_ns": 52232,
+        "server_ns": 7002792,
+        "status": 0,
+        "tokens": [
+          1849
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T14:35:25.656948+00:00",
+      "event": "socket_response",
+      "group": "mixed_coalesced",
+      "response": {
+        "batch_size": 1,
+        "first_ns": 6950560,
+        "id": 1,
+        "infer_ns": 6963432,
+        "kind": 32769,
+        "queue_ns": 52232,
+        "server_ns": 7015696,
+        "status": 0,
+        "tokens": [
+          1849
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T14:35:25.661334+00:00",
+      "event": "socket_response",
+      "group": "mixed_coalesced",
+      "response": {
+        "batch_size": 1,
+        "first_ns": 5574362,
+        "id": 2,
+        "infer_ns": 5574362,
+        "kind": 32770,
+        "queue_ns": 7000908,
+        "server_ns": 12575270,
+        "status": 0,
+        "tokens": [
+          905
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T14:35:25.672127+00:00",
+      "event": "socket_response",
+      "group": "mixed_coalesced",
+      "response": {
+        "batch_size": 1,
+        "first_ns": 5574362,
+        "id": 2,
+        "infer_ns": 16482270,
+        "kind": 32769,
+        "queue_ns": 7000908,
+        "server_ns": 23483208,
+        "status": 0,
+        "tokens": [
+          905,
+          366,
+          464
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T14:35:25.677765+00:00",
+      "event": "socket_response",
+      "group": "mixed_coalesced",
+      "response": {
+        "batch_size": 1,
+        "first_ns": 5549826,
+        "id": 3,
+        "infer_ns": 5549826,
+        "kind": 32770,
+        "queue_ns": 23494076,
+        "server_ns": 29043902,
+        "status": 0,
+        "tokens": [
+          13
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T14:35:25.699668+00:00",
+      "event": "socket_response",
+      "group": "mixed_coalesced",
+      "response": {
+        "batch_size": 1,
+        "first_ns": 5549826,
+        "id": 3,
+        "infer_ns": 27484105,
+        "kind": 32769,
+        "queue_ns": 23494076,
+        "server_ns": 50978202,
+        "status": 0,
+        "tokens": [
+          13,
+          198,
+          198,
+          464,
+          2646
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T14:35:25.702375+00:00",
+      "event": "requests_sent",
+      "group": "slot_reuse_reversed",
+      "ids": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "at": "2026-11-02T14:35:25.708196+00:00",
+      "event": "socket_response",
+      "group": "slot_reuse_reversed",
+      "response": {
+        "batch_size": 1,
+        "first_ns": 5628564,
+        "id": 4,
+        "infer_ns": 5628564,
+        "kind": 32770,
+        "queue_ns": 19560,
+        "server_ns": 5648124,
+        "status": 0,
+        "tokens": [
+          13
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T14:35:25.728395+00:00",
+      "event": "socket_response",
+      "group": "slot_reuse_reversed",
+      "response": {
+        "batch_size": 1,
+        "first_ns": 5628564,
+        "id": 4,
+        "infer_ns": 25867371,
+        "kind": 32769,
+        "queue_ns": 19560,
+        "server_ns": 25886955,
+        "status": 0,
+        "tokens": [
+          13,
+          198,
+          198,
+          464,
+          2646
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T14:35:25.733231+00:00",
+      "event": "socket_response",
+      "group": "slot_reuse_reversed",
+      "response": {
+        "batch_size": 1,
+        "first_ns": 4771274,
+        "id": 5,
+        "infer_ns": 4771274,
+        "kind": 32770,
+        "queue_ns": 25887708,
+        "server_ns": 30658982,
+        "status": 0,
+        "tokens": [
+          905
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T14:35:25.743087+00:00",
+      "event": "socket_response",
+      "group": "slot_reuse_reversed",
+      "response": {
+        "batch_size": 1,
+        "first_ns": 4771274,
+        "id": 5,
+        "infer_ns": 14548012,
+        "kind": 32769,
+        "queue_ns": 25887708,
+        "server_ns": 40435762,
+        "status": 0,
+        "tokens": [
+          905,
+          366,
+          464
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T14:35:25.747993+00:00",
+      "event": "socket_response",
+      "group": "slot_reuse_reversed",
+      "response": {
+        "batch_size": 1,
+        "first_ns": 5065631,
+        "id": 6,
+        "infer_ns": 5065631,
+        "kind": 32770,
+        "queue_ns": 40447695,
+        "server_ns": 45513326,
+        "status": 0,
+        "tokens": [
+          1849
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T14:35:25.748967+00:00",
+      "event": "socket_response",
+      "group": "slot_reuse_reversed",
+      "response": {
+        "batch_size": 1,
+        "first_ns": 5065631,
+        "id": 6,
+        "infer_ns": 5076291,
+        "kind": 32769,
+        "queue_ns": 40447695,
+        "server_ns": 45524007,
+        "status": 0,
+        "tokens": [
+          1849
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T14:35:25.750504+00:00",
+      "event": "requests_sent",
+      "group": "connection_id_reuse_a",
+      "ids": [
+        1
+      ]
+    },
+    {
+      "at": "2026-11-02T14:35:25.751979+00:00",
+      "event": "requests_sent",
+      "group": "connection_id_reuse_b",
+      "ids": [
+        1
+      ]
+    },
+    {
+      "at": "2026-11-02T14:35:25.755538+00:00",
+      "event": "socket_response",
+      "group": "connection_id_reuse_a",
+      "response": {
+        "batch_size": 1,
+        "first_ns": 4799451,
+        "id": 1,
+        "infer_ns": 4799451,
+        "kind": 32770,
+        "queue_ns": 19938,
+        "server_ns": 4819389,
+        "status": 0,
+        "tokens": [
+          1849
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T14:35:25.759489+00:00",
+      "event": "socket_response",
+      "group": "connection_id_reuse_a",
+      "response": {
+        "batch_size": 1,
+        "first_ns": 4799451,
+        "id": 1,
+        "infer_ns": 4811803,
+        "kind": 32769,
+        "queue_ns": 19938,
+        "server_ns": 4831761,
+        "status": 0,
+        "tokens": [
+          1849
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T14:35:25.760826+00:00",
+      "event": "socket_response",
+      "group": "connection_id_reuse_b",
+      "response": {
+        "batch_size": 1,
+        "first_ns": 5032566,
+        "id": 1,
+        "infer_ns": 5032566,
+        "kind": 32770,
+        "queue_ns": 3354320,
+        "server_ns": 8386886,
+        "status": 0,
+        "tokens": [
+          13
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T14:35:25.780059+00:00",
+      "event": "socket_response",
+      "group": "connection_id_reuse_b",
+      "response": {
+        "batch_size": 1,
+        "first_ns": 5032566,
+        "id": 1,
+        "infer_ns": 24609812,
+        "kind": 32769,
+        "queue_ns": 3354320,
+        "server_ns": 27964162,
+        "status": 0,
+        "tokens": [
+          13,
+          198,
+          198,
+          464,
+          2646
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T14:35:25.782139+00:00",
+      "event": "confirmed_process_signal",
+      "outcome": "signalled",
+      "pid": 312808,
+      "role": "native",
+      "signal": 15,
+      "start_ticks": 10503913
+    },
+    {
+      "at": "2026-11-02T14:35:25.783474+00:00",
+      "event": "confirmed_process_signal",
+      "outcome": "signalled",
+      "pid": 312801,
+      "role": "launcher",
+      "signal": 15,
+      "start_ticks": 10503850
+    }
+  ],
+  "finished_at": "2026-11-02T14:35:27.075117+00:00",
+  "frozen_token_ids_sha256": "1a9826daa2d0cb79a64a4b23b09812f2b895774c0bb604a1eb77cc552c6688e3",
+  "input_sha256": {
+    "/mnt/g/ResumeProject/platforms/tinyinfer/llm/configs/evaluation.json": "b3dde3a6e38318cfbb4bbf35507575d0ae04e47de2eb48305d5ce66ed15bb1ee",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T132951Z-m2-native-headers-kernel-gate/correctness.json": "db7195bc162643a2a8850952bdb061e224943ea968adfbc14cd0a645ff3f3b84",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T132951Z-m2-native-headers-kernel-gate/run.json": "fdef63a910cd5cbe0f560d3c4987d486fb6cf03e593758d1d0f4bf0a512b5c07",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T132951Z-m2-native-headers-model-gate/results.json": "d7ad8c7048491ca01877c7221de5c4338da0033255bd3955c88d735668f56d1b",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/server/__init__.py": "0df7ac8a474df0505c07aae40d3bd483bb2e01040422ebaa3806f04b233347a4",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/server/build_receipt.py": "8ba0325b47d5df7f5dfa0f6547fd5ade49e8f82a410e1ac44123ffaf502480fd",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/server/compare.py": "ae7231c46a4b8c70f0e37484fdee6c98d44ea6c741a104d83e44c71f8dc6a121",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/server/loadgen.py": "e5e57e5e384d858e8226dba62466d317bbd769cd9e59c732acf1c3aa826f29cb",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/server/metadata.py": "d9113dcfba44ef6597af7ce6f83d5f45f25e5f5fe699c1bb524fb5d3d5c50660",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/server/protocol.py": "bd86f8eaf59e01ffd68ea55eed6c3427dc66e2d3a548840546536e59fbb88be4",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/server/run.py": "612dcaacc8d54810e113e6598a42fa7f273aa19a10d5c2a756e8069e32b4f2ee",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/server/tests/__init__.py": "6482e4237496d1349e42cc4b1a7a7ecea7b3820126dc65ba07a2a270ef402849",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/server/tests/native_correctness.py": "80a38c07d9b7eb8a027084f3224dccbe632bea3d569b2bf30bab764ef83d0925",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/server/tests/test_e2e.py": "a4d16ec94678ae6fdc6281944e0663494a383f3ae31ac1c31953a9a15a3c4e1a",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/server/tests/test_protocol.py": "f8b62638e04d395001e3d6277f2fddce00138495927825cb9f19fed4646f147c",
+    "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_backend.so": "897434e4f360b1bbe87926e22f668f5bf28ec100443153fd9a8827cb7a5a7d6c",
+    "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_llm.so": "13507a9f7e01d314fa5c21201c11d426f88abd811c841390c4bcbd75c5d199c6",
+    "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/server/tinyinfer_server": "4cd456cf616dac3d680a7252d3d8da47b7fa8fc1c68796c7b5126ebb5979eaff",
+    "/opt/codex-resume/all-modules-v2/m2/data/frozen-wt2-20261102T132951Z-m2-native-headers.json": "16c317beb4ddbb239abb7ddec15ba557fc2c05d8c36fd8446fcc7d92a8754d42",
+    "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/model-build.json": "66d29cc92ef230cfe5248c54372b153e8f5b8c6a2fbc1c02941ebe4c5d8d9873",
+    "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/server-build.json": "684affcf96b18e9f1e938c37c1d39de01ad5e0422015c187dbbbb9091e525d37",
+    "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/server-off.json": "265cec0cab85d9b7ac7483b32be7449db4a4d4198e41eb88fa7bd4f56231bee5",
+    "/opt/codex-resume/all-modules-v2/m2/weights/20261102T132951Z-m2-native-headers-fp16/manifest.json": "25c2e22d1fcf1d9ff4cdff053f254e8f2f7fe5edb440cec5ee8f2573a248e605",
+    "/opt/codex-resume/all-modules-v2/m2/weights/20261102T132951Z-m2-native-headers-fp16/weights.bin": "bf7b3ab0516ae0fce69f18654bbc7ef80000b710f65efcf912270fb932659157"
+  },
+  "max_observed_batch": 1,
+  "precision": "fp16",
+  "ready": {
+    "model": "native",
+    "port": 8093,
+    "ready": true
+  },
+  "schema_version": 1,
+  "scope": "finite exact greedy socket/direct parity, no performance result",
+  "server_build_source_sha256": {
+    "CMakeLists.txt": "db0c115bef4fe0111b0ae89412cb232bc969ce91cc76f6a9bb59c945e37dc7b0",
+    "cmake/HostCodec.cmake": "4012e47011e09ba2b53466db80b0823b4ec38fa9a8cf16e86104d511a3076597",
+    "cmake/V2Kernels.cmake": "f279d80aba5ae5e11681019ff84c4f894cead9c1914cdaaa3e79dda50acb057e",
+    "cmake/V2LLM.cmake": "38f5cb5dad94d0921caf5c793851e9695b56e762461c7d73a94a20a16d9f65de",
+    "cmake/V2Server.cmake": "473cee99124969cc9d38cbfe5a4691b0630929dd330e624148e786fbf0999f48",
+    "llm/include/tinyinfer_llm.h": "c288dc76f9578fa3e40da6a4ab23d1ca1e98af251e167074bbb3039cd34bb97c",
+    "llm/src/artifact.hpp": "b66af831eebb872d0e66caabaf3ef010b1d7e336be2f847acf051f834a6c08e3",
+    "llm/src/runtime.cu": "c9782e9f28ebfbd86166f8b39e54b0dcb12326c3dded37fd03ec45eb80ca4793",
+    "server/CMakeLists.txt": "9680270e686517dae7c1d205546164580e9a61867755d624e307b8e275bf6419",
+    "server/include/model.hpp": "98016fb4ecc2dfd86f97993b6b785bb177687d0241b765638e7db4d68313dea6",
+    "server/include/mpsc.hpp": "f12d1c4c6c3a22de1fa43081b585de0237086f356c9b3193f6b78f283bc4c6c8",
+    "server/include/protocol.hpp": "d8b1ef8b0a16c5cfed9621dfe692be6f75b97a44809a00492f1245f938267246",
+    "server/include/transport.hpp": "72012535c080fc9506238c6a21ab696ff0a8090c2c1e68c63be70a2172622661",
+    "server/src/main.cpp": "f5756f4f4e71ab833ffcd45f742bc7b4a3634f4292df3e1b90c6237037b67eff",
+    "server/tests/transport.cpp": "394db5b27bcf39551c6b9c952ec2986384fb67bafa7d36c94bf98a2ae5507831",
+    "server/tests/unit.cpp": "78b136e749a8b24d52e5741075d4151ec4903a36e680a51d04aa89e7e8a25c69"
+  },
+  "server_output": "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T132951Z-m2-native-headers-native-socket-server-off",
+  "server_process": {
+    "argv": [
+      "/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+      "-B",
+      "-m",
+      "server.run",
+      "--config",
+      "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/server-off.json",
+      "--binary",
+      "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/server/tinyinfer_server",
+      "--build-receipt",
+      "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/server-build.json",
+      "--output",
+      "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T132951Z-m2-native-headers-native-socket-server-off"
+    ],
+    "cleanup_confirmed": true,
+    "cleanup_uncertain": false,
+    "independent_scope": {
+      "creation": "Popen(start_new_session=True); identity independent of server.json",
+      "known_members": {
+        "312801": {
+          "role": "launcher",
+          "start_ticks": 10503850
+        },
+        "312808": {
+          "role": "native",
+          "start_ticks": 10503913
+        }
+      },
+      "launcher_argv": [
+        "/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+        "-B",
+        "-m",
+        "server.run",
+        "--config",
+        "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/server-off.json",
+        "--binary",
+        "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/server/tinyinfer_server",
+        "--build-receipt",
+        "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/server-build.json",
+        "--output",
+        "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T132951Z-m2-native-headers-native-socket-server-off"
+      ],
+      "launcher_exe": "/usr/bin/python3.12",
+      "launcher_pid": 312801,
+      "launcher_start_ticks": 10503850,
+      "native_argv": [
+        "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/server/tinyinfer_server",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8093",
+        "--model",
+        "native",
+        "--manifest",
+        "/opt/codex-resume/all-modules-v2/m2/weights/20261102T132951Z-m2-native-headers-fp16/manifest.json",
+        "--max-batch",
+        "1",
+        "--max-wait-us",
+        "0",
+        "--capacity",
+        "1024",
+        "--max-new-tokens",
+        "128",
+        "--max-pending",
+        "256",
+        "--max-connections",
+        "256",
+        "--per-connection",
+        "32",
+        "--max-output-bytes",
+        "1048576",
+        "--max-ids",
+        "100000",
+        "--send-chunk-bytes",
+        "65536",
+        "--device",
+        "0",
+        "--gemm-config",
+        "0",
+        "--attention-config",
+        "0"
+      ],
+      "native_exe": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/server/tinyinfer_server",
+      "pgrp": 312801,
+      "session": 312801
+    },
+    "launcher_exit_code": 0,
+    "launcher_pid": 312801,
+    "record": {
+      "artifact_manifest_sha256": "25c2e22d1fcf1d9ff4cdff053f254e8f2f7fe5edb440cec5ee8f2573a248e605",
+      "binary": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/server/tinyinfer_server",
+      "binary_sha256": "4cd456cf616dac3d680a7252d3d8da47b7fa8fc1c68796c7b5126ebb5979eaff",
+      "build_receipt": {
+        "binary": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/server/tinyinfer_server",
+        "binary_sha256": "4cd456cf616dac3d680a7252d3d8da47b7fa8fc1c68796c7b5126ebb5979eaff",
+        "build_command_argv": [
+          "/usr/bin/env",
+          "LD_LIBRARY_PATH=/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers:/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib:/usr/lib/wsl/lib",
+          "/opt/codex-resume/portfolio-ml/venv/bin/cmake",
+          "--build",
+          "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers",
+          "--parallel",
+          "2"
+        ],
+        "build_exit_code": 0,
+        "build_log_sha256": "308efaa9fc64bf9a363581c8bed58a0862e4ed6ef33b29bc8476c1c62a170356",
+        "cmake_cache_sha256": "9fbbec12e2956ccc71dbb71154b34f405bb94bd60cb70982e61d1bbb1cf89da1",
+        "compile_commands": [
+          {
+            "command": "/usr/bin/g++ -DTI_SERVER_NATIVE=1 -I/mnt/g/ResumeProject/platforms/tinyinfer/server/../llm/include -I/mnt/g/ResumeProject/platforms/tinyinfer/server/include -I/mnt/g/ResumeProject/platforms/tinyinfer/llm/include -I/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include -O3 -DNDEBUG -std=gnu++17 -fPIE -Wall -Wextra -Wpedantic -o server/CMakeFiles/tinyinfer_server.dir/src/main.cpp.o -c /mnt/g/ResumeProject/platforms/tinyinfer/server/src/main.cpp",
+            "directory": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers",
+            "file": "/mnt/g/ResumeProject/platforms/tinyinfer/server/src/main.cpp",
+            "output": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/server/CMakeFiles/tinyinfer_server.dir/src/main.cpp.o"
+          }
+        ],
+        "compile_commands_sha256": "4af99b681f988edc0b7eeecb8c9ea2e78f359c2c264d6e7ce6f447a4289fe473",
+        "environment": {
+          "cpu": "12th Gen Intel(R) Core(TM) i7-12700KF",
+          "cuda": "not used",
+          "environment": "WSL2",
+          "git": {
+            "sha": "3edcfebd24d5efbf5da81cda13f2bf684031b35e",
+            "status_porcelain": "",
+            "version": "git version 2.43.0"
+          },
+          "gpu": "not queried; CPU execution",
+          "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+          "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+          "python_executable": "/opt/codex-resume/all-modules-v2/m2/venv/bin/python"
+        },
+        "ldd": "linux-vdso.so.1 (0x0000784dfdea9000)\n\tlibtinyinfer_llm.so => /opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_llm.so (0x0000784dfde52000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x0000784dfda00000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x0000784dfde22000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000784dfd600000)\n\tlibtinyinfer_backend.so => /opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_backend.so (0x0000784dfdd78000)\n\tlibcudart.so.12 => /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib/libcudart.so.12 (0x0000784dfd200000)\n\t/lib64/ld-linux-x86-64.so.2 (0x0000784dfdeab000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x0000784dfdc8d000)\n\tlibgomp.so.1 => /lib/x86_64-linux-gnu/libgomp.so.1 (0x0000784dfd9aa000)\n\tlibdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x0000784dfdc88000)\n\tlibpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x0000784dfdc83000)\n\tlibrt.so.1 => /lib/x86_64-linux-gnu/librt.so.1 (0x0000784dfd9a5000)",
+        "native_libraries": {
+          "tinyinfer_backend": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_backend.so",
+            "sha256": "897434e4f360b1bbe87926e22f668f5bf28ec100443153fd9a8827cb7a5a7d6c"
+          },
+          "tinyinfer_llm": {
+            "path": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_llm.so",
+            "sha256": "13507a9f7e01d314fa5c21201c11d426f88abd811c841390c4bcbd75c5d199c6"
+          }
+        },
+        "source_sha256": {
+          "CMakeLists.txt": "db0c115bef4fe0111b0ae89412cb232bc969ce91cc76f6a9bb59c945e37dc7b0",
+          "cmake/HostCodec.cmake": "4012e47011e09ba2b53466db80b0823b4ec38fa9a8cf16e86104d511a3076597",
+          "cmake/V2Kernels.cmake": "f279d80aba5ae5e11681019ff84c4f894cead9c1914cdaaa3e79dda50acb057e",
+          "cmake/V2LLM.cmake": "38f5cb5dad94d0921caf5c793851e9695b56e762461c7d73a94a20a16d9f65de",
+          "cmake/V2Server.cmake": "473cee99124969cc9d38cbfe5a4691b0630929dd330e624148e786fbf0999f48",
+          "llm/include/tinyinfer_llm.h": "c288dc76f9578fa3e40da6a4ab23d1ca1e98af251e167074bbb3039cd34bb97c",
+          "llm/src/artifact.hpp": "b66af831eebb872d0e66caabaf3ef010b1d7e336be2f847acf051f834a6c08e3",
+          "llm/src/runtime.cu": "c9782e9f28ebfbd86166f8b39e54b0dcb12326c3dded37fd03ec45eb80ca4793",
+          "server/CMakeLists.txt": "9680270e686517dae7c1d205546164580e9a61867755d624e307b8e275bf6419",
+          "server/include/model.hpp": "98016fb4ecc2dfd86f97993b6b785bb177687d0241b765638e7db4d68313dea6",
+          "server/include/mpsc.hpp": "f12d1c4c6c3a22de1fa43081b585de0237086f356c9b3193f6b78f283bc4c6c8",
+          "server/include/protocol.hpp": "d8b1ef8b0a16c5cfed9621dfe692be6f75b97a44809a00492f1245f938267246",
+          "server/include/transport.hpp": "72012535c080fc9506238c6a21ab696ff0a8090c2c1e68c63be70a2172622661",
+          "server/src/main.cpp": "f5756f4f4e71ab833ffcd45f742bc7b4a3634f4292df3e1b90c6237037b67eff",
+          "server/tests/transport.cpp": "394db5b27bcf39551c6b9c952ec2986384fb67bafa7d36c94bf98a2ae5507831",
+          "server/tests/unit.cpp": "78b136e749a8b24d52e5741075d4151ec4903a36e680a51d04aa89e7e8a25c69"
+        },
+        "timestamp": "2026-11-02T13:40:18.177129+00:00"
+      },
+      "build_receipt_sha256": "684affcf96b18e9f1e938c37c1d39de01ad5e0422015c187dbbbb9091e525d37",
+      "command_argv": [
+        "/mnt/g/ResumeProject/platforms/tinyinfer/server/run.py",
+        "--config",
+        "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/server-off.json",
+        "--binary",
+        "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/server/tinyinfer_server",
+        "--build-receipt",
+        "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/server-build.json",
+        "--output",
+        "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T132951Z-m2-native-headers-native-socket-server-off"
+      ],
+      "config": {
+        "attention_config": 0,
+        "capacity": 1024,
+        "device": 0,
+        "gemm_config": 0,
+        "host": "127.0.0.1",
+        "manifest": "/opt/codex-resume/all-modules-v2/m2/weights/20261102T132951Z-m2-native-headers-fp16/manifest.json",
+        "max_batch": 1,
+        "max_connections": 256,
+        "max_ids": 100000,
+        "max_new_tokens": 128,
+        "max_output_bytes": 1048576,
+        "max_pending": 256,
+        "max_wait_us": 0,
+        "model": "native",
+        "per_connection": 32,
+        "port": 8093,
+        "schema_version": 1,
+        "send_chunk_bytes": 65536
+      },
+      "config_sha256": "265cec0cab85d9b7ac7483b32be7449db4a4d4198e41eb88fa7bd4f56231bee5",
+      "environment": {
+        "cpu": "12th Gen Intel(R) Core(TM) i7-12700KF",
+        "cuda_scope": "driver/device reported by nvidia-smi; exact build toolkit belongs to supplied build receipt",
+        "environment": "WSL2",
+        "git": {
+          "sha": "3edcfebd24d5efbf5da81cda13f2bf684031b35e",
+          "status_porcelain": "?? results/v2/",
+          "version": "git version 2.43.0"
+        },
+        "nvidia_smi": "NVIDIA GeForce RTX 3080, 621.01, 12288 MiB",
+        "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+        "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+        "python_executable": "/opt/codex-resume/all-modules-v2/m2/venv/bin/python"
+      },
+      "exit_code": 0,
+      "finished_timestamp": "2026-11-02T14:35:25.835939+00:00",
+      "pid": 312808,
+      "server_argv": [
+        "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/server/tinyinfer_server",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8093",
+        "--model",
+        "native",
+        "--manifest",
+        "/opt/codex-resume/all-modules-v2/m2/weights/20261102T132951Z-m2-native-headers-fp16/manifest.json",
+        "--max-batch",
+        "1",
+        "--max-wait-us",
+        "0",
+        "--capacity",
+        "1024",
+        "--max-new-tokens",
+        "128",
+        "--max-pending",
+        "256",
+        "--max-connections",
+        "256",
+        "--per-connection",
+        "32",
+        "--max-output-bytes",
+        "1048576",
+        "--max-ids",
+        "100000",
+        "--send-chunk-bytes",
+        "65536",
+        "--device",
+        "0",
+        "--gemm-config",
+        "0",
+        "--attention-config",
+        "0"
+      ],
+      "status": "stopped",
+      "stderr.log_sha256": "b57ff3cd8fe468dcd74633d2a7c64f183317c5aff7d9bf0d7f4a1958577aef24",
+      "stdout.log_sha256": "e2d878fa1c75acbd559e18efc4291e606a05423954a7ecf88fbbd65ad0548983",
+      "timestamp": "2026-11-02T14:35:22.944206+00:00",
+      "wall_seconds": 2.8917535139917163
+    }
+  },
+  "server_python_sha256": {
+    "server/__init__.py": "0df7ac8a474df0505c07aae40d3bd483bb2e01040422ebaa3806f04b233347a4",
+    "server/build_receipt.py": "8ba0325b47d5df7f5dfa0f6547fd5ade49e8f82a410e1ac44123ffaf502480fd",
+    "server/compare.py": "ae7231c46a4b8c70f0e37484fdee6c98d44ea6c741a104d83e44c71f8dc6a121",
+    "server/loadgen.py": "e5e57e5e384d858e8226dba62466d317bbd769cd9e59c732acf1c3aa826f29cb",
+    "server/metadata.py": "d9113dcfba44ef6597af7ce6f83d5f45f25e5f5fe699c1bb524fb5d3d5c50660",
+    "server/protocol.py": "bd86f8eaf59e01ffd68ea55eed6c3427dc66e2d3a548840546536e59fbb88be4",
+    "server/run.py": "612dcaacc8d54810e113e6598a42fa7f273aa19a10d5c2a756e8069e32b4f2ee",
+    "server/tests/__init__.py": "6482e4237496d1349e42cc4b1a7a7ecea7b3820126dc65ba07a2a270ef402849",
+    "server/tests/native_correctness.py": "80a38c07d9b7eb8a027084f3224dccbe632bea3d569b2bf30bab764ef83d0925",
+    "server/tests/test_e2e.py": "a4d16ec94678ae6fdc6281944e0663494a383f3ae31ac1c31953a9a15a3c4e1a",
+    "server/tests/test_protocol.py": "f8b62638e04d395001e3d6277f2fddce00138495927825cb9f19fed4646f147c"
+  },
+  "server_trace": {
+    "argmax": 24,
+    "attention": 288,
+    "embedding": 24,
+    "forward_calls": 24,
+    "gelu": 288,
+    "gemm_fp16": 1176,
+    "gemm_int8": 0,
+    "kv_scatter_gather": 288,
+    "layernorm": 600,
+    "lm_head": 24,
+    "native_trace_status": 0,
+    "nll": 0,
+    "residual": 576
+  },
+  "socket_cases": [
+    {
+      "final": {
+        "1": {
+          "batch_size": 1,
+          "first_ns": 6950560,
+          "id": 1,
+          "infer_ns": 6963432,
+          "kind": 32769,
+          "queue_ns": 52232,
+          "server_ns": 7015696,
+          "status": 0,
+          "tokens": [
+            1849
+          ]
+        },
+        "2": {
+          "batch_size": 1,
+          "first_ns": 5574362,
+          "id": 2,
+          "infer_ns": 16482270,
+          "kind": 32769,
+          "queue_ns": 7000908,
+          "server_ns": 23483208,
+          "status": 0,
+          "tokens": [
+            905,
+            366,
+            464
+          ]
+        },
+        "3": {
+          "batch_size": 1,
+          "first_ns": 5549826,
+          "id": 3,
+          "infer_ns": 27484105,
+          "kind": 32769,
+          "queue_ns": 23494076,
+          "server_ns": 50978202,
+          "status": 0,
+          "tokens": [
+            13,
+            198,
+            198,
+            464,
+            2646
+          ]
+        }
+      },
+      "first": {
+        "1": {
+          "batch_size": 1,
+          "first_ns": 6950560,
+          "id": 1,
+          "infer_ns": 6950560,
+          "kind": 32770,
+          "queue_ns": 52232,
+          "server_ns": 7002792,
+          "status": 0,
+          "tokens": [
+            1849
+          ]
+        },
+        "2": {
+          "batch_size": 1,
+          "first_ns": 5574362,
+          "id": 2,
+          "infer_ns": 5574362,
+          "kind": 32770,
+          "queue_ns": 7000908,
+          "server_ns": 12575270,
+          "status": 0,
+          "tokens": [
+            905
+          ]
+        },
+        "3": {
+          "batch_size": 1,
+          "first_ns": 5549826,
+          "id": 3,
+          "infer_ns": 5549826,
+          "kind": 32770,
+          "queue_ns": 23494076,
+          "server_ns": 29043902,
+          "status": 0,
+          "tokens": [
+            13
+          ]
+        }
+      },
+      "group": "mixed_coalesced"
+    },
+    {
+      "final": {
+        "4": {
+          "batch_size": 1,
+          "first_ns": 5628564,
+          "id": 4,
+          "infer_ns": 25867371,
+          "kind": 32769,
+          "queue_ns": 19560,
+          "server_ns": 25886955,
+          "status": 0,
+          "tokens": [
+            13,
+            198,
+            198,
+            464,
+            2646
+          ]
+        },
+        "5": {
+          "batch_size": 1,
+          "first_ns": 4771274,
+          "id": 5,
+          "infer_ns": 14548012,
+          "kind": 32769,
+          "queue_ns": 25887708,
+          "server_ns": 40435762,
+          "status": 0,
+          "tokens": [
+            905,
+            366,
+            464
+          ]
+        },
+        "6": {
+          "batch_size": 1,
+          "first_ns": 5065631,
+          "id": 6,
+          "infer_ns": 5076291,
+          "kind": 32769,
+          "queue_ns": 40447695,
+          "server_ns": 45524007,
+          "status": 0,
+          "tokens": [
+            1849
+          ]
+        }
+      },
+      "first": {
+        "4": {
+          "batch_size": 1,
+          "first_ns": 5628564,
+          "id": 4,
+          "infer_ns": 5628564,
+          "kind": 32770,
+          "queue_ns": 19560,
+          "server_ns": 5648124,
+          "status": 0,
+          "tokens": [
+            13
+          ]
+        },
+        "5": {
+          "batch_size": 1,
+          "first_ns": 4771274,
+          "id": 5,
+          "infer_ns": 4771274,
+          "kind": 32770,
+          "queue_ns": 25887708,
+          "server_ns": 30658982,
+          "status": 0,
+          "tokens": [
+            905
+          ]
+        },
+        "6": {
+          "batch_size": 1,
+          "first_ns": 5065631,
+          "id": 6,
+          "infer_ns": 5065631,
+          "kind": 32770,
+          "queue_ns": 40447695,
+          "server_ns": 45513326,
+          "status": 0,
+          "tokens": [
+            1849
+          ]
+        }
+      },
+      "group": "slot_reuse_reversed"
+    },
+    {
+      "final": {
+        "1": {
+          "batch_size": 1,
+          "first_ns": 4799451,
+          "id": 1,
+          "infer_ns": 4811803,
+          "kind": 32769,
+          "queue_ns": 19938,
+          "server_ns": 4831761,
+          "status": 0,
+          "tokens": [
+            1849
+          ]
+        }
+      },
+      "first": {
+        "1": {
+          "batch_size": 1,
+          "first_ns": 4799451,
+          "id": 1,
+          "infer_ns": 4799451,
+          "kind": 32770,
+          "queue_ns": 19938,
+          "server_ns": 4819389,
+          "status": 0,
+          "tokens": [
+            1849
+          ]
+        }
+      },
+      "group": "connection_id_reuse_a"
+    },
+    {
+      "final": {
+        "1": {
+          "batch_size": 1,
+          "first_ns": 5032566,
+          "id": 1,
+          "infer_ns": 24609812,
+          "kind": 32769,
+          "queue_ns": 3354320,
+          "server_ns": 27964162,
+          "status": 0,
+          "tokens": [
+            13,
+            198,
+            198,
+            464,
+            2646
+          ]
+        }
+      },
+      "first": {
+        "1": {
+          "batch_size": 1,
+          "first_ns": 5032566,
+          "id": 1,
+          "infer_ns": 5032566,
+          "kind": 32770,
+          "queue_ns": 3354320,
+          "server_ns": 8386886,
+          "status": 0,
+          "tokens": [
+            13
+          ]
+        }
+      },
+      "group": "connection_id_reuse_b"
+    }
+  ],
+  "source_sha256": {
+    "CMakeLists.txt": "db0c115bef4fe0111b0ae89412cb232bc969ce91cc76f6a9bb59c945e37dc7b0",
+    "backend/host_codec.cpp": "eccf21660ee7e84e93cf7ff5663775b760afa782341e391b5552889cbadfbd19",
+    "backend/host_codec/CMakeLists.txt": "3389bb92826e119788cc642219e23f7be84872532639407a079df31d6dc39c43",
+    "backend/include/tinyinfer_backend.h": "622b340666f7f6749325b56fd6da06536106253f7faa232c5713a94cec738841",
+    "backend/include/tinyinfer_backend_v2.h": "7b9b63c52b22587924a89687b58911b0759808d84242bc96ae27d273b41aaacd",
+    "backend/include/tinyinfer_host_codec.h": "e0731deeb9842d74938f4b663e7c73669cf9fde2be864ac3c7de25fb0ce1358f",
+    "backend/include/tinyinfer_host_validation.hpp": "30b2f99d98418959a434936d1fa8d704faaccc5ee01c037180b488177b5e32ea",
+    "backend/include/tinyinfer_quantization_scalar.h": "5cce4305bfc36baac1b7ce369529b6f4db42931cf64626fc7da42084239b08f7",
+    "backend/runtime.cpp": "509f824730a061857efc3a9388a97ec31381176ec75a8c9a23020a88e28c459e",
+    "backend/runtime_v2.cu": "3616b5117022217d5ec138e244bec95376c0b4f82ebfe0f2acfebc0582782008",
+    "bench/v2/kernels/profile.cu": "d021519bf632719b31c96dd7777eab0a5d1896d3705ae7de40bc6cc1d3984f53",
+    "cmake/HostCodec.cmake": "4012e47011e09ba2b53466db80b0823b4ec38fa9a8cf16e86104d511a3076597",
+    "cmake/V2Kernels.cmake": "f279d80aba5ae5e11681019ff84c4f894cead9c1914cdaaa3e79dda50acb057e",
+    "cmake/V2LLM.cmake": "38f5cb5dad94d0921caf5c793851e9695b56e762461c7d73a94a20a16d9f65de",
+    "cmake/V2Server.cmake": "473cee99124969cc9d38cbfe5a4691b0630929dd330e624148e786fbf0999f48",
+    "kernels/src/cuda/tc/README.md": "403340f798455c17c6bbfbc9b0e51fd4ca217171aa1763aa130da2b87fc365e9",
+    "kernels/src/cuda/tc/attention.cu": "7cb99aef148213352b6cf7eff7783e6a2c62bcd1a48a2294b8b10afa81954a66",
+    "kernels/src/cuda/tc/catalog.cuh": "e494ab87e879f88517a3ee26fd7a9f8af2399600f0fea53e4d47a75c21337f15",
+    "kernels/src/cuda/tc/elementwise.cu": "0eb57bea34b7f321c1e639d0778010d835c0707962908f5e076778145e0110b2",
+    "kernels/src/cuda/tc/gemm.cu": "3bdb812e4b9455a7f972513e96c644dc4e91392dca27eade0d85f21158a19535",
+    "kernels/src/cuda/tc/launchers.cuh": "1fe42cce9ff4bfd6742983a4e0b65418d4d5aa39280f221f2652dd413a43ebd6",
+    "llm/__init__.py": "1dfe5f5fab353cb98f79c9004b37080b09da11fb6155b15549c646cebc69807d",
+    "llm/build_receipt.py": "b0e5ea5bd6c0c9c7d6e572dfefab8caa90defab849f0c60f868a5b19881d054b",
+    "llm/cache_reference.py": "efe31861acfe834bbc85902b13b399dfb19f1fd9211ac6d5266122a321e581b6",
+    "llm/configs/evaluation.json": "b3dde3a6e38318cfbb4bbf35507575d0ae04e47de2eb48305d5ce66ed15bb1ee",
+    "llm/evaluate.py": "fdc1f10b96e79d455ed99854d3ecc2bab9055ffa02ac65c8ab7395283ebe6128",
+    "llm/export_weights.py": "898d2feec69ae713fabace2c23d9a684d4f1dd597ebf577e2edb158c3a2e96d0",
+    "llm/freeze_tokens.py": "a165a41b4ac57a2706de1b98b7f2099da206035e961f5ad32c73cfd597cdeb76",
+    "llm/gpu_correctness.py": "03be3b01786813fded6409482c45828bd4fdadac9cfa312fb31c957f42fe1045",
+    "llm/host_codec.py": "ae1b3e4f06354dd8523111f05b94369ca597c7146c2f10c17807dc98ba60004b",
+    "llm/include/tinyinfer_llm.h": "c288dc76f9578fa3e40da6a4ab23d1ca1e98af251e167074bbb3039cd34bb97c",
+    "llm/native_ops.py": "944b2e11054aace705d7597d674352d1351cef06d149a7e54bad80c3ca41902f",
+    "llm/protocol.py": "e1718fe0a23f39641469fbb55bdaea30ff68ee78fdcc3541f8ef2fde7a251f6a",
+    "llm/quantization.py": "9b5509ad9f2f28c5c2d411c62f70730734c8cb9c84c8205e6da406406aed4091",
+    "llm/runtime.py": "4b1e622ba129940a23779b63724554db1d498f1695153e07cd405556f162fc88",
+    "llm/src/artifact.hpp": "b66af831eebb872d0e66caabaf3ef010b1d7e336be2f847acf051f834a6c08e3",
+    "llm/src/runtime.cu": "c9782e9f28ebfbd86166f8b39e54b0dcb12326c3dded37fd03ec45eb80ca4793",
+    "llm/tests/test_contracts.py": "b9f0de354b698265c9bfeaa301f339851b54cc62f9de2571e65941800b2c98f1"
+  },
+  "started_at": "2026-11-02T14:35:13.655873+00:00",
+  "status": "passed",
+  "timeout_scope": "readiness/socket/cleanup deadlines only; synchronous direct C calls require external m2_record total timeout",
+  "wall_seconds": 13.420541002997197
+}

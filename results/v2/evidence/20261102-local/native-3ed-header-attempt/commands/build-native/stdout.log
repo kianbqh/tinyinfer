@@ -1,0 +1,32 @@
+[1/35] Building CXX object CMakeFiles/tinyinfer_backend.dir/backend/runtime.cpp.o
+[2/35] Building CXX object CMakeFiles/tinyinfer_backend.dir/kernels/src/cpu/matmul.cpp.o
+[3/35] Building CXX object CMakeFiles/tinyinfer_backend.dir/kernels/src/cpu/softmax.cpp.o
+[4/35] Building CXX object CMakeFiles/tinyinfer_backend.dir/kernels/src/cpu/layernorm.cpp.o
+[5/35] Building CUDA object CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/matmul.cu.o
+[6/35] Building CUDA object CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/softmax.cu.o
+[7/35] Building CUDA object CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/layernorm.cu.o
+[8/35] Building CUDA object CMakeFiles/tinyinfer_v2.dir/backend/runtime_v2.cu.o
+[9/35] Building CUDA object CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/bench_api.cu.o
+[10/35] Building CUDA object CMakeFiles/tinyinfer_v2.dir/kernels/src/cuda/tc/attention.cu.o
+[11/35] Building CUDA object CMakeFiles/tinyinfer_v2.dir/kernels/src/cuda/tc/gemm.cu.o
+[12/35] Building CUDA object CMakeFiles/tinyinfer_v2.dir/kernels/src/cuda/tc/elementwise.cu.o
+[13/35] Linking CXX shared library libtinyinfer_backend.so
+[14/35] Building CUDA object CMakeFiles/tinyinfer_llm.dir/llm/src/runtime.cu.o
+[15/35] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[16/35] Building CXX object CMakeFiles/ikernels.dir/kernels/python/bindings.cpp.o
+FAILED: [code=1] CMakeFiles/ikernels.dir/kernels/python/bindings.cpp.o 
+/usr/bin/g++ -DIK_HAVE_CUDA=1 -Dikernels_EXPORTS -I/mnt/g/ResumeProject/platforms/tinyinfer/kernels/include -I/mnt/g/ResumeProject/platforms/tinyinfer/backend/include -isystem /opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include/python3.12 -isystem /opt/codex-resume/portfolio-ml/venv/lib/python3.12/site-packages/pybind11/include -isystem /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/include -O3 -DNDEBUG -fPIC -fvisibility=hidden -flto=auto -fno-fat-lto-objects -fopenmp -MD -MT CMakeFiles/ikernels.dir/kernels/python/bindings.cpp.o -MF CMakeFiles/ikernels.dir/kernels/python/bindings.cpp.o.d -o CMakeFiles/ikernels.dir/kernels/python/bindings.cpp.o -c /mnt/g/ResumeProject/platforms/tinyinfer/kernels/python/bindings.cpp
+In file included from /opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include/python3.12/Python.h:12,
+                 from /opt/codex-resume/portfolio-ml/venv/lib/python3.12/site-packages/pybind11/include/pybind11/conduit/wrap_include_python_h.h:44,
+                 from /opt/codex-resume/portfolio-ml/venv/lib/python3.12/site-packages/pybind11/include/pybind11/detail/common.h:12,
+                 from /opt/codex-resume/portfolio-ml/venv/lib/python3.12/site-packages/pybind11/include/pybind11/attr.h:13,
+                 from /opt/codex-resume/portfolio-ml/venv/lib/python3.12/site-packages/pybind11/include/pybind11/detail/class.h:12,
+                 from /opt/codex-resume/portfolio-ml/venv/lib/python3.12/site-packages/pybind11/include/pybind11/pybind11.h:12,
+                 from /opt/codex-resume/portfolio-ml/venv/lib/python3.12/site-packages/pybind11/include/pybind11/numpy.h:12,
+                 from /mnt/g/ResumeProject/platforms/tinyinfer/kernels/python/bindings.cpp:2:
+/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include/python3.12/pyconfig.h:3:12: fatal error: x86_64-linux-gnu/python3.12/pyconfig.h: No such file or directory
+    3 | #  include <x86_64-linux-gnu/python3.12/pyconfig.h>
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+[17/35] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+ninja: build stopped: subcommand failed.

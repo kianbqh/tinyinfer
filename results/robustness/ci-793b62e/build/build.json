@@ -1,0 +1,241 @@
+{
+  "binaries": {
+    "artifact": {
+      "path": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_artifact",
+      "sha256": "9710d6bf04de3f316917afab5d9245964ded80217b33788f0688be02776dfc85"
+    },
+    "codec": {
+      "path": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_codec",
+      "sha256": "c7514f0d0d937cdafdbd9a49763b61bb618fc198db708687cbd2d91c4c2db3ba"
+    },
+    "cpu_ops": {
+      "path": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_cpu_ops",
+      "sha256": "9d27fd7d197f65c6e198aa4ecf94983cca62232ed88e7f153cfe1de012709f28"
+    },
+    "host_validation": {
+      "path": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_host_validation",
+      "sha256": "173725361ff3c692070c303967c678d75fc83e0e785eb11689696a276d9c1d00"
+    },
+    "json": {
+      "path": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary/fuzz_json",
+      "sha256": "86182ecdc72182820eaa682e0bd7c8c61da94e8aa36f63df9a484971d3afe3b4"
+    }
+  },
+  "build_directory": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary",
+  "commands": [
+    {
+      "argv": [
+        "/usr/bin/clang++",
+        "--version"
+      ],
+      "end_utc": "2026-11-02T12:21:35.588742+00:00",
+      "exit_code": 0,
+      "log": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/compiler.log",
+      "log_sha256": "3635b8631d4ebcd8ed7586f4e01e7a6b44407de9d38db6e01daca9c242ed7a53",
+      "start_utc": "2026-11-02T12:21:34.722890+00:00",
+      "wall_seconds": 0.8658635480000001
+    },
+    {
+      "argv": [
+        "cmake",
+        "-S",
+        "/home/runner/work/tinyinfer/tinyinfer/fuzz",
+        "-B",
+        "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary",
+        "-DCMAKE_CXX_COMPILER=/usr/bin/clang++",
+        "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+      ],
+      "end_utc": "2026-11-02T12:21:37.913036+00:00",
+      "exit_code": 0,
+      "log": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/configure.log",
+      "log_sha256": "7840f52fa4456d5607592fa4e84b9752bd48536200ce1f3cb374d40be49de920",
+      "start_utc": "2026-11-02T12:21:35.589327+00:00",
+      "wall_seconds": 2.3237161360000016
+    },
+    {
+      "argv": [
+        "cmake",
+        "--build",
+        "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/binary",
+        "--parallel",
+        "1"
+      ],
+      "end_utc": "2026-11-02T12:21:47.403859+00:00",
+      "exit_code": 0,
+      "log": "/home/runner/work/_temp/tinyinfer-robustness/20261102T122134Z-build-0cbfeb03/build.log",
+      "log_sha256": "4ad337dd6647b481f7536b740dbbf0a7a3374c9cc37d598b8ae40a090ad91c1f",
+      "start_utc": "2026-11-02T12:21:37.913598+00:00",
+      "wall_seconds": 9.490274476
+    }
+  ],
+  "compile_commands_sha256": "668c85141adbf04b8cec1a4f76e2f88a46c0091d2d62c18f3338aea797500b69",
+  "compiler_path": "/usr/bin/clang++",
+  "compiler_sha256": "8ef402d453d1ba4902e4ee0f0f847f6cfa01400c95aa43c24e97818b9c0e3f45",
+  "end_utc": "2026-11-02T12:21:47.434196+00:00",
+  "environment": {
+    "cpu_threads": 4,
+    "cuda": "not used",
+    "environment": "GitHub-hosted",
+    "machine": "x86_64",
+    "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "python": "3.12.15",
+    "sanitizer_env": {
+      "ASAN_OPTIONS": "abort_on_error=1:detect_leaks=1",
+      "UBSAN_OPTIONS": "halt_on_error=1:print_stacktrace=1"
+    }
+  },
+  "schema_version": 1,
+  "sources_end": {
+    "files": {
+      "CMakeLists.txt": "db0c115bef4fe0111b0ae89412cb232bc969ce91cc76f6a9bb59c945e37dc7b0",
+      "backend/host_codec.cpp": "eccf21660ee7e84e93cf7ff5663775b760afa782341e391b5552889cbadfbd19",
+      "backend/host_codec/CMakeLists.txt": "3389bb92826e119788cc642219e23f7be84872532639407a079df31d6dc39c43",
+      "backend/include/tinyinfer_backend.h": "622b340666f7f6749325b56fd6da06536106253f7faa232c5713a94cec738841",
+      "backend/include/tinyinfer_backend_v2.h": "7b9b63c52b22587924a89687b58911b0759808d84242bc96ae27d273b41aaacd",
+      "backend/include/tinyinfer_host_codec.h": "e0731deeb9842d74938f4b663e7c73669cf9fde2be864ac3c7de25fb0ce1358f",
+      "backend/include/tinyinfer_host_validation.hpp": "30b2f99d98418959a434936d1fa8d704faaccc5ee01c037180b488177b5e32ea",
+      "backend/include/tinyinfer_quantization_scalar.h": "5cce4305bfc36baac1b7ce369529b6f4db42931cf64626fc7da42084239b08f7",
+      "backend/runtime_v2.cu": "3616b5117022217d5ec138e244bec95376c0b4f82ebfe0f2acfebc0582782008",
+      "cmake/HostCodec.cmake": "4012e47011e09ba2b53466db80b0823b4ec38fa9a8cf16e86104d511a3076597",
+      "cmake/V2Kernels.cmake": "f279d80aba5ae5e11681019ff84c4f894cead9c1914cdaaa3e79dda50acb057e",
+      "cmake/V2LLM.cmake": "38f5cb5dad94d0921caf5c793851e9695b56e762461c7d73a94a20a16d9f65de",
+      "cmake/V2Server.cmake": "473cee99124969cc9d38cbfe5a4691b0630929dd330e624148e786fbf0999f48",
+      "fuzz/CMakeLists.txt": "b86456dffc15dc10b05e1456b3aca1440eddb3d7986c9ad6ff9918acbacfab32",
+      "fuzz/build.py": "f9a831ff89568e23ea00213d83d30faf1c10ceb9fdd69e11c3811dbf59757548",
+      "fuzz/check_codec.py": "189e9b0e4c5378fe45f27274564451cd4ce46506b54a90d61cc387f59b28e57a",
+      "fuzz/configs/ci.json": "56e0fb0522789c519157cc6a6e08c88291b67decc018e9ace95fde0a2173e9a5",
+      "fuzz/configs/local.json": "c63c03b9c7d285c71554cd57f212d9cdb84532daa07adcb039c3ca59da8ee45f",
+      "fuzz/corpus/MANIFEST.json": "4bb79b6872d588eb449fdcb62268cc3600f87ffefa2866393ba2ea205028eb48",
+      "fuzz/corpus/artifact/0a18cc441aac315b6e24d7ec0d853a0d1381ea00040b6ebab67fb4f2609f883e": "0a18cc441aac315b6e24d7ec0d853a0d1381ea00040b6ebab67fb4f2609f883e",
+      "fuzz/corpus/artifact/a88d1a75d6131c15222b2be102cc36fb6b18059138f71d839e99c9ee5d9528bb": "a88d1a75d6131c15222b2be102cc36fb6b18059138f71d839e99c9ee5d9528bb",
+      "fuzz/corpus/artifact/cf73b2e5eae58e22203177584647ce753669b09e2793f5cb9374335b97191175": "cf73b2e5eae58e22203177584647ce753669b09e2793f5cb9374335b97191175",
+      "fuzz/corpus/codec/4082763076bdaee3a85e52eb5893169d45d057397616251e0e699e6403238e66": "4082763076bdaee3a85e52eb5893169d45d057397616251e0e699e6403238e66",
+      "fuzz/corpus/codec/6b1e73a0094b7b812d3b9e22cffb4f8239319847522c4fa103753b6950020f93": "6b1e73a0094b7b812d3b9e22cffb4f8239319847522c4fa103753b6950020f93",
+      "fuzz/corpus/codec/6d58692645c9d1cfaf13541cbd258f86193ef63c2f1d38f6bbca9617372d7bd6": "6d58692645c9d1cfaf13541cbd258f86193ef63c2f1d38f6bbca9617372d7bd6",
+      "fuzz/corpus/codec/a3f6fa56d901c5c2d830fad46595ddddedd2fb485c03199b7b288706a84a2999": "a3f6fa56d901c5c2d830fad46595ddddedd2fb485c03199b7b288706a84a2999",
+      "fuzz/corpus/codec/c70439d27ba78a04d3c3fe3df2091f315d9fc902805afdc58e37a055dc6f7642": "c70439d27ba78a04d3c3fe3df2091f315d9fc902805afdc58e37a055dc6f7642",
+      "fuzz/corpus/codec/df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+      "fuzz/corpus/cpu_ops/aee04a0510558011802f92fa220b6c78ed466036c3b9898df5a4d71cfd92bd94": "aee04a0510558011802f92fa220b6c78ed466036c3b9898df5a4d71cfd92bd94",
+      "fuzz/corpus/cpu_ops/bff51a6d513395979e3a870c8483769a5a70002e6e32c146c53e1d2edc467002": "bff51a6d513395979e3a870c8483769a5a70002e6e32c146c53e1d2edc467002",
+      "fuzz/corpus/cpu_ops/dc64a19a4ef8d065126c7db0b7ce0e7f9348761995a069d398f42ee39bca1101": "dc64a19a4ef8d065126c7db0b7ce0e7f9348761995a069d398f42ee39bca1101",
+      "fuzz/corpus/host_validation/3048b10d2cc8d14c0329e9347fbcfec3d72fa504b263bf533ee79c2ebb388c5d": "3048b10d2cc8d14c0329e9347fbcfec3d72fa504b263bf533ee79c2ebb388c5d",
+      "fuzz/corpus/host_validation/70f86133c06b03d5fe28b939cb612c4a046b7c735e0c8cd7552ae32f6bb50a05": "70f86133c06b03d5fe28b939cb612c4a046b7c735e0c8cd7552ae32f6bb50a05",
+      "fuzz/corpus/host_validation/affe6fbf18fb733d2e57f1dafb346ed67cb1b26b97ab832b2f4147f2ad8c3ef4": "affe6fbf18fb733d2e57f1dafb346ed67cb1b26b97ab832b2f4147f2ad8c3ef4",
+      "fuzz/corpus/host_validation/e95bd419a41b6e68a8c2098dbb27d9f422a2afb2c5ebe7ecd005ae7c05afe56f": "e95bd419a41b6e68a8c2098dbb27d9f422a2afb2c5ebe7ecd005ae7c05afe56f",
+      "fuzz/corpus/json/2cdb26265b4dc65e3b44d694f121fd6de99b9e4b8ae7f08d84bfa9537635ae43": "2cdb26265b4dc65e3b44d694f121fd6de99b9e4b8ae7f08d84bfa9537635ae43",
+      "fuzz/corpus/json/44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "fuzz/corpus/json/4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "fuzz/corpus/json/8bc9309217fd274ca954370bb5262f9a12d878771913cad405c572de98f64cd6": "8bc9309217fd274ca954370bb5262f9a12d878771913cad405c572de98f64cd6",
+      "fuzz/corpus/json/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "fuzz/harnesses/artifact.cpp": "18bb7c0b6370765d7712ee6861228abd045038f013d07a7df42d87c04d3b4374",
+      "fuzz/harnesses/codec.cpp": "fc8acd006fb053bf7f3dbef98f1347e4762606e981b17034124aab288985382f",
+      "fuzz/harnesses/cpu_ops.cpp": "5daadf081126c6fbd111d1e4103e09c102178cb12171c931a0191517d0f62541",
+      "fuzz/harnesses/host_validation.cpp": "99c907216c560a3daf9b19a45f4c34a148943407173ee60ff465ff6b68f61ddd",
+      "fuzz/harnesses/input.hpp": "064ff91bcb6ab81e75493c59e8b8e47f40da748f4657441f9597b123f295170a",
+      "fuzz/harnesses/json.cpp": "f0ec3e5d14a01c0d52c4b1e482e9badddb825d0290f6c39002d4ce8a5830adf6",
+      "fuzz/metadata.py": "957f6b62320af2888e6b3963a0c9564555fa90a253c1d0993c39601a50d4d4f9",
+      "fuzz/regressions/manifest.json": "a630cad4352916dfadc1017fa3bea16a530e0376b40f8cb8d509eba281377a86",
+      "fuzz/replay_regressions.py": "e6bd1caabbfb445994e07583219a746783ffec1b50aff976e177ae2e9c77bddb",
+      "fuzz/run_campaign.py": "21aaa2d89942a3a24652a52d95092135bd395c4e7ef794944aafc1da6da14687",
+      "fuzz/seed_corpus.py": "55ed55cf4d05d25619177abb7c2acd0385d6351686d06fd70f65011c22aef56e",
+      "kernels/include/ik/cpu_kernels.hpp": "4280287cd416e6e5265a1192b95598894d070d2d734159e2d66505cdce8092ca",
+      "kernels/include/ik/cuda_kernels.hpp": "250257696dfadcc09efdab402cc907123b61d4ef97555838f2bd17d93411ee1e",
+      "kernels/src/cpu/layernorm.cpp": "0d077487c755be1838d6dd6141f58cfe5bfdd3712db47b9e62e4d04c069ecfde",
+      "kernels/src/cpu/matmul.cpp": "1ad04432d9f1f8e35641a7179b968d828098594ac9611a45558996408b3eae6f",
+      "kernels/src/cpu/softmax.cpp": "c2a3a086188d1a5dcedad03ef9bf1b3394dc03aef14054346cc2db060366dec3",
+      "kernels/src/cuda/tc/catalog.cuh": "e494ab87e879f88517a3ee26fd7a9f8af2399600f0fea53e4d47a75c21337f15",
+      "kernels/src/cuda/tc/gemm.cu": "3bdb812e4b9455a7f972513e96c644dc4e91392dca27eade0d85f21158a19535",
+      "llm/export_weights.py": "898d2feec69ae713fabace2c23d9a684d4f1dd597ebf577e2edb158c3a2e96d0",
+      "llm/host_codec.py": "ae1b3e4f06354dd8523111f05b94369ca597c7146c2f10c17807dc98ba60004b",
+      "llm/src/artifact.hpp": "b66af831eebb872d0e66caabaf3ef010b1d7e336be2f847acf051f834a6c08e3"
+    },
+    "git_head": {
+      "exit_code": 0,
+      "output": "6db431a04425089915544791a173ed27634119e5\n",
+      "stderr": ""
+    },
+    "git_status": {
+      "exit_code": 0,
+      "output": "",
+      "stderr": ""
+    }
+  },
+  "sources_start": {
+    "files": {
+      "CMakeLists.txt": "db0c115bef4fe0111b0ae89412cb232bc969ce91cc76f6a9bb59c945e37dc7b0",
+      "backend/host_codec.cpp": "eccf21660ee7e84e93cf7ff5663775b760afa782341e391b5552889cbadfbd19",
+      "backend/host_codec/CMakeLists.txt": "3389bb92826e119788cc642219e23f7be84872532639407a079df31d6dc39c43",
+      "backend/include/tinyinfer_backend.h": "622b340666f7f6749325b56fd6da06536106253f7faa232c5713a94cec738841",
+      "backend/include/tinyinfer_backend_v2.h": "7b9b63c52b22587924a89687b58911b0759808d84242bc96ae27d273b41aaacd",
+      "backend/include/tinyinfer_host_codec.h": "e0731deeb9842d74938f4b663e7c73669cf9fde2be864ac3c7de25fb0ce1358f",
+      "backend/include/tinyinfer_host_validation.hpp": "30b2f99d98418959a434936d1fa8d704faaccc5ee01c037180b488177b5e32ea",
+      "backend/include/tinyinfer_quantization_scalar.h": "5cce4305bfc36baac1b7ce369529b6f4db42931cf64626fc7da42084239b08f7",
+      "backend/runtime_v2.cu": "3616b5117022217d5ec138e244bec95376c0b4f82ebfe0f2acfebc0582782008",
+      "cmake/HostCodec.cmake": "4012e47011e09ba2b53466db80b0823b4ec38fa9a8cf16e86104d511a3076597",
+      "cmake/V2Kernels.cmake": "f279d80aba5ae5e11681019ff84c4f894cead9c1914cdaaa3e79dda50acb057e",
+      "cmake/V2LLM.cmake": "38f5cb5dad94d0921caf5c793851e9695b56e762461c7d73a94a20a16d9f65de",
+      "cmake/V2Server.cmake": "473cee99124969cc9d38cbfe5a4691b0630929dd330e624148e786fbf0999f48",
+      "fuzz/CMakeLists.txt": "b86456dffc15dc10b05e1456b3aca1440eddb3d7986c9ad6ff9918acbacfab32",
+      "fuzz/build.py": "f9a831ff89568e23ea00213d83d30faf1c10ceb9fdd69e11c3811dbf59757548",
+      "fuzz/check_codec.py": "189e9b0e4c5378fe45f27274564451cd4ce46506b54a90d61cc387f59b28e57a",
+      "fuzz/configs/ci.json": "56e0fb0522789c519157cc6a6e08c88291b67decc018e9ace95fde0a2173e9a5",
+      "fuzz/configs/local.json": "c63c03b9c7d285c71554cd57f212d9cdb84532daa07adcb039c3ca59da8ee45f",
+      "fuzz/corpus/MANIFEST.json": "4bb79b6872d588eb449fdcb62268cc3600f87ffefa2866393ba2ea205028eb48",
+      "fuzz/corpus/artifact/0a18cc441aac315b6e24d7ec0d853a0d1381ea00040b6ebab67fb4f2609f883e": "0a18cc441aac315b6e24d7ec0d853a0d1381ea00040b6ebab67fb4f2609f883e",
+      "fuzz/corpus/artifact/a88d1a75d6131c15222b2be102cc36fb6b18059138f71d839e99c9ee5d9528bb": "a88d1a75d6131c15222b2be102cc36fb6b18059138f71d839e99c9ee5d9528bb",
+      "fuzz/corpus/artifact/cf73b2e5eae58e22203177584647ce753669b09e2793f5cb9374335b97191175": "cf73b2e5eae58e22203177584647ce753669b09e2793f5cb9374335b97191175",
+      "fuzz/corpus/codec/4082763076bdaee3a85e52eb5893169d45d057397616251e0e699e6403238e66": "4082763076bdaee3a85e52eb5893169d45d057397616251e0e699e6403238e66",
+      "fuzz/corpus/codec/6b1e73a0094b7b812d3b9e22cffb4f8239319847522c4fa103753b6950020f93": "6b1e73a0094b7b812d3b9e22cffb4f8239319847522c4fa103753b6950020f93",
+      "fuzz/corpus/codec/6d58692645c9d1cfaf13541cbd258f86193ef63c2f1d38f6bbca9617372d7bd6": "6d58692645c9d1cfaf13541cbd258f86193ef63c2f1d38f6bbca9617372d7bd6",
+      "fuzz/corpus/codec/a3f6fa56d901c5c2d830fad46595ddddedd2fb485c03199b7b288706a84a2999": "a3f6fa56d901c5c2d830fad46595ddddedd2fb485c03199b7b288706a84a2999",
+      "fuzz/corpus/codec/c70439d27ba78a04d3c3fe3df2091f315d9fc902805afdc58e37a055dc6f7642": "c70439d27ba78a04d3c3fe3df2091f315d9fc902805afdc58e37a055dc6f7642",
+      "fuzz/corpus/codec/df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+      "fuzz/corpus/cpu_ops/aee04a0510558011802f92fa220b6c78ed466036c3b9898df5a4d71cfd92bd94": "aee04a0510558011802f92fa220b6c78ed466036c3b9898df5a4d71cfd92bd94",
+      "fuzz/corpus/cpu_ops/bff51a6d513395979e3a870c8483769a5a70002e6e32c146c53e1d2edc467002": "bff51a6d513395979e3a870c8483769a5a70002e6e32c146c53e1d2edc467002",
+      "fuzz/corpus/cpu_ops/dc64a19a4ef8d065126c7db0b7ce0e7f9348761995a069d398f42ee39bca1101": "dc64a19a4ef8d065126c7db0b7ce0e7f9348761995a069d398f42ee39bca1101",
+      "fuzz/corpus/host_validation/3048b10d2cc8d14c0329e9347fbcfec3d72fa504b263bf533ee79c2ebb388c5d": "3048b10d2cc8d14c0329e9347fbcfec3d72fa504b263bf533ee79c2ebb388c5d",
+      "fuzz/corpus/host_validation/70f86133c06b03d5fe28b939cb612c4a046b7c735e0c8cd7552ae32f6bb50a05": "70f86133c06b03d5fe28b939cb612c4a046b7c735e0c8cd7552ae32f6bb50a05",
+      "fuzz/corpus/host_validation/affe6fbf18fb733d2e57f1dafb346ed67cb1b26b97ab832b2f4147f2ad8c3ef4": "affe6fbf18fb733d2e57f1dafb346ed67cb1b26b97ab832b2f4147f2ad8c3ef4",
+      "fuzz/corpus/host_validation/e95bd419a41b6e68a8c2098dbb27d9f422a2afb2c5ebe7ecd005ae7c05afe56f": "e95bd419a41b6e68a8c2098dbb27d9f422a2afb2c5ebe7ecd005ae7c05afe56f",
+      "fuzz/corpus/json/2cdb26265b4dc65e3b44d694f121fd6de99b9e4b8ae7f08d84bfa9537635ae43": "2cdb26265b4dc65e3b44d694f121fd6de99b9e4b8ae7f08d84bfa9537635ae43",
+      "fuzz/corpus/json/44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "fuzz/corpus/json/4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "fuzz/corpus/json/8bc9309217fd274ca954370bb5262f9a12d878771913cad405c572de98f64cd6": "8bc9309217fd274ca954370bb5262f9a12d878771913cad405c572de98f64cd6",
+      "fuzz/corpus/json/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "fuzz/harnesses/artifact.cpp": "18bb7c0b6370765d7712ee6861228abd045038f013d07a7df42d87c04d3b4374",
+      "fuzz/harnesses/codec.cpp": "fc8acd006fb053bf7f3dbef98f1347e4762606e981b17034124aab288985382f",
+      "fuzz/harnesses/cpu_ops.cpp": "5daadf081126c6fbd111d1e4103e09c102178cb12171c931a0191517d0f62541",
+      "fuzz/harnesses/host_validation.cpp": "99c907216c560a3daf9b19a45f4c34a148943407173ee60ff465ff6b68f61ddd",
+      "fuzz/harnesses/input.hpp": "064ff91bcb6ab81e75493c59e8b8e47f40da748f4657441f9597b123f295170a",
+      "fuzz/harnesses/json.cpp": "f0ec3e5d14a01c0d52c4b1e482e9badddb825d0290f6c39002d4ce8a5830adf6",
+      "fuzz/metadata.py": "957f6b62320af2888e6b3963a0c9564555fa90a253c1d0993c39601a50d4d4f9",
+      "fuzz/regressions/manifest.json": "a630cad4352916dfadc1017fa3bea16a530e0376b40f8cb8d509eba281377a86",
+      "fuzz/replay_regressions.py": "e6bd1caabbfb445994e07583219a746783ffec1b50aff976e177ae2e9c77bddb",
+      "fuzz/run_campaign.py": "21aaa2d89942a3a24652a52d95092135bd395c4e7ef794944aafc1da6da14687",
+      "fuzz/seed_corpus.py": "55ed55cf4d05d25619177abb7c2acd0385d6351686d06fd70f65011c22aef56e",
+      "kernels/include/ik/cpu_kernels.hpp": "4280287cd416e6e5265a1192b95598894d070d2d734159e2d66505cdce8092ca",
+      "kernels/include/ik/cuda_kernels.hpp": "250257696dfadcc09efdab402cc907123b61d4ef97555838f2bd17d93411ee1e",
+      "kernels/src/cpu/layernorm.cpp": "0d077487c755be1838d6dd6141f58cfe5bfdd3712db47b9e62e4d04c069ecfde",
+      "kernels/src/cpu/matmul.cpp": "1ad04432d9f1f8e35641a7179b968d828098594ac9611a45558996408b3eae6f",
+      "kernels/src/cpu/softmax.cpp": "c2a3a086188d1a5dcedad03ef9bf1b3394dc03aef14054346cc2db060366dec3",
+      "kernels/src/cuda/tc/catalog.cuh": "e494ab87e879f88517a3ee26fd7a9f8af2399600f0fea53e4d47a75c21337f15",
+      "kernels/src/cuda/tc/gemm.cu": "3bdb812e4b9455a7f972513e96c644dc4e91392dca27eade0d85f21158a19535",
+      "llm/export_weights.py": "898d2feec69ae713fabace2c23d9a684d4f1dd597ebf577e2edb158c3a2e96d0",
+      "llm/host_codec.py": "ae1b3e4f06354dd8523111f05b94369ca597c7146c2f10c17807dc98ba60004b",
+      "llm/src/artifact.hpp": "b66af831eebb872d0e66caabaf3ef010b1d7e336be2f847acf051f834a6c08e3"
+    },
+    "git_head": {
+      "exit_code": 0,
+      "output": "6db431a04425089915544791a173ed27634119e5\n",
+      "stderr": ""
+    },
+    "git_status": {
+      "exit_code": 0,
+      "output": "",
+      "stderr": ""
+    }
+  },
+  "start_utc": "2026-11-02T12:21:34.716625+00:00",
+  "status": "built_not_run"
+}

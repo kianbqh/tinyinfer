@@ -1,0 +1,34 @@
+{
+  "accepted": true,
+  "utc": "2026-11-02T13:50:03.595233+00:00",
+  "commit": "3edcfebd24d5efbf5da81cda13f2bf684031b35e",
+  "scope": "Build/link/source and already-completed 115-case GPU kernel gate; model/benchmark gates separate",
+  "source_files": 53,
+  "cuda_compile_records": 6,
+  "kernel_cases_passed": 115,
+  "gate_files": {
+    "run.json": "fdef63a910cd5cbe0f560d3c4987d486fb6cf03e593758d1d0f4bf0a512b5c07",
+    "correctness.json": "db7195bc162643a2a8850952bdb061e224943ea968adfbc14cd0a645ff3f3b84"
+  },
+  "build_receipts": {
+    "kernel": "f4e740b5d854bbbdd81d51e410e06e9bf47b635b4c4b819651fc600a2f010943",
+    "model": "66d29cc92ef230cfe5248c54372b153e8f5b8c6a2fbc1c02941ebe4c5d8d9873",
+    "server": "684affcf96b18e9f1e938c37c1d39de01ad5e0422015c187dbbbb9091e525d37"
+  },
+  "ld_library_path": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers:/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib:/usr/lib/wsl/lib",
+  "actual_ldd": {
+    "kernel": "\tlinux-vdso.so.1 (0x000078fd1eca6000)\n\tlibcudart.so.12 => /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib/libcudart.so.12 (0x000078fd1e800000)\n\tlibgomp.so.1 => /lib/x86_64-linux-gnu/libgomp.so.1 (0x000078fd1eb9c000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x000078fd1e400000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x000078fd1eab3000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x000078fd1e7d2000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000078fd1e000000)\n\t/lib64/ld-linux-x86-64.so.2 (0x000078fd1eca8000)\n\tlibdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x000078fd1e7cb000)\n\tlibpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x000078fd1e7c6000)\n\tlibrt.so.1 => /lib/x86_64-linux-gnu/librt.so.1 (0x000078fd1e7c1000)\n",
+    "model": "\tlinux-vdso.so.1 (0x000073dd25684000)\n\tlibtinyinfer_backend.so => /opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_backend.so (0x000073dd2559a000)\n\tlibcudart.so.12 => /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib/libcudart.so.12 (0x000073dd25200000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x000073dd24e00000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x000073dd2556a000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000073dd24a00000)\n\t/lib64/ld-linux-x86-64.so.2 (0x000073dd25686000)\n\tlibgomp.so.1 => /lib/x86_64-linux-gnu/libgomp.so.1 (0x000073dd25512000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x000073dd25117000)\n\tlibdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x000073dd2550d000)\n\tlibpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x000073dd25508000)\n\tlibrt.so.1 => /lib/x86_64-linux-gnu/librt.so.1 (0x000073dd25503000)\n",
+    "server": "\tlinux-vdso.so.1 (0x0000717e596d8000)\n\tlibtinyinfer_llm.so => /opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_llm.so (0x0000717e59681000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x0000717e59400000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x0000717e593d2000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000717e59000000)\n\tlibtinyinfer_backend.so => /opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_backend.so (0x0000717e59328000)\n\tlibcudart.so.12 => /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib/libcudart.so.12 (0x0000717e58c00000)\n\t/lib64/ld-linux-x86-64.so.2 (0x0000717e596da000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x0000717e5923d000)\n\tlibgomp.so.1 => /lib/x86_64-linux-gnu/libgomp.so.1 (0x0000717e58faa000)\n\tlibdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x0000717e59238000)\n\tlibpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x0000717e59233000)\n\tlibrt.so.1 => /lib/x86_64-linux-gnu/librt.so.1 (0x0000717e5922c000)\n"
+  },
+  "stream_case": {
+    "detail": {
+      "atol": 0.02,
+      "max_abs_error": 3.814697265625e-06,
+      "rtol": 0.02
+    },
+    "name": "non_default_stream_and_input_lifetime",
+    "status": "passed"
+  },
+  "incremental_build": "Retained failed compilation/link attempt plus successful final 3-target link; source unchanged throughout 3ed attempt"
+}

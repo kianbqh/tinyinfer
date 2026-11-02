@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "failed",
+  "argv": [
+    "/opt/codex-resume/portfolio-ml/venv/bin/cmake",
+    "--build",
+    "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers",
+    "--parallel",
+    "2"
+  ],
+  "cwd": "/mnt/g/ResumeProject/platforms/tinyinfer",
+  "started_at": "2026-11-02T13:30:47.461193+00:00",
+  "timeout_seconds": 1800,
+  "pid": 303393,
+  "exit_code": 1,
+  "finished_at": "2026-11-02T13:31:20.025095+00:00",
+  "wall_seconds": 32.566783962000045,
+  "stdout.log_sha256": "479cfd1e58b75df4b30f8844740b0e8027ec8813ce4a3b9ae5b0ba5b064cb909",
+  "stderr.log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

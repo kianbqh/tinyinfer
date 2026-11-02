@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "seeds": [
+    17,
+    41,
+    73
+  ],
+  "proposal_budget": 64,
+  "evaluation_budget": 8,
+  "baseline_id": 0,
+  "fixture": {
+    "fixture_seed": 193,
+    "M": 512,
+    "N": 512,
+    "K": 512,
+    "warmups": 20,
+    "repeats": 101,
+    "host_repeats": 21,
+    "rtol": 0.02,
+    "atol": 0.02
+  },
+  "llama": {
+    "executable": "/opt/codex-resume/llm-risk-classifier/llama/llama-b12024/llama-completion",
+    "model": "/opt/codex-resume/llm-risk-classifier/weights/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+    "executable_sha256": "15472995c69d23fd6350f84b1fb73156698bab77b20438b617bcd8e1e9a9a11f",
+    "model_sha256": "6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e",
+    "max_output_tokens": 384,
+    "context_tokens": 8192,
+    "timeout_seconds": 180
+  },
+  "toolchain": {
+    "cmake": "/opt/codex-resume/portfolio-ml/venv/bin/cmake",
+    "ninja": "/opt/codex-resume/portfolio-ml/venv/bin/ninja",
+    "nvcc": "/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/bin/nvcc",
+    "cxx": "/usr/bin/g++",
+    "python": "/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+    "python_include": "/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include/python3.12",
+    "gtest_source": "/opt/codex-resume/cpp-cuda-inference-kernels/googletest"
+  },
+  "scratch_base": "/opt/codex-resume/all-modules-v2/m2/autotune",
+  "build_timeout_seconds": 900,
+  "evaluation_timeout_seconds": 900
+}

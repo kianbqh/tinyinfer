@@ -21,3 +21,7 @@ Build and test from the repository root:
 ```
 
 `./scripts/test.sh` runs the same unified correctness suite without timing. The root [workflow](https://github.com/kianbqh/tinyinfer/actions/workflows/tinyinfer.yml) owns CI. This module's former independent build and workflow have been replaced by the root build; its original history is preserved by the non-squashed subtree merge.
+
+## FP16 and INT8 experiments
+
+The newer [CUDA v2 path](src/cuda/tc/README.md) and [Triton comparison](triton_v2/README.md) add FP16 WMMA GEMM, on-load INT8 weight dequantization and tiled causal attention. The completed [GEMM](../results/v2/20261102T132951Z-m2-native-headers-gemm-cpath/run.json), [softmax](../results/v2/20261102T132951Z-m2-native-headers-softmax-cpath/run.json) and [attention](../results/v2/20261102T132951Z-m2-native-headers-attention-cpath/run.json) groups retain raw CUDA-event and synchronized host-call samples. They are a separate WSL2/RTX 3080 experiment; the earlier FP32 compiler and kernel results above are unchanged. The module tables include library wins and the custom paths' losses.
