@@ -1,4 +1,5 @@
 #include "launchers.cuh"
+#include <math_constants.h>
 #include <cmath>
 #include <cstddef>
 namespace ti::v2 {
