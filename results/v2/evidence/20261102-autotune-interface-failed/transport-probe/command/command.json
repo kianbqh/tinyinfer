@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "argv": [
+    "/opt/codex-resume/llm-risk-classifier/llama/llama-b12024/llama-completion",
+    "-m",
+    "/opt/codex-resume/llm-risk-classifier/weights/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+    "-ngl",
+    "0",
+    "--seed",
+    "17",
+    "-n",
+    "384",
+    "-c",
+    "8192",
+    "--temp",
+    "0.7",
+    "--no-display-prompt",
+    "--no-conversation",
+    "-f",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T224446Z-m2-autotune-venvfix/seed-17/llm/proposals/proposal-0000/prompt.txt"
+  ],
+  "cwd": "/mnt/g/ResumeProject/platforms/tinyinfer",
+  "started_at": "2026-11-02T23:02:23.788510+00:00",
+  "timeout_seconds": 180,
+  "pid": 372406,
+  "exit_code": 0,
+  "finished_at": "2026-11-02T23:02:35.235816+00:00",
+  "wall_seconds": 11.44730847000028,
+  "stdout.log_sha256": "8aaed2d1c4774072382230ba5b8b0e51048644aaec0593b755a4dc92b9521073",
+  "stderr.log_sha256": "03d7e293581e71be60bdf1730585e0bdf427e173dd48f0c623af4ccab69044f0"
+}

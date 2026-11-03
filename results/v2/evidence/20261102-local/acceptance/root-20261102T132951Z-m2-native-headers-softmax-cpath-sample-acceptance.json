@@ -1,0 +1,307 @@
+{
+  "utc": "2026-11-02T14:24:06.997032+00:00",
+  "scope": "Closed raw samples/statistics and accepted library/build binding; no new measurement",
+  "run": "20261102T132951Z-m2-native-headers-softmax-cpath",
+  "group": "softmax",
+  "run_sha256": "fc5118eda7b3c1f0ce8ff6acc99a3188e1b31c69f069d59b16d1101c942f9e73",
+  "status": "accepted",
+  "completed_cases": 12,
+  "optional_not_run": [],
+  "raw_samples_reconciled": 840,
+  "git": {
+    "executable": "/opt/codex-resume/all-modules-v2/m1a/tools/git-native/usr/bin/git",
+    "sha": "3edcfebd24d5efbf5da81cda13f2bf684031b35e",
+    "status_porcelain": "?? results/v2/",
+    "version": "git version 2.43.0"
+  },
+  "cases": [
+    {
+      "method": "torch_softmax_fp16",
+      "shape": {
+        "cols": 128,
+        "rows": 128
+      },
+      "max_abs_error": 5.008280277252197e-05,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.01583680001087487,
+        "p50_ms": 0.013359999749809504,
+        "p95_ms": 0.029235200583934782,
+        "p99_ms": 0.035379200801253306,
+        "std_population_ms": 0.008344704985202154
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.03190435,
+        "p50_ms": 0.029575999999999998,
+        "p95_ms": 0.03796665000000002,
+        "p99_ms": 0.06095892999999997,
+        "std_population_ms": 0.00835913227718643
+      }
+    },
+    {
+      "method": "cuda_softmax_fp16",
+      "shape": {
+        "cols": 128,
+        "rows": 128
+      },
+      "max_abs_error": 5.008280277252197e-05,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.06882752012461424,
+        "p50_ms": 0.06963200122117996,
+        "p95_ms": 0.08294399827718735,
+        "p99_ms": 0.10277247890830037,
+        "std_population_ms": 0.013639932873813059
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.0732869,
+        "p50_ms": 0.07170950000000001,
+        "p95_ms": 0.08374615000000002,
+        "p99_ms": 0.10124362999999997,
+        "std_population_ms": 0.009192131558566817
+      }
+    },
+    {
+      "method": "triton_softmax_fp16",
+      "shape": {
+        "cols": 128,
+        "rows": 128
+      },
+      "max_abs_error": 5.008280277252197e-05,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.06701439974829554,
+        "p50_ms": 0.07265600189566612,
+        "p95_ms": 0.13131839595735056,
+        "p99_ms": 0.2772479924559589,
+        "std_population_ms": 0.05569157064052668
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.0508706,
+        "p50_ms": 0.0485275,
+        "p95_ms": 0.05852535000000001,
+        "p99_ms": 0.06952026999999998,
+        "std_population_ms": 0.005690985533279803
+      }
+    },
+    {
+      "method": "torch_softmax_fp16",
+      "shape": {
+        "cols": 512,
+        "rows": 128
+      },
+      "max_abs_error": 2.851337194442749e-05,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.018295039907097816,
+        "p50_ms": 0.020479999482631683,
+        "p95_ms": 0.026726399734616275,
+        "p99_ms": 0.03652863837778567,
+        "std_population_ms": 0.007060020911101885
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.033327,
+        "p50_ms": 0.030345999999999998,
+        "p95_ms": 0.039443700000000026,
+        "p99_ms": 0.06100793999999997,
+        "std_population_ms": 0.007976299937941151
+      }
+    },
+    {
+      "method": "cuda_softmax_fp16",
+      "shape": {
+        "cols": 512,
+        "rows": 128
+      },
+      "max_abs_error": 2.851337194442749e-05,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.032044800091534854,
+        "p50_ms": 0.028672000393271446,
+        "p95_ms": 0.046564800105988936,
+        "p99_ms": 0.10136767927557211,
+        "std_population_ms": 0.017543974485423733
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.044843,
+        "p50_ms": 0.043818499999999996,
+        "p95_ms": 0.049105850000000006,
+        "p99_ms": 0.053541969999999994,
+        "std_population_ms": 0.002671844830823826
+      }
+    },
+    {
+      "method": "triton_softmax_fp16",
+      "shape": {
+        "cols": 512,
+        "rows": 128
+      },
+      "max_abs_error": 2.851337194442749e-05,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.04215616002678871,
+        "p50_ms": 0.04095999896526337,
+        "p95_ms": 0.05628159921616314,
+        "p99_ms": 0.06262783974409103,
+        "std_population_ms": 0.007795507274563493
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.0488819,
+        "p50_ms": 0.0471935,
+        "p95_ms": 0.05692975,
+        "p99_ms": 0.05815715,
+        "std_population_ms": 0.003676755184942288
+      }
+    },
+    {
+      "method": "torch_softmax_fp16",
+      "shape": {
+        "cols": 2048,
+        "rows": 128
+      },
+      "max_abs_error": 6.761401891708374e-06,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.02287616005167365,
+        "p50_ms": 0.01740800030529499,
+        "p95_ms": 0.048360000737011424,
+        "p99_ms": 0.07692736037075518,
+        "std_population_ms": 0.015598532692402512
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.038431850000000004,
+        "p50_ms": 0.038585999999999995,
+        "p95_ms": 0.038922500000000006,
+        "p99_ms": 0.0389605,
+        "std_population_ms": 0.0005288499101824635
+      }
+    },
+    {
+      "method": "cuda_softmax_fp16",
+      "shape": {
+        "cols": 2048,
+        "rows": 128
+      },
+      "max_abs_error": 6.761401891708374e-06,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.03076032009907067,
+        "p50_ms": 0.02851200010627508,
+        "p95_ms": 0.040903999842703334,
+        "p99_ms": 0.20878335908055257,
+        "std_population_ms": 0.04467104392383491
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.0508118,
+        "p50_ms": 0.0451075,
+        "p95_ms": 0.08167560000000003,
+        "p99_ms": 0.11302711999999995,
+        "std_population_ms": 0.01783208892306227
+      }
+    },
+    {
+      "method": "triton_softmax_fp16",
+      "shape": {
+        "cols": 2048,
+        "rows": 128
+      },
+      "max_abs_error": 6.761401891708374e-06,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.03356927973218262,
+        "p50_ms": 0.03174399957060814,
+        "p95_ms": 0.05248319953680035,
+        "p99_ms": 0.12308607876300792,
+        "std_population_ms": 0.023518779004288743
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.0561809,
+        "p50_ms": 0.050559999999999994,
+        "p95_ms": 0.06550245000000006,
+        "p99_ms": 0.1241812899999999,
+        "std_population_ms": 0.01938991086854192
+      }
+    },
+    {
+      "method": "torch_softmax_fp16",
+      "shape": {
+        "cols": 4096,
+        "rows": 128
+      },
+      "max_abs_error": 3.010965883731842e-06,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.019969920106232168,
+        "p50_ms": 0.016224000602960587,
+        "p95_ms": 0.03891199827194214,
+        "p99_ms": 0.059749759323894897,
+        "std_population_ms": 0.012958005979086766
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.03590935,
+        "p50_ms": 0.035743,
+        "p95_ms": 0.038799450000000006,
+        "p99_ms": 0.03907989,
+        "std_population_ms": 0.0012733170176747034
+      }
+    },
+    {
+      "method": "cuda_softmax_fp16",
+      "shape": {
+        "cols": 4096,
+        "rows": 128
+      },
+      "max_abs_error": 3.010965883731842e-06,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.029343360345810653,
+        "p50_ms": 0.02969600073993206,
+        "p95_ms": 0.03901439998298883,
+        "p99_ms": 0.049694720022380345,
+        "std_population_ms": 0.009010628437682603
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.05054405,
+        "p50_ms": 0.0451925,
+        "p95_ms": 0.061132650000000045,
+        "p99_ms": 0.11092252999999991,
+        "std_population_ms": 0.017062750761454026
+      }
+    },
+    {
+      "method": "triton_softmax_fp16",
+      "shape": {
+        "cols": 4096,
+        "rows": 128
+      },
+      "max_abs_error": 3.010965883731842e-06,
+      "cuda_event": {
+        "count": 50,
+        "mean_ms": 0.03933312011882663,
+        "p50_ms": 0.03788800165057182,
+        "p95_ms": 0.050175998359918594,
+        "p99_ms": 0.08746527977287762,
+        "std_population_ms": 0.01191342641096455
+      },
+      "host_synchronized": {
+        "count": 20,
+        "mean_ms": 0.06279305,
+        "p50_ms": 0.0488245,
+        "p95_ms": 0.07193705000000017,
+        "p99_ms": 0.25409460999999967,
+        "std_population_ms": 0.05442742357348454
+      }
+    }
+  ]
+}

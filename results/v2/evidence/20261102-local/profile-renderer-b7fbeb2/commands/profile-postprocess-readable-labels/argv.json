@@ -1,0 +1,17 @@
+[
+  "/usr/bin/env",
+  "LD_LIBRARY_PATH=/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers:/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib:/usr/lib/wsl/lib",
+  "PYTHONPATH=/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers:/mnt/g/ResumeProject/platforms/tinyinfer",
+  "PYTHONDONTWRITEBYTECODE=1",
+  "TINYC_GIT=/opt/codex-resume/all-modules-v2/m1a/tools/git-native/usr/bin/git",
+  "/usr/bin/env",
+  "M2_RENDERER_CHECKPOINT=b7fbeb201ab66a36d46dcbd5bdd1b68977b64229",
+  "/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+  "-B",
+  "-m",
+  "bench.v2.profiling.postprocess",
+  "--manifest",
+  "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/profile-captures-readable-labels.json",
+  "--output",
+  "results/v2/20261102T221317Z-m2-profile-enabled-profile-labels"
+]

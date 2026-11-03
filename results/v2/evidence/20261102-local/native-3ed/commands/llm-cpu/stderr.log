@@ -1,0 +1,19 @@
+test_append_variable_lengths_absolute_offsets_and_isolation (test_contracts.CacheTests.test_append_variable_lengths_absolute_offsets_and_isolation) ... ok
+test_owned_input_output_and_reset (test_contracts.CacheTests.test_owned_input_output_and_reset) ... ok
+test_validation_transactional (test_contracts.CacheTests.test_validation_transactional) ... ok
+test_fixed_protocol_and_strict_config (test_contracts.EvaluationContractTests.test_fixed_protocol_and_strict_config) ... ok
+test_percentile_definition_and_invalid_samples (test_contracts.EvaluationContractTests.test_percentile_definition_and_invalid_samples) ... ok
+test_context_and_exact_ids (test_contracts.ProtocolTests.test_context_and_exact_ids) ... ok
+test_target_ownership_across_overlapping_windows (test_contracts.ProtocolTests.test_target_ownership_across_overlapping_windows) ... ok
+test_dequantization_rounds_back_to_fp16 (test_contracts.QuantizationTests.test_dequantization_rounds_back_to_fp16) ... ok
+test_exporter_matches_independent_reference (test_contracts.QuantizationTests.test_exporter_matches_independent_reference) ... ok
+test_invalid_shapes_dtypes_and_scales (test_contracts.QuantizationTests.test_invalid_shapes_dtypes_and_scales) ... ok
+test_output_axis_zero_and_signed_channels (test_contracts.QuantizationTests.test_output_axis_zero_and_signed_channels) ... ok
+test_ties_to_even_and_clipping_range (test_contracts.QuantizationTests.test_ties_to_even_and_clipping_range) ... ok
+test_host_abi_metadata_and_no_heavy_import (test_contracts.ReaderAndAbiTests.test_host_abi_metadata_and_no_heavy_import) ... ok
+test_safetensors_bare_conv1d_orientation (test_contracts.ReaderAndAbiTests.test_safetensors_bare_conv1d_orientation) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.065s
+
+OK

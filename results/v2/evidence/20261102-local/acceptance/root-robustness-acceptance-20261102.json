@@ -1,0 +1,27 @@
+{
+  "accepted": true,
+  "artifact_id": 13140933607,
+  "artifact_sha256": "6c23b4a23deb84a3c4b4dbd2e647e02894da34e3cf18d82e5a13c83bebc711ea",
+  "source_commit": "793b62ecf694e6eae6c7f590bf886cd139fb65c8",
+  "scope": "Actual historical host libFuzzer CI artifact; no local fuzz rerun",
+  "root_review": [
+    "Downloaded ZIP bytes and SHA match GitHub artifact metadata",
+    "Read each raw log's #10000 DONE and Done 10000 runs records",
+    "Reviewed actual parser, host GEMM/attention validation and quantization harness calls",
+    "Reviewed additive pull_request job, sanitizer compilation/linkage and fail-fast runtime settings",
+    "Reviewed 61-source Git blob parity, deterministic replay and corpus retention receipts"
+  ],
+  "targets": 5,
+  "executions_per_target": 10000,
+  "execution_count_includes_initialization": true,
+  "seed_replays_passed": 21,
+  "confirmed_issues": 0,
+  "fixed_issues": 0,
+  "crash_artifacts": 0,
+  "sanitizer_diagnostics": 0,
+  "retained_corpus_files": 530,
+  "public_import_manifest_sha256": "b02478b15bc711e5e47acb4c887628f4ad484852248af3a8fc8e5807bfc247d8",
+  "publication": "Import after frozen M2 measurement window; use direct host-coverage wording and remove generic absence-of-defects disclaimer from README subsection",
+  "current_checkpoint": "3edcfebd24d5efbf5da81cda13f2bf684031b35e",
+  "current_ci": {"run_id": 41452873870, "cpu_jobs_passed": 5, "cuda_job": "conditional manual job skipped"}
+}

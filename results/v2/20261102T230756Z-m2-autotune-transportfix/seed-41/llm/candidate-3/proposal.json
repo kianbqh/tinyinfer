@@ -1,0 +1,11 @@
+{
+  "config_id": 1,
+  "epilogue": "fused",
+  "stages": 2,
+  "tile": [
+    64,
+    32,
+    32,
+    8
+  ]
+}

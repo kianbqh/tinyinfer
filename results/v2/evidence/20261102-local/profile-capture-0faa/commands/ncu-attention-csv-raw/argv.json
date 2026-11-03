@@ -1,0 +1,10 @@
+[
+  "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+  "--import",
+  "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention.ncu-rep",
+  "--page",
+  "raw",
+  "--csv",
+  "--print-units",
+  "base"
+]

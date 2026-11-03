@@ -1,0 +1,25 @@
+0.00.022.386 I llama_completion: llama backend init
+0.00.022.407 I llama_completion: load the model and apply lora adapter, if any
+0.00.209.143 W load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.00.648.431 I cmn          init: llama threadpool init, n_threads = 10
+0.00.697.766 I 
+0.00.697.832 I system_info: n_threads = 10 (n_threads_batch = 10) / 20 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX_VNNI = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | 
+0.00.697.832 I 
+0.00.698.427 I sampler seed: 42
+0.00.698.435 I sampler params: 
+	repeat_last_n = 64, repeat_penalty = 1.000, frequency_penalty = 0.000, presence_penalty = 0.000
+	dry_multiplier = 0.000, dry_base = 1.750, dry_allowed_length = 2, dry_penalty_last_n = 64
+	top_k = 40, top_p = 0.950, min_p = 0.050, xtc_probability = 0.000, xtc_threshold = 0.100, typical_p = 1.000, top_n_sigma = -1.000, temp = 0.700
+	mirostat = 0, mirostat_lr = 0.100, mirostat_ent = 5.000, adaptive_target = -1.000, adaptive_decay = 0.900
+0.00.698.440 I sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> min-p -> ?xtc -> temp-ext -> dist 
+0.00.698.440 I generate: n_ctx = 8192, n_batch = 2048, n_predict = 384, n_keep = 0
+0.00.698.440 I 
+0.03.648.034 I common_perf_print:    sampling time =      11.84 ms
+0.03.648.036 I common_perf_print:    samplers time =       3.47 ms /   673 tokens
+0.03.648.040 I common_perf_print:        load time =     527.70 ms
+0.03.648.041 I common_perf_print: prompt eval time =    1769.82 ms /   632 tokens (    2.80 ms per token,   357.10 tokens per second)
+0.03.648.041 I common_perf_print:        eval time =    1165.21 ms /    40 runs   (   29.13 ms per token,    34.33 tokens per second)
+0.03.648.042 I common_perf_print:       total time =    2950.28 ms /   672 tokens
+0.03.648.042 I common_perf_print: unaccounted time =       3.41 ms /   0.1 %      (total - sampling - prompt eval - eval) / (total)
+0.03.648.043 I common_perf_print:    graphs reused =         39
+0.03.648.043 I common_perf_print:   graph reallocs =          0    /     0        (same size) / (changed size)

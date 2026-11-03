@@ -1,0 +1,297 @@
+{
+  "state": "private_candidate_cpu_and_same_gguf_capacity_verified",
+  "scope": "Only prompt history-table capacity; no model/seed/sampling/context/output/timeout/budget/gate/strict-schema/transport changes",
+  "files": [
+    {
+      "destination": "autotune/proposer.py",
+      "preimage": {
+        "sha256": "fee68aece2a584dcc35c3f2b5a5d50b72fb267993acdd77bc216a2c020cf8fd3",
+        "bytes": 5373
+      },
+      "candidate": {
+        "sha256": "a8c710a436b7d1614e283ed647dda519c9bacc0f9c13d2ec72fb95b44b1a70be",
+        "bytes": 5999
+      }
+    },
+    {
+      "destination": "autotune/tests/test_proposer_transport.py",
+      "preimage": {
+        "sha256": "ca9d1ce9112fe7524215c154e7c66795ac5e63c21127ccfa669aa0c14c6731f6",
+        "bytes": 7627
+      },
+      "candidate": {
+        "sha256": "1dbf91e905d670f816a9de08d444d2a7ca440d6affe59c9b51f645e62fadf061",
+        "bytes": 7675
+      }
+    },
+    {
+      "destination": "autotune/tests/test_proposer_history.py",
+      "preimage": null,
+      "preimage_state": "absent",
+      "candidate": {
+        "sha256": "22c34bab187273f5a2a3413804625f23850818010556b2aaf7d59421155ecc23",
+        "bytes": 6181
+      }
+    }
+  ],
+  "unchanged_dependencies": {
+    "autotune/__init__.py": {
+      "sha256": "46d6a267f87d3ca443b3e23448285161ab96ae64b11555b70424e1c1cb5f66ba",
+      "bytes": 63
+    },
+    "autotune/core.py": {
+      "sha256": "4086ea16d0edc6eba305b515c9ea2d5df6264dd14f8d5ce4741919038448a565",
+      "bytes": 5382
+    },
+    "bench/v2/kernels/candidate_build.py": {
+      "sha256": "aa46c93a140d9953314e9eca9242b1e4f4293183a55ef26f8965de368eeed3f6",
+      "bytes": 6832
+    },
+    "bench/v2/kernels/protocol.py": {
+      "sha256": "7d2801a9687e60344f7e79d13c5745e0feb40e6e44211a611f2f6b6b262bc285",
+      "bytes": 4301
+    },
+    "bench/v2/kernels/run.py": {
+      "sha256": "9446173fc9f3cba35320dfcce8d3b3a9928f8d392267180f54d7d7be721d6959",
+      "bytes": 15093
+    },
+    "llm/__init__.py": {
+      "sha256": "1dfe5f5fab353cb98f79c9004b37080b09da11fb6155b15549c646cebc69807d",
+      "bytes": 86
+    },
+    "llm/native_ops.py": {
+      "sha256": "944b2e11054aace705d7597d674352d1351cef06d149a7e54bad80c3ca41902f",
+      "bytes": 10740
+    },
+    "server/__init__.py": {
+      "sha256": "0df7ac8a474df0505c07aae40d3bd483bb2e01040422ebaa3806f04b233347a4",
+      "bytes": 54
+    },
+    "server/metadata.py": {
+      "sha256": "d9113dcfba44ef6597af7ce6f83d5f45f25e5f5fe699c1bb524fb5d3d5c50660",
+      "bytes": 2377
+    }
+  },
+  "protocol_note": "Capacity-only interface repair. Preserve old interrupted runs; both methods and all three seeds must start fresh. Normal valid duplicates/incomplete unique budgets remain actual negative outcomes, not grounds for further prompt changes.",
+  "pending": [
+    "Root source review/import/commit/CI",
+    "Both methods and all three seeds fresh under capacity-only interface repair"
+  ],
+  "utc": "2026-11-02T23:45:25.984820+00:00",
+  "actual_repository_file_states": [
+    "root_imported_exact_candidate",
+    "root_imported_exact_candidate",
+    "root_imported_exact_candidate"
+  ],
+  "unchanged_control": {
+    "decoder_ast": true,
+    "constructor_ast": true,
+    "all_call_statements_from_prompt_file_write_onward": true,
+    "all_model_flags_seed_temperature_context_output_timeout_and_transport": true,
+    "only_prose_change": "samples_ms to median_ms",
+    "catalog_and_avoid_previous_advice_unchanged": true,
+    "gates_strict_schema_budget_accounting_source_hashes_unchanged": true
+  },
+  "cpu_result": {
+    "sha256": "40eee08df800d1d4af129e8013892749bc815c869301cbc344e81d0a7faa1ed2",
+    "preimage_new_capacity_failures": 3,
+    "preimage_existing_transport_passes": 8,
+    "postimage_passes": 11,
+    "skips": 0,
+    "forbidden_ml_imports": []
+  },
+  "tokenizer_result": {
+    "sha256": "07ee602261923fc955511351b8fed4590207a13c431d50ecc6cdc7d0f874c24b",
+    "actual_closed_prompt_tokens": 8206,
+    "prompt_limit": 8188,
+    "context_tokens": 8192,
+    "fixed_output_tokens": 384,
+    "candidate_counts": {
+      "postimage-mixed-history": 2263,
+      "postimage-wide-history": 3163,
+      "postimage-adversarial-envelope": 4518
+    },
+    "largest_tested_conservative_envelope": 4518,
+    "margin_to_prompt_limit": 3670,
+    "envelope_plus_output": 4902,
+    "scope": "65 total rows (baseline + 64 previous attempts), full-width finite floats, known states and 32-character error-type envelope. Exact same GGUF/default BOS/special handling; fixture capacity results are not LLM quality or search results."
+  },
+  "read_files": {
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\CANDIDATE_MANIFEST.json": {
+      "sha256": "7cb9f7013cabca985372b4a50d0d700f39bfcfa3d344be6e7280011a5db0db4e",
+      "bytes": 2955
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\preimage\\autotune\\proposer.py": {
+      "sha256": "fee68aece2a584dcc35c3f2b5a5d50b72fb267993acdd77bc216a2c020cf8fd3",
+      "bytes": 5373
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\candidate\\autotune\\proposer.py": {
+      "sha256": "a8c710a436b7d1614e283ed647dda519c9bacc0f9c13d2ec72fb95b44b1a70be",
+      "bytes": 5999
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\autotune\\proposer.py": {
+      "sha256": "a8c710a436b7d1614e283ed647dda519c9bacc0f9c13d2ec72fb95b44b1a70be",
+      "bytes": 5999
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\candidate\\autotune\\tests\\test_proposer_transport.py": {
+      "sha256": "1dbf91e905d670f816a9de08d444d2a7ca440d6affe59c9b51f645e62fadf061",
+      "bytes": 7675
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\autotune\\tests\\test_proposer_transport.py": {
+      "sha256": "1dbf91e905d670f816a9de08d444d2a7ca440d6affe59c9b51f645e62fadf061",
+      "bytes": 7675
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\candidate\\autotune\\tests\\test_proposer_history.py": {
+      "sha256": "22c34bab187273f5a2a3413804625f23850818010556b2aaf7d59421155ecc23",
+      "bytes": 6181
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\autotune\\tests\\test_proposer_history.py": {
+      "sha256": "22c34bab187273f5a2a3413804625f23850818010556b2aaf7d59421155ecc23",
+      "bytes": 6181
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\autotune\\__init__.py": {
+      "sha256": "46d6a267f87d3ca443b3e23448285161ab96ae64b11555b70424e1c1cb5f66ba",
+      "bytes": 63
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\autotune\\core.py": {
+      "sha256": "4086ea16d0edc6eba305b515c9ea2d5df6264dd14f8d5ce4741919038448a565",
+      "bytes": 5382
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\bench\\v2\\kernels\\candidate_build.py": {
+      "sha256": "aa46c93a140d9953314e9eca9242b1e4f4293183a55ef26f8965de368eeed3f6",
+      "bytes": 6832
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\bench\\v2\\kernels\\protocol.py": {
+      "sha256": "7d2801a9687e60344f7e79d13c5745e0feb40e6e44211a611f2f6b6b262bc285",
+      "bytes": 4301
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\bench\\v2\\kernels\\run.py": {
+      "sha256": "9446173fc9f3cba35320dfcce8d3b3a9928f8d392267180f54d7d7be721d6959",
+      "bytes": 15093
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\llm\\__init__.py": {
+      "sha256": "1dfe5f5fab353cb98f79c9004b37080b09da11fb6155b15549c646cebc69807d",
+      "bytes": 86
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\llm\\native_ops.py": {
+      "sha256": "944b2e11054aace705d7597d674352d1351cef06d149a7e54bad80c3ca41902f",
+      "bytes": 10740
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\server\\__init__.py": {
+      "sha256": "0df7ac8a474df0505c07aae40d3bd483bb2e01040422ebaa3806f04b233347a4",
+      "bytes": 54
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\server\\metadata.py": {
+      "sha256": "d9113dcfba44ef6597af7ce6f83d5f45f25e5f5fe699c1bb524fb5d3d5c50660",
+      "bytes": 2377
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\autotune\\run.py": {
+      "sha256": "3c3bb1e9d5a1eac8beef5c0524bb4d206a9885d205150f061294ed6b55f4bfeb",
+      "bytes": 11352
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\CPU_RESULT.json": {
+      "sha256": "40eee08df800d1d4af129e8013892749bc815c869301cbc344e81d0a7faa1ed2",
+      "bytes": 1428
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\TOKEN_CAPACITY_RESULT.json": {
+      "sha256": "07ee602261923fc955511351b8fed4590207a13c431d50ecc6cdc7d0f874c24b",
+      "bytes": 9406
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\logs\\preimage.stdout.txt": {
+      "sha256": "a84ee0845b74989ac6ccf19f90db69e5d344371fc7d4b80aa5e6dfc5674dcbba",
+      "bytes": 105
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\logs\\preimage.stderr.txt": {
+      "sha256": "20bcf3da3b03041cec469f0595d4dba8f853a489353ef5026a8a2a4010eba290",
+      "bytes": 437803
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\logs\\postimage.stdout.txt": {
+      "sha256": "f4accefcbcaa7400d0d0c75d98790a03b0bc230e8b33b5b24fdacb475cb7f9d7",
+      "bytes": 106
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\logs\\postimage.stderr.txt": {
+      "sha256": "68e25c99d1f1a00077d53166b67eba5a5485b83fea0c3565c6d46a06653e34b9",
+      "bytes": 2049
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\tokenizer-capacity\\actual-closed-attempt26\\command.json": {
+      "sha256": "9b262ea1918d188aa5d41c82e6171385c04ab61f2fd5e45673894dc2616403a8",
+      "bytes": 1590
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\tokenizer-capacity\\actual-closed-attempt26\\stdout.log": {
+      "sha256": "2a0acbbf3581ab1b1a33b048699ac9944488db69417c7470a7aa0c969dfbd352",
+      "bytes": 35141
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\tokenizer-capacity\\actual-closed-attempt26\\stderr.log": {
+      "sha256": "25f01478689a1e4aab06da82128997e65d294b66746de3bdbfe6f74622f7b1c5",
+      "bytes": 359
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T230756Z-m2-autotune-transportfix\\seed-17\\llm\\proposals\\proposal-0026\\prompt.txt": {
+      "sha256": "11a47e2bdeb7fb31f5973216a3146d0a34530369359f175031563b9a6e0f55e5",
+      "bytes": 10798
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\tokenizer-capacity\\preimage-long-history\\command.json": {
+      "sha256": "65c1983794ca225141ed73b00e0e0bf7d4523d7277fc7e8cf28d65decbb9022a",
+      "bytes": 1568
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\tokenizer-capacity\\preimage-long-history\\stdout.log": {
+      "sha256": "9d9effd5cf557db5987d807414a3e05acbebc436fb49a07f8ec3558040f5e53f",
+      "bytes": 483700
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\tokenizer-capacity\\preimage-long-history\\stderr.log": {
+      "sha256": "5f7adab013b5ea0568802eeac6e99b358f1efeb9dbfb34a49fe3c5f1152ae6fb",
+      "bytes": 359
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\evidence\\preimage-long-history-prompt.txt": {
+      "sha256": "48e8dc66ee47a15809df57d8f927874ecd299107506b6486a91a1dc109ab342b",
+      "bytes": 205130
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\tokenizer-capacity\\postimage-mixed-history\\command.json": {
+      "sha256": "b09d952808997e54750166c8f0c0536357eb3caa3ba2b20cce18f7be7d93d865",
+      "bytes": 1565
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\tokenizer-capacity\\postimage-mixed-history\\stdout.log": {
+      "sha256": "da4376b8fed7f4c45fdbdbf822b3447ee08dde7831df593ce659fde1ec424d78",
+      "bytes": 11201
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\tokenizer-capacity\\postimage-mixed-history\\stderr.log": {
+      "sha256": "9d94be579fb71d4b979a98a1ae913d47d08a7ac7d50e02a85c4e980f3434fcb7",
+      "bytes": 359
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\evidence\\postimage-long-history-prompt.txt": {
+      "sha256": "b6f1b1432fc6e8af9ee14702d3980a3a9aa4cf1293b2147421bb0802466fde24",
+      "bytes": 5274
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\tokenizer-capacity\\postimage-wide-history\\command.json": {
+      "sha256": "e48684078a9d18f139abcb0e70cb1925674c4288c7b5de3365c6bdc903a49eec",
+      "bytes": 1563
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\tokenizer-capacity\\postimage-wide-history\\stdout.log": {
+      "sha256": "c39da99e796e8ed972d59e466cc2388354ebaf247c1a78b62103dd075d99ef59",
+      "bytes": 15195
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\tokenizer-capacity\\postimage-wide-history\\stderr.log": {
+      "sha256": "345a8a7418ced032d188a962f88a814e583964b1ee4d2478b4afb2dce3ee2fa3",
+      "bytes": 359
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\evidence\\postimage-wide-history-prompt.txt": {
+      "sha256": "ff7695ce2d8caadad3d36449d3859c94cc633d4cdd227805ebdc8f5e2bcb73b7",
+      "bytes": 7384
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\tokenizer-capacity\\postimage-adversarial-envelope\\command.json": {
+      "sha256": "1bd9587082b982e27c53880b607061ecd893efd2e44c2c925a241c2242a29d23",
+      "bytes": 1589
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\tokenizer-capacity\\postimage-adversarial-envelope\\stdout.log": {
+      "sha256": "adbb7d562306ffe5b83d286344f07be205dc724a4074a9a6efae21f83006bf2d",
+      "bytes": 20945
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\tokenizer-capacity\\postimage-adversarial-envelope\\stderr.log": {
+      "sha256": "1642cfb37876d04155f9166032c6de1b96ef69bbeab8e970f1c6eb6e8954fd03",
+      "bytes": 359
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-history-capacity-fix\\evidence\\postimage-adversarial-envelope-prompt.txt": {
+      "sha256": "69345f577a3a1573d811167eed6ddc7a3e7fa055ad89f1c0d9280a402402a673",
+      "bytes": 7387
+    }
+  }
+}

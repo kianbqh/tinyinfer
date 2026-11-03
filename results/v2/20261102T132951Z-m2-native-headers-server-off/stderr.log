@@ -1,0 +1,1 @@
+{"native_trace_status":0,"forward_calls":12952,"embedding":12952,"gemm_fp16":634648,"gemm_int8":0,"layernorm":323800,"gelu":155424,"attention":155424,"residual":310848,"kv_scatter_gather":155424,"lm_head":12952,"argmax":12952,"nll":0}

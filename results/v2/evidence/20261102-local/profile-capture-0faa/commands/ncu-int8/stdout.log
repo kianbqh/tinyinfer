@@ -1,0 +1,6 @@
+==WARNING== Note: Running with unmodified GPU clocks. If not controlled otherwise, profiling results may be inconsistent.
+==PROF== Connected to process 362536 (/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/profile_v2)
+==PROF== Profiling "void ti::v2::<unnamed>::wmma_gemm<(int)32, (int)32, (int)16, (int)4, (bool)1, (int)2>(const __half *, const void *, const float *, const __half *, void *, int, int, int, int)": 0%....50%....100% - 8 passes
+{"status":"completed","operation":"int8","size":1024,"config":0,"head_dim":64,"launches":20}
+==PROF== Disconnected from process 362536
+==PROF== Report: /opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/int8.ncu-rep

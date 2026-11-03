@@ -1,0 +1,1 @@
+/usr/bin/clang++ -O2 -g -DNDEBUG -fsanitize=fuzzer,address,undefined -fno-sanitize-recover=undefined -Xlinker --dependency-file=CMakeFiles/fuzz_cpu_ops.dir/link.d CMakeFiles/fuzz_cpu_ops.dir/harnesses/cpu_ops.cpp.o -o fuzz_cpu_ops  libti_fuzz_production.a

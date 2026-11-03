@@ -1,0 +1,58 @@
+{
+  "build": {
+    "schema_version": 1,
+    "status": "completed",
+    "argv": [
+      "/usr/bin/env",
+      "LD_LIBRARY_PATH=/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers:/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib:/usr/lib/wsl/lib",
+      "/opt/codex-resume/portfolio-ml/venv/bin/cmake",
+      "--build",
+      "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers",
+      "--parallel",
+      "2"
+    ],
+    "cwd": "/mnt/g/ResumeProject",
+    "started_at": "2026-11-02T13:36:31.994720+00:00",
+    "timeout_seconds": 1800,
+    "pid": 304373,
+    "exit_code": 0,
+    "finished_at": "2026-11-02T13:36:35.817854+00:00",
+    "wall_seconds": 3.823128196003381,
+    "stdout.log_sha256": "308efaa9fc64bf9a363581c8bed58a0862e4ed6ef33b29bc8476c1c62a170356",
+    "stderr.log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": "[1/3] Linking CXX executable server/ti_server_unit\n[2/3] Linking CXX executable server/tinyinfer_server\n[3/3] Linking CXX executable server/ti_server_transport\n",
+  "stderr": "",
+  "libraries": {
+    "libtinyinfer_backend.so": {
+      "path": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_backend.so",
+      "bytes": 704752,
+      "sha256": "897434e4f360b1bbe87926e22f668f5bf28ec100443153fd9a8827cb7a5a7d6c",
+      "ldd": "\tlinux-vdso.so.1 (0x00007883f4e8d000)\n\tlibcudart.so.12 => /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib/libcudart.so.12 (0x00007883f4a00000)\n\tlibgomp.so.1 => /lib/x86_64-linux-gnu/libgomp.so.1 (0x00007883f4d83000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007883f4600000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007883f4917000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007883f4d55000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007883f4200000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007883f4e8f000)\n\tlibdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007883f4d4e000)\n\tlibpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007883f4d49000)\n\tlibrt.so.1 => /lib/x86_64-linux-gnu/librt.so.1 (0x00007883f4d44000)\n"
+    },
+    "libtinyinfer_llm.so": {
+      "path": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_llm.so",
+      "bytes": 251496,
+      "sha256": "13507a9f7e01d314fa5c21201c11d426f88abd811c841390c4bcbd75c5d199c6",
+      "ldd": "\tlinux-vdso.so.1 (0x00007114acc85000)\n\tlibtinyinfer_backend.so => /opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_backend.so (0x00007114acb9b000)\n\tlibcudart.so.12 => /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib/libcudart.so.12 (0x00007114ac800000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007114ac400000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007114acb6b000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007114ac000000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007114acc87000)\n\tlibgomp.so.1 => /lib/x86_64-linux-gnu/libgomp.so.1 (0x00007114acb13000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007114ac717000)\n\tlibdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007114acb0e000)\n\tlibpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007114acb09000)\n\tlibrt.so.1 => /lib/x86_64-linux-gnu/librt.so.1 (0x00007114acb04000)\n"
+    },
+    "profile_v2": {
+      "path": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/profile_v2",
+      "bytes": 37208,
+      "sha256": "6246008983f2201aad30b5672e48631aaad255b680288a70f2adfec402884ce1",
+      "ldd": "\tlinux-vdso.so.1 (0x000075ae4166d000)\n\tlibtinyinfer_backend.so => /opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_backend.so (0x000075ae415b3000)\n\tlibcudart.so.12 => /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib/libcudart.so.12 (0x000075ae41200000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x000075ae40e00000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x000075ae41583000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000075ae40a00000)\n\tlibgomp.so.1 => /lib/x86_64-linux-gnu/libgomp.so.1 (0x000075ae4152b000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x000075ae41117000)\n\t/lib64/ld-linux-x86-64.so.2 (0x000075ae4166f000)\n\tlibdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x000075ae41526000)\n\tlibpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x000075ae41521000)\n\tlibrt.so.1 => /lib/x86_64-linux-gnu/librt.so.1 (0x000075ae4151c000)\n"
+    },
+    "ikernels.cpython-312-x86_64-linux-gnu.so": {
+      "path": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/ikernels.cpython-312-x86_64-linux-gnu.so",
+      "bytes": 196776,
+      "sha256": "81cdb260830bf1fcb26540e1deab3e743f5af0547bb27b87e38cb9d76bd77a78",
+      "ldd": "\tlinux-vdso.so.1 (0x00007ac9c2a43000)\n\tlibtinyinfer_backend.so => /opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_backend.so (0x00007ac9c2960000)\n\tlibgomp.so.1 => /lib/x86_64-linux-gnu/libgomp.so.1 (0x00007ac9c2908000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007ac9c2600000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007ac9c28da000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007ac9c2200000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007ac9c2a45000)\n\tlibcudart.so.12 => /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib/libcudart.so.12 (0x00007ac9c1e00000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007ac9c2517000)\n\tlibdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007ac9c28d3000)\n\tlibpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007ac9c28ce000)\n\tlibrt.so.1 => /lib/x86_64-linux-gnu/librt.so.1 (0x00007ac9c28c9000)\n"
+    },
+    "server/tinyinfer_server": {
+      "path": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/server/tinyinfer_server",
+      "bytes": 110704,
+      "sha256": "4cd456cf616dac3d680a7252d3d8da47b7fa8fc1c68796c7b5126ebb5979eaff",
+      "ldd": "\tlinux-vdso.so.1 (0x00007c81fdcb2000)\n\tlibtinyinfer_llm.so => /opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_llm.so (0x00007c81fdc5b000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007c81fd800000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007c81fdc2b000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007c81fd400000)\n\tlibtinyinfer_backend.so => /opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_backend.so (0x00007c81fdb81000)\n\tlibcudart.so.12 => /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib/libcudart.so.12 (0x00007c81fd000000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007c81fdcb4000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007c81fda96000)\n\tlibgomp.so.1 => /lib/x86_64-linux-gnu/libgomp.so.1 (0x00007c81fd7aa000)\n\tlibdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007c81fda91000)\n\tlibpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007c81fda8c000)\n\tlibrt.so.1 => /lib/x86_64-linux-gnu/librt.so.1 (0x00007c81fda85000)\n"
+    }
+  }
+}

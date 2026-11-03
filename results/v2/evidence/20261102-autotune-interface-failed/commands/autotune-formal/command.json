@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "failed",
+  "argv": [
+    "/usr/bin/env",
+    "LD_LIBRARY_PATH=/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers:/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib:/usr/lib/wsl/lib",
+    "PYTHONPATH=/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers:/mnt/g/ResumeProject/platforms/tinyinfer",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "TINYC_GIT=/opt/codex-resume/all-modules-v2/m1a/tools/git-native/usr/bin/git",
+    "/usr/bin/env",
+    "CPATH=/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include/python3.12:/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include",
+    "CXXFLAGS=-I/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include",
+    "M2_AUTOTUNE_CHECKPOINT=961eee603a27f4af3faf827eeaad84b091295fd2",
+    "/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+    "-B",
+    "-m",
+    "autotune.run",
+    "--config",
+    "/opt/codex-resume/all-modules-v2/m2/runs/20261102T224446Z-m2-autotune-venvfix/autotune.json",
+    "--output",
+    "results/v2/20261102T224446Z-m2-autotune-venvfix"
+  ],
+  "cwd": "/mnt/g/ResumeProject/platforms/tinyinfer",
+  "started_at": "2026-11-02T22:51:35.506972+00:00",
+  "timeout_seconds": 28800,
+  "pid": 366477,
+  "exit_code": -15,
+  "finished_at": "2026-11-02T23:00:07.448069+00:00",
+  "wall_seconds": 511.9621223509894,
+  "stdout.log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr.log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

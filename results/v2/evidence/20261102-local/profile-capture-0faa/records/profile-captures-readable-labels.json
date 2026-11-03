@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "measured",
+  "checkpoint": "3edcfebd24d5efbf5da81cda13f2bf684031b35e",
+  "compute_capability": [
+    8,
+    6
+  ],
+  "source_root": "/mnt/g/ResumeProject/platforms/tinyinfer",
+  "kernel_build_receipt": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/kernel-build.json",
+  "build_command": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/commands/build-native-linkretry/command.json",
+  "profile_executable": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/profile_v2",
+  "profile_executable_sha256": "6246008983f2201aad30b5672e48631aaad255b680288a70f2adfec402884ce1",
+  "profile_source_sha256": "d021519bf632719b31c96dd7777eab0a5d1896d3705ae7de40bc6cc1d3984f53",
+  "ncu_version_command": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+  "recorder_source_sha256": "a61978863450d6d110e2db6e286dd496481e5674669568e7098ecff9f04bb697",
+  "section_directory": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/sections",
+  "captures": [
+    {
+      "label": "FP16 GEMM",
+      "operation": "gemm",
+      "kernel_id": "0",
+      "kernel_name": "void ti::v2::<unnamed>::wmma_gemm<(int)32, (int)32, (int)16, (int)4, (bool)0, (int)2>(const __half *, const void *, const float *, const __half *, void *, int, int, int, int)",
+      "raw_csv": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-gemm-csv-raw/stdout.log",
+      "report": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm.ncu-rep",
+      "capture_command": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-gemm/command.json",
+      "export_command": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-gemm-csv-raw/command.json"
+    },
+    {
+      "label": "Weight-only INT8",
+      "operation": "int8",
+      "kernel_id": "0",
+      "kernel_name": "void ti::v2::<unnamed>::wmma_gemm<(int)32, (int)32, (int)16, (int)4, (bool)1, (int)2>(const __half *, const void *, const float *, const __half *, void *, int, int, int, int)",
+      "raw_csv": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-int8-csv-raw/stdout.log",
+      "report": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/int8.ncu-rep",
+      "capture_command": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-int8/command.json",
+      "export_command": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-int8-csv-raw/command.json"
+    },
+    {
+      "label": "Online attention",
+      "operation": "attention",
+      "kernel_id": "0",
+      "kernel_name": "void ti::v2::<unnamed>::online_attention<(int)64, (int)32>(const __half *, const __half *, const __half *, __half *, const int *, const int *, const int *, int, int, int, bool)",
+      "raw_csv": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-attention-csv-raw/stdout.log",
+      "report": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention.ncu-rep",
+      "capture_command": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-attention/command.json",
+      "export_command": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-attention-csv-raw/command.json"
+    }
+  ],
+  "capture_worktree_checkpoint": "0faa5148d1694a00c201846ac96fd2b98309f0da",
+  "processing_worktree_checkpoint": "b7fbeb201ab66a36d46dcbd5bdd1b68977b64229",
+  "processing_tracked_status": "",
+  "capture_window_metadata": {
+    "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/capture-window.json",
+    "bytes": 3499,
+    "sha256": "2820b8a426352de8e574eb266c5c95212f68241bec1890e781b9f60bea21431c"
+  },
+  "build_sources_unchanged_at_processing": true,
+  "runtime_environment": {
+    "LD_LIBRARY_PATH": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers:/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib:/usr/lib/wsl/lib",
+    "PYTHONPATH": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers:/mnt/g/ResumeProject/platforms/tinyinfer",
+    "TMPDIR": "/opt/codex-resume/all-modules-v2/m2/tmp"
+  },
+  "created_utc": "2026-11-02T22:27:11.743579+00:00",
+  "display_label_revision": {
+    "reason": "Avoid overlapping axis labels in first actual occupancy plot",
+    "parent_manifest": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/profile-captures.json",
+    "parent_sha256": "26a901ff60c8a06ca7b839d1f27e617e59341aeaa14f2357ab46fcb0bdd5c2a7",
+    "changes": [
+      {
+        "operation": "gemm",
+        "old": "fp16-gemm-1024-config0",
+        "new": "FP16 GEMM"
+      },
+      {
+        "operation": "int8",
+        "old": "weight-only-int8-gemm-1024-config0",
+        "new": "Weight-only INT8"
+      },
+      {
+        "operation": "attention",
+        "old": "online-attention-1024-d64-config0",
+        "new": "Online attention"
+      }
+    ]
+  }
+}

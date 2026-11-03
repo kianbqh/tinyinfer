@@ -1,0 +1,3 @@
+ {"tile": [64, 32, 32, 8], "stages": 1, "epilogue": "fused"} [end of text]
+
+

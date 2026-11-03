@@ -14,6 +14,10 @@ flowchart LR
     B --> J
     B --> Y[pybind11 API and kernel tests]
     J --> R[CPU-input / CPU-output model call]
+    B --> K[FP16 and INT8-weight kernels]
+    K --> L[Native GPT-2 and per-request KV cache]
+    L --> S[epoll server and dynamic batches]
+    A[Test-gated autotuner] --> K
 ```
 
 | Execution path | What runs |
@@ -111,3 +115,69 @@ The unified suite retains the original compiler tests, kernel CPU/CUDA tests and
 The local run passed 22 CTest cases (12 CPU and 10 CUDA), 57 unified Python cases and two targeted frozen-policy cases. [Suite log](results/tests.log) · [policy regression](results/test-policy.log). All final compiled models matched their reference outputs within `atol=rtol=1e-4`; the largest absolute model error across CPU/GPU was 4.77e-6. The separate 1024³ CPU GEMM had a 2.29e-4 maximum absolute error and passed its `1e-3` tolerance. [Result checks](results/validation.json) · [run record](results/run.json).
 
 The compiler history and the kernel subtree were merged without squash. Both original main commits remain ancestors; commands and source SHAs are in [history.md](docs/history.md). Earlier output snapshots live in `results/before/`; the GPU tables above use only the new integrated run.
+
+## Native decoder experiments
+
+I added [WMMA GEMM and tiled attention](kernels/src/cuda/tc/README.md), a [native GPT-2 decoder](llm/README.md), an [epoll server](server/README.md), and a [test-gated kernel search](autotune/README.md). The decoder and server share the native C ABI and per-request contiguous KV slots. INT8 stores weights and dequantizes them for FP16 WMMA compute. Shared staging buffers use synchronous copies. The [experiment report](results/M2_DELIVERY_REPORT.md) collects the full result tables and reproduction details.
+
+Measured in WSL2 on an i7-12700KF and RTX 3080 12 GB, with PyTorch 2.15.0+cu132, Triton 3.9.0 and a standalone CUDA 12.4.131 build at source `3edcfeb`. Displayed decimals are rounded; linked JSON retains full precision. The compiler measurements above remain their original experiment.
+
+For the fixed c0 configuration at 4096³:
+
+| GEMM path | Event p50 (ms) | Synchronized host p50 (ms) | TFLOP/s from event p50 | % of cuBLAS throughput |
+| --- | --- | --- | --- | --- |
+| cuBLAS via torch.matmul | 2.171392 | 2.251240 | 63.2953 | 100.0000 |
+| Legacy FP32 adapter | 14.621696 | 14.696854 | 9.3997 | 14.8505 |
+| WMMA FP16, c0 | 13.902848 | 14.116478 | 9.8857 | 15.6183 |
+| Triton FP16, c0 | 5.444096 | 5.593244 | 25.2455 | 39.8853 |
+| INT8 weights, c0 | 15.497216 | 15.926268 | 8.8686 | 14.0115 |
+
+[All GEMM samples and configurations](results/v2/20261102T132951Z-m2-native-headers-gemm-cpath/run.json) retain the smaller sizes and FP32-output variants. WMMA loses to cuBLAS at this size. [Softmax](results/v2/20261102T132951Z-m2-native-headers-softmax-cpath/run.json) also loses to PyTorch for every tested shape. The online attention avoids materializing the score matrix, but loses to forced-flash SDPA in every measured case; [attention tables and memory scope](kernels/src/cuda/tc/README.md#attention) keep that tradeoff explicit.
+
+The same frozen WikiText-2 slice gives:
+
+| Runtime | WikiText-2 slice perplexity | Scored targets |
+| --- | --- | --- |
+| HF eager | 26.01968506 | 16383 |
+| HF compile / Inductor | 26.01571659 | 16383 |
+| Native FP16 | 26.01567248 | 16383 |
+| Native INT8 weights | 26.58238995 | 16383 |
+
+[Quality, raw generation samples and environment](results/v2/20261102T132951Z-m2-native-headers-llm-cpath/results.json) · [batch 1/8/32 latency tables](llm/README.md#measured-results). Native INT8 raises perplexity by 0.56671747 over native FP16 and is slower at all three batches. HF compile is faster than native FP16 at every measured batch. The native INT8 binary is 203,075,140 bytes versus 326,074,368 bytes for FP16; this is exported weight storage, not GPU memory usage.
+
+Seed `20261101`; concurrency 1; 10 warmups, 50 CUDA-event samples and 20 separately synchronized host samples per case. Events surround one device-resident Python wrapper call and include enqueue gaps. Host samples include wrapper dispatch, allocation, stream handling and synchronization. Attention also uploads validated lengths/offsets on each call. These are separate timing windows, not hardware-only kernel latency. GPT-2 generation instead uses synchronized host TTFT/total timers, 3 warmups and 10 repeats, with 128-token prompts and 32 generated tokens. Decode rate excludes the first token; see the linked module for the exact denominator and excluded work.
+
+The native FP16 server also completed matched off/on Poisson load sweeps. At the 20 req/s arrival-rate parameter:
+
+| Batching | Completed/offered | Errors/drops | Completed/full-drain s | p50 (ms) | p99 (ms) |
+| --- | --- | --- | --- | --- | --- |
+| off | 587/587 | 0/0 | 17.1223 | 2219.0913 | 4302.3986 |
+| on | 587/587 | 0/0 | 19.4860 | 82.6331 | 157.2028 |
+
+[All four rates, raw request records and histogram summaries](server/README.md#measured-load-results) retain 1,084 completed requests per mode with zero errors or drops. Each mode uses one 30-second offered window per rate, followed by full drain; the table's latency runs from scheduled due time through the final socket response. Batching off uses max batch 1/wait 0; on uses max batch 8/wait 1,000 µs. These are per-request percentiles within single load trials.
+
+The standalone Nsight Compute 2024.1 captures give:
+
+| Profile point | Achieved occupancy (%) | Counted DRAM-roofline ceiling (%) |
+| --- | --- | --- |
+| FP16 GEMM | 59.95 | 3.171549 |
+| Weight-only INT8 | 49.73 | 2.268871 |
+| Online attention | 17.95 | 5.986942 |
+
+[Raw counters, summary and plots](bench/v2/profiling/README.md#measured-profiles) use size 1024/config0, with D64 for attention. Each point is one profiler-replayed launch with `--cache-control all` and `--clock-control none`. GEMM/weight-only INT8 use SM86 Tensor x512 instruction accounting; attention uses predicated FP32 FADD+FMUL+2×FFMA. These counted rooflines are separate from the algorithmic GEMM TFLOP/s table above.
+
+I also ran the [three-seed kernel search](autotune/README.md#measured-search) with the local Qwen proposer and random search. Each method had a cap of 64 proposals and 8 unique nonbaseline evaluations; selected configurations were then rebuilt and remeasured independently.
+
+| Seed | Unique evaluations, random / LLM | Random independent speedup | LLM independent speedup |
+| --- | ---: | ---: | ---: |
+| 17 | 8 / 5 | 0.977273× | 0.846154× |
+| 41 | 8 / 5 | 1.131579× | 1.000000× |
+| 73 | 8 / 4 | 1.162162× | 1.000000× |
+
+The LLM reached the proposal cap in every seed. None of its independent remeasurements passed the 3% improvement gate; random search passed it in seeds 41 and 73. Actual evaluation counts differ, so there is no matched-budget aggregate speedup. [Raw outcomes](results/v2/20261102T234500Z-m2-autotune-compact-history/search.json) retain invalid and duplicate proposals as well as the selection-stage timings. The earlier build, output-transport and history-capacity failures remain in the [result index](results/v2/README.md). Paged KV and speculative decoding remain unimplemented stretch work.
+
+## Robustness checks
+
+The [PR workflow](https://github.com/kianbqh/tinyinfer/actions/runs/41444025668/job/125272576550) ran five libFuzzer targets with ASan and UBSan on source `793b62e`, using seed `20261102`. They exercise the production model/weight parser, shared tensor-shape and GEMM/attention entry validation, CPU operators, and the FP16/INT8 host codec used by the exporter. Each target reached 10,000 executions; counters include seed initialization.
+
+All 21 fixed seed replays passed. The campaign recorded **0 sanitizer diagnostics, 0 crash artifacts, 0 confirmed issues and 0 fixes**. No crash-derived regressions were registered. The [receipts, logs and 530 retained corpus files](results/robustness/ci-793b62e/README.md) preserve the run. These are host-code checks; CUDA execution has separate [numerical and stream/lifetime results](results/v2/20261102T132951Z-m2-native-headers-kernel-gate/correctness.json).

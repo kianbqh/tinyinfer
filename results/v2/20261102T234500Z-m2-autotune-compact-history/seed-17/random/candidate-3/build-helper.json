@@ -1,0 +1,33 @@
+{
+  "argv": [
+    "/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+    "-m",
+    "bench.v2.kernels.candidate_build",
+    "--proposal",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T234500Z-m2-autotune-compact-history/seed-17/random/candidate-3/proposal.json",
+    "--scratch",
+    "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-17/random/candidate-3",
+    "--timeout-seconds",
+    "900",
+    "--cmake",
+    "/opt/codex-resume/portfolio-ml/venv/bin/cmake",
+    "--ninja",
+    "/opt/codex-resume/portfolio-ml/venv/bin/ninja",
+    "--nvcc",
+    "/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/bin/nvcc",
+    "--cxx",
+    "/usr/bin/g++",
+    "--python",
+    "/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+    "--python-include",
+    "/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include/python3.12",
+    "--gtest-source",
+    "/opt/codex-resume/cpp-cuda-inference-kernels/googletest"
+  ],
+  "exit_code": 0,
+  "finished_timestamp": "2026-11-02T23:56:30.588034+00:00",
+  "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "status": "completed",
+  "timestamp": "2026-11-02T23:56:17.934057+00:00",
+  "wall_seconds": 12.648562651011162
+}

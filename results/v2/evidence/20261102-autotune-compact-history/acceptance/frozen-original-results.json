@@ -1,0 +1,60 @@
+{
+  "repo": "tinyinfer",
+  "baseline_sha": "d4971ec389fe96907abbe5f8d79429757848e494",
+  "current_sha": "6b1b9f665052e05715b15427f0a9a4777d0414fb",
+  "old_files_verified": 27,
+  "git_diff_stat_command": [
+    "git",
+    "diff",
+    "--stat",
+    "d4971ec389fe96907abbe5f8d79429757848e494",
+    "--",
+    "results/dispatch.json",
+    "results/environment.txt",
+    "results/integrated_cpu.json",
+    "results/integrated_cuda.json",
+    "results/run.json",
+    "results/run_cpu.log",
+    "results/run_gpu.log",
+    "results/table.md",
+    "results/test-policy.log",
+    "results/tests.log",
+    "results/validation.json",
+    "results/before/bench_cpu.json",
+    "results/before/bench_cpu.md",
+    "results/before/bench_gpu.json",
+    "results/before/bench_gpu.md",
+    "results/before/environment.txt",
+    "results/before/run_all.log",
+    "results/before/run_gpu.log",
+    "results/before/test_final.log",
+    "results/before/kernels3/bench_cpu.csv",
+    "results/before/kernels3/bench_cpu.md",
+    "results/before/kernels3/bench_cuda.csv",
+    "results/before/kernels3/bench_cuda.md",
+    "results/before/kernels3/environment.json",
+    "results/before/kernels3/torch_compare.md",
+    "results/before/kernels3/torch_compare_gpu.md",
+    "results/before/kernels3/validation.md"
+  ],
+  "git_diff_stat_stdout": "",
+  "workflows": [
+    {
+      "path": ".github/workflows/tinyinfer.yml",
+      "original_jobs": [
+        "cpu",
+        "cuda"
+      ],
+      "new_jobs": [
+        "llm-cpu-contracts",
+        "server-autotune-cpu",
+        "robustness",
+        "profiling-contracts"
+      ],
+      "changed_original_jobs": []
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "scope": "Final documentation/result working tree before publication commit; current_sha identifies its source parent."
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "status": "failed",
+  "argv": [
+    "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+    "--version"
+  ],
+  "cwd": "/mnt/g/ResumeProject",
+  "started_at": "2026-11-02T14:32:12.195449+00:00",
+  "timeout_seconds": 60,
+  "artifact_bindings_request": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/ncu-version-bindings.json",
+  "error_type": "FileNotFoundError",
+  "error": "[Errno 2] No such file or directory: '/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/ncu-version-bindings.json'",
+  "finished_at": "2026-11-02T14:32:12.195552+00:00",
+  "wall_seconds": 9.553899872116745e-05
+}

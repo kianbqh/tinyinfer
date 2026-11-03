@@ -1,0 +1,43 @@
+{
+  "status": "interrupted_interface_failure",
+  "checkpoint": "961eee603a27f4af3faf827eeaad84b091295fd2",
+  "reason": "Root STOP: repeated exit0/empty stdout indicates mechanical output-interface failure; not model-quality failure",
+  "interrupt_finished_utc": "2026-11-02T23:00:07.521282+00:00",
+  "original_search_json_status_preserved": "started",
+  "original_search_json_sha256": "1a9c834347034c091b932a6cdc4469eb0069d533c56dc7fdf26913ec020e0710",
+  "original_search_json_not_modified": true,
+  "completed_method": {
+    "seed": 17,
+    "method": "random",
+    "evaluations": 8,
+    "test_passes": 8,
+    "proposal_attempts": 12,
+    "independent": {
+      "status": "passed",
+      "speedup": 1.1621621116715892,
+      "passes_3_percent_gate": true
+    }
+  },
+  "interrupted_llm": {
+    "seed": 17,
+    "original_status": "started",
+    "completed_empty_outputs": 15,
+    "total_attempt_rows": 16,
+    "gpu_evaluations": 0,
+    "last_attempt_preserved": {
+      "attempt": 15,
+      "status": "proposing"
+    },
+    "interpretation": "Original invalid counters retained, but repeated empty outputs are a mechanical transport failure, not a model-quality comparison"
+  },
+  "paired_three_seed_comparison_complete": false,
+  "transport_probe_excluded_from_search_budget": true,
+  "transport_probe_only_argv_change": {
+    "removed_index": 15,
+    "removed": "--log-disable"
+  },
+  "transport_probe_generated_stdout_restored": true,
+  "transport_probe_full_raw_strict_json_valid": false,
+  "no_output_cleaning_or_new_search": true,
+  "remaining_owned_processes_at_interruption_closure": []
+}

@@ -1,0 +1,57 @@
+{
+  "timestamp": "2026-11-02T22:17:27.071911+00:00",
+  "captures": [
+    {
+      "phase": "ncu-gemm",
+      "pid": 362336,
+      "profile_pids": [
+        362344
+      ],
+      "started_at": "2026-11-02T22:15:36.345648+00:00",
+      "finished_at": "2026-11-02T22:15:37.427208+00:00",
+      "wall_seconds": 1.0815623829839751,
+      "report": {
+        "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm.ncu-rep",
+        "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/gemm.ncu-rep",
+        "sha256": "567de8bf32238f60230ba00e950b6f1759aa2dbdfb2f21b978b5ec0b6354688a",
+        "bytes": 358940
+      }
+    },
+    {
+      "phase": "ncu-int8",
+      "pid": 362528,
+      "profile_pids": [
+        362536
+      ],
+      "started_at": "2026-11-02T22:16:54.140453+00:00",
+      "finished_at": "2026-11-02T22:16:55.215043+00:00",
+      "wall_seconds": 1.0745911059784703,
+      "report": {
+        "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/int8.ncu-rep",
+        "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/int8.ncu-rep",
+        "sha256": "3812dd6fa6d20c4dd65f6ffed956e28e9fb8fc917cdd51936947247f801ddb4f",
+        "bytes": 358563
+      }
+    },
+    {
+      "phase": "ncu-attention",
+      "pid": 362579,
+      "profile_pids": [
+        362587
+      ],
+      "started_at": "2026-11-02T22:17:04.433201+00:00",
+      "finished_at": "2026-11-02T22:17:05.704331+00:00",
+      "wall_seconds": 1.2711301700037438,
+      "report": {
+        "requested_path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention.ncu-rep",
+        "path": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention.ncu-rep",
+        "sha256": "fd9492d864c0c59824fdf0b4ed1a884022166b9a13cac4fa9c0c5a6170485680",
+        "bytes": 151722
+      }
+    }
+  ],
+  "known_capture_pids_present": [],
+  "gpu_compute_apps_stdout": "",
+  "gpu_query_exit_code": 0,
+  "restore_permission_now": true
+}

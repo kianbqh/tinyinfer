@@ -1,0 +1,77 @@
+{
+  "scope": "imports/API/device metadata only; no model, tensor, kernel, build or download",
+  "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+  "executable": "/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+  "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "modules": {
+    "torch": {
+      "distribution_version": "2.15.0",
+      "module_version": "2.15.0+cu132",
+      "origin": "/opt/codex-resume/portfolio-ml/venv/lib/python3.12/site-packages/torch/__init__.py"
+    },
+    "numpy": {
+      "distribution_version": "2.5.4",
+      "module_version": "2.5.4",
+      "origin": "/opt/codex-resume/portfolio-ml/venv/lib/python3.12/site-packages/numpy/__init__.py"
+    },
+    "transformers": {
+      "distribution_version": "5.22.1",
+      "module_version": "5.22.1",
+      "origin": "/opt/codex-resume/all-modules-v2/m1a/train-venv/lib/python3.12/site-packages/transformers/__init__.py"
+    },
+    "tokenizers": {
+      "distribution_version": "0.23.3",
+      "module_version": "0.23.3",
+      "origin": "/opt/codex-resume/all-modules-v2/m1a/train-venv/lib/python3.12/site-packages/tokenizers/__init__.py"
+    },
+    "safetensors": {
+      "distribution_version": "0.8.0",
+      "module_version": "0.8.0",
+      "origin": "/opt/codex-resume/all-modules-v2/m1a/train-venv/lib/python3.12/site-packages/safetensors/__init__.py"
+    },
+    "pyarrow": {
+      "distribution_version": "26.0.0",
+      "module_version": "26.0.0",
+      "origin": "/opt/codex-resume/all-modules-v2/m2/venv/lib/python3.12/site-packages/pyarrow/__init__.py"
+    },
+    "triton": {
+      "distribution_version": "3.9.0",
+      "module_version": "3.9.0",
+      "origin": "/opt/codex-resume/portfolio-ml/venv/lib/python3.12/site-packages/triton/__init__.py"
+    },
+    "matplotlib": {
+      "distribution_version": "3.11.2",
+      "module_version": "3.11.2",
+      "origin": "/opt/codex-resume/portfolio-ml/venv/lib/python3.12/site-packages/matplotlib/__init__.py"
+    }
+  },
+  "cache_paths": {
+    "HF_HOME": "/opt/codex-resume/all-modules-v2/m2/cache/huggingface",
+    "HF_DATASETS_CACHE": "/opt/codex-resume/all-modules-v2/m2/cache/datasets",
+    "PIP_CACHE_DIR": "/opt/codex-resume/all-modules-v2/m2/cache/pip",
+    "XDG_CACHE_HOME": "/opt/codex-resume/all-modules-v2/m2/cache/xdg",
+    "TORCH_HOME": "/opt/codex-resume/all-modules-v2/m2/cache/torch",
+    "TMPDIR": "/opt/codex-resume/all-modules-v2/m2/tmp",
+    "TRITON_CACHE_DIR": "/opt/codex-resume/all-modules-v2/m2/cache/triton",
+    "TORCHINDUCTOR_CACHE_DIR": "/opt/codex-resume/all-modules-v2/m2/cache/inductor",
+    "CUDA_CACHE_PATH": "/opt/codex-resume/all-modules-v2/m2/cache/cuda",
+    "MPLCONFIGDIR": "/opt/codex-resume/all-modules-v2/m2/cache/matplotlib"
+  },
+  "apis": {
+    "AutoModelForCausalLM": "AutoModelForCausalLM",
+    "AutoTokenizer": "AutoTokenizer",
+    "parquet.read_table": true
+  },
+  "cuda_available": true,
+  "torch_cuda_build": "13.2",
+  "device": {
+    "ordinal": 0,
+    "name": "NVIDIA GeForce RTX 3080",
+    "compute_capability": [
+      8,
+      6
+    ],
+    "total_bytes": 12884377600
+  },
+  "compatibility_limit": "Torch device metadata does not prove CUDA12.4 standalone ABI/stream correctness"
+}

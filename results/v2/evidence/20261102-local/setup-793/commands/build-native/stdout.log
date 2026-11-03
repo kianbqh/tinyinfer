@@ -1,0 +1,19 @@
+[1/35] Building CXX object CMakeFiles/tinyinfer_backend.dir/backend/runtime.cpp.o
+[2/35] Building CXX object CMakeFiles/tinyinfer_backend.dir/kernels/src/cpu/softmax.cpp.o
+[3/35] Building CXX object CMakeFiles/tinyinfer_backend.dir/kernels/src/cpu/matmul.cpp.o
+[4/35] Building CXX object CMakeFiles/tinyinfer_backend.dir/kernels/src/cpu/layernorm.cpp.o
+[5/35] Building CUDA object CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/matmul.cu.o
+[6/35] Building CUDA object CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/softmax.cu.o
+[7/35] Building CUDA object CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/layernorm.cu.o
+[8/35] Building CUDA object CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/bench_api.cu.o
+[9/35] Building CUDA object CMakeFiles/tinyinfer_v2.dir/backend/runtime_v2.cu.o
+[10/35] Building CUDA object CMakeFiles/tinyinfer_v2.dir/kernels/src/cuda/tc/attention.cu.o
+FAILED: [code=2] CMakeFiles/tinyinfer_v2.dir/kernels/src/cuda/tc/attention.cu.o 
+/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/bin/nvcc -forward-unknown-to-host-compiler -DTI_V2_ONLY_GEMM_CONFIG=-1 -I/mnt/g/ResumeProject/platforms/tinyinfer/backend/include -I/mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cuda -isystem /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/include -O3 -DNDEBUG "--generate-code=arch=compute_86,code=[compute_86,sm_86]" -Xcompiler=-fPIC -O3 -allow-unsupported-compiler -MD -MT CMakeFiles/tinyinfer_v2.dir/kernels/src/cuda/tc/attention.cu.o -MF CMakeFiles/tinyinfer_v2.dir/kernels/src/cuda/tc/attention.cu.o.d -x cu -c /mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cuda/tc/attention.cu -o CMakeFiles/tinyinfer_v2.dir/kernels/src/cuda/tc/attention.cu.o
+/mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cuda/tc/attention.cu(28): error: identifier "CUDART_INF_F" is undefined
+    float m=-CUDART_INF_F,l=0.f;
+             ^
+
+1 error detected in the compilation of "/mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cuda/tc/attention.cu".
+[11/35] Building CUDA object CMakeFiles/tinyinfer_v2.dir/kernels/src/cuda/tc/gemm.cu.o
+ninja: build stopped: subcommand failed.

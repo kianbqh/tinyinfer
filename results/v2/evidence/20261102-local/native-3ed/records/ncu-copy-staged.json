@@ -1,0 +1,362 @@
+{
+  "status": "copied_bytes_verified_not_executed",
+  "source": "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/ncu-installed-source",
+  "target": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1",
+  "files": [
+    {
+      "relative_path": "target/linux-desktop-glibc_2_11_3-x64/TreeLauncherSubreaper",
+      "bytes": 166776,
+      "source_sha256": "fb961fcb1ccd32464d8cbae9962f27c498457218a177ca0837230a8f46ff20c8",
+      "copied_sha256": "fb961fcb1ccd32464d8cbae9962f27c498457218a177ca0837230a8f46ff20c8"
+    },
+    {
+      "relative_path": "target/linux-desktop-glibc_2_11_3-x64/TreeLauncherTargetLdPreloadHelper",
+      "bytes": 14336,
+      "source_sha256": "49b3cdad1e31bd664a3aa8c985b5b9bdefaace38068b507ef735221ecf284427",
+      "copied_sha256": "49b3cdad1e31bd664a3aa8c985b5b9bdefaace38068b507ef735221ecf284427"
+    },
+    {
+      "relative_path": "target/linux-desktop-glibc_2_11_3-x64/libInterceptorInjectionTarget.so",
+      "bytes": 244944,
+      "source_sha256": "f90a24bda7c0b0478443a520f41fcaed151fbe7b4140f14a5e90ebf61ee6ddd6",
+      "copied_sha256": "f90a24bda7c0b0478443a520f41fcaed151fbe7b4140f14a5e90ebf61ee6ddd6"
+    },
+    {
+      "relative_path": "target/linux-desktop-glibc_2_11_3-x64/libTreeLauncherPlaceholder.so",
+      "bytes": 14000,
+      "source_sha256": "e86d0db97534ddc17115e52fed2b88fa0d5bc66072568a1187d1c19e5dda2c9a",
+      "copied_sha256": "e86d0db97534ddc17115e52fed2b88fa0d5bc66072568a1187d1c19e5dda2c9a"
+    },
+    {
+      "relative_path": "target/linux-desktop-glibc_2_11_3-x64/libTreeLauncherTargetInjection.so",
+      "bytes": 2980648,
+      "source_sha256": "b379562186223e4413ef515184708535a3cd71e6ade236530f16c19ef9d3e668",
+      "copied_sha256": "b379562186223e4413ef515184708535a3cd71e6ade236530f16c19ef9d3e668"
+    },
+    {
+      "relative_path": "target/linux-desktop-glibc_2_11_3-x64/libTreeLauncherTargetUpdatePreloadInjection.so",
+      "bytes": 1392272,
+      "source_sha256": "f57dfaa888e33cf086ba14bcd33d72534f7878903da158da96432baa50c99be7",
+      "copied_sha256": "f57dfaa888e33cf086ba14bcd33d72534f7878903da158da96432baa50c99be7"
+    },
+    {
+      "relative_path": "target/linux-desktop-glibc_2_11_3-x64/libcuda-injection.so",
+      "bytes": 54154128,
+      "source_sha256": "c5118b8ea2a3cbb0e1eeb5e6a4af43a502767884d6a2cdc4bd1a5e930c04cddb",
+      "copied_sha256": "c5118b8ea2a3cbb0e1eeb5e6a4af43a502767884d6a2cdc4bd1a5e930c04cddb"
+    },
+    {
+      "relative_path": "target/linux-desktop-glibc_2_11_3-x64/libnvperf_host.so",
+      "bytes": 28125280,
+      "source_sha256": "b7b2c031747edac9c9577745c7c1a48b01e7b835d15785aceaffd4b5ce50c52f",
+      "copied_sha256": "b7b2c031747edac9c9577745c7c1a48b01e7b835d15785aceaffd4b5ce50c52f"
+    },
+    {
+      "relative_path": "target/linux-desktop-glibc_2_11_3-x64/libnvperf_target.so",
+      "bytes": 5555536,
+      "source_sha256": "a8f78c8dff043d84c5418742b146512bd98b305f085d08de9d71b733136d7e88",
+      "copied_sha256": "a8f78c8dff043d84c5418742b146512bd98b305f085d08de9d71b733136d7e88"
+    },
+    {
+      "relative_path": "target/linux-desktop-glibc_2_11_3-x64/ncu",
+      "bytes": 88968432,
+      "source_sha256": "acc7ba9df698dca6f97032ffdaa028b3d571b51b8c47db36576a86924956d96c",
+      "copied_sha256": "acc7ba9df698dca6f97032ffdaa028b3d571b51b8c47db36576a86924956d96c"
+    },
+    {
+      "relative_path": "sections/AchievedOccupancy.py",
+      "bytes": 4978,
+      "source_sha256": "06dbf14ed67fa2cdc97665807fd67d36118ba9f6a41ff0f62b92ee6a6d17b02d",
+      "copied_sha256": "06dbf14ed67fa2cdc97665807fd67d36118ba9f6a41ff0f62b92ee6a6d17b02d"
+    },
+    {
+      "relative_path": "sections/C2CLink.section",
+      "bytes": 948,
+      "source_sha256": "d34d958ec216cfb3ddfec791685da7810d4b45149dbb0ff76646ae8da3779729",
+      "copied_sha256": "d34d958ec216cfb3ddfec791685da7810d4b45149dbb0ff76646ae8da3779729"
+    },
+    {
+      "relative_path": "sections/CPIStall.py",
+      "bytes": 21459,
+      "source_sha256": "13eadb7dcbbfc8f7a85e9d65c790cde02a02b67a2a350ad086c4c20f20fe8703",
+      "copied_sha256": "13eadb7dcbbfc8f7a85e9d65c790cde02a02b67a2a350ad086c4c20f20fe8703"
+    },
+    {
+      "relative_path": "sections/Compute.py",
+      "bytes": 2113,
+      "source_sha256": "f6f53cbcea735b2a4d451f8017b28d8bca6da995ba8c0a9c32216466b498ab72",
+      "copied_sha256": "f6f53cbcea735b2a4d451f8017b28d8bca6da995ba8c0a9c32216466b498ab72"
+    },
+    {
+      "relative_path": "sections/ComputeWorkloadAnalysis.section",
+      "bytes": 9025,
+      "source_sha256": "336c70d8c3a9d5aab9caadb5e9f3154cb63389ac39ab7a7a9b2b9fe382506849",
+      "copied_sha256": "336c70d8c3a9d5aab9caadb5e9f3154cb63389ac39ab7a7a9b2b9fe382506849"
+    },
+    {
+      "relative_path": "sections/FPInstructions.py",
+      "bytes": 6466,
+      "source_sha256": "cf91ab5cacf5ea3aa2aff8e6e9aba2c727c8c65d73fafc17f836e9edfcf73b1d",
+      "copied_sha256": "cf91ab5cacf5ea3aa2aff8e6e9aba2c727c8c65d73fafc17f836e9edfcf73b1d"
+    },
+    {
+      "relative_path": "sections/HighPipeUtilization.py",
+      "bytes": 17550,
+      "source_sha256": "bfdbbc269a5229aa77d78ddf8f0eedaf55224a6f482a5e82849db050ae5a504c",
+      "copied_sha256": "bfdbbc269a5229aa77d78ddf8f0eedaf55224a6f482a5e82849db050ae5a504c"
+    },
+    {
+      "relative_path": "sections/InstructionStatistics.section",
+      "bytes": 2041,
+      "source_sha256": "2dad2e34555acc7fe11d674cb576bad757ab4bda501751912a6f7ef1aa958943",
+      "copied_sha256": "2dad2e34555acc7fe11d674cb576bad757ab4bda501751912a6f7ef1aa958943"
+    },
+    {
+      "relative_path": "sections/IssueSlotUtilization.py",
+      "bytes": 5778,
+      "source_sha256": "56760bc31cba3cb73168bc23a4f213f9f594ace675403d1be1323bc5636d8fee",
+      "copied_sha256": "56760bc31cba3cb73168bc23a4f213f9f594ace675403d1be1323bc5636d8fee"
+    },
+    {
+      "relative_path": "sections/LaunchStatistics.py",
+      "bytes": 8275,
+      "source_sha256": "fd2a44616a40b357946208cd6ccf2add8e83b8167c4789a51eb5ac7ca3d6d458",
+      "copied_sha256": "fd2a44616a40b357946208cd6ccf2add8e83b8167c4789a51eb5ac7ca3d6d458"
+    },
+    {
+      "relative_path": "sections/LaunchStatistics.section",
+      "bytes": 2194,
+      "source_sha256": "4c26de70db11ff43330e8e30a1b68d53dedcb88f2a3a0e376b51624b8a36fd08",
+      "copied_sha256": "4c26de70db11ff43330e8e30a1b68d53dedcb88f2a3a0e376b51624b8a36fd08"
+    },
+    {
+      "relative_path": "sections/Memory.py",
+      "bytes": 2583,
+      "source_sha256": "feeaaac120001ee5a1a574f220fcfe645b8d3969daa7258bf0809429c85ea8a5",
+      "copied_sha256": "feeaaac120001ee5a1a574f220fcfe645b8d3969daa7258bf0809429c85ea8a5"
+    },
+    {
+      "relative_path": "sections/MemoryApertureUsage.py",
+      "bytes": 7542,
+      "source_sha256": "1f0723306a72e72cb6c174a3b97c7c8dddc1e8f84b450e82a83207f472a2dea4",
+      "copied_sha256": "1f0723306a72e72cb6c174a3b97c7c8dddc1e8f84b450e82a83207f472a2dea4"
+    },
+    {
+      "relative_path": "sections/MemoryCacheAccessPattern.py",
+      "bytes": 16475,
+      "source_sha256": "af8b197295ad9240fa81ded3abdbef562f78573edc7866f98704de263f687b87",
+      "copied_sha256": "af8b197295ad9240fa81ded3abdbef562f78573edc7866f98704de263f687b87"
+    },
+    {
+      "relative_path": "sections/MemoryL2Compression.py",
+      "bytes": 7581,
+      "source_sha256": "aa9a77b731197af7772bb31913b668c4aa394c6052f7c23b7c13ddb7750d9523",
+      "copied_sha256": "aa9a77b731197af7772bb31913b668c4aa394c6052f7c23b7c13ddb7750d9523"
+    },
+    {
+      "relative_path": "sections/MemoryWorkloadAnalysis.section",
+      "bytes": 1818,
+      "source_sha256": "6364f19ab38f0eda544133a283ca585517cf6af6f2552b02f253e8e542306a49",
+      "copied_sha256": "6364f19ab38f0eda544133a283ca585517cf6af6f2552b02f253e8e542306a49"
+    },
+    {
+      "relative_path": "sections/MemoryWorkloadAnalysis_Chart.section",
+      "bytes": 1883,
+      "source_sha256": "e4c6cdad7b1173344b67cdd6ffa33bdc4755c58efa33ddb7ef9d61695dd9e12d",
+      "copied_sha256": "e4c6cdad7b1173344b67cdd6ffa33bdc4755c58efa33ddb7ef9d61695dd9e12d"
+    },
+    {
+      "relative_path": "sections/MemoryWorkloadAnalysis_Tables.section",
+      "bytes": 3978,
+      "source_sha256": "abe53ac6c15184d39cdb907c150d828ad676918b9658c2d3ba32b75783c4b2ff",
+      "copied_sha256": "abe53ac6c15184d39cdb907c150d828ad676918b9658c2d3ba32b75783c4b2ff"
+    },
+    {
+      "relative_path": "sections/NumaAffinity.section",
+      "bytes": 975,
+      "source_sha256": "a3080bb34cce2585fde1047498a924fab3708af01c10f6a7e2df4eb21fb6b4c0",
+      "copied_sha256": "a3080bb34cce2585fde1047498a924fab3708af01c10f6a7e2df4eb21fb6b4c0"
+    },
+    {
+      "relative_path": "sections/NvRules.py",
+      "bytes": 113975,
+      "source_sha256": "e9d95de9d2d749c6dfaec5b0471c8e6a0a7a62dfbe81b82074dd2496498d19ae",
+      "copied_sha256": "e9d95de9d2d749c6dfaec5b0471c8e6a0a7a62dfbe81b82074dd2496498d19ae"
+    },
+    {
+      "relative_path": "sections/Nvlink.section",
+      "bytes": 4587,
+      "source_sha256": "fc9d7ba9b23d678425224ace212a99fa46f3ed73ceaee4c5ccff0f7a1bfeb414",
+      "copied_sha256": "fc9d7ba9b23d678425224ace212a99fa46f3ed73ceaee4c5ccff0f7a1bfeb414"
+    },
+    {
+      "relative_path": "sections/Nvlink_Tables.section",
+      "bytes": 451,
+      "source_sha256": "36b3ffbc338078513657152cf7358a3ed7a215f2a33b49881940a97902217c12",
+      "copied_sha256": "36b3ffbc338078513657152cf7358a3ed7a215f2a33b49881940a97902217c12"
+    },
+    {
+      "relative_path": "sections/Nvlink_Topology.section",
+      "bytes": 410,
+      "source_sha256": "54195e7412f8c649f3c53d2d65f7c557a2cd13870fcc52be8adf27c71df68c66",
+      "copied_sha256": "54195e7412f8c649f3c53d2d65f7c557a2cd13870fcc52be8adf27c71df68c66"
+    },
+    {
+      "relative_path": "sections/Occupancy.section",
+      "bytes": 5512,
+      "source_sha256": "60923f104984b71d7b1b94344ebe78e00951c7fcb9096106f53f3b7f44fe46e9",
+      "copied_sha256": "60923f104984b71d7b1b94344ebe78e00951c7fcb9096106f53f3b7f44fe46e9"
+    },
+    {
+      "relative_path": "sections/PCSamplingData.py",
+      "bytes": 2825,
+      "source_sha256": "5431db918106debc7f94a2855d8e33383cfbfb3aa4872a60caa841f5aff9d7ff",
+      "copied_sha256": "5431db918106debc7f94a2855d8e33383cfbfb3aa4872a60caa841f5aff9d7ff"
+    },
+    {
+      "relative_path": "sections/PmSampling.section",
+      "bytes": 14889,
+      "source_sha256": "1f01a7e1e2690dab72be99f556022d5e6bc5d2497e7ea1349c421beef53a05b6",
+      "copied_sha256": "1f01a7e1e2690dab72be99f556022d5e6bc5d2497e7ea1349c421beef53a05b6"
+    },
+    {
+      "relative_path": "sections/PmSampling_WarpStates.section",
+      "bytes": 8116,
+      "source_sha256": "fc897d7fab9ae24c87e6a00fd5d55c15975146f392bd970700c2c8c740f46e73",
+      "copied_sha256": "fc897d7fab9ae24c87e6a00fd5d55c15975146f392bd970700c2c8c740f46e73"
+    },
+    {
+      "relative_path": "sections/RequestedMetrics.py",
+      "bytes": 9581,
+      "source_sha256": "7fc365f08512410960751d89692baa5aa5e55018b5906076a565b7956e669dbf",
+      "copied_sha256": "7fc365f08512410960751d89692baa5aa5e55018b5906076a565b7956e669dbf"
+    },
+    {
+      "relative_path": "sections/SchedulerStatistics.section",
+      "bytes": 2396,
+      "source_sha256": "3c78d2bc0f22b0780f15402b8241f275c5d106dc4a38307368537acd7cf81e89",
+      "copied_sha256": "3c78d2bc0f22b0780f15402b8241f275c5d106dc4a38307368537acd7cf81e89"
+    },
+    {
+      "relative_path": "sections/SharedMemoryConflicts.py",
+      "bytes": 6362,
+      "source_sha256": "3ddfce378472a8bd8c7a692e37ae157ae797767617429cf8c6577912e557c5ef",
+      "copied_sha256": "3ddfce378472a8bd8c7a692e37ae157ae797767617429cf8c6577912e557c5ef"
+    },
+    {
+      "relative_path": "sections/SlowPipeLimiter.py",
+      "bytes": 5287,
+      "source_sha256": "c37bef72c8c310727f8e8a8f95a40e47821a9246bb290e1dba2f9dfe4a9fede6",
+      "copied_sha256": "c37bef72c8c310727f8e8a8f95a40e47821a9246bb290e1dba2f9dfe4a9fede6"
+    },
+    {
+      "relative_path": "sections/SourceCounters.section",
+      "bytes": 17136,
+      "source_sha256": "9d6e90a8a2bd95a1086f4c024132650195bbb091d13bd2fc774aac05b693df82",
+      "copied_sha256": "9d6e90a8a2bd95a1086f4c024132650195bbb091d13bd2fc774aac05b693df82"
+    },
+    {
+      "relative_path": "sections/SpeedOfLight.py",
+      "bytes": 8788,
+      "source_sha256": "546ce70fab8455d5d09d6c9c1dd3ee8d79cb079583cfb410d9ce76745913a763",
+      "copied_sha256": "546ce70fab8455d5d09d6c9c1dd3ee8d79cb079583cfb410d9ce76745913a763"
+    },
+    {
+      "relative_path": "sections/SpeedOfLight.section",
+      "bytes": 3865,
+      "source_sha256": "fd72e6755dbe9a0ad2a3064bcef84dfd90713a05e84fba5c96cb935f79c84b68",
+      "copied_sha256": "fd72e6755dbe9a0ad2a3064bcef84dfd90713a05e84fba5c96cb935f79c84b68"
+    },
+    {
+      "relative_path": "sections/SpeedOfLight_HierarchicalDoubleRooflineChart.section",
+      "bytes": 13141,
+      "source_sha256": "0f74c8222c6caace14e52cdcf60673c2d68c5b77709c72c01b6de2af055bc020",
+      "copied_sha256": "0f74c8222c6caace14e52cdcf60673c2d68c5b77709c72c01b6de2af055bc020"
+    },
+    {
+      "relative_path": "sections/SpeedOfLight_HierarchicalHalfRooflineChart.section",
+      "bytes": 13133,
+      "source_sha256": "3fd5841987bf5bbef853d67e6510f087aabdf6fb3c21e06ae6211dff0d9a4db6",
+      "copied_sha256": "3fd5841987bf5bbef853d67e6510f087aabdf6fb3c21e06ae6211dff0d9a4db6"
+    },
+    {
+      "relative_path": "sections/SpeedOfLight_HierarchicalSingleRooflineChart.section",
+      "bytes": 13141,
+      "source_sha256": "bee6894a77ce596744b1a436563e89d1a537c7902c830247a30f29e54b835767",
+      "copied_sha256": "bee6894a77ce596744b1a436563e89d1a537c7902c830247a30f29e54b835767"
+    },
+    {
+      "relative_path": "sections/SpeedOfLight_HierarchicalTensorRooflineChart.section",
+      "bytes": 11400,
+      "source_sha256": "aa625ad01e9d20d79633c43b55c445455eab9a15da8e97f02a3579381eaa8c45",
+      "copied_sha256": "aa625ad01e9d20d79633c43b55c445455eab9a15da8e97f02a3579381eaa8c45"
+    },
+    {
+      "relative_path": "sections/SpeedOfLight_Roofline.py",
+      "bytes": 7571,
+      "source_sha256": "4a59f59bc2365bdab352f83c47d00f8a6b2ddd38e5e96f5d712b8aa4ca293a0a",
+      "copied_sha256": "4a59f59bc2365bdab352f83c47d00f8a6b2ddd38e5e96f5d712b8aa4ca293a0a"
+    },
+    {
+      "relative_path": "sections/SpeedOfLight_RooflineChart.section",
+      "bytes": 9129,
+      "source_sha256": "aa2e015a035fcaf400b71fc7a1a95be7c7ec471e278aeef1dc056ea4016c41bf",
+      "copied_sha256": "aa2e015a035fcaf400b71fc7a1a95be7c7ec471e278aeef1dc056ea4016c41bf"
+    },
+    {
+      "relative_path": "sections/TheoreticalOccupancy.py",
+      "bytes": 5442,
+      "source_sha256": "17c5be56a1be7bbcf02b76975589c88fe7b2653d7e074d12d1e92aa6e42f5ef0",
+      "copied_sha256": "17c5be56a1be7bbcf02b76975589c88fe7b2653d7e074d12d1e92aa6e42f5ef0"
+    },
+    {
+      "relative_path": "sections/ThreadDivergence.py",
+      "bytes": 5074,
+      "source_sha256": "58e84dfccaea00a5c4666f9a5dc2b00a108c44bbe18246c9128fa75577cc0aba",
+      "copied_sha256": "58e84dfccaea00a5c4666f9a5dc2b00a108c44bbe18246c9128fa75577cc0aba"
+    },
+    {
+      "relative_path": "sections/UncoalescedAccess.chart",
+      "bytes": 161,
+      "source_sha256": "93beab947b9f54ff613a9f739c6862e6c15d01f5acf1fe974af19f321aa1aa40",
+      "copied_sha256": "93beab947b9f54ff613a9f739c6862e6c15d01f5acf1fe974af19f321aa1aa40"
+    },
+    {
+      "relative_path": "sections/UncoalescedAccess.py",
+      "bytes": 7096,
+      "source_sha256": "8a8b31581782a0e1f563bbe689934ce359590b5d76f1ee0e733034f4763e1c2e",
+      "copied_sha256": "8a8b31581782a0e1f563bbe689934ce359590b5d76f1ee0e733034f4763e1c2e"
+    },
+    {
+      "relative_path": "sections/UncoalescedSharedAccess.chart",
+      "bytes": 143,
+      "source_sha256": "05cdaf18c975f32a5dbc482393970eb499c6968909da14f8a5ae851073faf99c",
+      "copied_sha256": "05cdaf18c975f32a5dbc482393970eb499c6968909da14f8a5ae851073faf99c"
+    },
+    {
+      "relative_path": "sections/UncoalescedSharedAccess.py",
+      "bytes": 7432,
+      "source_sha256": "ef6de26899fb3ef3cf390ff537a903427c5bb9693e95d059614d2a893116139a",
+      "copied_sha256": "ef6de26899fb3ef3cf390ff537a903427c5bb9693e95d059614d2a893116139a"
+    },
+    {
+      "relative_path": "sections/WarpStateStatistics.section",
+      "bytes": 4671,
+      "source_sha256": "a654480f0ac77667c1aceae95a07d12e1e2d4e3fc0cd3a4fc86085947c4f20e2",
+      "copied_sha256": "a654480f0ac77667c1aceae95a07d12e1e2d4e3fc0cd3a4fc86085947c4f20e2"
+    },
+    {
+      "relative_path": "sections/WorkloadDistribution.section",
+      "bytes": 3661,
+      "source_sha256": "f2954c8b47113d8f75146cf4d33fe8468ad4fdd60b7810581f5e36264d53be65",
+      "copied_sha256": "f2954c8b47113d8f75146cf4d33fe8468ad4fdd60b7810581f5e36264d53be65"
+    },
+    {
+      "relative_path": "sections/WorkloadImbalance.py",
+      "bytes": 8905,
+      "source_sha256": "840150405b683444a11e6c7188469904cadbc0c8aaad2039a2fce818a26e5e53",
+      "copied_sha256": "840150405b683444a11e6c7188469904cadbc0c8aaad2039a2fce818a26e5e53"
+    }
+  ],
+  "bytes": 182054294
+}

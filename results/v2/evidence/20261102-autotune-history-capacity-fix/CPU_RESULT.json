@@ -1,0 +1,39 @@
+{
+  "status": "preimage_fails_postimage_passes",
+  "interpreter": "/usr/bin/python3",
+  "results": [
+    {
+      "stage": "preimage",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/proposer-history-capacity-fix/run_stage.py",
+        "--stage",
+        "preimage"
+      ],
+      "started_timestamp": "2026-11-02T23:42:10.507991+00:00",
+      "finished_timestamp": "2026-11-02T23:42:12.899652+00:00",
+      "wall_seconds": 2.391658409993397,
+      "exit_code": 1,
+      "stdout_sha256": "a84ee0845b74989ac6ccf19f90db69e5d344371fc7d4b80aa5e6dfc5674dcbba",
+      "stderr_sha256": "20bcf3da3b03041cec469f0595d4dba8f853a489353ef5026a8a2a4010eba290"
+    },
+    {
+      "stage": "postimage",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/proposer-history-capacity-fix/run_stage.py",
+        "--stage",
+        "postimage"
+      ],
+      "started_timestamp": "2026-11-02T23:42:12.900561+00:00",
+      "finished_timestamp": "2026-11-02T23:42:14.726935+00:00",
+      "wall_seconds": 1.8263796750106849,
+      "exit_code": 0,
+      "stdout_sha256": "f4accefcbcaa7400d0d0c75d98790a03b0bc230e8b33b5b24fdacb475cb7f9d7",
+      "stderr_sha256": "68e25c99d1f1a00077d53166b67eba5a5485b83fea0c3565c6d46a06653e34b9"
+    }
+  ],
+  "scope": "CPU fixtures only; no model, tokenizer, GPU or build"
+}

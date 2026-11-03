@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-11-02T23:00:30.173344+00:00",
+  "orchestration_receipt": {
+    "status": "failed",
+    "pid": 366477,
+    "exit_code": -15,
+    "finished_at": "2026-11-02T23:00:07.448069+00:00",
+    "wall_seconds": 511.9621223509894
+  },
+  "known_pids_present": [],
+  "gpu_compute_apps_stdout": "",
+  "gpu_query_exit_code": 0,
+  "overall_outcome": "interrupted_interface_failure_not_completed"
+}

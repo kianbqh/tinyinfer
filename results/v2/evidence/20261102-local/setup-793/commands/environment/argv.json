@@ -1,0 +1,6 @@
+[
+  "/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+  "-B",
+  "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/environment_probe_REVIEW3.py",
+  "--execute"
+]

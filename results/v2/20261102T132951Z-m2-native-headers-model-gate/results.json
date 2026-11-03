@@ -1,0 +1,409 @@
+{
+  "status": "passed",
+  "timestamp": "2026-11-02T13:53:27.785085+00:00",
+  "argv": [
+    "/mnt/g/ResumeProject/platforms/tinyinfer/llm/gpu_correctness.py",
+    "--library",
+    "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_llm.so",
+    "--build-receipt",
+    "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/model-build.json",
+    "--fp16-manifest",
+    "/opt/codex-resume/all-modules-v2/m2/weights/20261102T132951Z-m2-native-headers-fp16/manifest.json",
+    "--int8-manifest",
+    "/opt/codex-resume/all-modules-v2/m2/weights/20261102T132951Z-m2-native-headers-int8/manifest.json",
+    "--hf-directory",
+    "/opt/codex-resume/all-modules-v2/m2/weights/hf-gpt2",
+    "--config",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/llm/configs/evaluation.json",
+    "--frozen-tokens",
+    "/opt/codex-resume/all-modules-v2/m2/data/frozen-wt2-20261102T132951Z-m2-native-headers.json",
+    "--kernel-gate",
+    "results/v2/20261102T132951Z-m2-native-headers-kernel-gate/correctness.json",
+    "--output",
+    "results/v2/20261102T132951Z-m2-native-headers-model-gate"
+  ],
+  "environment": "WSL2",
+  "models": {
+    "fp16": {
+      "batched_vs_single_max_abs": 0.0,
+      "cached_vs_prefix_max_abs": 0.0,
+      "reset_isolation_max_abs": 0.0,
+      "invalid_batches_transactional": true,
+      "scoring_public_slots_unchanged": true,
+      "small_window_score": {
+        "sum_nll": 165.56376592060133,
+        "target_count": 32,
+        "position_nll": [
+          0.0,
+          6.875428823720611,
+          12.053137372791312,
+          4.114396637364891,
+          6.8675692892827485,
+          3.2456869491465454,
+          6.143061133145231,
+          5.812813854775513,
+          8.87641023439835,
+          9.491686098405268,
+          0.0009860206538974126,
+          13.72686195324475,
+          0.1850624588038201,
+          0.0026711258308580454,
+          0.0005640116913525617,
+          1.472900722233632,
+          2.1030386440475013,
+          3.698155862760558,
+          6.334675238897589,
+          10.774682560726617,
+          3.1915681866522334,
+          1.4414207499833473,
+          5.751977031152904,
+          1.3572055567880312,
+          3.4404444370161116,
+          0.68433321652806,
+          5.356289452055734,
+          1.7413545028040573,
+          7.109371536344369,
+          11.518498690244968,
+          6.740581690698015,
+          5.19941632175383,
+          10.251515556658632
+        ]
+      },
+      "masked_window_score": {
+        "sum_nll": 124.45818225124938,
+        "target_count": 22,
+        "position_nll": [
+          0.0,
+          6.875428823720611,
+          12.053137372791312,
+          0.0,
+          6.8675692892827485,
+          3.2456869491465454,
+          0.0,
+          5.812813854775513,
+          8.87641023439835,
+          0.0,
+          0.0009860206538974126,
+          13.72686195324475,
+          0.0,
+          0.0026711258308580454,
+          0.0005640116913525617,
+          0.0,
+          2.1030386440475013,
+          3.698155862760558,
+          0.0,
+          10.774682560726617,
+          3.1915681866522334,
+          0.0,
+          5.751977031152904,
+          1.3572055567880312,
+          0.0,
+          0.68433321652806,
+          5.356289452055734,
+          0.0,
+          7.109371536344369,
+          11.518498690244968,
+          0.0,
+          5.19941632175383,
+          10.251515556658632
+        ]
+      },
+      "mixed_greedy": {
+        "tokens": [
+          [
+            198,
+            198,
+            1
+          ],
+          [
+            416
+          ]
+        ],
+        "output_lengths": [
+          3,
+          1
+        ],
+        "ttft_ms": [
+          5.56839,
+          5.56839
+        ],
+        "total_ms": [
+          16.018179,
+          5.56839
+        ]
+      },
+      "mixed_greedy_matches_independent": true,
+      "hf_last_logits_max_abs": 0.13155364990234375,
+      "hf_last_logits_mean_abs": 0.05303998291492462,
+      "hf_greedy_agreement": 1.0,
+      "actual_call_trace": {
+        "forward_calls": 16,
+        "embedding": 16,
+        "gemm_fp16": 785,
+        "gemm_int8": 0,
+        "layernorm": 400,
+        "gelu": 192,
+        "attention": 192,
+        "residual": 384,
+        "kv_scatter_gather": 192,
+        "lm_head": 17,
+        "argmax": 13,
+        "nll": 4
+      },
+      "loaded_native_libraries": [
+        "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_backend.so",
+        "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_llm.so",
+        "/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib/libcudart.so.12.4.127",
+        "/opt/codex-resume/portfolio-ml/venv/lib/python3.12/site-packages/nvidia/cu13/lib/libcudart.so.13"
+      ]
+    },
+    "int8": {
+      "batched_vs_single_max_abs": 0.0,
+      "cached_vs_prefix_max_abs": 0.0,
+      "reset_isolation_max_abs": 0.0,
+      "invalid_batches_transactional": true,
+      "scoring_public_slots_unchanged": true,
+      "small_window_score": {
+        "sum_nll": 164.69382786620045,
+        "target_count": 32,
+        "position_nll": [
+          0.0,
+          6.873775024563095,
+          12.404695909860692,
+          4.058982441827226,
+          6.5766667546536866,
+          3.0321769113855197,
+          6.247397095563855,
+          5.66481900660559,
+          8.608380575296117,
+          9.262338684710556,
+          0.001175042111270841,
+          14.275360537004332,
+          0.17788246664292018,
+          0.003246245783515178,
+          0.0003740734250357036,
+          1.2776834374525663,
+          2.153800109767971,
+          3.4892430343352174,
+          6.233508688727838,
+          10.821178273611594,
+          2.9144180704488747,
+          1.337988022573306,
+          6.094248350636548,
+          1.6114780094644487,
+          3.20299470557741,
+          0.6728896786721208,
+          5.573504849190485,
+          2.024466979808892,
+          6.804191263925304,
+          11.40359455481503,
+          6.8180008129854315,
+          4.833193020658385,
+          10.240175234115611
+        ]
+      },
+      "masked_window_score": {
+        "sum_nll": 124.05258453033045,
+        "target_count": 22,
+        "position_nll": [
+          0.0,
+          6.873775024563095,
+          12.404695909860692,
+          0.0,
+          6.5766667546536866,
+          3.0321769113855197,
+          0.0,
+          5.66481900660559,
+          8.608380575296117,
+          0.0,
+          0.001175042111270841,
+          14.275360537004332,
+          0.0,
+          0.003246245783515178,
+          0.0003740734250357036,
+          0.0,
+          2.153800109767971,
+          3.4892430343352174,
+          0.0,
+          10.821178273611594,
+          2.9144180704488747,
+          0.0,
+          6.094248350636548,
+          1.6114780094644487,
+          0.0,
+          0.6728896786721208,
+          5.573504849190485,
+          0.0,
+          6.804191263925304,
+          11.40359455481503,
+          0.0,
+          4.833193020658385,
+          10.240175234115611
+        ]
+      },
+      "mixed_greedy": {
+        "tokens": [
+          [
+            198,
+            198,
+            1
+          ],
+          [
+            416
+          ]
+        ],
+        "output_lengths": [
+          3,
+          1
+        ],
+        "ttft_ms": [
+          7.129929,
+          7.129929
+        ],
+        "total_ms": [
+          22.333765,
+          7.129929
+        ]
+      },
+      "mixed_greedy_matches_independent": true,
+      "hf_last_logits_max_abs": 2.04534912109375,
+      "hf_last_logits_mean_abs": 0.6318784952163696,
+      "hf_greedy_agreement": 1.0,
+      "actual_call_trace": {
+        "forward_calls": 16,
+        "embedding": 16,
+        "gemm_fp16": 0,
+        "gemm_int8": 785,
+        "layernorm": 400,
+        "gelu": 192,
+        "attention": 192,
+        "residual": 384,
+        "kv_scatter_gather": 192,
+        "lm_head": 17,
+        "argmax": 13,
+        "nll": 4
+      },
+      "loaded_native_libraries": [
+        "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_backend.so",
+        "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_llm.so",
+        "/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib/libcudart.so.12.4.127",
+        "/opt/codex-resume/portfolio-ml/venv/lib/python3.12/site-packages/nvidia/cu13/lib/libcudart.so.13"
+      ]
+    }
+  },
+  "git": {
+    "argv": [
+      "/opt/codex-resume/all-modules-v2/m1a/tools/git-native/usr/bin/git",
+      "-C",
+      "/mnt/g/ResumeProject/platforms/tinyinfer",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "3edcfebd24d5efbf5da81cda13f2bf684031b35e\n",
+    "stderr": ""
+  },
+  "source_sha256": {
+    "CMakeLists.txt": "db0c115bef4fe0111b0ae89412cb232bc969ce91cc76f6a9bb59c945e37dc7b0",
+    "backend/host_codec/CMakeLists.txt": "3389bb92826e119788cc642219e23f7be84872532639407a079df31d6dc39c43",
+    "backend/host_codec.cpp": "eccf21660ee7e84e93cf7ff5663775b760afa782341e391b5552889cbadfbd19",
+    "backend/include/tinyinfer_backend.h": "622b340666f7f6749325b56fd6da06536106253f7faa232c5713a94cec738841",
+    "backend/include/tinyinfer_backend_v2.h": "7b9b63c52b22587924a89687b58911b0759808d84242bc96ae27d273b41aaacd",
+    "backend/include/tinyinfer_host_codec.h": "e0731deeb9842d74938f4b663e7c73669cf9fde2be864ac3c7de25fb0ce1358f",
+    "backend/include/tinyinfer_host_validation.hpp": "30b2f99d98418959a434936d1fa8d704faaccc5ee01c037180b488177b5e32ea",
+    "backend/include/tinyinfer_quantization_scalar.h": "5cce4305bfc36baac1b7ce369529b6f4db42931cf64626fc7da42084239b08f7",
+    "backend/runtime.cpp": "509f824730a061857efc3a9388a97ec31381176ec75a8c9a23020a88e28c459e",
+    "backend/runtime_v2.cu": "3616b5117022217d5ec138e244bec95376c0b4f82ebfe0f2acfebc0582782008",
+    "bench/v2/kernels/profile.cu": "d021519bf632719b31c96dd7777eab0a5d1896d3705ae7de40bc6cc1d3984f53",
+    "cmake/HostCodec.cmake": "4012e47011e09ba2b53466db80b0823b4ec38fa9a8cf16e86104d511a3076597",
+    "cmake/V2Kernels.cmake": "f279d80aba5ae5e11681019ff84c4f894cead9c1914cdaaa3e79dda50acb057e",
+    "cmake/V2LLM.cmake": "38f5cb5dad94d0921caf5c793851e9695b56e762461c7d73a94a20a16d9f65de",
+    "cmake/V2Server.cmake": "473cee99124969cc9d38cbfe5a4691b0630929dd330e624148e786fbf0999f48",
+    "kernels/src/cuda/tc/README.md": "403340f798455c17c6bbfbc9b0e51fd4ca217171aa1763aa130da2b87fc365e9",
+    "kernels/src/cuda/tc/attention.cu": "7cb99aef148213352b6cf7eff7783e6a2c62bcd1a48a2294b8b10afa81954a66",
+    "kernels/src/cuda/tc/catalog.cuh": "e494ab87e879f88517a3ee26fd7a9f8af2399600f0fea53e4d47a75c21337f15",
+    "kernels/src/cuda/tc/elementwise.cu": "0eb57bea34b7f321c1e639d0778010d835c0707962908f5e076778145e0110b2",
+    "kernels/src/cuda/tc/gemm.cu": "3bdb812e4b9455a7f972513e96c644dc4e91392dca27eade0d85f21158a19535",
+    "kernels/src/cuda/tc/launchers.cuh": "1fe42cce9ff4bfd6742983a4e0b65418d4d5aa39280f221f2652dd413a43ebd6",
+    "llm/__init__.py": "1dfe5f5fab353cb98f79c9004b37080b09da11fb6155b15549c646cebc69807d",
+    "llm/build_receipt.py": "b0e5ea5bd6c0c9c7d6e572dfefab8caa90defab849f0c60f868a5b19881d054b",
+    "llm/cache_reference.py": "efe31861acfe834bbc85902b13b399dfb19f1fd9211ac6d5266122a321e581b6",
+    "llm/configs/evaluation.json": "b3dde3a6e38318cfbb4bbf35507575d0ae04e47de2eb48305d5ce66ed15bb1ee",
+    "llm/evaluate.py": "fdc1f10b96e79d455ed99854d3ecc2bab9055ffa02ac65c8ab7395283ebe6128",
+    "llm/export_weights.py": "898d2feec69ae713fabace2c23d9a684d4f1dd597ebf577e2edb158c3a2e96d0",
+    "llm/freeze_tokens.py": "a165a41b4ac57a2706de1b98b7f2099da206035e961f5ad32c73cfd597cdeb76",
+    "llm/gpu_correctness.py": "03be3b01786813fded6409482c45828bd4fdadac9cfa312fb31c957f42fe1045",
+    "llm/host_codec.py": "ae1b3e4f06354dd8523111f05b94369ca597c7146c2f10c17807dc98ba60004b",
+    "llm/include/tinyinfer_llm.h": "c288dc76f9578fa3e40da6a4ab23d1ca1e98af251e167074bbb3039cd34bb97c",
+    "llm/native_ops.py": "944b2e11054aace705d7597d674352d1351cef06d149a7e54bad80c3ca41902f",
+    "llm/protocol.py": "e1718fe0a23f39641469fbb55bdaea30ff68ee78fdcc3541f8ef2fde7a251f6a",
+    "llm/quantization.py": "9b5509ad9f2f28c5c2d411c62f70730734c8cb9c84c8205e6da406406aed4091",
+    "llm/runtime.py": "4b1e622ba129940a23779b63724554db1d498f1695153e07cd405556f162fc88",
+    "llm/src/artifact.hpp": "b66af831eebb872d0e66caabaf3ef010b1d7e336be2f847acf051f834a6c08e3",
+    "llm/src/runtime.cu": "c9782e9f28ebfbd86166f8b39e54b0dcb12326c3dded37fd03ec45eb80ca4793",
+    "llm/tests/test_contracts.py": "b9f0de354b698265c9bfeaa301f339851b54cc62f9de2571e65941800b2c98f1"
+  },
+  "library_sha256": "13507a9f7e01d314fa5c21201c11d426f88abd811c841390c4bcbd75c5d199c6",
+  "input_sha256": {
+    "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_llm.so": "13507a9f7e01d314fa5c21201c11d426f88abd811c841390c4bcbd75c5d199c6",
+    "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_backend.so": "897434e4f360b1bbe87926e22f668f5bf28ec100443153fd9a8827cb7a5a7d6c",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/llm/configs/evaluation.json": "b3dde3a6e38318cfbb4bbf35507575d0ae04e47de2eb48305d5ce66ed15bb1ee",
+    "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/model-build.json": "66d29cc92ef230cfe5248c54372b153e8f5b8c6a2fbc1c02941ebe4c5d8d9873",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T132951Z-m2-native-headers-kernel-gate/correctness.json": "db7195bc162643a2a8850952bdb061e224943ea968adfbc14cd0a645ff3f3b84",
+    "/opt/codex-resume/all-modules-v2/m2/data/frozen-wt2-20261102T132951Z-m2-native-headers.json": "16c317beb4ddbb239abb7ddec15ba557fc2c05d8c36fd8446fcc7d92a8754d42",
+    "/opt/codex-resume/all-modules-v2/m2/weights/20261102T132951Z-m2-native-headers-fp16/manifest.json": "25c2e22d1fcf1d9ff4cdff053f254e8f2f7fe5edb440cec5ee8f2573a248e605",
+    "/opt/codex-resume/all-modules-v2/m2/weights/20261102T132951Z-m2-native-headers-int8/manifest.json": "64257aa6eac7cf451da6f83ce6d32a743e660fe3cff0cff9ea0a272bcd6a4394",
+    "/opt/codex-resume/all-modules-v2/m2/weights/20261102T132951Z-m2-native-headers-fp16/weights.bin": "bf7b3ab0516ae0fce69f18654bbc7ef80000b710f65efcf912270fb932659157",
+    "/opt/codex-resume/all-modules-v2/m2/weights/20261102T132951Z-m2-native-headers-int8/weights.bin": "08155ae9d9e1d635778d481fe9a450ec99c776264ea0cf74190d2578f01103dd"
+  },
+  "config_sha256": "13fb2c6f85c7da26f83b7ad13d6e0d9dcb3f5a8eab3ab86674baf6e3f011546a",
+  "frozen_token_ids_sha256": "1a9826daa2d0cb79a64a4b23b09812f2b895774c0bb604a1eb77cc552c6688e3",
+  "artifact_manifest_sha256": {
+    "fp16": "25c2e22d1fcf1d9ff4cdff053f254e8f2f7fe5edb440cec5ee8f2573a248e605",
+    "int8": "64257aa6eac7cf451da6f83ce6d32a743e660fe3cff0cff9ea0a272bcd6a4394"
+  },
+  "versions": {
+    "torch": "2.15.0",
+    "numpy": "2.5.4",
+    "transformers": "5.22.1",
+    "safetensors": "0.8.0"
+  },
+  "gpu": "NVIDIA GeForce RTX 3080",
+  "torch_cuda": "13.2",
+  "driver": {
+    "argv": [
+      "nvidia-smi",
+      "--query-gpu=driver_version",
+      "--format=csv,noheader"
+    ],
+    "exit_code": 0,
+    "stdout": "621.01\n",
+    "stderr": ""
+  },
+  "cpu": {
+    "argv": [
+      "lscpu"
+    ],
+    "exit_code": 0,
+    "stdout": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           39 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  20\nOn-line CPU(s) list:                     0-19\nVendor ID:                               GenuineIntel\nModel name:                              12th Gen Intel(R) Core(TM) i7-12700KF\nCPU family:                              6\nModel:                                   151\nThread(s) per core:                      2\nCore(s) per socket:                      10\nSocket(s):                               1\nStepping:                                2\nBogoMIPS:                                7219.20\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology tsc_reliable nonstop_tsc cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves avx_vnni vnmi umip waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize ibt flush_l1d arch_capabilities\nVirtualization:                          VT-x\nHypervisor vendor:                       Microsoft\nVirtualization type:                     full\nL1d cache:                               480 KiB (10 instances)\nL1i cache:                               320 KiB (10 instances)\nL2 cache:                                12.5 MiB (10 instances)\nL3 cache:                                25 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-19\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Mitigation; Aligned branch/return thunks\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Mitigation; Enhanced IBRS\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected\n",
+    "stderr": ""
+  },
+  "build_receipt_sha256": "66d29cc92ef230cfe5248c54372b153e8f5b8c6a2fbc1c02941ebe4c5d8d9873",
+  "kernel_gate_sha256": "db7195bc162643a2a8850952bdb061e224943ea968adfbc14cd0a645ff3f3b84",
+  "source_unchanged": true,
+  "end_git": {
+    "argv": [
+      "/opt/codex-resume/all-modules-v2/m1a/tools/git-native/usr/bin/git",
+      "-C",
+      "/mnt/g/ResumeProject/platforms/tinyinfer",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "3edcfebd24d5efbf5da81cda13f2bf684031b35e\n",
+    "stderr": ""
+  },
+  "inputs_unchanged": true,
+  "wall_seconds": 14.540588004005258,
+  "finished_at": "2026-11-02T13:53:42.325674+00:00"
+}

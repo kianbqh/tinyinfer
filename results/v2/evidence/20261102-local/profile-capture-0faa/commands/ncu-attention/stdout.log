@@ -1,0 +1,6 @@
+==WARNING== Note: Running with unmodified GPU clocks. If not controlled otherwise, profiling results may be inconsistent.
+==PROF== Connected to process 362587 (/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/profile_v2)
+==PROF== Profiling "void ti::v2::<unnamed>::online_attention<(int)64, (int)32>(const __half *, const __half *, const __half *, __half *, const int *, const int *, const int *, int, int, int, bool)": 0%....50%....100% - 8 passes
+{"status":"completed","operation":"attention","size":1024,"config":0,"head_dim":64,"launches":20}
+==PROF== Disconnected from process 362587
+==PROF== Report: /opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention.ncu-rep

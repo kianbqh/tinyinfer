@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "inputs": {
+    "ncu": "/opt/codex-resume/all-modules-v2/m2/tools/ncu-2024.1/target/linux-desktop-glibc_2_11_3-x64/ncu",
+    "version_receipt": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/commands/ncu-version/command.json",
+    "report": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/attention.ncu-rep"
+  },
+  "outputs": {}
+}

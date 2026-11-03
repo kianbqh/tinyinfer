@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "seed": 20261101,
+  "warmups": 10,
+  "repeats": 50,
+  "host_repeats": 20,
+  "gemm_sizes": [512, 1024, 2048, 4096],
+  "gemm_configs": [0, 1, 2],
+  "attention_lengths": [128, 256, 512, 1024, 2048, 4096],
+  "attention_heads": 4,
+  "attention_batch": 1,
+  "head_dims": [64, 128],
+  "attention_configs": [0, 1],
+  "softmax_shapes": [[128, 128], [128, 512], [128, 2048], [128, 4096]],
+  "rtol": 0.02,
+  "atol": 0.02
+}

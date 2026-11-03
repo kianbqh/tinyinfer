@@ -1,0 +1,25 @@
+{
+  "input_files": {
+    "executable": {
+      "path": "/opt/codex-resume/llm-risk-classifier/llama/llama-b12024/llama-completion",
+      "bytes": 15968,
+      "sha256": "15472995c69d23fd6350f84b1fb73156698bab77b20438b617bcd8e1e9a9a11f"
+    },
+    "model": {
+      "path": "/opt/codex-resume/llm-risk-classifier/weights/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+      "bytes": 1117320736,
+      "sha256": "6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e"
+    }
+  },
+  "environment": {
+    "LD_LIBRARY_PATH": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers:/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib:/usr/lib/wsl/lib",
+    "CPATH": "/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include/python3.12:/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include",
+    "CXXFLAGS": "-I/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include",
+    "CMAKE_BUILD_PARALLEL_LEVEL": "2",
+    "OMP_NUM_THREADS": "1"
+  },
+  "config_sha256": "4937112b0fe9183f4f1d13993f515326babeef9e7a5c22c5df8a99e07380fc42",
+  "status": "fixed_config_ready_not_started",
+  "config": "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/autotune.json",
+  "source_executable_choice": "Installed completion CLI; same build and fixed proposer flags, no source edit"
+}

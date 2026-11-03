@@ -1,0 +1,32 @@
+{
+  "utc": "2026-11-02T22:32:16.570463+00:00",
+  "status": "accepted",
+  "scope": "Closed exact raw CSV identity/units, independent installed-section arithmetic, six output hashes and visual review of both new PNGs",
+  "rows": [
+    {
+      "label": "FP16 GEMM",
+      "occupancy_pct": 59.95,
+      "counted_roofline_pct": 3.1715491559093714,
+      "raw_sha256": "7ffa40988bba05aed987c5bca4900db1ed314f32a9fb472b5213db6ee00055bd"
+    },
+    {
+      "label": "Weight-only INT8",
+      "occupancy_pct": 49.73,
+      "counted_roofline_pct": 2.2688712759695897,
+      "raw_sha256": "b441384eb389231c8103887f57dc9df85877a88af801ab8bbeca9e414161e6cd"
+    },
+    {
+      "label": "Online attention",
+      "occupancy_pct": 17.95,
+      "counted_roofline_pct": 5.986941964285714,
+      "raw_sha256": "3b726701b23eebb27b4266d52d5198f568dee5fc3ce6a3c8b661f4d19ca2abaa"
+    }
+  ],
+  "display_only_revision": true,
+  "visual_review": "Both PNGs readable, no overlapping category labels",
+  "result_sha256": "0857254374a5961cae31d54275fcc9d573022c176c2be866c0d7a0055d65b16d",
+  "build_checkpoint": "3edcfebd24d5efbf5da81cda13f2bf684031b35e",
+  "capture_checkpoint": "0faa5148d1694a00c201846ac96fd2b98309f0da",
+  "renderer_checkpoint": "b7fbeb201ab66a36d46dcbd5bdd1b68977b64229",
+  "new_gpu_work": false
+}

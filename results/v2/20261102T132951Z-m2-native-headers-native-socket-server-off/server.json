@@ -1,0 +1,166 @@
+{
+  "artifact_manifest_sha256": "25c2e22d1fcf1d9ff4cdff053f254e8f2f7fe5edb440cec5ee8f2573a248e605",
+  "binary": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/server/tinyinfer_server",
+  "binary_sha256": "4cd456cf616dac3d680a7252d3d8da47b7fa8fc1c68796c7b5126ebb5979eaff",
+  "build_receipt": {
+    "binary": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/server/tinyinfer_server",
+    "binary_sha256": "4cd456cf616dac3d680a7252d3d8da47b7fa8fc1c68796c7b5126ebb5979eaff",
+    "build_command_argv": [
+      "/usr/bin/env",
+      "LD_LIBRARY_PATH=/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers:/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib:/usr/lib/wsl/lib",
+      "/opt/codex-resume/portfolio-ml/venv/bin/cmake",
+      "--build",
+      "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers",
+      "--parallel",
+      "2"
+    ],
+    "build_exit_code": 0,
+    "build_log_sha256": "308efaa9fc64bf9a363581c8bed58a0862e4ed6ef33b29bc8476c1c62a170356",
+    "cmake_cache_sha256": "9fbbec12e2956ccc71dbb71154b34f405bb94bd60cb70982e61d1bbb1cf89da1",
+    "compile_commands": [
+      {
+        "command": "/usr/bin/g++ -DTI_SERVER_NATIVE=1 -I/mnt/g/ResumeProject/platforms/tinyinfer/server/../llm/include -I/mnt/g/ResumeProject/platforms/tinyinfer/server/include -I/mnt/g/ResumeProject/platforms/tinyinfer/llm/include -I/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include -O3 -DNDEBUG -std=gnu++17 -fPIE -Wall -Wextra -Wpedantic -o server/CMakeFiles/tinyinfer_server.dir/src/main.cpp.o -c /mnt/g/ResumeProject/platforms/tinyinfer/server/src/main.cpp",
+        "directory": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers",
+        "file": "/mnt/g/ResumeProject/platforms/tinyinfer/server/src/main.cpp",
+        "output": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/server/CMakeFiles/tinyinfer_server.dir/src/main.cpp.o"
+      }
+    ],
+    "compile_commands_sha256": "4af99b681f988edc0b7eeecb8c9ea2e78f359c2c264d6e7ce6f447a4289fe473",
+    "environment": {
+      "cpu": "12th Gen Intel(R) Core(TM) i7-12700KF",
+      "cuda": "not used",
+      "environment": "WSL2",
+      "git": {
+        "sha": "3edcfebd24d5efbf5da81cda13f2bf684031b35e",
+        "status_porcelain": "",
+        "version": "git version 2.43.0"
+      },
+      "gpu": "not queried; CPU execution",
+      "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+      "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+      "python_executable": "/opt/codex-resume/all-modules-v2/m2/venv/bin/python"
+    },
+    "ldd": "linux-vdso.so.1 (0x0000784dfdea9000)\n\tlibtinyinfer_llm.so => /opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_llm.so (0x0000784dfde52000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x0000784dfda00000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x0000784dfde22000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000784dfd600000)\n\tlibtinyinfer_backend.so => /opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_backend.so (0x0000784dfdd78000)\n\tlibcudart.so.12 => /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib/libcudart.so.12 (0x0000784dfd200000)\n\t/lib64/ld-linux-x86-64.so.2 (0x0000784dfdeab000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x0000784dfdc8d000)\n\tlibgomp.so.1 => /lib/x86_64-linux-gnu/libgomp.so.1 (0x0000784dfd9aa000)\n\tlibdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x0000784dfdc88000)\n\tlibpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x0000784dfdc83000)\n\tlibrt.so.1 => /lib/x86_64-linux-gnu/librt.so.1 (0x0000784dfd9a5000)",
+    "native_libraries": {
+      "tinyinfer_backend": {
+        "path": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_backend.so",
+        "sha256": "897434e4f360b1bbe87926e22f668f5bf28ec100443153fd9a8827cb7a5a7d6c"
+      },
+      "tinyinfer_llm": {
+        "path": "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_llm.so",
+        "sha256": "13507a9f7e01d314fa5c21201c11d426f88abd811c841390c4bcbd75c5d199c6"
+      }
+    },
+    "source_sha256": {
+      "CMakeLists.txt": "db0c115bef4fe0111b0ae89412cb232bc969ce91cc76f6a9bb59c945e37dc7b0",
+      "cmake/HostCodec.cmake": "4012e47011e09ba2b53466db80b0823b4ec38fa9a8cf16e86104d511a3076597",
+      "cmake/V2Kernels.cmake": "f279d80aba5ae5e11681019ff84c4f894cead9c1914cdaaa3e79dda50acb057e",
+      "cmake/V2LLM.cmake": "38f5cb5dad94d0921caf5c793851e9695b56e762461c7d73a94a20a16d9f65de",
+      "cmake/V2Server.cmake": "473cee99124969cc9d38cbfe5a4691b0630929dd330e624148e786fbf0999f48",
+      "llm/include/tinyinfer_llm.h": "c288dc76f9578fa3e40da6a4ab23d1ca1e98af251e167074bbb3039cd34bb97c",
+      "llm/src/artifact.hpp": "b66af831eebb872d0e66caabaf3ef010b1d7e336be2f847acf051f834a6c08e3",
+      "llm/src/runtime.cu": "c9782e9f28ebfbd86166f8b39e54b0dcb12326c3dded37fd03ec45eb80ca4793",
+      "server/CMakeLists.txt": "9680270e686517dae7c1d205546164580e9a61867755d624e307b8e275bf6419",
+      "server/include/model.hpp": "98016fb4ecc2dfd86f97993b6b785bb177687d0241b765638e7db4d68313dea6",
+      "server/include/mpsc.hpp": "f12d1c4c6c3a22de1fa43081b585de0237086f356c9b3193f6b78f283bc4c6c8",
+      "server/include/protocol.hpp": "d8b1ef8b0a16c5cfed9621dfe692be6f75b97a44809a00492f1245f938267246",
+      "server/include/transport.hpp": "72012535c080fc9506238c6a21ab696ff0a8090c2c1e68c63be70a2172622661",
+      "server/src/main.cpp": "f5756f4f4e71ab833ffcd45f742bc7b4a3634f4292df3e1b90c6237037b67eff",
+      "server/tests/transport.cpp": "394db5b27bcf39551c6b9c952ec2986384fb67bafa7d36c94bf98a2ae5507831",
+      "server/tests/unit.cpp": "78b136e749a8b24d52e5741075d4151ec4903a36e680a51d04aa89e7e8a25c69"
+    },
+    "timestamp": "2026-11-02T13:40:18.177129+00:00"
+  },
+  "build_receipt_sha256": "684affcf96b18e9f1e938c37c1d39de01ad5e0422015c187dbbbb9091e525d37",
+  "command_argv": [
+    "/mnt/g/ResumeProject/platforms/tinyinfer/server/run.py",
+    "--config",
+    "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/server-off.json",
+    "--binary",
+    "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/server/tinyinfer_server",
+    "--build-receipt",
+    "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/server-build.json",
+    "--output",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T132951Z-m2-native-headers-native-socket-server-off"
+  ],
+  "config": {
+    "attention_config": 0,
+    "capacity": 1024,
+    "device": 0,
+    "gemm_config": 0,
+    "host": "127.0.0.1",
+    "manifest": "/opt/codex-resume/all-modules-v2/m2/weights/20261102T132951Z-m2-native-headers-fp16/manifest.json",
+    "max_batch": 1,
+    "max_connections": 256,
+    "max_ids": 100000,
+    "max_new_tokens": 128,
+    "max_output_bytes": 1048576,
+    "max_pending": 256,
+    "max_wait_us": 0,
+    "model": "native",
+    "per_connection": 32,
+    "port": 8093,
+    "schema_version": 1,
+    "send_chunk_bytes": 65536
+  },
+  "config_sha256": "265cec0cab85d9b7ac7483b32be7449db4a4d4198e41eb88fa7bd4f56231bee5",
+  "environment": {
+    "cpu": "12th Gen Intel(R) Core(TM) i7-12700KF",
+    "cuda_scope": "driver/device reported by nvidia-smi; exact build toolkit belongs to supplied build receipt",
+    "environment": "WSL2",
+    "git": {
+      "sha": "3edcfebd24d5efbf5da81cda13f2bf684031b35e",
+      "status_porcelain": "?? results/v2/",
+      "version": "git version 2.43.0"
+    },
+    "nvidia_smi": "NVIDIA GeForce RTX 3080, 621.01, 12288 MiB",
+    "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+    "python_executable": "/opt/codex-resume/all-modules-v2/m2/venv/bin/python"
+  },
+  "exit_code": 0,
+  "finished_timestamp": "2026-11-02T14:35:25.835939+00:00",
+  "pid": 312808,
+  "server_argv": [
+    "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/server/tinyinfer_server",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8093",
+    "--model",
+    "native",
+    "--manifest",
+    "/opt/codex-resume/all-modules-v2/m2/weights/20261102T132951Z-m2-native-headers-fp16/manifest.json",
+    "--max-batch",
+    "1",
+    "--max-wait-us",
+    "0",
+    "--capacity",
+    "1024",
+    "--max-new-tokens",
+    "128",
+    "--max-pending",
+    "256",
+    "--max-connections",
+    "256",
+    "--per-connection",
+    "32",
+    "--max-output-bytes",
+    "1048576",
+    "--max-ids",
+    "100000",
+    "--send-chunk-bytes",
+    "65536",
+    "--device",
+    "0",
+    "--gemm-config",
+    "0",
+    "--attention-config",
+    "0"
+  ],
+  "status": "stopped",
+  "stderr.log_sha256": "b57ff3cd8fe468dcd74633d2a7c64f183317c5aff7d9bf0d7f4a1958577aef24",
+  "stdout.log_sha256": "e2d878fa1c75acbd559e18efc4291e606a05423954a7ecf88fbbd65ad0548983",
+  "timestamp": "2026-11-02T14:35:22.944206+00:00",
+  "wall_seconds": 2.8917535139917163
+}

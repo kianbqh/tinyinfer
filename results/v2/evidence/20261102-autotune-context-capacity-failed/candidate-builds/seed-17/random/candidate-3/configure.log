@@ -1,0 +1,31 @@
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/x86_64-linux-gnu-g++-13 - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenMP_CXX: -fopenmp (found version "4.5")
+-- Found OpenMP: TRUE (found version "4.5")
+-- The CUDA compiler identification is NVIDIA 12.4.131 with host compiler GNU 13.3.0
+-- Detecting CUDA compiler ABI info
+-- Detecting CUDA compiler ABI info - done
+-- Check for working CUDA compiler: /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/bin/nvcc - skipped
+-- Detecting CUDA compile features
+-- Detecting CUDA compile features - done
+-- Found CUDAToolkit: /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/include (found version "12.4.131")
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Found Python3: /opt/codex-resume/all-modules-v2/m2/venv/bin/python (found version "3.12.3") found components: Interpreter Development.Module
+-- Performing Test HAS_FLTO_AUTO
+-- Performing Test HAS_FLTO_AUTO - Success
+-- Found pybind11: /opt/codex-resume/portfolio-ml/venv/lib/python3.12/site-packages/pybind11/include (found version "3.1.0")
+-- The C compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done (1.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /opt/codex-resume/all-modules-v2/m2/autotune/20261102T230756Z-transportfix/20261102T230756Z-m2-autotune-transportfix/seed-17/random/candidate-3/build

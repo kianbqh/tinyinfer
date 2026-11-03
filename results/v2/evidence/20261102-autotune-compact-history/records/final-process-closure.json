@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "finished_utc": "2026-11-03T00:33:44.360394+00:00",
+  "run": "20261102T234500Z-m2-autotune-compact-history",
+  "source_checkpoint": "6b1b9f665052e05715b15427f0a9a4777d0414fb",
+  "config_sha256": "1af32f7d69b598ee92ccd4484031eccb07aa1f1f2a24dc1b0b57658be3aea31e",
+  "original_pid": 386146,
+  "original_start_ticks": 13861602,
+  "original_pid_absent": true,
+  "remaining_scope_or_run_members": [],
+  "unreadable_process_entries": [],
+  "signals_sent": [],
+  "gpu_compute_apps": {
+    "argv": [
+      "/usr/lib/wsl/lib/nvidia-smi",
+      "--query-compute-apps=pid,process_name,used_memory",
+      "--format=csv,noheader"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "head": {
+    "argv": [
+      "/opt/codex-resume/all-modules-v2/m1a/tools/git-native/usr/bin/git",
+      "-C",
+      "/mnt/g/ResumeProject/platforms/tinyinfer",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "6b1b9f665052e05715b15427f0a9a4777d0414fb\n",
+    "stderr": ""
+  },
+  "tracked_status": {
+    "argv": [
+      "/opt/codex-resume/all-modules-v2/m1a/tools/git-native/usr/bin/git",
+      "-C",
+      "/mnt/g/ResumeProject/platforms/tinyinfer",
+      "status",
+      "--porcelain",
+      "--untracked-files=no"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "full_status": {
+    "argv": [
+      "/opt/codex-resume/all-modules-v2/m1a/tools/git-native/usr/bin/git",
+      "-C",
+      "/mnt/g/ResumeProject/platforms/tinyinfer",
+      "status",
+      "--porcelain"
+    ],
+    "exit_code": 0,
+    "stdout": "?? results/v2/20261102T234500Z-m2-autotune-compact-history/\n",
+    "stderr": ""
+  },
+  "pause_flag_present": true,
+  "windows_kitti_state": "Root-verified OS suspended; not inspected, resumed or altered here",
+  "terminal_status": "incomplete_incomparable",
+  "outer_exit_code": 1,
+  "original_search_sha256": "178401906d1d70f5585ba8dc1cbe5d32ae307623b6e401ba4e0bef57b04cb9fd",
+  "raw_or_source_modified": false
+}

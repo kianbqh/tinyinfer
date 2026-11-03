@@ -1,0 +1,27 @@
+{
+  "status": "started",
+  "timestamp": "2026-11-02T13:53:27.785085+00:00",
+  "argv": [
+    "/mnt/g/ResumeProject/platforms/tinyinfer/llm/gpu_correctness.py",
+    "--library",
+    "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_llm.so",
+    "--build-receipt",
+    "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/model-build.json",
+    "--fp16-manifest",
+    "/opt/codex-resume/all-modules-v2/m2/weights/20261102T132951Z-m2-native-headers-fp16/manifest.json",
+    "--int8-manifest",
+    "/opt/codex-resume/all-modules-v2/m2/weights/20261102T132951Z-m2-native-headers-int8/manifest.json",
+    "--hf-directory",
+    "/opt/codex-resume/all-modules-v2/m2/weights/hf-gpt2",
+    "--config",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/llm/configs/evaluation.json",
+    "--frozen-tokens",
+    "/opt/codex-resume/all-modules-v2/m2/data/frozen-wt2-20261102T132951Z-m2-native-headers.json",
+    "--kernel-gate",
+    "results/v2/20261102T132951Z-m2-native-headers-kernel-gate/correctness.json",
+    "--output",
+    "results/v2/20261102T132951Z-m2-native-headers-model-gate"
+  ],
+  "environment": "WSL2",
+  "models": {}
+}

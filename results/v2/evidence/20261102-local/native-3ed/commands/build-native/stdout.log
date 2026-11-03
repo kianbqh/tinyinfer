@@ -1,0 +1,64 @@
+[1/35] Building CXX object CMakeFiles/tinyinfer_backend.dir/backend/runtime.cpp.o
+[2/35] Building CXX object CMakeFiles/tinyinfer_backend.dir/kernels/src/cpu/matmul.cpp.o
+[3/35] Building CXX object CMakeFiles/tinyinfer_backend.dir/kernels/src/cpu/softmax.cpp.o
+[4/35] Building CXX object CMakeFiles/tinyinfer_backend.dir/kernels/src/cpu/layernorm.cpp.o
+[5/35] Building CUDA object CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/softmax.cu.o
+[6/35] Building CUDA object CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/matmul.cu.o
+[7/35] Building CUDA object CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/layernorm.cu.o
+[8/35] Building CUDA object CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/bench_api.cu.o
+[9/35] Building CUDA object CMakeFiles/tinyinfer_v2.dir/backend/runtime_v2.cu.o
+[10/35] Building CUDA object CMakeFiles/tinyinfer_v2.dir/kernels/src/cuda/tc/attention.cu.o
+[11/35] Building CUDA object CMakeFiles/tinyinfer_v2.dir/kernels/src/cuda/tc/gemm.cu.o
+[12/35] Building CUDA object CMakeFiles/tinyinfer_v2.dir/kernels/src/cuda/tc/elementwise.cu.o
+[13/35] Linking CXX shared library libtinyinfer_backend.so
+[14/35] Building CUDA object CMakeFiles/tinyinfer_llm.dir/llm/src/runtime.cu.o
+[15/35] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[16/35] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[17/35] Linking CXX static library lib/libgtest.a
+[18/35] Building CXX object CMakeFiles/ikernels.dir/kernels/python/bindings.cpp.o
+[19/35] Building CXX object CMakeFiles/test_cpu.dir/kernels/tests/test_cpu.cpp.o
+[20/35] Building CUDA object CMakeFiles/profile_v2.dir/bench/v2/kernels/profile.cu.o
+[21/35] Linking CUDA shared library libtinyinfer_llm.so
+[22/35] Building CXX object CMakeFiles/test_cuda.dir/kernels/tests/test_cuda.cpp.o
+[23/35] Linking CXX static library lib/libgtest_main.a
+[24/35] Building CXX object CMakeFiles/tinyinfer_artifact_test.dir/llm/tests/test_artifact.cpp.o
+[25/35] Building CXX object server/CMakeFiles/ti_server_unit.dir/tests/unit.cpp.o
+[26/35] Building CXX object server/CMakeFiles/tinyinfer_server.dir/src/main.cpp.o
+[27/35] Building CXX object server/CMakeFiles/ti_server_transport.dir/tests/transport.cpp.o
+[28/35] Linking CXX executable test_cpu
+[29/35] Linking CXX executable test_cuda
+[30/35] Linking CUDA executable profile_v2
+[31/35] Linking CXX executable tinyinfer_artifact_test
+[32/35] Linking CXX executable server/tinyinfer_server
+FAILED: [code=1] server/tinyinfer_server 
+: && /usr/bin/g++ -I/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include -O3 -DNDEBUG -Wl,--dependency-file=server/CMakeFiles/tinyinfer_server.dir/link.d server/CMakeFiles/tinyinfer_server.dir/src/main.cpp.o -o server/tinyinfer_server  -Wl,-rpath,/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers  libtinyinfer_llm.so  -Wl,-rpath-link,/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers && :
+/usr/bin/ld: warning: libcudart.so.12, needed by libtinyinfer_llm.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: libtinyinfer_llm.so: undefined reference to `cudaFree@libcudart.so.12'
+/usr/bin/ld: libtinyinfer_llm.so: undefined reference to `__cudaRegisterFatBinaryEnd@libcudart.so.12'
+/usr/bin/ld: /opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_backend.so: undefined reference to `cudaEventElapsedTime@libcudart.so.12'
+/usr/bin/ld: /opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_backend.so: undefined reference to `cudaDeviceSynchronize@libcudart.so.12'
+/usr/bin/ld: /opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_backend.so: undefined reference to `cudaEventCreate@libcudart.so.12'
+/usr/bin/ld: /opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_backend.so: undefined reference to `cudaEventSynchronize@libcudart.so.12'
+/usr/bin/ld: libtinyinfer_llm.so: undefined reference to `cudaSetDevice@libcudart.so.12'
+/usr/bin/ld: /opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_backend.so: undefined reference to `cudaEventDestroy@libcudart.so.12'
+/usr/bin/ld: libtinyinfer_llm.so: undefined reference to `__cudaRegisterFunction@libcudart.so.12'
+/usr/bin/ld: libtinyinfer_llm.so: undefined reference to `cudaMalloc@libcudart.so.12'
+/usr/bin/ld: /opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_backend.so: undefined reference to `cudaGetDeviceCount@libcudart.so.12'
+/usr/bin/ld: libtinyinfer_llm.so: undefined reference to `cudaGetErrorString@libcudart.so.12'
+/usr/bin/ld: /opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_backend.so: undefined reference to `cudaEventRecord@libcudart.so.12'
+/usr/bin/ld: libtinyinfer_llm.so: undefined reference to `cudaStreamDestroy@libcudart.so.12'
+/usr/bin/ld: libtinyinfer_llm.so: undefined reference to `cudaGetDevice@libcudart.so.12'
+/usr/bin/ld: libtinyinfer_llm.so: undefined reference to `__cudaRegisterFatBinary@libcudart.so.12'
+/usr/bin/ld: libtinyinfer_llm.so: undefined reference to `cudaStreamSynchronize@libcudart.so.12'
+/usr/bin/ld: libtinyinfer_llm.so: undefined reference to `cudaLaunchKernel@libcudart.so.12'
+/usr/bin/ld: libtinyinfer_llm.so: undefined reference to `cudaMemsetAsync@libcudart.so.12'
+/usr/bin/ld: libtinyinfer_llm.so: undefined reference to `__cudaPushCallConfiguration@libcudart.so.12'
+/usr/bin/ld: libtinyinfer_llm.so: undefined reference to `cudaMemcpyAsync@libcudart.so.12'
+/usr/bin/ld: libtinyinfer_llm.so: undefined reference to `cudaStreamCreateWithFlags@libcudart.so.12'
+/usr/bin/ld: /opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers/libtinyinfer_backend.so: undefined reference to `cudaMemcpy@libcudart.so.12'
+/usr/bin/ld: libtinyinfer_llm.so: undefined reference to `__cudaUnregisterFatBinary@libcudart.so.12'
+/usr/bin/ld: libtinyinfer_llm.so: undefined reference to `__cudaPopCallConfiguration@libcudart.so.12'
+/usr/bin/ld: libtinyinfer_llm.so: undefined reference to `cudaGetLastError@libcudart.so.12'
+collect2: error: ld returned 1 exit status
+[33/35] Linking CXX shared module ikernels.cpython-312-x86_64-linux-gnu.so
+ninja: build stopped: subcommand failed.

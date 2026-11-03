@@ -1,0 +1,13 @@
+[1/13] Building CXX object CMakeFiles/tinyinfer_backend.dir/backend/runtime.cpp.o
+[2/13] Building CXX object CMakeFiles/tinyinfer_backend.dir/kernels/src/cpu/matmul.cpp.o
+[3/13] Building CXX object CMakeFiles/tinyinfer_backend.dir/kernels/src/cpu/softmax.cpp.o
+[4/13] Building CXX object CMakeFiles/tinyinfer_backend.dir/kernels/src/cpu/layernorm.cpp.o
+[5/13] Building CUDA object CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/matmul.cu.o
+[6/13] Building CUDA object CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/softmax.cu.o
+[7/13] Building CUDA object CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/layernorm.cu.o
+[8/13] Building CUDA object CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/bench_api.cu.o
+[9/13] Building CUDA object CMakeFiles/tinyinfer_v2.dir/backend/runtime_v2.cu.o
+[10/13] Building CUDA object CMakeFiles/tinyinfer_v2.dir/kernels/src/cuda/tc/attention.cu.o
+[11/13] Building CUDA object CMakeFiles/tinyinfer_v2.dir/kernels/src/cuda/tc/gemm.cu.o
+[12/13] Building CUDA object CMakeFiles/tinyinfer_v2.dir/kernels/src/cuda/tc/elementwise.cu.o
+[13/13] Linking CXX shared library libtinyinfer_backend.so

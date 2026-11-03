@@ -1,0 +1,13 @@
+[
+  "/opt/codex-resume/portfolio-ml/venv/bin/cmake",
+  "-S",
+  "/mnt/g/ResumeProject/platforms/tinyinfer/backend/host_codec",
+  "-B",
+  "/opt/codex-resume/all-modules-v2/m2/builds/20261102T131700Z-m2-setup-host-codec",
+  "-G",
+  "Ninja",
+  "-DCMAKE_MAKE_PROGRAM=/opt/codex-resume/portfolio-ml/venv/bin/ninja",
+  "-DCMAKE_BUILD_TYPE=Release",
+  "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+  "-DCMAKE_CXX_COMPILER=/usr/bin/g++"
+]

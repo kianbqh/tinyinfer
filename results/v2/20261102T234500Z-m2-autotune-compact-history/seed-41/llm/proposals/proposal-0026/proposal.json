@@ -1,0 +1,40 @@
+{
+  "argv": [
+    "/opt/codex-resume/llm-risk-classifier/llama/llama-b12024/llama-completion",
+    "-m",
+    "/opt/codex-resume/llm-risk-classifier/weights/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+    "-ngl",
+    "0",
+    "--seed",
+    "67",
+    "-n",
+    "384",
+    "-c",
+    "8192",
+    "--temp",
+    "0.7",
+    "--no-display-prompt",
+    "--no-conversation",
+    "-f",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T234500Z-m2-autotune-compact-history/seed-41/llm/proposals/proposal-0026/prompt.txt"
+  ],
+  "executable_sha256": "15472995c69d23fd6350f84b1fb73156698bab77b20438b617bcd8e1e9a9a11f",
+  "exit_code": 0,
+  "finished_timestamp": "2026-11-03T00:11:33.371977+00:00",
+  "gpu_policy": "CPU proposer: fixed -ngl 0; subprocess fully exits before candidate build/GPU evaluation",
+  "model_sha256": "6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e",
+  "prompt_sha256": "5cdd32039cc09b39bbba8e8ed0ac11a36ba3ae758ca988867f605d7698c25e9f",
+  "returned_payload_sha256": "d0ac3f859eab2ce0657909eabffdca293fd8a3090b7c605aa614c594cadff620",
+  "status": "returned_unvalidated",
+  "stderr.txt_sha256": "cd2c67e453766be6d8393ec555ff9755dfc0c74618616f053f582e3e4282bcc2",
+  "stdout.txt_sha256": "8e78c29835821210ac541851a8ff806171526f4bd9d405dc7c095ecd14fff618",
+  "stdout_transport": {
+    "cli_framing_removed": false,
+    "contract": "llama.cpp_completion_eog_stdout_v1",
+    "exact_terminal_suffix": " [end of text]\n\n\n",
+    "maximum_suffix_removals": 1,
+    "upstream_revision": "ddf48f85c933c1f438212a02eb21e7b001d2d37d"
+  },
+  "timestamp": "2026-11-03T00:11:16.749834+00:00",
+  "wall_seconds": 16.618611332
+}

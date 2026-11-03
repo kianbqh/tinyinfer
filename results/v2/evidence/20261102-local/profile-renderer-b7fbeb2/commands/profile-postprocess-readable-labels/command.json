@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "argv": [
+    "/usr/bin/env",
+    "LD_LIBRARY_PATH=/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers:/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib:/usr/lib/wsl/lib",
+    "PYTHONPATH=/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers:/mnt/g/ResumeProject/platforms/tinyinfer",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "TINYC_GIT=/opt/codex-resume/all-modules-v2/m1a/tools/git-native/usr/bin/git",
+    "/usr/bin/env",
+    "M2_RENDERER_CHECKPOINT=b7fbeb201ab66a36d46dcbd5bdd1b68977b64229",
+    "/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+    "-B",
+    "-m",
+    "bench.v2.profiling.postprocess",
+    "--manifest",
+    "/opt/codex-resume/all-modules-v2/m2/runs/20261102T221317Z-m2-profile-enabled/profile-captures-readable-labels.json",
+    "--output",
+    "results/v2/20261102T221317Z-m2-profile-enabled-profile-labels"
+  ],
+  "cwd": "/mnt/g/ResumeProject/platforms/tinyinfer",
+  "started_at": "2026-11-02T22:29:35.128712+00:00",
+  "timeout_seconds": 180,
+  "pid": 364041,
+  "exit_code": 0,
+  "finished_at": "2026-11-02T22:29:40.754862+00:00",
+  "wall_seconds": 5.62615239500883,
+  "stdout.log_sha256": "2cedddcda01ea0aea2b6825c15f6de23c61238c21d07e36c0d3077879aaf2a54",
+  "stderr.log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

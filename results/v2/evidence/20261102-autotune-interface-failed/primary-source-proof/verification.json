@@ -1,0 +1,26 @@
+{
+  "status": "official_git_blob_bytes_verified",
+  "files": [
+    {
+      "path": "tools/completion/completion.cpp",
+      "bytes": 38472,
+      "git_blob_sha": "b5b5daf2a6dcba53d60623e29dda43ddff142593",
+      "sha256": "0dde1fed7b17e9b37ad0cf3e125210dd1c316364cf2924f24d0f41c38538677b",
+      "official_url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c/tools/completion/completion.cpp"
+    },
+    {
+      "path": "common/log.h",
+      "bytes": 6400,
+      "git_blob_sha": "93ea58e76158add30c7050032d641261317af800",
+      "sha256": "e99f07f5b64288aaece28955ed9f97c2ed8dc9c0375af3e253fc5c682637a014",
+      "official_url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c/common/log.h"
+    },
+    {
+      "path": "common/log.cpp",
+      "bytes": 15295,
+      "git_blob_sha": "25f12684e7a7d67382e8b1e760f895b796124549",
+      "sha256": "f345a4af8c06177313437693657f7493ff197ad99e70a45f18f12aa7d261e671",
+      "official_url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c/common/log.cpp"
+    }
+  ]
+}

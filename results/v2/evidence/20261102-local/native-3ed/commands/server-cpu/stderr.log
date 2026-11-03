@@ -1,0 +1,17 @@
+test_cancellation (test_e2e.EndToEnd.test_cancellation) ... skipped 'native server build is a later execution gate'
+test_duplicate_ids_close (test_e2e.EndToEnd.test_duplicate_ids_close) ... skipped 'native server build is a later execution gate'
+test_fragmented_and_coalesced_mixed_prompts (test_e2e.EndToEnd.test_fragmented_and_coalesced_mixed_prompts) ... skipped 'native server build is a later execution gate'
+test_invalid_prefix_disconnect_and_fd_reuse (test_e2e.EndToEnd.test_invalid_prefix_disconnect_and_fd_reuse) ... skipped 'native server build is a later execution gate'
+test_output_backpressure_closes_and_reaps (test_e2e.EndToEnd.test_output_backpressure_closes_and_reaps) ... skipped 'native server build is a later execution gate'
+test_config_limits (test_protocol.ProtocolTests.test_config_limits) ... ok
+test_histograms_use_individual_samples (test_protocol.ProtocolTests.test_histograms_use_individual_samples) ... ok
+test_late_arrival_and_capacity_admission (test_protocol.ProtocolTests.test_late_arrival_and_capacity_admission) ... ok
+test_limits (test_protocol.ProtocolTests.test_limits) ... ok
+test_request_roundtrip_layout (test_protocol.ProtocolTests.test_request_roundtrip_layout) ... ok
+test_response (test_protocol.ProtocolTests.test_response) ... ok
+test_workload_is_matched_and_poisson_schedule_is_absolute (test_protocol.ProtocolTests.test_workload_is_matched_and_poisson_schedule_is_absolute) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.084s
+
+OK (skipped=5)

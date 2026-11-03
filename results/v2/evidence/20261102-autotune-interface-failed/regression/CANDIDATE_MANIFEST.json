@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "utc": "2026-11-02T23:07:51.533539+00:00",
+  "owner": "/root/v2_m2_publication_review",
+  "scope": "Private fixed CLI transport/framing candidate and CPU regression; repository imports performed only by root",
+  "files": [
+    {
+      "destination": "autotune/proposer.py",
+      "preimage": {
+        "sha256": "cecc38b78b875a933f710931ef8a612ae522b92741736653218c6b164e1e499c",
+        "bytes": 4145
+      },
+      "candidate": {
+        "sha256": "fee68aece2a584dcc35c3f2b5a5d50b72fb267993acdd77bc216a2c020cf8fd3",
+        "bytes": 5373
+      }
+    },
+    {
+      "destination": "autotune/tests/test_proposer_transport.py",
+      "preimage": null,
+      "preimage_state": "absent",
+      "candidate": {
+        "sha256": "ca9d1ce9112fe7524215c154e7c66795ac5e63c21127ccfa669aa0c14c6731f6",
+        "bytes": 7627
+      }
+    }
+  ],
+  "actual_new_test_absent": true,
+  "production_change": "Remove --log-disable; decode at most one exact fixed terminal CLI suffix; preserve raw stdout/hashes and record transport/returned-payload receipt fields",
+  "frozen": "Prompt, sampling, seeds, budgets, strict JSON parsing, gates and error accounting unchanged",
+  "read_dependency_hashes": {
+    "autotune/__init__.py": {
+      "sha256": "46d6a267f87d3ca443b3e23448285161ab96ae64b11555b70424e1c1cb5f66ba",
+      "bytes": 63
+    },
+    "autotune/core.py": {
+      "sha256": "4086ea16d0edc6eba305b515c9ea2d5df6264dd14f8d5ce4741919038448a565",
+      "bytes": 5382
+    },
+    "bench/v2/kernels/candidate_build.py": {
+      "sha256": "aa46c93a140d9953314e9eca9242b1e4f4293183a55ef26f8965de368eeed3f6",
+      "bytes": 6832
+    },
+    "bench/v2/kernels/protocol.py": {
+      "sha256": "7d2801a9687e60344f7e79d13c5745e0feb40e6e44211a611f2f6b6b262bc285",
+      "bytes": 4301
+    },
+    "bench/v2/kernels/run.py": {
+      "sha256": "9446173fc9f3cba35320dfcce8d3b3a9928f8d392267180f54d7d7be721d6959",
+      "bytes": 15093
+    },
+    "llm/__init__.py": {
+      "sha256": "1dfe5f5fab353cb98f79c9004b37080b09da11fb6155b15549c646cebc69807d",
+      "bytes": 86
+    },
+    "llm/native_ops.py": {
+      "sha256": "944b2e11054aace705d7597d674352d1351cef06d149a7e54bad80c3ca41902f",
+      "bytes": 10740
+    },
+    "server/__init__.py": {
+      "sha256": "0df7ac8a474df0505c07aae40d3bd483bb2e01040422ebaa3806f04b233347a4",
+      "bytes": 54
+    },
+    "server/metadata.py": {
+      "sha256": "d9113dcfba44ef6597af7ce6f83d5f45f25e5f5fe699c1bb524fb5d3d5c50660",
+      "bytes": 2377
+    }
+  },
+  "pending": "Root integration/commit/CI; actual model extra configuration_id key remains invalid and must consume attempts normally",
+  "primary_source": {
+    "status": "official_git_blob_bytes_verified",
+    "files": [
+      {
+        "path": "tools/completion/completion.cpp",
+        "bytes": 38472,
+        "git_blob_sha": "b5b5daf2a6dcba53d60623e29dda43ddff142593",
+        "sha256": "0dde1fed7b17e9b37ad0cf3e125210dd1c316364cf2924f24d0f41c38538677b",
+        "official_url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c/tools/completion/completion.cpp"
+      },
+      {
+        "path": "common/log.h",
+        "bytes": 6400,
+        "git_blob_sha": "93ea58e76158add30c7050032d641261317af800",
+        "sha256": "e99f07f5b64288aaece28955ed9f97c2ed8dc9c0375af3e253fc5c682637a014",
+        "official_url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c/common/log.h"
+      },
+      {
+        "path": "common/log.cpp",
+        "bytes": 15295,
+        "git_blob_sha": "25f12684e7a7d67382e8b1e760f895b796124549",
+        "sha256": "f345a4af8c06177313437693657f7493ff197ad99e70a45f18f12aa7d261e671",
+        "official_url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c/common/log.cpp"
+      }
+    ]
+  },
+  "full_upstream_commit": "ddf48f85c933c1f438212a02eb21e7b001d2d37d",
+  "runtime_probe": {
+    "stdout_restored": true,
+    "original_strict_json_valid": false,
+    "extra_model_key_still_invalid_after_deframing": true,
+    "prompt_sha256": "c6fac0195a2b93dc3448ea753bfd2564e7f2ecdbd3859e7f745046de6f93d4b1"
+  },
+  "regression": {
+    "status": "original_and_oneflag_preimages_fail_postimage_passes",
+    "tests_per_overlay": 8,
+    "exit_codes": [
+      1,
+      1,
+      0
+    ],
+    "result_sha256": "403d6aef19cf8c943787643e0ef3bb5e8136684013d648476cce701a7c13ba21"
+  },
+  "original_two_test_history": "history/oneflag-20261102T2304Z",
+  "acceptance": {
+    "original_source_preimage_hash_verified": true,
+    "repository_state": "root_imported_exact_candidate_during_finalization",
+    "prompt_ast_unchanged": true,
+    "argv_only_removes_log_disable": true,
+    "subprocess_call_unchanged": true,
+    "except_and_finally_unchanged": true,
+    "all_control_dependency_hashes_unchanged": true,
+    "primary_git_blob_bytes_verified": true
+  },
+  "read_files": {
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-transport-fix\\CANDIDATE_MANIFEST.json": {
+      "sha256": "22a33a46b022cc9b9f86c43cbc8c29abd660cfc4e8a5c81db196c61b329bea22",
+      "bytes": 2627
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-transport-fix\\preimage\\autotune\\proposer.py": {
+      "sha256": "cecc38b78b875a933f710931ef8a612ae522b92741736653218c6b164e1e499c",
+      "bytes": 4145
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-transport-fix\\candidate\\autotune\\proposer.py": {
+      "sha256": "fee68aece2a584dcc35c3f2b5a5d50b72fb267993acdd77bc216a2c020cf8fd3",
+      "bytes": 5373
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\autotune\\proposer.py": {
+      "sha256": "fee68aece2a584dcc35c3f2b5a5d50b72fb267993acdd77bc216a2c020cf8fd3",
+      "bytes": 5373
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\autotune\\tests\\test_proposer_transport.py": {
+      "sha256": "ca9d1ce9112fe7524215c154e7c66795ac5e63c21127ccfa669aa0c14c6731f6",
+      "bytes": 7627
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-transport-fix\\candidate\\autotune\\tests\\test_proposer_transport.py": {
+      "sha256": "ca9d1ce9112fe7524215c154e7c66795ac5e63c21127ccfa669aa0c14c6731f6",
+      "bytes": 7627
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\autotune\\__init__.py": {
+      "sha256": "46d6a267f87d3ca443b3e23448285161ab96ae64b11555b70424e1c1cb5f66ba",
+      "bytes": 63
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\autotune\\core.py": {
+      "sha256": "4086ea16d0edc6eba305b515c9ea2d5df6264dd14f8d5ce4741919038448a565",
+      "bytes": 5382
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\bench\\v2\\kernels\\candidate_build.py": {
+      "sha256": "aa46c93a140d9953314e9eca9242b1e4f4293183a55ef26f8965de368eeed3f6",
+      "bytes": 6832
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\bench\\v2\\kernels\\protocol.py": {
+      "sha256": "7d2801a9687e60344f7e79d13c5745e0feb40e6e44211a611f2f6b6b262bc285",
+      "bytes": 4301
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\bench\\v2\\kernels\\run.py": {
+      "sha256": "9446173fc9f3cba35320dfcce8d3b3a9928f8d392267180f54d7d7be721d6959",
+      "bytes": 15093
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\llm\\__init__.py": {
+      "sha256": "1dfe5f5fab353cb98f79c9004b37080b09da11fb6155b15549c646cebc69807d",
+      "bytes": 86
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\llm\\native_ops.py": {
+      "sha256": "944b2e11054aace705d7597d674352d1351cef06d149a7e54bad80c3ca41902f",
+      "bytes": 10740
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\server\\__init__.py": {
+      "sha256": "0df7ac8a474df0505c07aae40d3bd483bb2e01040422ebaa3806f04b233347a4",
+      "bytes": 54
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\server\\metadata.py": {
+      "sha256": "d9113dcfba44ef6597af7ce6f83d5f45f25e5f5fe699c1bb524fb5d3d5c50660",
+      "bytes": 2377
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\autotune-next-20261102T224446Z\\primary-source\\ddf48f85c\\verification.json": {
+      "sha256": "f20da1b4e3f915904c7f6c7ffa7dad903bd0ad8f792e97ec35579d9397161e17",
+      "bytes": 1024
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\autotune-next-20261102T224446Z\\primary-source\\ddf48f85c\\commit-resolution.json": {
+      "sha256": "e4e6ed0aa9e28a3e6c51758f0a6e1ff989a2a50accc84e391166cfc94429d768",
+      "bytes": 514
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\autotune-next-20261102T224446Z\\primary-source\\ddf48f85c\\tools\\completion\\completion.cpp": {
+      "sha256": "0dde1fed7b17e9b37ad0cf3e125210dd1c316364cf2924f24d0f41c38538677b",
+      "bytes": 38472
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\autotune-next-20261102T224446Z\\primary-source\\ddf48f85c\\common\\log.h": {
+      "sha256": "e99f07f5b64288aaece28955ed9f97c2ed8dc9c0375af3e253fc5c682637a014",
+      "bytes": 6400
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\autotune-next-20261102T224446Z\\primary-source\\ddf48f85c\\common\\log.cpp": {
+      "sha256": "f345a4af8c06177313437693657f7493ff197ad99e70a45f18f12aa7d261e671",
+      "bytes": 15295
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\autotune-next-20261102T224446Z\\transport-probe-without-log-disable\\outcome.json": {
+      "sha256": "f0a683ddff04164e931513f6f1f1d98cc48cdb701341d77f09aa165ca5b0f999",
+      "bytes": 1057
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\autotune-next-20261102T224446Z\\transport-probe-without-log-disable\\specification.json": {
+      "sha256": "385ffea925c37491aa8a19646324775c3d7df43a3e42f389f9c7adb4cf95be87",
+      "bytes": 2696
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\autotune-next-20261102T224446Z\\transport-probe-without-log-disable\\command\\stdout.log": {
+      "sha256": "8aaed2d1c4774072382230ba5b8b0e51048644aaec0593b755a4dc92b9521073",
+      "bytes": 116
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\autotune-next-20261102T224446Z\\transport-probe-without-log-disable\\command\\stderr.log": {
+      "sha256": "03d7e293581e71be60bdf1730585e0bdf427e173dd48f0c623af4ccab69044f0",
+      "bytes": 2212
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-transport-fix\\REGRESSION_RESULT.json": {
+      "sha256": "403d6aef19cf8c943787643e0ef3bb5e8136684013d648476cce701a7c13ba21",
+      "bytes": 2668
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-transport-fix\\logs\\preimage.stdout.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-transport-fix\\logs\\preimage.stderr.txt": {
+      "sha256": "e57125d8560b9e0a1e91f5c628b9f30526f929a180095554b4967d1f94a6ca5f",
+      "bytes": 9682
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-transport-fix\\logs\\transport_preimage.stdout.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-transport-fix\\logs\\transport_preimage.stderr.txt": {
+      "sha256": "4abc0e79b5c97d99aa27c0ce50ce1ecba8dfb01f7460d50c51f3a40d08d25f8e",
+      "bytes": 8289
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-transport-fix\\logs\\postimage.stdout.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-transport-fix\\logs\\postimage.stderr.txt": {
+      "sha256": "7a110e725827cde35f5f1f5d88cf0bcb7b7bcb631de19b4c027571181e3134ed",
+      "bytes": 1546
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-transport-fix\\history\\oneflag-20261102T2304Z\\HISTORY_HASHES.json": {
+      "sha256": "0756210e32a62c9eaed39254326e0cc076d3f5771bae314da5e1154afa76db5c",
+      "bytes": 1699
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-transport-fix\\history\\oneflag-20261102T2304Z\\CANDIDATE_MANIFEST.json": {
+      "sha256": "2dd752bdd7b8b3efcc1b0652326574249235e2b86ff5199e857c44ed058f4556",
+      "bytes": 4578
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-transport-fix\\history\\oneflag-20261102T2304Z\\HANDOFF.md": {
+      "sha256": "08b032c8c20a4915ce819123a6acc47f53ec2b05ddfdbb6d95d18ff673db9b4f",
+      "bytes": 4404
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-transport-fix\\history\\oneflag-20261102T2304Z\\prepare.py": {
+      "sha256": "3e20683dda13cc69890bdd310a1ad260fdef4a776abf74d757de68f29892a66a",
+      "bytes": 2718
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-transport-fix\\history\\oneflag-20261102T2304Z\\REGRESSION_RESULT.json": {
+      "sha256": "881b93110450cb53a4fc7db7be93d232e51780b2d0425d1fa9727f021319b86a",
+      "bytes": 1904
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-transport-fix\\history\\oneflag-20261102T2304Z\\run_regression.py": {
+      "sha256": "4afbdd2f11da23863419798a9c21f3a0d10cac58360a363f82eac528cc631816",
+      "bytes": 1972
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-transport-fix\\history\\oneflag-20261102T2304Z\\candidate\\autotune\\proposer.py": {
+      "sha256": "1de183cfe988c2c5386912371e6639f756556b9c164f39d3703f5f3320e25d76",
+      "bytes": 4129
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-transport-fix\\history\\oneflag-20261102T2304Z\\candidate\\autotune\\tests\\test_proposer_transport.py": {
+      "sha256": "cc6421b41c2daeedd1efb619b539b1334cbeb716e56fe5f500548299e2ed66c7",
+      "bytes": 4276
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-transport-fix\\history\\oneflag-20261102T2304Z\\logs\\postimage.stderr.txt": {
+      "sha256": "ee251c4fcd46886d19ca12609008fb5e95272416e9bdfdb8f547267731bb6db3",
+      "bytes": 452
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-transport-fix\\history\\oneflag-20261102T2304Z\\logs\\postimage.stdout.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-transport-fix\\history\\oneflag-20261102T2304Z\\logs\\preimage.stderr.txt": {
+      "sha256": "be05b18d28d15d39c90efeea1a3e76c53ceff3ff3bd3a564b0b1c81a75103ace",
+      "bytes": 2574
+    },
+    "G:\\ResumeProject\\.runtime\\all-modules-v2\\m2\\runtime\\proposer-transport-fix\\history\\oneflag-20261102T2304Z\\logs\\preimage.stdout.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  }
+}

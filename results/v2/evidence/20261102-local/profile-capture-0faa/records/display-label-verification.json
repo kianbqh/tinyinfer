@@ -1,0 +1,38 @@
+{
+  "status": "verified_display_labels_only",
+  "old_output": "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T221317Z-m2-profile-enabled-profile",
+  "new_output": "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T221317Z-m2-profile-enabled-profile-labels",
+  "numeric_rows_equal_except_label": true,
+  "all_raw_csv_sha256_equal": true,
+  "labels": [
+    "FP16 GEMM",
+    "Weight-only INT8",
+    "Online attention"
+  ],
+  "processor": {
+    "pid": 364041,
+    "started_at": "2026-11-02T22:29:35.128712+00:00",
+    "finished_at": "2026-11-02T22:29:40.754862+00:00",
+    "wall_seconds": 5.62615239500883,
+    "exit_code": 0
+  },
+  "processor_pid_present": false,
+  "files": {
+    "summary.csv": {
+      "bytes": 2004,
+      "sha256": "c7729d91d386265da10b59474253e785801406b4c2e502dd5fcd928fc9d76ace"
+    },
+    "roofline.png": {
+      "bytes": 154650,
+      "sha256": "86f96b94a8e1f03c1fe8c980eae58581317af7be1021334c4c529ed3cb5b7173"
+    },
+    "occupancy.png": {
+      "bytes": 73154,
+      "sha256": "72bee871f4212da14647532729f64a2f499abed3df4b1bc8593d1fe8db8b8619"
+    },
+    "results.json": {
+      "bytes": 75905,
+      "sha256": "0857254374a5961cae31d54275fcc9d573022c176c2be866c0d7a0055d65b16d"
+    }
+  }
+}

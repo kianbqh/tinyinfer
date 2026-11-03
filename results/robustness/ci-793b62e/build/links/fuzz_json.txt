@@ -1,0 +1,1 @@
+/usr/bin/clang++ -O2 -g -DNDEBUG -fsanitize=fuzzer,address,undefined -fno-sanitize-recover=undefined -Xlinker --dependency-file=CMakeFiles/fuzz_json.dir/link.d CMakeFiles/fuzz_json.dir/harnesses/json.cpp.o -o fuzz_json  libti_fuzz_production.a

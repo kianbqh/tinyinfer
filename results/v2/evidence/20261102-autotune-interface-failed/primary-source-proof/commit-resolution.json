@@ -1,0 +1,10 @@
+{
+  "repository": "ggml-org/llama.cpp",
+  "requested_ref": "ddf48f85c",
+  "full_commit_sha": "ddf48f85c933c1f438212a02eb21e7b001d2d37d",
+  "tree_sha": "f5e123c63c8386d324ff3abf04b528665103d7df",
+  "official_api_url": "https://api.github.com/repos/ggml-org/llama.cpp/commits/ddf48f85c",
+  "official_commit_url": "https://github.com/ggml-org/llama.cpp/commit/ddf48f85c933c1f438212a02eb21e7b001d2d37d",
+  "via": "Read-only official GitHub connector fetch",
+  "source_files_verified_separately": "verification.json"
+}

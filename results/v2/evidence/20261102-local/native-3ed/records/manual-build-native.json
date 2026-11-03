@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "status": "failed",
+  "stage": "build-native",
+  "run_id": "20261102T132951Z-m2-native-headers",
+  "root_release_acknowledged": true,
+  "checkpoint_before": {
+    "sha": "3edcfebd24d5efbf5da81cda13f2bf684031b35e",
+    "tracked_status": ""
+  },
+  "recorder_sha256": "a61978863450d6d110e2db6e286dd496481e5674669568e7098ecff9f04bb697",
+  "reference_setup_run_id": null,
+  "launcher_sha256": "10d14533e8750128d74a1480b0abb527abbb7ea6e8c3425390f619ee346f5fc1",
+  "argv": [
+    "/opt/codex-resume/portfolio-ml/venv/bin/cmake",
+    "--build",
+    "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers",
+    "--parallel",
+    "2"
+  ],
+  "recorder_argv": [
+    "/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+    "-B",
+    "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/record_command.py",
+    "--execute",
+    "--output",
+    "/opt/codex-resume/all-modules-v2/m2/runs/20261102T132951Z-m2-native-headers/commands/build-native",
+    "--timeout",
+    "1800",
+    "--",
+    "/opt/codex-resume/portfolio-ml/venv/bin/cmake",
+    "--build",
+    "/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers",
+    "--parallel",
+    "2"
+  ],
+  "started_at": "2026-11-02T13:30:47.381674+00:00",
+  "timeout_scope": "existing recorder owns bounded child execution and cleanup; no next stage is launched",
+  "recorder_pid": 303392,
+  "recorder_exit_code": 1,
+  "checkpoint_after": {
+    "sha": "3edcfebd24d5efbf5da81cda13f2bf684031b35e",
+    "tracked_status": ""
+  },
+  "error_type": "RuntimeError",
+  "error": "single stage or recorder source verification failed; preserve command logs",
+  "finished_at": "2026-11-02T13:31:20.291602+00:00"
+}

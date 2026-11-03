@@ -1,0 +1,6 @@
+{
+  "schema_version": 1, "seed": 41, "rates_per_second": [1, 5, 10, 20], "duration_seconds": 30,
+  "max_inflight": 128, "timeout_seconds": 120, "drain_timeout_seconds": 150,
+  "max_schedule_lag_ms": 10, "prompt_lengths": [8, 16, 32], "new_token_counts": [8, 16],
+  "histogram_edges_ms": [0, 0.25, 0.5, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072]
+}

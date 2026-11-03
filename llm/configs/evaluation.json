@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "seed": 42,
+  "warmups": 3,
+  "repeats": 10,
+  "batches": [1, 8, 32],
+  "prompt_tokens": 128,
+  "prompt_offset_step": 13,
+  "new_tokens": 32,
+  "capacity": 1024,
+  "gemm_config": 0,
+  "attention_config": 0,
+  "cached_atol": 0.03,
+  "cached_rtol": 0.005,
+  "hf_atol": 0.15,
+  "hf_rtol": 0.015,
+  "fp16_ppl_relative_tolerance": 0.02,
+  "compile_ppl_relative_tolerance": 0.001,
+  "attempt_compile": true,
+  "compile_backend": "inductor",
+  "compile_dynamic": true,
+  "compile_fullgraph": false
+}

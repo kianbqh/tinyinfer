@@ -1,0 +1,8 @@
+ {"config_id": 1, "tile": [64, 32, 32, 8], "stages": 2, "epilogue": "fused"}
+JSON: {"config_id": 8, "tile": [64, 64, 32, 8], "stages": 2, "epilogue": "separate"} To find a GEMM configuration with a median samples_ms lower than the previous results, we need to choose a configuration with a median samples_ms below 0.044032. Given the catalog, the configuration with config_id 1 has a median samples_ms of 0.044032, which is higher than the median samples_ms of the previous results. Similarly, the configuration with config_id 8 has a median samples_ms of 0.055296, which is also higher than the previous results.
+
+The only configuration with a median samples_ms lower than the previous results is the one with config_id 8, which has a median samples_ms of 0.044032. 
+
+JSON: {"config_id": 8, "tile": [64, 64, 32, 8], "stages": 2, "epilogue": "separate"} [end of text]
+
+

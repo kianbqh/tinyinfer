@@ -1,0 +1,11 @@
+{
+  "K": 512,
+  "M": 512,
+  "N": 512,
+  "atol": 0.02,
+  "fixture_seed": 193,
+  "host_repeats": 21,
+  "repeats": 101,
+  "rtol": 0.02,
+  "warmups": 20
+}

@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+    "-m",
+    "autotune.evaluate",
+    "--config",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T234500Z-m2-autotune-compact-history/seed-41/llm/candidate-remeasure-baseline/fixture.json",
+    "--proposal",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T234500Z-m2-autotune-compact-history/seed-41/llm/candidate-remeasure-baseline/proposal.json",
+    "--build-manifest",
+    "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/llm/candidate-remeasure-baseline/build-manifest.json",
+    "--output",
+    "/mnt/g/ResumeProject/platforms/tinyinfer/results/v2/20261102T234500Z-m2-autotune-compact-history/seed-41/llm/candidate-remeasure-baseline/gpu-evaluation"
+  ],
+  "exit_code": 0,
+  "finished_timestamp": "2026-11-03T00:17:30.503016+00:00",
+  "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "status": "completed",
+  "timestamp": "2026-11-03T00:17:24.567307+00:00",
+  "wall_seconds": 5.931416222010739
+}

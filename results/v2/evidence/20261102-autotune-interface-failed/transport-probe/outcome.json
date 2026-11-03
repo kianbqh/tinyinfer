@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-11-02T23:03:34.196137+00:00",
+  "status": "one_transport_probe_completed_no_search",
+  "probe": {
+    "status": "completed",
+    "pid": 372406,
+    "started_at": "2026-11-02T23:02:23.788510+00:00",
+    "finished_at": "2026-11-02T23:02:35.235816+00:00",
+    "exit_code": 0,
+    "wall_seconds": 11.44730847000028
+  },
+  "only_argv_change": {
+    "removed_index": 15,
+    "removed": "--log-disable"
+  },
+  "actual_cli_argv_matches_spec": true,
+  "original_prompt_sha256": "c6fac0195a2b93dc3448ea753bfd2564e7f2ecdbd3859e7f745046de6f93d4b1",
+  "stdout_bytes": 116,
+  "stderr_bytes": 2212,
+  "stdout_sha256": "8aaed2d1c4774072382230ba5b8b0e51048644aaec0593b755a4dc92b9521073",
+  "generated_stdout_restored": true,
+  "strict_json_valid": false,
+  "strict_json_error": "Extra data: line 1 column 101 (char 100)",
+  "parsed_without_any_cleaning": null,
+  "output_cleaning_or_extraction_performed": false,
+  "probe_pid_present": false,
+  "gpu_compute_apps_stdout": "",
+  "gpu_query_exit_code": 0,
+  "gpu_evaluation_or_build_performed": false
+}

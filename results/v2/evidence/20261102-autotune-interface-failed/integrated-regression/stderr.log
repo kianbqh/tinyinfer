@@ -1,0 +1,25 @@
+test_configure_preserves_symlinked_venv_interpreter (test_candidate_build_python_path.CandidatePythonPathTests.test_configure_preserves_symlinked_venv_interpreter) ... ok
+test_example_needs_actual_hashes (test_config.ConfigTests.test_example_needs_actual_hashes) ... ok
+test_seed_directory_is_in_candidate_scratch_identity (test_config.ConfigTests.test_seed_directory_is_in_candidate_scratch_identity) ... ok
+test_three_seeds_and_matching_budgets (test_config.ConfigTests.test_three_seeds_and_matching_budgets) ... ok
+test_bad_samples_cannot_win (test_core.GateTests.test_bad_samples_cannot_win) ... ok
+test_exact_boundary_and_correctness (test_core.GateTests.test_exact_boundary_and_correctness) ... ok
+test_fake_proposer_accounting (test_core.GateTests.test_fake_proposer_accounting) ... ok
+test_fixture_mismatch_is_rejected (test_core.GateTests.test_fixture_mismatch_is_rejected) ... ok
+test_incomplete_search_is_not_matched_budget (test_core.GateTests.test_incomplete_search_is_not_matched_budget) ... ok
+test_incumbent_updates_require_three_percent_each_time (test_core.GateTests.test_incumbent_updates_require_three_percent_each_time) ... ok
+test_random_reproducibility_and_stdlib_only (test_core.GateTests.test_random_reproducibility_and_stdlib_only) ... ok
+test_schema_exact_catalog_all_twelve (test_core.GateTests.test_schema_exact_catalog_all_twelve) ... ok
+test_actual_probe_extra_key_stays_rejected_after_cli_deframing (test_proposer_transport.ProposerTransportTests.test_actual_probe_extra_key_stays_rejected_after_cli_deframing) ... ok
+test_completion_stdout_survives_and_diagnostics_stay_separate (test_proposer_transport.ProposerTransportTests.test_completion_stdout_survives_and_diagnostics_stay_separate) ... ok
+test_decoder_leaves_middle_incomplete_and_crlf_trailers_untouched (test_proposer_transport.ProposerTransportTests.test_decoder_leaves_middle_incomplete_and_crlf_trailers_untouched) ... ok
+test_decoder_preserves_payload_whitespace_and_never_recurses (test_proposer_transport.ProposerTransportTests.test_decoder_preserves_payload_whitespace_and_never_recurses) ... ok
+test_exact_cli_trailer_allows_strict_json_without_changing_raw_stdout (test_proposer_transport.ProposerTransportTests.test_exact_cli_trailer_allows_strict_json_without_changing_raw_stdout) ... ok
+test_model_marker_and_cli_marker_remove_only_last_once (test_proposer_transport.ProposerTransportTests.test_model_marker_and_cli_marker_remove_only_last_once) ... ok
+test_non_json_generation_is_preserved_for_strict_rejection (test_proposer_transport.ProposerTransportTests.test_non_json_generation_is_preserved_for_strict_rejection) ... ok
+test_token_limit_truncation_without_cli_trailer_stays_unchanged (test_proposer_transport.ProposerTransportTests.test_token_limit_truncation_without_cli_trailer_stays_unchanged) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 1.676s
+
+OK

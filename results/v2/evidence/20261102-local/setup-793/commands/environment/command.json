@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "argv": [
+    "/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+    "-B",
+    "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/environment_probe_REVIEW3.py",
+    "--execute"
+  ],
+  "cwd": "/mnt/g/ResumeProject/platforms/tinyinfer",
+  "started_at": "2026-11-02T13:19:14.313111+00:00",
+  "timeout_seconds": 180,
+  "pid": 300952,
+  "exit_code": 0,
+  "finished_at": "2026-11-02T13:20:29.649265+00:00",
+  "wall_seconds": 75.34044855399407,
+  "stdout.log_sha256": "9f8cc9daa19a9ef1ad6920d25a0cb661a5da4ca2e81df201066b4db979878ce9",
+  "stderr.log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

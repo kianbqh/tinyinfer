@@ -1,0 +1,1 @@
+/usr/bin/clang++ -O2 -g -DNDEBUG -fsanitize=fuzzer,address,undefined -fno-sanitize-recover=undefined -Xlinker --dependency-file=CMakeFiles/fuzz_host_validation.dir/link.d CMakeFiles/fuzz_host_validation.dir/harnesses/host_validation.cpp.o -o fuzz_host_validation  libti_fuzz_production.a

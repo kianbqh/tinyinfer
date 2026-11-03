@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "autotune/tests",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "cwd": "/mnt/g/ResumeProject/platforms/tinyinfer",
+  "timestamp": "2026-11-02T23:46:11.488313+00:00",
+  "stdout.log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr.log_sha256": "bc370c69198d9628431137a9f1538437bae479ac9d0edee480821db169882600",
+  "exit_code": 0,
+  "wall_seconds": 2.2160575539746787,
+  "finished_timestamp": "2026-11-02T23:46:13.704387+00:00"
+}

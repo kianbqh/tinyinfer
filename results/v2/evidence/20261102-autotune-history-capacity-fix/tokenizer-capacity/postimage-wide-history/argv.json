@@ -1,0 +1,12 @@
+[
+  "/opt/codex-resume/llm-risk-classifier/llama/llama-b12024/llama-tokenize",
+  "-m",
+  "/opt/codex-resume/llm-risk-classifier/weights/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+  "-f",
+  "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/proposer-history-capacity-fix/evidence/postimage-wide-history-prompt.txt",
+  "--ids",
+  "--show-count",
+  "--offline",
+  "-ngl",
+  "0"
+]

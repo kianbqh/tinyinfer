@@ -1,0 +1,110 @@
+[
+{
+  "directory": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-13 -DIK_HAVE_CUDA=1 -Dtinyinfer_backend_EXPORTS -I/mnt/g/ResumeProject/platforms/tinyinfer/kernels/include -I/mnt/g/ResumeProject/platforms/tinyinfer/backend/include -isystem /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/include -I/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include -O3 -DNDEBUG -fPIC -O3 -march=native -ffp-contract=fast -fno-math-errno -fopenmp -o CMakeFiles/tinyinfer_backend.dir/backend/runtime.cpp.o -c /mnt/g/ResumeProject/platforms/tinyinfer/backend/runtime.cpp",
+  "file": "/mnt/g/ResumeProject/platforms/tinyinfer/backend/runtime.cpp",
+  "output": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build/CMakeFiles/tinyinfer_backend.dir/backend/runtime.cpp.o"
+},
+{
+  "directory": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-13 -DIK_HAVE_CUDA=1 -Dtinyinfer_backend_EXPORTS -I/mnt/g/ResumeProject/platforms/tinyinfer/kernels/include -I/mnt/g/ResumeProject/platforms/tinyinfer/backend/include -isystem /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/include -I/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include -O3 -DNDEBUG -fPIC -O3 -march=native -ffp-contract=fast -fno-math-errno -fopenmp -o CMakeFiles/tinyinfer_backend.dir/kernels/src/cpu/matmul.cpp.o -c /mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cpu/matmul.cpp",
+  "file": "/mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cpu/matmul.cpp",
+  "output": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build/CMakeFiles/tinyinfer_backend.dir/kernels/src/cpu/matmul.cpp.o"
+},
+{
+  "directory": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-13 -DIK_HAVE_CUDA=1 -Dtinyinfer_backend_EXPORTS -I/mnt/g/ResumeProject/platforms/tinyinfer/kernels/include -I/mnt/g/ResumeProject/platforms/tinyinfer/backend/include -isystem /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/include -I/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include -O3 -DNDEBUG -fPIC -O3 -march=native -ffp-contract=fast -fno-math-errno -fopenmp -o CMakeFiles/tinyinfer_backend.dir/kernels/src/cpu/softmax.cpp.o -c /mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cpu/softmax.cpp",
+  "file": "/mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cpu/softmax.cpp",
+  "output": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build/CMakeFiles/tinyinfer_backend.dir/kernels/src/cpu/softmax.cpp.o"
+},
+{
+  "directory": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-13 -DIK_HAVE_CUDA=1 -Dtinyinfer_backend_EXPORTS -I/mnt/g/ResumeProject/platforms/tinyinfer/kernels/include -I/mnt/g/ResumeProject/platforms/tinyinfer/backend/include -isystem /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/include -I/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include -O3 -DNDEBUG -fPIC -O3 -march=native -ffp-contract=fast -fno-math-errno -fopenmp -o CMakeFiles/tinyinfer_backend.dir/kernels/src/cpu/layernorm.cpp.o -c /mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cpu/layernorm.cpp",
+  "file": "/mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cpu/layernorm.cpp",
+  "output": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build/CMakeFiles/tinyinfer_backend.dir/kernels/src/cpu/layernorm.cpp.o"
+},
+{
+  "directory": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build",
+  "command": "/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/bin/nvcc -forward-unknown-to-host-compiler -DIK_HAVE_CUDA=1 -Dtinyinfer_backend_EXPORTS -I/mnt/g/ResumeProject/platforms/tinyinfer/kernels/include -I/mnt/g/ResumeProject/platforms/tinyinfer/backend/include -isystem /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/include -O3 -DNDEBUG \"--generate-code=arch=compute_86,code=[compute_86,sm_86]\" -Xcompiler=-fPIC -O3 --use_fast_math -allow-unsupported-compiler -x cu -c /mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cuda/matmul.cu -o CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/matmul.cu.o",
+  "file": "/mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cuda/matmul.cu",
+  "output": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build/CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/matmul.cu.o"
+},
+{
+  "directory": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build",
+  "command": "/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/bin/nvcc -forward-unknown-to-host-compiler -DIK_HAVE_CUDA=1 -Dtinyinfer_backend_EXPORTS -I/mnt/g/ResumeProject/platforms/tinyinfer/kernels/include -I/mnt/g/ResumeProject/platforms/tinyinfer/backend/include -isystem /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/include -O3 -DNDEBUG \"--generate-code=arch=compute_86,code=[compute_86,sm_86]\" -Xcompiler=-fPIC -O3 --use_fast_math -allow-unsupported-compiler -x cu -c /mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cuda/softmax.cu -o CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/softmax.cu.o",
+  "file": "/mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cuda/softmax.cu",
+  "output": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build/CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/softmax.cu.o"
+},
+{
+  "directory": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build",
+  "command": "/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/bin/nvcc -forward-unknown-to-host-compiler -DIK_HAVE_CUDA=1 -Dtinyinfer_backend_EXPORTS -I/mnt/g/ResumeProject/platforms/tinyinfer/kernels/include -I/mnt/g/ResumeProject/platforms/tinyinfer/backend/include -isystem /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/include -O3 -DNDEBUG \"--generate-code=arch=compute_86,code=[compute_86,sm_86]\" -Xcompiler=-fPIC -O3 --use_fast_math -allow-unsupported-compiler -x cu -c /mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cuda/layernorm.cu -o CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/layernorm.cu.o",
+  "file": "/mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cuda/layernorm.cu",
+  "output": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build/CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/layernorm.cu.o"
+},
+{
+  "directory": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build",
+  "command": "/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/bin/nvcc -forward-unknown-to-host-compiler -DIK_HAVE_CUDA=1 -Dtinyinfer_backend_EXPORTS -I/mnt/g/ResumeProject/platforms/tinyinfer/kernels/include -I/mnt/g/ResumeProject/platforms/tinyinfer/backend/include -isystem /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/include -O3 -DNDEBUG \"--generate-code=arch=compute_86,code=[compute_86,sm_86]\" -Xcompiler=-fPIC -O3 --use_fast_math -allow-unsupported-compiler -x cu -c /mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cuda/bench_api.cu -o CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/bench_api.cu.o",
+  "file": "/mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cuda/bench_api.cu",
+  "output": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build/CMakeFiles/tinyinfer_backend.dir/kernels/src/cuda/bench_api.cu.o"
+},
+{
+  "directory": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-13 -DIK_HAVE_CUDA=1 -Dikernels_EXPORTS -I/mnt/g/ResumeProject/platforms/tinyinfer/kernels/include -I/mnt/g/ResumeProject/platforms/tinyinfer/backend/include -isystem /opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include/python3.12 -isystem /opt/codex-resume/portfolio-ml/venv/lib/python3.12/site-packages/pybind11/include -isystem /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/include -I/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include -O3 -DNDEBUG -fPIC -fvisibility=hidden -flto=auto -fno-fat-lto-objects -fopenmp -o CMakeFiles/ikernels.dir/kernels/python/bindings.cpp.o -c /mnt/g/ResumeProject/platforms/tinyinfer/kernels/python/bindings.cpp",
+  "file": "/mnt/g/ResumeProject/platforms/tinyinfer/kernels/python/bindings.cpp",
+  "output": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build/CMakeFiles/ikernels.dir/kernels/python/bindings.cpp.o"
+},
+{
+  "directory": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-13 -DIK_HAVE_CUDA=1 -I/mnt/g/ResumeProject/platforms/tinyinfer/kernels/include -I/mnt/g/ResumeProject/platforms/tinyinfer/backend/include -isystem /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/include -isystem /opt/codex-resume/cpp-cuda-inference-kernels/googletest/googletest/include -isystem /opt/codex-resume/cpp-cuda-inference-kernels/googletest/googletest -I/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include -O3 -DNDEBUG -fPIE -fopenmp -o CMakeFiles/test_cpu.dir/kernels/tests/test_cpu.cpp.o -c /mnt/g/ResumeProject/platforms/tinyinfer/kernels/tests/test_cpu.cpp",
+  "file": "/mnt/g/ResumeProject/platforms/tinyinfer/kernels/tests/test_cpu.cpp",
+  "output": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build/CMakeFiles/test_cpu.dir/kernels/tests/test_cpu.cpp.o"
+},
+{
+  "directory": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-13 -DIK_HAVE_CUDA=1 -I/mnt/g/ResumeProject/platforms/tinyinfer/kernels/include -I/mnt/g/ResumeProject/platforms/tinyinfer/backend/include -isystem /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/include -isystem /opt/codex-resume/cpp-cuda-inference-kernels/googletest/googletest/include -isystem /opt/codex-resume/cpp-cuda-inference-kernels/googletest/googletest -I/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include -O3 -DNDEBUG -fPIE -fopenmp -o CMakeFiles/test_cuda.dir/kernels/tests/test_cuda.cpp.o -c /mnt/g/ResumeProject/platforms/tinyinfer/kernels/tests/test_cuda.cpp",
+  "file": "/mnt/g/ResumeProject/platforms/tinyinfer/kernels/tests/test_cuda.cpp",
+  "output": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build/CMakeFiles/test_cuda.dir/kernels/tests/test_cuda.cpp.o"
+},
+{
+  "directory": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build",
+  "command": "/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/bin/nvcc -forward-unknown-to-host-compiler -DTI_V2_ONLY_GEMM_CONFIG=6 -I/mnt/g/ResumeProject/platforms/tinyinfer/backend/include -I/mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cuda -isystem /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/include -O3 -DNDEBUG \"--generate-code=arch=compute_86,code=[compute_86,sm_86]\" -Xcompiler=-fPIC -O3 -allow-unsupported-compiler -x cu -c /mnt/g/ResumeProject/platforms/tinyinfer/backend/runtime_v2.cu -o CMakeFiles/tinyinfer_v2.dir/backend/runtime_v2.cu.o",
+  "file": "/mnt/g/ResumeProject/platforms/tinyinfer/backend/runtime_v2.cu",
+  "output": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build/CMakeFiles/tinyinfer_v2.dir/backend/runtime_v2.cu.o"
+},
+{
+  "directory": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build",
+  "command": "/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/bin/nvcc -forward-unknown-to-host-compiler -DTI_V2_ONLY_GEMM_CONFIG=6 -I/mnt/g/ResumeProject/platforms/tinyinfer/backend/include -I/mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cuda -isystem /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/include -O3 -DNDEBUG \"--generate-code=arch=compute_86,code=[compute_86,sm_86]\" -Xcompiler=-fPIC -O3 -allow-unsupported-compiler -x cu -c /mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cuda/tc/gemm.cu -o CMakeFiles/tinyinfer_v2.dir/kernels/src/cuda/tc/gemm.cu.o",
+  "file": "/mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cuda/tc/gemm.cu",
+  "output": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build/CMakeFiles/tinyinfer_v2.dir/kernels/src/cuda/tc/gemm.cu.o"
+},
+{
+  "directory": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build",
+  "command": "/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/bin/nvcc -forward-unknown-to-host-compiler -DTI_V2_ONLY_GEMM_CONFIG=6 -I/mnt/g/ResumeProject/platforms/tinyinfer/backend/include -I/mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cuda -isystem /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/include -O3 -DNDEBUG \"--generate-code=arch=compute_86,code=[compute_86,sm_86]\" -Xcompiler=-fPIC -O3 -allow-unsupported-compiler -x cu -c /mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cuda/tc/attention.cu -o CMakeFiles/tinyinfer_v2.dir/kernels/src/cuda/tc/attention.cu.o",
+  "file": "/mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cuda/tc/attention.cu",
+  "output": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build/CMakeFiles/tinyinfer_v2.dir/kernels/src/cuda/tc/attention.cu.o"
+},
+{
+  "directory": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build",
+  "command": "/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/bin/nvcc -forward-unknown-to-host-compiler -DTI_V2_ONLY_GEMM_CONFIG=6 -I/mnt/g/ResumeProject/platforms/tinyinfer/backend/include -I/mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cuda -isystem /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/include -O3 -DNDEBUG \"--generate-code=arch=compute_86,code=[compute_86,sm_86]\" -Xcompiler=-fPIC -O3 -allow-unsupported-compiler -x cu -c /mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cuda/tc/elementwise.cu -o CMakeFiles/tinyinfer_v2.dir/kernels/src/cuda/tc/elementwise.cu.o",
+  "file": "/mnt/g/ResumeProject/platforms/tinyinfer/kernels/src/cuda/tc/elementwise.cu",
+  "output": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build/CMakeFiles/tinyinfer_v2.dir/kernels/src/cuda/tc/elementwise.cu.o"
+},
+{
+  "directory": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build",
+  "command": "/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/bin/nvcc -forward-unknown-to-host-compiler -DIK_HAVE_CUDA=1 -I/mnt/g/ResumeProject/platforms/tinyinfer/kernels/include -I/mnt/g/ResumeProject/platforms/tinyinfer/backend/include -isystem /opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/include -O3 -DNDEBUG \"--generate-code=arch=compute_86,code=[compute_86,sm_86]\" -Xcompiler=-fPIE -O3 -allow-unsupported-compiler -x cu -c /mnt/g/ResumeProject/platforms/tinyinfer/bench/v2/kernels/profile.cu -o CMakeFiles/profile_v2.dir/bench/v2/kernels/profile.cu.o",
+  "file": "/mnt/g/ResumeProject/platforms/tinyinfer/bench/v2/kernels/profile.cu",
+  "output": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build/CMakeFiles/profile_v2.dir/bench/v2/kernels/profile.cu.o"
+},
+{
+  "directory": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-13 -I/opt/codex-resume/cpp-cuda-inference-kernels/googletest/googletest/include -I/opt/codex-resume/cpp-cuda-inference-kernels/googletest/googletest -I/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include -O3 -DNDEBUG -std=c++17 -fPIC -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /opt/codex-resume/cpp-cuda-inference-kernels/googletest/googletest/src/gtest-all.cc",
+  "file": "/opt/codex-resume/cpp-cuda-inference-kernels/googletest/googletest/src/gtest-all.cc",
+  "output": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+},
+{
+  "directory": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-13 -isystem /opt/codex-resume/cpp-cuda-inference-kernels/googletest/googletest/include -isystem /opt/codex-resume/cpp-cuda-inference-kernels/googletest/googletest -I/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include -O3 -DNDEBUG -std=c++17 -fPIC -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /opt/codex-resume/cpp-cuda-inference-kernels/googletest/googletest/src/gtest_main.cc",
+  "file": "/opt/codex-resume/cpp-cuda-inference-kernels/googletest/googletest/src/gtest_main.cc",
+  "output": "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-41/random/candidate-0/build/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+}
+]

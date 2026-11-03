@@ -1,0 +1,21 @@
+[  6%] Building CXX object CMakeFiles/ti_fuzz_production.dir/home/runner/work/tinyinfer/tinyinfer/backend/host_codec.cpp.o
+[ 13%] Building CXX object CMakeFiles/ti_fuzz_production.dir/home/runner/work/tinyinfer/tinyinfer/kernels/src/cpu/matmul.cpp.o
+[ 20%] Building CXX object CMakeFiles/ti_fuzz_production.dir/home/runner/work/tinyinfer/tinyinfer/kernels/src/cpu/softmax.cpp.o
+[ 26%] Building CXX object CMakeFiles/ti_fuzz_production.dir/home/runner/work/tinyinfer/tinyinfer/kernels/src/cpu/layernorm.cpp.o
+[ 33%] Linking CXX static library libti_fuzz_production.a
+[ 33%] Built target ti_fuzz_production
+[ 40%] Building CXX object CMakeFiles/fuzz_json.dir/harnesses/json.cpp.o
+[ 46%] Linking CXX executable fuzz_json
+[ 46%] Built target fuzz_json
+[ 53%] Building CXX object CMakeFiles/fuzz_artifact.dir/harnesses/artifact.cpp.o
+[ 60%] Linking CXX executable fuzz_artifact
+[ 60%] Built target fuzz_artifact
+[ 66%] Building CXX object CMakeFiles/fuzz_host_validation.dir/harnesses/host_validation.cpp.o
+[ 73%] Linking CXX executable fuzz_host_validation
+[ 73%] Built target fuzz_host_validation
+[ 80%] Building CXX object CMakeFiles/fuzz_cpu_ops.dir/harnesses/cpu_ops.cpp.o
+[ 86%] Linking CXX executable fuzz_cpu_ops
+[ 86%] Built target fuzz_cpu_ops
+[ 93%] Building CXX object CMakeFiles/fuzz_codec.dir/harnesses/codec.cpp.o
+[100%] Linking CXX executable fuzz_codec
+[100%] Built target fuzz_codec

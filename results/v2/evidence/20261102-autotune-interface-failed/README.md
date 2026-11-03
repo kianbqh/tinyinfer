@@ -1,0 +1,7 @@
+# Completion output repair
+
+The search at source `961eee6` was interrupted after the local completion CLI repeatedly exited successfully with empty stdout and stderr. The original run files remain unchanged, including its unfinished journal. [The separate interruption record](../../20261102T224446Z-m2-autotune-venvfix/interrupted.json) identifies the stopped processes and unfinished comparison.
+
+A single transport probe reused the first prompt, model, seed and generation settings, removing only `--log-disable`. Generated stdout returned. The pinned upstream program writes generated tokens through the same logger and appends a terminal ` [end of text]` marker. The adapter now keeps logging enabled and decodes one exact CLI trailer. It retains the original stdout, stderr and hashes. The model's extra `configuration_id` field in that probe remains invalid under the unchanged schema.
+
+The directories here retain command records, process closure, raw probe output, source-contract hashes and the completed native candidate build receipts. [Regression results](regression/REGRESSION_RESULT.json) include the failing original adapter, the insufficient one-flag fix and the final transport fix. [Integrated CPU suite](integrated-regression/check.json) and [test log](integrated-regression/stderr.log) cover the actual repository version. These interface repairs are separate from the libFuzzer issue count.

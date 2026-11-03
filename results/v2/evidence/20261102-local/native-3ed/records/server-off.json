@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "host": "127.0.0.1",
+  "port": 8093,
+  "model": "native",
+  "manifest": "/opt/codex-resume/all-modules-v2/m2/weights/20261102T132951Z-m2-native-headers-fp16/manifest.json",
+  "max_batch": 1,
+  "max_wait_us": 0,
+  "capacity": 1024,
+  "max_new_tokens": 128,
+  "max_pending": 256,
+  "max_connections": 256,
+  "per_connection": 32,
+  "max_output_bytes": 1048576,
+  "max_ids": 100000,
+  "send_chunk_bytes": 65536,
+  "device": 0,
+  "gemm_config": 0,
+  "attention_config": 0
+}

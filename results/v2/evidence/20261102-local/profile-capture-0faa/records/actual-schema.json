@@ -1,0 +1,267 @@
+[
+  {
+    "operation": "gemm",
+    "columns": 518,
+    "rows": 3,
+    "raw_bytes": 31056,
+    "kernel_id": "0",
+    "kernel_name": "void ti::v2::<unnamed>::wmma_gemm<(int)32, (int)32, (int)16, (int)4, (bool)0, (int)2>(const __half *, const void *, const float *, const __half *, void *, int, int, int, int)",
+    "metrics": {
+      "sm__warps_active.avg.pct_of_peak_sustained_active": {
+        "unit": "%",
+        "raw": "59.95",
+        "expected_unit": "%"
+      },
+      "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+        "unit": "%",
+        "raw": "68.40",
+        "expected_unit": "%"
+      },
+      "gpu__compute_memory_throughput.avg.pct_of_peak_sustained_elapsed": {
+        "unit": "%",
+        "raw": "45.09",
+        "expected_unit": "%"
+      },
+      "gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed": {
+        "unit": "%",
+        "raw": "3.17",
+        "expected_unit": "%"
+      },
+      "sm__cycles_elapsed.avg.per_second": {
+        "unit": "cycle/second",
+        "raw": "1766230603.96",
+        "expected_unit": "cycle/second"
+      },
+      "smsp__cycles_elapsed.avg.per_second": {
+        "unit": "cycle/second",
+        "raw": "1766230603.96",
+        "expected_unit": "cycle/second"
+      },
+      "dram__cycles_elapsed.avg.per_second": {
+        "unit": "cycle/second",
+        "raw": "9241923641.70",
+        "expected_unit": "cycle/second"
+      },
+      "dram__bytes.sum.peak_sustained": {
+        "unit": "byte/cycle",
+        "raw": "96",
+        "expected_unit": "byte/cycle"
+      },
+      "dram__bytes.sum.per_second": {
+        "unit": "byte/second",
+        "raw": "28138766519.82",
+        "expected_unit": "byte/second"
+      },
+      "sm__inst_executed_pipe_tensor.sum.peak_sustained": {
+        "unit": "inst/cycle",
+        "raw": "70",
+        "expected_unit": "inst/cycle"
+      },
+      "smsp__inst_executed_pipe_tensor.sum.per_cycle_elapsed": {
+        "unit": "inst/cycle",
+        "raw": "1.28",
+        "expected_unit": "inst/cycle"
+      }
+    },
+    "parse_status": "passed",
+    "derived": {
+      "label": "gemm",
+      "operation": "gemm",
+      "kernel_id": "0",
+      "kernel_name": "void ti::v2::<unnamed>::wmma_gemm<(int)32, (int)32, (int)16, (int)4, (bool)0, (int)2>(const __half *, const void *, const float *, const __half *, void *, int, int, int, int)",
+      "roofline_model": "tensor_sm86_x512",
+      "achieved_occupancy_pct": 59.95,
+      "sm_throughput_pct": 68.4,
+      "memory_throughput_pct": 45.09,
+      "dram_throughput_pct": 3.17,
+      "achieved_flop_per_second": 1157516888611.2256,
+      "peak_compute_flop_per_second": 63301704845926.4,
+      "achieved_dram_byte_per_second": 28138766519.82,
+      "peak_dram_byte_per_second": 887224669603.2001,
+      "arithmetic_intensity_flop_per_byte": 41.13602093382131,
+      "ridge_flop_per_byte": 71.34799900710298,
+      "ceiling_at_point_flop_per_second": 36496892581799.93,
+      "pct_of_roofline": 3.1715491559093714
+    }
+  },
+  {
+    "operation": "int8",
+    "columns": 518,
+    "rows": 3,
+    "raw_bytes": 31068,
+    "kernel_id": "0",
+    "kernel_name": "void ti::v2::<unnamed>::wmma_gemm<(int)32, (int)32, (int)16, (int)4, (bool)1, (int)2>(const __half *, const void *, const float *, const __half *, void *, int, int, int, int)",
+    "metrics": {
+      "sm__warps_active.avg.pct_of_peak_sustained_active": {
+        "unit": "%",
+        "raw": "49.73",
+        "expected_unit": "%"
+      },
+      "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+        "unit": "%",
+        "raw": "58.04",
+        "expected_unit": "%"
+      },
+      "gpu__compute_memory_throughput.avg.pct_of_peak_sustained_elapsed": {
+        "unit": "%",
+        "raw": "38.42",
+        "expected_unit": "%"
+      },
+      "gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed": {
+        "unit": "%",
+        "raw": "2.27",
+        "expected_unit": "%"
+      },
+      "sm__cycles_elapsed.avg.per_second": {
+        "unit": "cycle/second",
+        "raw": "1781353710.11",
+        "expected_unit": "cycle/second"
+      },
+      "smsp__cycles_elapsed.avg.per_second": {
+        "unit": "cycle/second",
+        "raw": "1781353710.11",
+        "expected_unit": "cycle/second"
+      },
+      "dram__cycles_elapsed.avg.per_second": {
+        "unit": "cycle/second",
+        "raw": "9241707234.24",
+        "expected_unit": "cycle/second"
+      },
+      "dram__bytes.sum.peak_sustained": {
+        "unit": "byte/cycle",
+        "raw": "96",
+        "expected_unit": "byte/cycle"
+      },
+      "dram__bytes.sum.per_second": {
+        "unit": "byte/second",
+        "raw": "20129514321.30",
+        "expected_unit": "byte/second"
+      },
+      "sm__inst_executed_pipe_tensor.sum.peak_sustained": {
+        "unit": "inst/cycle",
+        "raw": "70",
+        "expected_unit": "inst/cycle"
+      },
+      "smsp__inst_executed_pipe_tensor.sum.per_cycle_elapsed": {
+        "unit": "inst/cycle",
+        "raw": "1.04",
+        "expected_unit": "inst/cycle"
+      }
+    },
+    "parse_status": "passed",
+    "derived": {
+      "label": "int8",
+      "operation": "int8",
+      "kernel_id": "0",
+      "kernel_name": "void ti::v2::<unnamed>::wmma_gemm<(int)32, (int)32, (int)16, (int)4, (bool)1, (int)2>(const __half *, const void *, const float *, const __half *, void *, int, int, int, int)",
+      "roofline_model": "tensor_sm86_x512",
+      "achieved_occupancy_pct": 49.73,
+      "sm_throughput_pct": 58.04,
+      "memory_throughput_pct": 38.42,
+      "dram_throughput_pct": 2.27,
+      "achieved_flop_per_second": 948535223559.3728,
+      "peak_compute_flop_per_second": 63843716970342.4,
+      "achieved_dram_byte_per_second": 20129514321.3,
+      "peak_dram_byte_per_second": 887203894487.04,
+      "arithmetic_intensity_flop_per_byte": 47.121614978841414,
+      "ridge_flop_per_byte": 71.96059143457131,
+      "ceiling_at_point_flop_per_second": 41806480323746.945,
+      "pct_of_roofline": 2.2688712759695897
+    }
+  },
+  {
+    "operation": "attention",
+    "columns": 510,
+    "rows": 3,
+    "raw_bytes": 31132,
+    "kernel_id": "0",
+    "kernel_name": "void ti::v2::<unnamed>::online_attention<(int)64, (int)32>(const __half *, const __half *, const __half *, __half *, const int *, const int *, const int *, int, int, int, bool)",
+    "metrics": {
+      "sm__warps_active.avg.pct_of_peak_sustained_active": {
+        "unit": "%",
+        "raw": "17.95",
+        "expected_unit": "%"
+      },
+      "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+        "unit": "%",
+        "raw": "31.31",
+        "expected_unit": "%"
+      },
+      "gpu__compute_memory_throughput.avg.pct_of_peak_sustained_elapsed": {
+        "unit": "%",
+        "raw": "31.31",
+        "expected_unit": "%"
+      },
+      "gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed": {
+        "unit": "%",
+        "raw": "0.90",
+        "expected_unit": "%"
+      },
+      "sm__cycles_elapsed.avg.per_second": {
+        "unit": "cycle/second",
+        "raw": "1776008048.84",
+        "expected_unit": "cycle/second"
+      },
+      "smsp__cycles_elapsed.avg.per_second": {
+        "unit": "cycle/second",
+        "raw": "1776008048.84",
+        "expected_unit": "cycle/second"
+      },
+      "dram__cycles_elapsed.avg.per_second": {
+        "unit": "cycle/second",
+        "raw": "9241879876.61",
+        "expected_unit": "cycle/second"
+      },
+      "dram__bytes.sum.peak_sustained": {
+        "unit": "byte/cycle",
+        "raw": "96",
+        "expected_unit": "byte/cycle"
+      },
+      "dram__bytes.sum.per_second": {
+        "unit": "byte/second",
+        "raw": "8020685900.93",
+        "expected_unit": "byte/second"
+      },
+      "sm__sass_thread_inst_executed_op_ffma_pred_on.sum.peak_sustained": {
+        "unit": "inst/cycle",
+        "raw": "8960",
+        "expected_unit": "inst/cycle"
+      },
+      "smsp__sass_thread_inst_executed_op_fadd_pred_on.sum.per_cycle_elapsed": {
+        "unit": "inst/cycle",
+        "raw": "241.18",
+        "expected_unit": "inst/cycle"
+      },
+      "smsp__sass_thread_inst_executed_op_fmul_pred_on.sum.per_cycle_elapsed": {
+        "unit": "inst/cycle",
+        "raw": "134.00",
+        "expected_unit": "inst/cycle"
+      },
+      "smsp__sass_thread_inst_executed_op_ffma_pred_on.sum.per_cycle_elapsed": {
+        "unit": "inst/cycle",
+        "raw": "348.84",
+        "expected_unit": "inst/cycle"
+      }
+    },
+    "parse_status": "passed",
+    "derived": {
+      "label": "attention",
+      "operation": "attention",
+      "kernel_id": "0",
+      "kernel_name": "void ti::v2::<unnamed>::online_attention<(int)64, (int)32>(const __half *, const __half *, const __half *, __half *, const int *, const int *, const int *, int, int, int, bool)",
+      "roofline_model": "fp32_fadd_fmul_ffma",
+      "achieved_occupancy_pct": 17.95,
+      "sm_throughput_pct": 31.31,
+      "memory_throughput_pct": 31.31,
+      "dram_throughput_pct": 0.9,
+      "achieved_flop_per_second": 1905407995278.4822,
+      "peak_compute_flop_per_second": 31826064235212.797,
+      "achieved_dram_byte_per_second": 8020685900.93,
+      "peak_dram_byte_per_second": 887220468154.56,
+      "arithmetic_intensity_flop_per_byte": 237.56172711582556,
+      "ridge_flop_per_byte": 35.871652399331786,
+      "ceiling_at_point_flop_per_second": 31826064235212.797,
+      "pct_of_roofline": 5.986941964285714
+    }
+  }
+]

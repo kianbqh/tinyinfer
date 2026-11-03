@@ -1,0 +1,3 @@
+ {"config_id": 5, "tile": [64, 64, 32, 8], "stages": 2, "epilogue": "separate"} The selected GEMM configuration is: {"config_id": 5, "tile": [64, 64, 32, 8], "stages": 2, "epilogue": "separate"} with a median samples_ms of 0.043007999658584595. This configuration uses a nonzero bias and matches the requirements of the previous results, being lower than the initial baseline and having a lower median samples_ms. It computes the same GEMM operation with a bias value of 0.055296000093221664. The correctness of this configuration is acceptable as per the criteria provided. [end of text]
+
+
