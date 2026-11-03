@@ -1,0 +1,95 @@
+{
+  "attempts": [
+    {
+      "argv": [
+        "/opt/codex-resume/portfolio-ml/venv/bin/cmake",
+        "-S",
+        "/mnt/g/ResumeProject/platforms/tinyinfer",
+        "-B",
+        "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-17/random/candidate-remeasure-winner/build",
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+        "-DCMAKE_MAKE_PROGRAM=/opt/codex-resume/portfolio-ml/venv/bin/ninja",
+        "-DTINYC_CUDA=ON",
+        "-DTINYC_V2_CUDA=ON",
+        "-DTINYC_V2_GEMM_CONFIG=10",
+        "-DCMAKE_CUDA_COMPILER=/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/bin/nvcc",
+        "-DCUDAToolkit_ROOT=/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4",
+        "-DCMAKE_CXX_COMPILER=/usr/bin/x86_64-linux-gnu-g++-13",
+        "-DPython3_EXECUTABLE=/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+        "-DPython3_INCLUDE_DIR=/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include/python3.12",
+        "-DFETCHCONTENT_FULLY_DISCONNECTED=ON",
+        "-DFETCHCONTENT_SOURCE_DIR_GOOGLETEST=/opt/codex-resume/cpp-cuda-inference-kernels/googletest"
+      ],
+      "exit_code": 0,
+      "log_sha256": "f86b2c13f09de1960d44a37a8306f4fa890a3258665fd02d1626e12931f3a198",
+      "phase": "configure",
+      "status": "completed",
+      "wall_seconds": 2.1688770110195037
+    },
+    {
+      "argv": [
+        "/opt/codex-resume/portfolio-ml/venv/bin/cmake",
+        "--build",
+        "/opt/codex-resume/all-modules-v2/m2/autotune/20261102T234500Z-compact-history/20261102T234500Z-m2-autotune-compact-history/seed-17/random/candidate-remeasure-winner/build",
+        "--target",
+        "tinyinfer_backend",
+        "--parallel",
+        "2"
+      ],
+      "exit_code": 0,
+      "log_sha256": "939a1208f04100164713072eb31e5ad37dc5139e1c01d55fe153db0790ef6611",
+      "phase": "build",
+      "status": "completed",
+      "wall_seconds": 7.230347521021031
+    }
+  ],
+  "candidate_id": 10,
+  "finished_timestamp": "2026-11-02T23:58:28.817150+00:00",
+  "git": {
+    "executable": "/opt/codex-resume/all-modules-v2/m1a/tools/git-native/usr/bin/git",
+    "sha": "6b1b9f665052e05715b15427f0a9a4777d0414fb",
+    "status_porcelain": "?? results/v2/20261102T234500Z-m2-autotune-compact-history/",
+    "version": "git version 2.43.0"
+  },
+  "proposal": {
+    "config_id": 10,
+    "epilogue": "separate",
+    "stages": 1,
+    "tile": [
+      64,
+      32,
+      32,
+      8
+    ]
+  },
+  "proposal_canonical_sha256": "b9e1acc80d2a03d09bf03da25e44a842b5af9490ea2992bce57656ea9e278136",
+  "proposal_sha256": "f245ab7ca5ddef5f55ad5a488cd6fe67fdee8d935c370dfad02292010b871133",
+  "source_sha256": {
+    "CMakeLists.txt": "db0c115bef4fe0111b0ae89412cb232bc969ce91cc76f6a9bb59c945e37dc7b0",
+    "backend/host_codec.cpp": "eccf21660ee7e84e93cf7ff5663775b760afa782341e391b5552889cbadfbd19",
+    "backend/host_codec/CMakeLists.txt": "3389bb92826e119788cc642219e23f7be84872532639407a079df31d6dc39c43",
+    "backend/include/tinyinfer_backend.h": "622b340666f7f6749325b56fd6da06536106253f7faa232c5713a94cec738841",
+    "backend/include/tinyinfer_backend_v2.h": "7b9b63c52b22587924a89687b58911b0759808d84242bc96ae27d273b41aaacd",
+    "backend/include/tinyinfer_host_codec.h": "e0731deeb9842d74938f4b663e7c73669cf9fde2be864ac3c7de25fb0ce1358f",
+    "backend/include/tinyinfer_host_validation.hpp": "30b2f99d98418959a434936d1fa8d704faaccc5ee01c037180b488177b5e32ea",
+    "backend/include/tinyinfer_quantization_scalar.h": "5cce4305bfc36baac1b7ce369529b6f4db42931cf64626fc7da42084239b08f7",
+    "backend/runtime.cpp": "509f824730a061857efc3a9388a97ec31381176ec75a8c9a23020a88e28c459e",
+    "backend/runtime_v2.cu": "3616b5117022217d5ec138e244bec95376c0b4f82ebfe0f2acfebc0582782008",
+    "bench/v2/kernels/profile.cu": "d021519bf632719b31c96dd7777eab0a5d1896d3705ae7de40bc6cc1d3984f53",
+    "cmake/HostCodec.cmake": "4012e47011e09ba2b53466db80b0823b4ec38fa9a8cf16e86104d511a3076597",
+    "cmake/V2Kernels.cmake": "f279d80aba5ae5e11681019ff84c4f894cead9c1914cdaaa3e79dda50acb057e",
+    "cmake/V2LLM.cmake": "38f5cb5dad94d0921caf5c793851e9695b56e762461c7d73a94a20a16d9f65de",
+    "cmake/V2Server.cmake": "473cee99124969cc9d38cbfe5a4691b0630929dd330e624148e786fbf0999f48",
+    "kernels/src/cuda/tc/attention.cu": "7cb99aef148213352b6cf7eff7783e6a2c62bcd1a48a2294b8b10afa81954a66",
+    "kernels/src/cuda/tc/catalog.cuh": "e494ab87e879f88517a3ee26fd7a9f8af2399600f0fea53e4d47a75c21337f15",
+    "kernels/src/cuda/tc/elementwise.cu": "0eb57bea34b7f321c1e639d0778010d835c0707962908f5e076778145e0110b2",
+    "kernels/src/cuda/tc/gemm.cu": "3bdb812e4b9455a7f972513e96c644dc4e91392dca27eade0d85f21158a19535",
+    "kernels/src/cuda/tc/launchers.cuh": "1fe42cce9ff4bfd6742983a4e0b65418d4d5aa39280f221f2652dd413a43ebd6"
+  },
+  "status": "compiled_not_gpu_tested",
+  "timestamp": "2026-11-02T23:58:16.219708+00:00",
+  "wall_seconds": 9.553737218986498
+}

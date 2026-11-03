@@ -1,0 +1,23 @@
+{
+  "status": "passed_prompt_reconstruction_against_retained_capacity_fixtures",
+  "source": "6b1b9f665052e05715b15427f0a9a4777d0414fb",
+  "audit_script_sha256": "cf0f469986c0f05165aded61e8acd006a2d6e486186f7c38b714ca16eb586dbb",
+  "fixtures": [
+    {
+      "fixture": "postimage-long-history",
+      "bytes": 5274,
+      "sha256": "b6f1b1432fc6e8af9ee14702d3980a3a9aa4cf1293b2147421bb0802466fde24"
+    },
+    {
+      "fixture": "postimage-wide-history",
+      "bytes": 7384,
+      "sha256": "ff7695ce2d8caadad3d36449d3859c94cc633d4cdd227805ebdc8f5e2bcb73b7"
+    },
+    {
+      "fixture": "postimage-adversarial-envelope",
+      "bytes": 7387,
+      "sha256": "69345f577a3a1573d811167eed6ddc7a3e7fa055ad89f1c0d9280a402402a673"
+    }
+  ],
+  "scope": "Only synthetic prompt reconstruction and audit syntax; no active or closed search outcome audited."
+}

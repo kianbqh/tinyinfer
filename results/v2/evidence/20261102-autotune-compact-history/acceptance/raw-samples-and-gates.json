@@ -1,0 +1,1330 @@
+{
+  "status": "passed",
+  "timestamp_utc": "2026-11-03T00:33:46.362861+00:00",
+  "run_status": "incomplete_incomparable",
+  "scope": "Independent raw-sample, source, build-identity, incumbent-gate and budget accounting. External native build receipt files and proposer process logs require separate provenance review.",
+  "comparable": false,
+  "methods": [
+    {
+      "seed": 17,
+      "method": "llm",
+      "proposals": 64,
+      "evaluations": 5,
+      "counts": {
+        "passed": 5,
+        "duplicate": 12,
+        "invalid": 47
+      },
+      "accepted": 1,
+      "best_id": 10,
+      "selection_speedup": 1.0487805051182812,
+      "independent_speedup": 0.8461538622987227,
+      "independent_gate": false
+    },
+    {
+      "seed": 17,
+      "method": "random",
+      "proposals": 12,
+      "evaluations": 8,
+      "counts": {
+        "passed": 8,
+        "duplicate": 4
+      },
+      "accepted": 1,
+      "best_id": 10,
+      "selection_speedup": 1.0487805051182812,
+      "independent_speedup": 0.9772727197562422,
+      "independent_gate": false
+    },
+    {
+      "seed": 41,
+      "method": "llm",
+      "proposals": 64,
+      "evaluations": 5,
+      "counts": {
+        "invalid": 44,
+        "passed": 5,
+        "duplicate": 15
+      },
+      "accepted": 0,
+      "best_id": 0,
+      "selection_speedup": 1.0,
+      "independent_speedup": 1.0,
+      "independent_gate": false
+    },
+    {
+      "seed": 41,
+      "method": "random",
+      "proposals": 9,
+      "evaluations": 8,
+      "counts": {
+        "passed": 8,
+        "duplicate": 1
+      },
+      "accepted": 1,
+      "best_id": 4,
+      "selection_speedup": 1.1621621116715892,
+      "independent_speedup": 1.1315789977559414,
+      "independent_gate": true
+    },
+    {
+      "seed": 73,
+      "method": "llm",
+      "proposals": 64,
+      "evaluations": 4,
+      "counts": {
+        "passed": 4,
+        "invalid": 43,
+        "duplicate": 17
+      },
+      "accepted": 0,
+      "best_id": 0,
+      "selection_speedup": 1.0,
+      "independent_speedup": 1.0,
+      "independent_gate": false
+    },
+    {
+      "seed": 73,
+      "method": "random",
+      "proposals": 15,
+      "evaluations": 8,
+      "counts": {
+        "passed": 8,
+        "duplicate": 7
+      },
+      "accepted": 1,
+      "best_id": 4,
+      "selection_speedup": 1.1621621116715892,
+      "independent_speedup": 1.1621621116715892,
+      "independent_gate": true
+    }
+  ],
+  "evaluations": {
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\candidate-initial-baseline\\gpu-evaluation\\evaluation.json": {
+      "sha256": "9c7ba66a70ff05eec1661f436c1cc0ecd897c03d4b0c5322bd737379a50f47df",
+      "config_id": 0,
+      "event_p50_ms": 0.04403200000524521,
+      "host_p50_ms": 0.10028
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-0\\gpu-evaluation\\evaluation.json": {
+      "sha256": "e7315698485e3428adf24a42882eeb8cd0008155ca37da22dd90bc214ae43058",
+      "config_id": 1,
+      "event_p50_ms": 0.04505600035190582,
+      "host_p50_ms": 0.087629
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-6\\gpu-evaluation\\evaluation.json": {
+      "sha256": "bbe8ece1158a2ae1fa5a528aebd4ee7823739be74d8abe23f3719379fafcd3e6",
+      "config_id": 2,
+      "event_p50_ms": 0.050175998359918594,
+      "host_p50_ms": 0.096901
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-40\\gpu-evaluation\\evaluation.json": {
+      "sha256": "c0c67d9fbf2eb8c8b6d218eb946044ba4bf23c17f22a8ce106763eea707db2a6",
+      "config_id": 3,
+      "event_p50_ms": 0.053247999399900436,
+      "host_p50_ms": 0.092442
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-42\\gpu-evaluation\\evaluation.json": {
+      "sha256": "03f7c9f02abc0f387f2b5efd1a7803363c2b316c09af5227ae5dc50c922d159f",
+      "config_id": 8,
+      "event_p50_ms": 0.10956799983978271,
+      "host_p50_ms": 0.096181
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-46\\gpu-evaluation\\evaluation.json": {
+      "sha256": "fcce89855e9e2b2ba49f2db6808b834b653fee0c2ce8f4c65837bf9efbec9639",
+      "config_id": 10,
+      "event_p50_ms": 0.04198399931192398,
+      "host_p50_ms": 0.088042
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-remeasure-baseline\\gpu-evaluation\\evaluation.json": {
+      "sha256": "806320586156ca0f64163ecd101507654ce4a6fc3bdf3b77b2e8ab8131e0fd3c",
+      "config_id": 0,
+      "event_p50_ms": 0.04505600035190582,
+      "host_p50_ms": 0.106188
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-remeasure-winner\\gpu-evaluation\\evaluation.json": {
+      "sha256": "bed0c3ea1f62ddee2d6c4b82e820ba452d636a08a8016aaf2957dee4181331b3",
+      "config_id": 10,
+      "event_p50_ms": 0.053247999399900436,
+      "host_p50_ms": 0.098612
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-0\\gpu-evaluation\\evaluation.json": {
+      "sha256": "0b60232b824168e45c7aba06025c6978c86b1d235917371cb73893fb8c4d3374",
+      "config_id": 8,
+      "event_p50_ms": 0.05427199974656105,
+      "host_p50_ms": 0.098569
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-1\\gpu-evaluation\\evaluation.json": {
+      "sha256": "8b0a269bb3522a9456d9954476fe5f7f31849de4be38b572107ea64e56f8355f",
+      "config_id": 6,
+      "event_p50_ms": 0.048128001391887665,
+      "host_p50_ms": 0.091292
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-2\\gpu-evaluation\\evaluation.json": {
+      "sha256": "f63af963df1ba316aee9f92120474e7d95ad042a28cc75ad50a7a8a58275971c",
+      "config_id": 4,
+      "event_p50_ms": 0.04608000069856644,
+      "host_p50_ms": 0.084649
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-3\\gpu-evaluation\\evaluation.json": {
+      "sha256": "b34c70d741f91e8f6a3475309f1f1926ca832f76c59e7840c7254fc052852df6",
+      "config_id": 5,
+      "event_p50_ms": 0.04710400104522705,
+      "host_p50_ms": 0.088797
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-5\\gpu-evaluation\\evaluation.json": {
+      "sha256": "df32470acb2e386ca8d3a751dd8501d2fd5a5008046dd076a75cc5d996ee32f6",
+      "config_id": 2,
+      "event_p50_ms": 0.050175998359918594,
+      "host_p50_ms": 0.111839
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-6\\gpu-evaluation\\evaluation.json": {
+      "sha256": "626f0c3869e0a3feaa5632a4334aa7bc9657a85a68258ea9f669009a07b763b1",
+      "config_id": 11,
+      "event_p50_ms": 0.05427199974656105,
+      "host_p50_ms": 0.120491
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-9\\gpu-evaluation\\evaluation.json": {
+      "sha256": "75c1688d40bfd9271300980e0c52e47c344e16b24543ff2c6fe80772598be2ee",
+      "config_id": 10,
+      "event_p50_ms": 0.04198399931192398,
+      "host_p50_ms": 0.087352
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-11\\gpu-evaluation\\evaluation.json": {
+      "sha256": "7324b1f767fbbe49c75b157238fa5f25a19f0a4b9a75623100f478b64478f1e6",
+      "config_id": 1,
+      "event_p50_ms": 0.04505600035190582,
+      "host_p50_ms": 0.113959
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-remeasure-baseline\\gpu-evaluation\\evaluation.json": {
+      "sha256": "d3ab5bcd1698e89de097ac58e7c9d1f0a7bb95895561c2366bf3bbda9786533b",
+      "config_id": 0,
+      "event_p50_ms": 0.04403200000524521,
+      "host_p50_ms": 0.08469
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-remeasure-winner\\gpu-evaluation\\evaluation.json": {
+      "sha256": "af3b57b6896e5d93b30592988f37a0a6fbf26d723c15c175e3c484b1794f333a",
+      "config_id": 10,
+      "event_p50_ms": 0.04505600035190582,
+      "host_p50_ms": 0.086082
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\candidate-initial-baseline\\gpu-evaluation\\evaluation.json": {
+      "sha256": "f55c68967aa40533995dbe10f0a8c7a88a975897c7158abc0af9df33f299f5c0",
+      "config_id": 0,
+      "event_p50_ms": 0.04403200000524521,
+      "host_p50_ms": 0.083872
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-1\\gpu-evaluation\\evaluation.json": {
+      "sha256": "27907ef58502aceb48669fba092ef4ae619066d195d917ecd3deeeaa738934ba",
+      "config_id": 1,
+      "event_p50_ms": 0.04505600035190582,
+      "host_p50_ms": 0.0856
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-22\\gpu-evaluation\\evaluation.json": {
+      "sha256": "7d302678e4322c1a909926237f00bb15fbac589f10c1c990d29e9a5fe6befc0f",
+      "config_id": 6,
+      "event_p50_ms": 0.048128001391887665,
+      "host_p50_ms": 0.120992
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-25\\gpu-evaluation\\evaluation.json": {
+      "sha256": "ab39366426823a8bb6c533ef3436fbabf098783c380b1e1580ebe069cd278025",
+      "config_id": 11,
+      "event_p50_ms": 0.050175998359918594,
+      "host_p50_ms": 0.103006
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-28\\gpu-evaluation\\evaluation.json": {
+      "sha256": "17a09124fa3d30ce018d7ecb37dd235f14ab4bcb641127e83590f58e68f7355f",
+      "config_id": 2,
+      "event_p50_ms": 0.050175998359918594,
+      "host_p50_ms": 0.09454
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-41\\gpu-evaluation\\evaluation.json": {
+      "sha256": "27e3a521b1fbcb8125ca5de35a7921d2fca4a04ea2b533547f8c3ebff099515d",
+      "config_id": 8,
+      "event_p50_ms": 0.05427199974656105,
+      "host_p50_ms": 0.098214
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-remeasure-baseline\\gpu-evaluation\\evaluation.json": {
+      "sha256": "484b8f62e412c467231c170f1814f64a65f01ed5c1a9c16e7d56aad993c2eca1",
+      "config_id": 0,
+      "event_p50_ms": 0.04403200000524521,
+      "host_p50_ms": 0.08396
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-remeasure-winner\\gpu-evaluation\\evaluation.json": {
+      "sha256": "cab49beeaa434a18d8dccfa64d76b2c1a0dc3b9ab4bd6f17a18e46ebb773c9e0",
+      "config_id": 0,
+      "event_p50_ms": 0.04403200000524521,
+      "host_p50_ms": 0.088191
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-0\\gpu-evaluation\\evaluation.json": {
+      "sha256": "d7f37a008b5af7e0b588c3f3b5da8ac82e25c29025dbb03f4b4e7875aefa6b9e",
+      "config_id": 6,
+      "event_p50_ms": 0.048128001391887665,
+      "host_p50_ms": 0.091802
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-1\\gpu-evaluation\\evaluation.json": {
+      "sha256": "bb9968eda1e3f1acb1f63a4091c21e500049fc2e5c998eca0fe5f651dc834849",
+      "config_id": 5,
+      "event_p50_ms": 0.04710400104522705,
+      "host_p50_ms": 0.092394
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-2\\gpu-evaluation\\evaluation.json": {
+      "sha256": "1c3da6de39dd39e336a4cf9678dba057040fd7c77750e0c4cafe6e800195ab7e",
+      "config_id": 3,
+      "event_p50_ms": 0.053247999399900436,
+      "host_p50_ms": 0.092057
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-3\\gpu-evaluation\\evaluation.json": {
+      "sha256": "34381951c15b6e1741b3e3b85770e309d026926502d32bc757310238808dd0d2",
+      "config_id": 2,
+      "event_p50_ms": 0.050175998359918594,
+      "host_p50_ms": 0.090405
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-5\\gpu-evaluation\\evaluation.json": {
+      "sha256": "4f7676dbe71deb59a8792c5a9c1c89f1b1ac800e8278f0cc7ede1ebc87ea17fa",
+      "config_id": 9,
+      "event_p50_ms": 0.05734400078654289,
+      "host_p50_ms": 0.110314
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-6\\gpu-evaluation\\evaluation.json": {
+      "sha256": "60333c3819605fb62703d840ceec2c9821051bcb5f3cc578134a25b9f52369a5",
+      "config_id": 11,
+      "event_p50_ms": 0.050175998359918594,
+      "host_p50_ms": 0.095774
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-7\\gpu-evaluation\\evaluation.json": {
+      "sha256": "05593e4f0a707405060b5f060ca9d9ac7c7f23c15114cfebfc4d3ae6cb23638e",
+      "config_id": 4,
+      "event_p50_ms": 0.03788800165057182,
+      "host_p50_ms": 0.083474
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-8\\gpu-evaluation\\evaluation.json": {
+      "sha256": "b8a348e76805217f9134c507f340184ba7f0a7d7efea34a685853b936ccc4956",
+      "config_id": 8,
+      "event_p50_ms": 0.05427199974656105,
+      "host_p50_ms": 0.106974
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-remeasure-baseline\\gpu-evaluation\\evaluation.json": {
+      "sha256": "ab6372f940b577a5fd0cfb5124b8ae43be18747e7153b1b3e06559b51942053e",
+      "config_id": 0,
+      "event_p50_ms": 0.04403200000524521,
+      "host_p50_ms": 0.083577
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-remeasure-winner\\gpu-evaluation\\evaluation.json": {
+      "sha256": "32b1f38016ae2bb00811f9cebb1cc64d1255089016d273aed96dcf4261ad7517",
+      "config_id": 4,
+      "event_p50_ms": 0.03891199827194214,
+      "host_p50_ms": 0.082591
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\candidate-initial-baseline\\gpu-evaluation\\evaluation.json": {
+      "sha256": "d451bb8cfc0ef9854aefb32b10361d0dab14bb946d031bc5d5ac4fa35cb6a34d",
+      "config_id": 0,
+      "event_p50_ms": 0.04403200000524521,
+      "host_p50_ms": 0.087621
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-0\\gpu-evaluation\\evaluation.json": {
+      "sha256": "effae32a0e9e66838e4d440539db47071df22a099b04142dbc057ea42dba3e91",
+      "config_id": 11,
+      "event_p50_ms": 0.050175998359918594,
+      "host_p50_ms": 0.093921
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-2\\gpu-evaluation\\evaluation.json": {
+      "sha256": "33beaa52aa62c5f883c0362df0f75d3a85c461c391a602219ae9e73f12db0f34",
+      "config_id": 10,
+      "event_p50_ms": 0.05119999870657921,
+      "host_p50_ms": 0.087277
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-12\\gpu-evaluation\\evaluation.json": {
+      "sha256": "d62349d336bae51f6847779bd048d39ed217454a33e8834a7ad6207f22042891",
+      "config_id": 2,
+      "event_p50_ms": 0.050175998359918594,
+      "host_p50_ms": 0.091896
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-21\\gpu-evaluation\\evaluation.json": {
+      "sha256": "088edcb1013df07f36a4a3fcfc11dcac71292a7cdefb533578042b8e4de675e4",
+      "config_id": 1,
+      "event_p50_ms": 0.0870399996638298,
+      "host_p50_ms": 0.12929
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-remeasure-baseline\\gpu-evaluation\\evaluation.json": {
+      "sha256": "c43d73d6207b5e00d55fa890f320daefc69c50e6b05b7d9a83b6cd643c4657b9",
+      "config_id": 0,
+      "event_p50_ms": 0.04403200000524521,
+      "host_p50_ms": 0.096134
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-remeasure-winner\\gpu-evaluation\\evaluation.json": {
+      "sha256": "3d87c9e9cec0256482295ea6a396519f9e885989b426a7208c2af3fb1c2460bc",
+      "config_id": 0,
+      "event_p50_ms": 0.04403200000524521,
+      "host_p50_ms": 0.085857
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-0\\gpu-evaluation\\evaluation.json": {
+      "sha256": "4455b8abff5bcc2eae78a32bb921dc5444a6771a4dbbfdfddbfa6beef4718b89",
+      "config_id": 4,
+      "event_p50_ms": 0.03788800165057182,
+      "host_p50_ms": 0.079524
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-1\\gpu-evaluation\\evaluation.json": {
+      "sha256": "e139788aa08aababd0320c89621ae3dc915117c7e8622bff9eb6ced58cdf140a",
+      "config_id": 1,
+      "event_p50_ms": 0.04505600035190582,
+      "host_p50_ms": 0.086624
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-2\\gpu-evaluation\\evaluation.json": {
+      "sha256": "e029d99018a2b549e6fe008e254abf0fac2ea54cba1d4e16e0856230ec92cd31",
+      "config_id": 8,
+      "event_p50_ms": 0.05427199974656105,
+      "host_p50_ms": 0.09758
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-3\\gpu-evaluation\\evaluation.json": {
+      "sha256": "3394128aebc1c4016931893203525f7202d00a5e38107ebc263ab6c1b2b65508",
+      "config_id": 7,
+      "event_p50_ms": 0.04915200173854828,
+      "host_p50_ms": 0.107447
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-4\\gpu-evaluation\\evaluation.json": {
+      "sha256": "ba1d0ff00f0b6ffb5cf18cbb87bb673b6f0758f1057c758b361a1035205cb7c7",
+      "config_id": 9,
+      "event_p50_ms": 0.05734400078654289,
+      "host_p50_ms": 0.100091
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-5\\gpu-evaluation\\evaluation.json": {
+      "sha256": "6149f502c150e2bffb9891347b40e583c64f9068d0fd9740aaf95042f8c14d0f",
+      "config_id": 2,
+      "event_p50_ms": 0.050175998359918594,
+      "host_p50_ms": 0.093338
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-11\\gpu-evaluation\\evaluation.json": {
+      "sha256": "7b70d3314255ea188311be21baba374bd4c372e5f475d3485deac08f0b5076e1",
+      "config_id": 6,
+      "event_p50_ms": 0.09830400347709656,
+      "host_p50_ms": 0.137243
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-14\\gpu-evaluation\\evaluation.json": {
+      "sha256": "26f2be9815e75e5aa819a4c6d2a0e54df2dc6af8e7dd78ccb5fbd7f4c178c624",
+      "config_id": 3,
+      "event_p50_ms": 0.05427199974656105,
+      "host_p50_ms": 0.12625
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-remeasure-baseline\\gpu-evaluation\\evaluation.json": {
+      "sha256": "82462dc1e647c434562be2427dee1b7f7d93a33d89dc646f3beef0cd264844ef",
+      "config_id": 0,
+      "event_p50_ms": 0.04403200000524521,
+      "host_p50_ms": 0.086134
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-remeasure-winner\\gpu-evaluation\\evaluation.json": {
+      "sha256": "7ac65f403379f9daec8dd6495076e9085a2b9fc2c72335edd62093ab94d343be",
+      "config_id": 4,
+      "event_p50_ms": 0.03788800165057182,
+      "host_p50_ms": 0.078302
+    }
+  },
+  "source_hashes": {
+    "CMakeLists.txt": "db0c115bef4fe0111b0ae89412cb232bc969ce91cc76f6a9bb59c945e37dc7b0",
+    "backend/host_codec.cpp": "eccf21660ee7e84e93cf7ff5663775b760afa782341e391b5552889cbadfbd19",
+    "backend/host_codec/CMakeLists.txt": "3389bb92826e119788cc642219e23f7be84872532639407a079df31d6dc39c43",
+    "backend/include/tinyinfer_backend.h": "622b340666f7f6749325b56fd6da06536106253f7faa232c5713a94cec738841",
+    "backend/include/tinyinfer_backend_v2.h": "7b9b63c52b22587924a89687b58911b0759808d84242bc96ae27d273b41aaacd",
+    "backend/include/tinyinfer_host_codec.h": "e0731deeb9842d74938f4b663e7c73669cf9fde2be864ac3c7de25fb0ce1358f",
+    "backend/include/tinyinfer_host_validation.hpp": "30b2f99d98418959a434936d1fa8d704faaccc5ee01c037180b488177b5e32ea",
+    "backend/include/tinyinfer_quantization_scalar.h": "5cce4305bfc36baac1b7ce369529b6f4db42931cf64626fc7da42084239b08f7",
+    "backend/runtime.cpp": "509f824730a061857efc3a9388a97ec31381176ec75a8c9a23020a88e28c459e",
+    "backend/runtime_v2.cu": "3616b5117022217d5ec138e244bec95376c0b4f82ebfe0f2acfebc0582782008",
+    "bench/v2/kernels/build_receipt.py": "3ada28edb32ab3c6aa9efebc3b9dd540e82bd06c41881d1149c4f22ae21c244f",
+    "bench/v2/kernels/candidate_build.py": "aa46c93a140d9953314e9eca9242b1e4f4293183a55ef26f8965de368eeed3f6",
+    "bench/v2/kernels/correctness.py": "4ca032ac2dc6af965f78852efc0182b06fa9575050cbcc607d6b9240e7e5e803",
+    "bench/v2/kernels/profile.cu": "d021519bf632719b31c96dd7777eab0a5d1896d3705ae7de40bc6cc1d3984f53",
+    "bench/v2/kernels/protocol.py": "7d2801a9687e60344f7e79d13c5745e0feb40e6e44211a611f2f6b6b262bc285",
+    "bench/v2/kernels/run.py": "9446173fc9f3cba35320dfcce8d3b3a9928f8d392267180f54d7d7be721d6959",
+    "cmake/HostCodec.cmake": "4012e47011e09ba2b53466db80b0823b4ec38fa9a8cf16e86104d511a3076597",
+    "cmake/V2Kernels.cmake": "f279d80aba5ae5e11681019ff84c4f894cead9c1914cdaaa3e79dda50acb057e",
+    "cmake/V2LLM.cmake": "38f5cb5dad94d0921caf5c793851e9695b56e762461c7d73a94a20a16d9f65de",
+    "cmake/V2Server.cmake": "473cee99124969cc9d38cbfe5a4691b0630929dd330e624148e786fbf0999f48",
+    "kernels/src/cuda/matmul.cu": "513e8724171560afdd87ae992e5836536d963e23e69ce19535e2834d0718729e",
+    "kernels/src/cuda/tc/attention.cu": "7cb99aef148213352b6cf7eff7783e6a2c62bcd1a48a2294b8b10afa81954a66",
+    "kernels/src/cuda/tc/catalog.cuh": "e494ab87e879f88517a3ee26fd7a9f8af2399600f0fea53e4d47a75c21337f15",
+    "kernels/src/cuda/tc/elementwise.cu": "0eb57bea34b7f321c1e639d0778010d835c0707962908f5e076778145e0110b2",
+    "kernels/src/cuda/tc/gemm.cu": "3bdb812e4b9455a7f972513e96c644dc4e91392dca27eade0d85f21158a19535",
+    "kernels/src/cuda/tc/launchers.cuh": "1fe42cce9ff4bfd6742983a4e0b65418d4d5aa39280f221f2652dd413a43ebd6",
+    "kernels/triton_v2/ops.py": "7a46324922a2c66472ba8b5d0a3b2033ae994a03ac54b71599141ef4a926643a",
+    "llm/native_ops.py": "944b2e11054aace705d7597d674352d1351cef06d149a7e54bad80c3ca41902f"
+  },
+  "read_files": {
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\search.json": {
+      "bytes": 2329660,
+      "sha256": "178401906d1d70f5585ba8dc1cbe5d32ae307623b6e401ba4e0bef57b04cb9fd"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\candidate-initial-baseline\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21690,
+      "sha256": "9c7ba66a70ff05eec1661f436c1cc0ecd897c03d4b0c5322bd737379a50f47df"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\candidate-initial-baseline\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "2c80b0ac085386b15eceb32f1fc9920bd0551fc5e4311f18b7a42d54aebaa20a"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\candidate-initial-baseline\\build-helper.json": {
+      "bytes": 1317,
+      "sha256": "09fec1538005d35d76b67733e5050a4ebacb7e42bf78969df04ee26adaca57f3"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\candidate-initial-baseline\\gpu-helper.json": {
+      "bytes": 1106,
+      "sha256": "ae3f6b166776d16557962e10eca81d7c4cff7cc73f531105f11bd8cb2c41308e"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\search.json": {
+      "bytes": 288944,
+      "sha256": "037892084e333bbe9cd37998ea5a724ea93e224902a05926d5bc36b86f2b4570"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-0\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21514,
+      "sha256": "e7315698485e3428adf24a42882eeb8cd0008155ca37da22dd90bc214ae43058"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-0\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "e962e9a3216410d1a85473837e4b2b2961a562b08ff1931945611a701b6f89d8"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-0\\build-helper.json": {
+      "bytes": 1295,
+      "sha256": "22092c59229932334750a7543543a9aeada61769853d9f69c5053ea9205dd664"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-0\\gpu-helper.json": {
+      "bytes": 1062,
+      "sha256": "3b87a69d153696502d1fe68085cbad5b4a6d7308c3cb4aa827c404e12261ab01"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-6\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21678,
+      "sha256": "bbe8ece1158a2ae1fa5a528aebd4ee7823739be74d8abe23f3719379fafcd3e6"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-6\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "f53158e5d0f6aa2b6da6292594495510b982b9ae6df42da3f907eaa4551e6db4"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-6\\build-helper.json": {
+      "bytes": 1295,
+      "sha256": "0191a0b6546531f029ad5402a5f7c37c9673deffed979f1af9ebeed4b7e732e9"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-6\\gpu-helper.json": {
+      "bytes": 1061,
+      "sha256": "2a3f7b04079b83241014ae7426c0c62521f2959f5c47a6abebae20f51e55fdd6"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-40\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21692,
+      "sha256": "c0c67d9fbf2eb8c8b6d218eb946044ba4bf23c17f22a8ce106763eea707db2a6"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-40\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "8aa2f3d26ae1e2f62c54c35463c40f128b73df281c7cf93f92dda1cf906ea56a"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-40\\build-helper.json": {
+      "bytes": 1297,
+      "sha256": "627398ae9dfe0435476e94be6b9c078f8ce97daa5ce7e2ffb5a4dc0683ca132f"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-40\\gpu-helper.json": {
+      "bytes": 1066,
+      "sha256": "2bb7c3a07c5b6cfcfd853ccddca66f5dc55855d1a6377f2ac6cae9422d9ab64f"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-42\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21551,
+      "sha256": "03f7c9f02abc0f387f2b5efd1a7803363c2b316c09af5227ae5dc50c922d159f"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-42\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "52091a2350a26dbf5a2ad0f2aec289c3bd14efade69d68e232a6f1f5d8605a9b"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-42\\build-helper.json": {
+      "bytes": 1297,
+      "sha256": "75e1ff4ebff294ae03f7397d95724275b0126dab485c5123d9cb430bff956cb6"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-42\\gpu-helper.json": {
+      "bytes": 1066,
+      "sha256": "017402a87fdd3a90cf23ddf766b49df30fab416d0c87a54218cec75e89beb1bf"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-46\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21565,
+      "sha256": "fcce89855e9e2b2ba49f2db6808b834b653fee0c2ce8f4c65837bf9efbec9639"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-46\\gpu-evaluation\\correctness.json": {
+      "bytes": 7028,
+      "sha256": "8b7187c88b34e16c73cb1f98be3a9a1bc0f0d500c8b8420a60af348aefe27979"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-46\\build-helper.json": {
+      "bytes": 1297,
+      "sha256": "14101b3ae502dba0e625d5bf6ca9f77f168ebef5e6d7707b1dfd31799cfb888b"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-46\\gpu-helper.json": {
+      "bytes": 1066,
+      "sha256": "1ec024f31008da11007e1bd0a9a6a188c2b2a8a6867a454b14293a5b3dad6d35"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-remeasure-baseline\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21751,
+      "sha256": "806320586156ca0f64163ecd101507654ce4a6fc3bdf3b77b2e8ab8131e0fd3c"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-remeasure-baseline\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "2c80b0ac085386b15eceb32f1fc9920bd0551fc5e4311f18b7a42d54aebaa20a"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-remeasure-baseline\\build-helper.json": {
+      "bytes": 1329,
+      "sha256": "9c2f8e430435b3077d9ba790dcee3e341e9f844e51937fdf0b89996900357a10"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-remeasure-baseline\\gpu-helper.json": {
+      "bytes": 1130,
+      "sha256": "1d2fb1fd6da120e7b81ed0fe2ae9de305617a9c893feadd1f9589addf76f5a4f"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-remeasure-winner\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21749,
+      "sha256": "bed0c3ea1f62ddee2d6c4b82e820ba452d636a08a8016aaf2957dee4181331b3"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-remeasure-winner\\gpu-evaluation\\correctness.json": {
+      "bytes": 7028,
+      "sha256": "8b7187c88b34e16c73cb1f98be3a9a1bc0f0d500c8b8420a60af348aefe27979"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-remeasure-winner\\build-helper.json": {
+      "bytes": 1324,
+      "sha256": "0d94527acad688282fd15b8d7cf1e98ed1cbc3b1a375b72c0e627724dad97675"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\llm\\candidate-remeasure-winner\\gpu-helper.json": {
+      "bytes": 1122,
+      "sha256": "82918bc4c6f819a91e08a32c998a02a0149e5a5b3b320b509d80eefcb2ffb4fc"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\search.json": {
+      "bytes": 365096,
+      "sha256": "c4ef98b68744a1ae4dc8ef6e3ec6cce8b8b18348fe099217e2c881e4a169d101"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-0\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21673,
+      "sha256": "0b60232b824168e45c7aba06025c6978c86b1d235917371cb73893fb8c4d3374"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-0\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "52091a2350a26dbf5a2ad0f2aec289c3bd14efade69d68e232a6f1f5d8605a9b"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-0\\build-helper.json": {
+      "bytes": 1301,
+      "sha256": "9fe4634fff913caeda4c9cc97ae5ff0c83f4e9907b601cf6ed3e2eb290d2cfd2"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-0\\gpu-helper.json": {
+      "bytes": 1074,
+      "sha256": "5c22f637e00688e3445e4451678d56be9841909dbee046a02cc72a1bd098e832"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-1\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21679,
+      "sha256": "8b0a269bb3522a9456d9954476fe5f7f31849de4be38b572107ea64e56f8355f"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-1\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "13f19f06edf9379c022e5718891aaca85340d3908897f31923a86ab3dc862ea3"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-1\\build-helper.json": {
+      "bytes": 1301,
+      "sha256": "fae3b14a51c93d37fc2c744e50e46fce1180fcd3f78faa0e5871d55f7bd770c9"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-1\\gpu-helper.json": {
+      "bytes": 1074,
+      "sha256": "035671a1cc4c8ac34a2828cc9eaaa77540c7b0c34edf67493735a465e63d4e2f"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-2\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21556,
+      "sha256": "f63af963df1ba316aee9f92120474e7d95ad042a28cc75ad50a7a8a58275971c"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-2\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "fd0c1143b7ffc2a1fb43c7f4753e2d13472c4bcd483f8dd9e17702c06b5e4817"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-2\\build-helper.json": {
+      "bytes": 1300,
+      "sha256": "b2ee673d070b91b6b14f13977bcff0dafc0e59e17b5cfa354c0f09b59e77d482"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-2\\gpu-helper.json": {
+      "bytes": 1074,
+      "sha256": "b1bdc87605f91727c27e5ee480263dcaefa4304ee2e86a88de2f6122b77a4c13"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-3\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21568,
+      "sha256": "b34c70d741f91e8f6a3475309f1f1926ca832f76c59e7840c7254fc052852df6"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-3\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "8080c90b7ed4539b58bd629a13bd506209e7d0781f604a839f8b3b5ffd8dfd78"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-3\\build-helper.json": {
+      "bytes": 1301,
+      "sha256": "99dd8c2e3820a382c6556ba2b584bfb7e762a8b02347cc35b9f8f71110f52d32"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-3\\gpu-helper.json": {
+      "bytes": 1074,
+      "sha256": "00b28dd114ddb7447b4043478dda2ddebc85b9888b83e4271ff243f26df00f53"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-5\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21649,
+      "sha256": "df32470acb2e386ca8d3a751dd8501d2fd5a5008046dd076a75cc5d996ee32f6"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-5\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "f53158e5d0f6aa2b6da6292594495510b982b9ae6df42da3f907eaa4551e6db4"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-5\\build-helper.json": {
+      "bytes": 1301,
+      "sha256": "f192b91a3ba35b3a36d0fd04261c8cc41dc257bebfb413974a85ae1815008e8e"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-5\\gpu-helper.json": {
+      "bytes": 1074,
+      "sha256": "338cdabd5fa2ed399020a794d9d5ef03b09fb4fedcb365894079b1c1e1fd4be5"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-6\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21657,
+      "sha256": "626f0c3869e0a3feaa5632a4334aa7bc9657a85a68258ea9f669009a07b763b1"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-6\\gpu-evaluation\\correctness.json": {
+      "bytes": 7028,
+      "sha256": "407046d8619aa2bb965cfe3c3c22ba961848fdd6c800effe6ea84aea9b0a08a1"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-6\\build-helper.json": {
+      "bytes": 1301,
+      "sha256": "56f775eac2e7170dcfd64db415db36c50055f7d34098ac79e24a676a6e2cd18a"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-6\\gpu-helper.json": {
+      "bytes": 1074,
+      "sha256": "29c50996210ae5c5e0013a2321e61510b9f0b7e78fa0b12e421171324bbe5af7"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-9\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21592,
+      "sha256": "75c1688d40bfd9271300980e0c52e47c344e16b24543ff2c6fe80772598be2ee"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-9\\gpu-evaluation\\correctness.json": {
+      "bytes": 7028,
+      "sha256": "8b7187c88b34e16c73cb1f98be3a9a1bc0f0d500c8b8420a60af348aefe27979"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-9\\build-helper.json": {
+      "bytes": 1301,
+      "sha256": "9c1cba4ec6dc64948a0ec0b7de5e5f0768112e722bd1342b8f58745d6c8c9e36"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-9\\gpu-helper.json": {
+      "bytes": 1074,
+      "sha256": "43771cc2fd0cae4289f4a4ef347b0996cc4ce2f5a8d4edfae01aa618e08fa857"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-11\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21565,
+      "sha256": "7324b1f767fbbe49c75b157238fa5f25a19f0a4b9a75623100f478b64478f1e6"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-11\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "e962e9a3216410d1a85473837e4b2b2961a562b08ff1931945611a701b6f89d8"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-11\\build-helper.json": {
+      "bytes": 1302,
+      "sha256": "7d35914d083408aada5d958aa7e3677a3ba67eb5994df914ada774f27bea5b06"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-11\\gpu-helper.json": {
+      "bytes": 1078,
+      "sha256": "f34aef69f89e9672d178d6aca8babca6c3ffd0abf4007f9f954db17cff52ac97"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-remeasure-baseline\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21786,
+      "sha256": "d3ab5bcd1698e89de097ac58e7c9d1f0a7bb95895561c2366bf3bbda9786533b"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-remeasure-baseline\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "2c80b0ac085386b15eceb32f1fc9920bd0551fc5e4311f18b7a42d54aebaa20a"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-remeasure-baseline\\build-helper.json": {
+      "bytes": 1335,
+      "sha256": "c40a06ab285b9eecdb62e9a050a79d88c84ed6e667f770f02b35157942d2a124"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-remeasure-baseline\\gpu-helper.json": {
+      "bytes": 1143,
+      "sha256": "b6361940dcdf9f72ff64c246c4424c613e8bdd510c82e62a44161d242f873e6e"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-remeasure-winner\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21773,
+      "sha256": "af3b57b6896e5d93b30592988f37a0a6fbf26d723c15c175e3c484b1794f333a"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-remeasure-winner\\gpu-evaluation\\correctness.json": {
+      "bytes": 7028,
+      "sha256": "8b7187c88b34e16c73cb1f98be3a9a1bc0f0d500c8b8420a60af348aefe27979"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-remeasure-winner\\build-helper.json": {
+      "bytes": 1330,
+      "sha256": "e6bd7bad5e5c35b39d946d8500a1f1dc9da29b44110c3e9d137586735670553e"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-17\\random\\candidate-remeasure-winner\\gpu-helper.json": {
+      "bytes": 1134,
+      "sha256": "f362a4e88f07e523fcc215287f9afadc61663935d709fe4a97511bfd264b9773"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\candidate-initial-baseline\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21694,
+      "sha256": "f55c68967aa40533995dbe10f0a8c7a88a975897c7158abc0af9df33f299f5c0"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\candidate-initial-baseline\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "2c80b0ac085386b15eceb32f1fc9920bd0551fc5e4311f18b7a42d54aebaa20a"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\candidate-initial-baseline\\build-helper.json": {
+      "bytes": 1317,
+      "sha256": "0d33d467cd13554203da401cc68ed3887941219537e6113ec84938c4fb1344a0"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\candidate-initial-baseline\\gpu-helper.json": {
+      "bytes": 1106,
+      "sha256": "d76721316c18ff4c89b3f35462a7249bce68754f2dcedf45a9d11b408c64ffe4"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\search.json": {
+      "bytes": 296941,
+      "sha256": "0ce437a0503402ca367202fbe01d4634716617c17aae2972b1b92f725a800dd4"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-1\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21539,
+      "sha256": "27907ef58502aceb48669fba092ef4ae619066d195d917ecd3deeeaa738934ba"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-1\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "e962e9a3216410d1a85473837e4b2b2961a562b08ff1931945611a701b6f89d8"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-1\\build-helper.json": {
+      "bytes": 1295,
+      "sha256": "5e294fc04ba547cc1c02069eb1b416ed75460e4a52a14cf62173877110c4e5d6"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-1\\gpu-helper.json": {
+      "bytes": 1062,
+      "sha256": "cf2c7619fbb95cfe7691ef19a045b546c8af674caf2872f50e6610b0cf8cd3c2"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-22\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21633,
+      "sha256": "7d302678e4322c1a909926237f00bb15fbac589f10c1c990d29e9a5fe6befc0f"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-22\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "13f19f06edf9379c022e5718891aaca85340d3908897f31923a86ab3dc862ea3"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-22\\build-helper.json": {
+      "bytes": 1297,
+      "sha256": "4ea4c4ba9996d613e8e7e1944ed740dac885f7dc09272407b049bf8b24da56bd"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-22\\gpu-helper.json": {
+      "bytes": 1065,
+      "sha256": "bb95b2bff59bd1e38087d06c7c975e99610e07c707f732c62e4299f3561ba58d"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-25\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21701,
+      "sha256": "ab39366426823a8bb6c533ef3436fbabf098783c380b1e1580ebe069cd278025"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-25\\gpu-evaluation\\correctness.json": {
+      "bytes": 7028,
+      "sha256": "407046d8619aa2bb965cfe3c3c22ba961848fdd6c800effe6ea84aea9b0a08a1"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-25\\build-helper.json": {
+      "bytes": 1297,
+      "sha256": "d06ad209f6cd93e404c4c207dfd351ae053c59c9547713f2531d191c73ad8564"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-25\\gpu-helper.json": {
+      "bytes": 1066,
+      "sha256": "328d2065bdff353115648c21fa98499a222045dfbd5f9b3fef7df013d68d86e4"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-28\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21691,
+      "sha256": "17a09124fa3d30ce018d7ecb37dd235f14ab4bcb641127e83590f58e68f7355f"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-28\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "f53158e5d0f6aa2b6da6292594495510b982b9ae6df42da3f907eaa4551e6db4"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-28\\build-helper.json": {
+      "bytes": 1297,
+      "sha256": "7c4f1a6487fe0b7c17066cb82155de67cd396b4e33b0e4d5cd43995848b7faf9"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-28\\gpu-helper.json": {
+      "bytes": 1066,
+      "sha256": "1731cc9cc53316c0508488a21f778cf151012eef1b4161df9f176e9f052a7fcf"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-41\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21599,
+      "sha256": "27e3a521b1fbcb8125ca5de35a7921d2fca4a04ea2b533547f8c3ebff099515d"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-41\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "52091a2350a26dbf5a2ad0f2aec289c3bd14efade69d68e232a6f1f5d8605a9b"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-41\\build-helper.json": {
+      "bytes": 1297,
+      "sha256": "50c8278a15fb1cc51efaea95d02a810f7c4a7ade62cc5868fdfa62d2993d221d"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-41\\gpu-helper.json": {
+      "bytes": 1066,
+      "sha256": "75743246cf33b632f317c82e7b52509afdb2069c6edc03cdfedce1f07f379f0a"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-remeasure-baseline\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21778,
+      "sha256": "484b8f62e412c467231c170f1814f64a65f01ed5c1a9c16e7d56aad993c2eca1"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-remeasure-baseline\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "2c80b0ac085386b15eceb32f1fc9920bd0551fc5e4311f18b7a42d54aebaa20a"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-remeasure-baseline\\build-helper.json": {
+      "bytes": 1328,
+      "sha256": "5e6dbf648d0a15c3ff24032d6470c00ce7b6a2b987ab7fa4de4f941f2fec7227"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-remeasure-baseline\\gpu-helper.json": {
+      "bytes": 1130,
+      "sha256": "fa802b7d65c8580b281330bea149ee13057ca796373728c792f23bd94ebd6bec"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-remeasure-winner\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21741,
+      "sha256": "cab49beeaa434a18d8dccfa64d76b2c1a0dc3b9ab4bd6f17a18e46ebb773c9e0"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-remeasure-winner\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "2c80b0ac085386b15eceb32f1fc9920bd0551fc5e4311f18b7a42d54aebaa20a"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-remeasure-winner\\build-helper.json": {
+      "bytes": 1324,
+      "sha256": "0db1ada1d3c0b5af3db540bf67baf8b3de7eccc5c968d59057a5086e68c7362f"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\llm\\candidate-remeasure-winner\\gpu-helper.json": {
+      "bytes": 1122,
+      "sha256": "ae3721aa3fb2f346894198c9402251a0dbd13ea6c8ac6b49f36e19afa21ebfcf"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\search.json": {
+      "bytes": 364176,
+      "sha256": "161fade51597cce9a731df85dca6e4fdc026fc3a69efa1ab5bc26a9913850635"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-0\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21674,
+      "sha256": "d7f37a008b5af7e0b588c3f3b5da8ac82e25c29025dbb03f4b4e7875aefa6b9e"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-0\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "13f19f06edf9379c022e5718891aaca85340d3908897f31923a86ab3dc862ea3"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-0\\build-helper.json": {
+      "bytes": 1301,
+      "sha256": "8107ee721cf4848d6db5faf48ca24605a793c6fc42fd20b4a8721a5e1269a792"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-0\\gpu-helper.json": {
+      "bytes": 1074,
+      "sha256": "b373bc00ffcfd38d3e296248a0f8dd1179c1bad762f1ca53c13e345dda3ebaac"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-1\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21561,
+      "sha256": "bb9968eda1e3f1acb1f63a4091c21e500049fc2e5c998eca0fe5f651dc834849"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-1\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "8080c90b7ed4539b58bd629a13bd506209e7d0781f604a839f8b3b5ffd8dfd78"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-1\\build-helper.json": {
+      "bytes": 1301,
+      "sha256": "b428998ec856978e3752e6b2cc040ca41aa10ab87a6f4d96233cf4cdb8245f79"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-1\\gpu-helper.json": {
+      "bytes": 1074,
+      "sha256": "e55f5837cb404c613334a524b10be093fd3b227978cebca9534e9c97e0a9d3ed"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-2\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21704,
+      "sha256": "1c3da6de39dd39e336a4cf9678dba057040fd7c77750e0c4cafe6e800195ab7e"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-2\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "8aa2f3d26ae1e2f62c54c35463c40f128b73df281c7cf93f92dda1cf906ea56a"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-2\\build-helper.json": {
+      "bytes": 1300,
+      "sha256": "fa7035afb3dde0d0011929f79c0ac68de205c5a5e3ef9e4a4145a2adbd0b2116"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-2\\gpu-helper.json": {
+      "bytes": 1074,
+      "sha256": "a86a2c384f8eb8aff8db5dfcaabe26e510af8c660bd16bab1881a060f76709a9"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-3\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21730,
+      "sha256": "34381951c15b6e1741b3e3b85770e309d026926502d32bc757310238808dd0d2"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-3\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "f53158e5d0f6aa2b6da6292594495510b982b9ae6df42da3f907eaa4551e6db4"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-3\\build-helper.json": {
+      "bytes": 1301,
+      "sha256": "84cb464970fb8e4901e6b6af0f7fc501b1510b23672108d2688f3e3d799d94ff"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-3\\gpu-helper.json": {
+      "bytes": 1074,
+      "sha256": "5de34d72871bdc6fec300d5fd57b3f80221964b2378001abcf65d8cc1cc2eb0b"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-5\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21582,
+      "sha256": "4f7676dbe71deb59a8792c5a9c1c89f1b1ac800e8278f0cc7ede1ebc87ea17fa"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-5\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "01145f87dc7cdb25468d5250cbc9f937074ad19fc4a44fe6f2fa2daf18fdae71"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-5\\build-helper.json": {
+      "bytes": 1301,
+      "sha256": "44d8b2459f18930e3c5249ba5f5488f09ebbf3bc19f33401d34d424649650490"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-5\\gpu-helper.json": {
+      "bytes": 1074,
+      "sha256": "50571abdee4e468399f60b829349505eeacb2a273410a1b8068709df0d6a2341"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-6\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21716,
+      "sha256": "60333c3819605fb62703d840ceec2c9821051bcb5f3cc578134a25b9f52369a5"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-6\\gpu-evaluation\\correctness.json": {
+      "bytes": 7028,
+      "sha256": "407046d8619aa2bb965cfe3c3c22ba961848fdd6c800effe6ea84aea9b0a08a1"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-6\\build-helper.json": {
+      "bytes": 1301,
+      "sha256": "94e8347f961b8242691c9841fea27925e48749ab612a665f08d30849e411505f"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-6\\gpu-helper.json": {
+      "bytes": 1075,
+      "sha256": "b0fd440bf6af38ecebc5286eb505393480e14c05ac1d53b1f04f079875f0a58f"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-7\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21561,
+      "sha256": "05593e4f0a707405060b5f060ca9d9ac7c7f23c15114cfebfc4d3ae6cb23638e"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-7\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "fd0c1143b7ffc2a1fb43c7f4753e2d13472c4bcd483f8dd9e17702c06b5e4817"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-7\\build-helper.json": {
+      "bytes": 1301,
+      "sha256": "966b15b804b074bb4ac47d12c06f9067326fef178409550696ba8f6bedec503a"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-7\\gpu-helper.json": {
+      "bytes": 1074,
+      "sha256": "7731cfcd80c01de7239c56f2f46bbafac9efc276d2e1cb70a8e37d133e1f2924"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-8\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21645,
+      "sha256": "b8a348e76805217f9134c507f340184ba7f0a7d7efea34a685853b936ccc4956"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-8\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "52091a2350a26dbf5a2ad0f2aec289c3bd14efade69d68e232a6f1f5d8605a9b"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-8\\build-helper.json": {
+      "bytes": 1301,
+      "sha256": "fad0636b45fc94be7fcbcff79473d58e84d32466c05245970c5ba39e7e4ac9fd"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-8\\gpu-helper.json": {
+      "bytes": 1074,
+      "sha256": "87f3375c9b4d0c83d0ca97babcba4b03b3439554458f72200673a96856118bfe"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-remeasure-baseline\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21784,
+      "sha256": "ab6372f940b577a5fd0cfb5124b8ae43be18747e7153b1b3e06559b51942053e"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-remeasure-baseline\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "2c80b0ac085386b15eceb32f1fc9920bd0551fc5e4311f18b7a42d54aebaa20a"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-remeasure-baseline\\build-helper.json": {
+      "bytes": 1335,
+      "sha256": "181c1bcabf31e4578a1c921693d7cd8cbf85724c98935415434fb7fee8fd8f9c"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-remeasure-baseline\\gpu-helper.json": {
+      "bytes": 1142,
+      "sha256": "b6b51a9738a198e87c849e93deda14fd1b0a45c747385ac3aa4b76b9a0992483"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-remeasure-winner\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21763,
+      "sha256": "32b1f38016ae2bb00811f9cebb1cc64d1255089016d273aed96dcf4261ad7517"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-remeasure-winner\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "fd0c1143b7ffc2a1fb43c7f4753e2d13472c4bcd483f8dd9e17702c06b5e4817"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-remeasure-winner\\build-helper.json": {
+      "bytes": 1330,
+      "sha256": "9dc5a52e38c139003a29049ebeb316c6b3a154f9b885c0004d1ce4e154399a6e"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-41\\random\\candidate-remeasure-winner\\gpu-helper.json": {
+      "bytes": 1134,
+      "sha256": "6bc4de96dbc015533fc1deee9f7868be5a031cd1f21c1a3010f6b2a22a2d24d2"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\candidate-initial-baseline\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21702,
+      "sha256": "d451bb8cfc0ef9854aefb32b10361d0dab14bb946d031bc5d5ac4fa35cb6a34d"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\candidate-initial-baseline\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "2c80b0ac085386b15eceb32f1fc9920bd0551fc5e4311f18b7a42d54aebaa20a"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\candidate-initial-baseline\\build-helper.json": {
+      "bytes": 1317,
+      "sha256": "98005c378820a1704cc371a2e096d9a6df325ef653c3f4c87f09015cce44e25a"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\candidate-initial-baseline\\gpu-helper.json": {
+      "bytes": 1106,
+      "sha256": "740e61c5b3914e4e95f69bc91d693508ebcdf9af90520b1ec20d124c4cd055fc"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\search.json": {
+      "bytes": 263264,
+      "sha256": "6cac5033eca06384462ed5b1616be296963adb2706e466333b90d3a6ee7faf4c"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-0\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21645,
+      "sha256": "effae32a0e9e66838e4d440539db47071df22a099b04142dbc057ea42dba3e91"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-0\\gpu-evaluation\\correctness.json": {
+      "bytes": 7028,
+      "sha256": "407046d8619aa2bb965cfe3c3c22ba961848fdd6c800effe6ea84aea9b0a08a1"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-0\\build-helper.json": {
+      "bytes": 1294,
+      "sha256": "6827e210e7be00d271034f10f7ed80bef7593c1b8344a0f9da4c00553f60eab3"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-0\\gpu-helper.json": {
+      "bytes": 1061,
+      "sha256": "450f3ace24457ed14c0efa10558087ed3f16c514dd92901b9489499e04c5bedb"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-2\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21582,
+      "sha256": "33beaa52aa62c5f883c0362df0f75d3a85c461c391a602219ae9e73f12db0f34"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-2\\gpu-evaluation\\correctness.json": {
+      "bytes": 7028,
+      "sha256": "8b7187c88b34e16c73cb1f98be3a9a1bc0f0d500c8b8420a60af348aefe27979"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-2\\build-helper.json": {
+      "bytes": 1295,
+      "sha256": "71cacbfa0e02915325bed332f4ef4e32a0fff01b0d65d2d25d3c1cdfc78a3c91"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-2\\gpu-helper.json": {
+      "bytes": 1062,
+      "sha256": "000862c384517af4b599a449dae5f71f2057b26a329ab8854355b11800815bc8"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-12\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21680,
+      "sha256": "d62349d336bae51f6847779bd048d39ed217454a33e8834a7ad6207f22042891"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-12\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "f53158e5d0f6aa2b6da6292594495510b982b9ae6df42da3f907eaa4551e6db4"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-12\\build-helper.json": {
+      "bytes": 1297,
+      "sha256": "d75ab25ce65e6adda19433daaea3edddf238fe5d020d8fd3c2877f476a656e3a"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-12\\gpu-helper.json": {
+      "bytes": 1066,
+      "sha256": "4a8fc0fa791383bf3d38df8d4458e15e04eebfb86d7a87bd162f42b4e5ce05aa"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-21\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21538,
+      "sha256": "088edcb1013df07f36a4a3fcfc11dcac71292a7cdefb533578042b8e4de675e4"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-21\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "e962e9a3216410d1a85473837e4b2b2961a562b08ff1931945611a701b6f89d8"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-21\\build-helper.json": {
+      "bytes": 1297,
+      "sha256": "18f12fa98d13b7d7639701c6f5625b176776625b1675e00e44dfa9febf1dc9a3"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-21\\gpu-helper.json": {
+      "bytes": 1066,
+      "sha256": "e219a37498c189497c22bbaaa17747483c5f4ecba3c8662dc20884cf1f63f613"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-remeasure-baseline\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21786,
+      "sha256": "c43d73d6207b5e00d55fa890f320daefc69c50e6b05b7d9a83b6cd643c4657b9"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-remeasure-baseline\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "2c80b0ac085386b15eceb32f1fc9920bd0551fc5e4311f18b7a42d54aebaa20a"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-remeasure-baseline\\build-helper.json": {
+      "bytes": 1329,
+      "sha256": "ddfe00aea327f2e4f35bdfd37b4b2715f58ef40ce75062d3aa79e6e23e11fae8"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-remeasure-baseline\\gpu-helper.json": {
+      "bytes": 1130,
+      "sha256": "273d2bf43ffb5ff1fc5217ab3ff91f184466f24c22531a3c00518f5d79003ab7"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-remeasure-winner\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21754,
+      "sha256": "3d87c9e9cec0256482295ea6a396519f9e885989b426a7208c2af3fb1c2460bc"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-remeasure-winner\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "2c80b0ac085386b15eceb32f1fc9920bd0551fc5e4311f18b7a42d54aebaa20a"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-remeasure-winner\\build-helper.json": {
+      "bytes": 1325,
+      "sha256": "92e841bf96f441dcc00be3b75d6c3494765f924c19dc89d5733688f6f1e394bd"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\llm\\candidate-remeasure-winner\\gpu-helper.json": {
+      "bytes": 1121,
+      "sha256": "44036bc9332d3c564678f6b03e53c2599d5482d8b8f3d0e1a62e30f912c7186e"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\search.json": {
+      "bytes": 366071,
+      "sha256": "d33492366c0591430d080780e7ab374de75a8801a9e5a52503dbed35bd243a19"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-0\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21553,
+      "sha256": "4455b8abff5bcc2eae78a32bb921dc5444a6771a4dbbfdfddbfa6beef4718b89"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-0\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "fd0c1143b7ffc2a1fb43c7f4753e2d13472c4bcd483f8dd9e17702c06b5e4817"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-0\\build-helper.json": {
+      "bytes": 1301,
+      "sha256": "51e38b9a0763f603dffce383ddb624204623a01eb463237af9354653c748de97"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-0\\gpu-helper.json": {
+      "bytes": 1074,
+      "sha256": "ebb391cbd88b61732b39707737df38e74ace22cce0ffffbb1cde6891caafcb69"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-1\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21560,
+      "sha256": "e139788aa08aababd0320c89621ae3dc915117c7e8622bff9eb6ced58cdf140a"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-1\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "e962e9a3216410d1a85473837e4b2b2961a562b08ff1931945611a701b6f89d8"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-1\\build-helper.json": {
+      "bytes": 1301,
+      "sha256": "fa095a6b3dd6235e9189991752cecbedd717ecff0d71d95c82c13377ca6f641a"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-1\\gpu-helper.json": {
+      "bytes": 1075,
+      "sha256": "91c46f832f7c5400e7188a78ab514d6df92f47560cb7ba5054f1c23f777a1528"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-2\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21657,
+      "sha256": "e029d99018a2b549e6fe008e254abf0fac2ea54cba1d4e16e0856230ec92cd31"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-2\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "52091a2350a26dbf5a2ad0f2aec289c3bd14efade69d68e232a6f1f5d8605a9b"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-2\\build-helper.json": {
+      "bytes": 1300,
+      "sha256": "48c24c54c282104e95bac4ac4f3ae29d7ff8ee56a5c2318313300bd51f060a9a"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-2\\gpu-helper.json": {
+      "bytes": 1074,
+      "sha256": "9e8f037d154452dee8243202d198add87e0e0b79b00d7bd2028c0469e9289e58"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-3\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21624,
+      "sha256": "3394128aebc1c4016931893203525f7202d00a5e38107ebc263ab6c1b2b65508"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-3\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "78509ae2db9d11d62841c3130ae8bde10afe37ecb8700dd370ea876e9002211e"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-3\\build-helper.json": {
+      "bytes": 1300,
+      "sha256": "9535ec0888440479d7e77764ac08e0fed2b7c7ac06d6d056db354cb7fa7f979b"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-3\\gpu-helper.json": {
+      "bytes": 1074,
+      "sha256": "9a5f1a831b634aef71de464862c93bc6f1f0d02f774f0f4e050f4dd0736c6e48"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-4\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21605,
+      "sha256": "ba1d0ff00f0b6ffb5cf18cbb87bb673b6f0758f1057c758b361a1035205cb7c7"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-4\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "01145f87dc7cdb25468d5250cbc9f937074ad19fc4a44fe6f2fa2daf18fdae71"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-4\\build-helper.json": {
+      "bytes": 1301,
+      "sha256": "5fb7626cfab9927465d2e5e547f0893a82ecb7cc01a94f0df0ca910d7ebd8e50"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-4\\gpu-helper.json": {
+      "bytes": 1074,
+      "sha256": "3d7b97e0873dbe03122436d41956b55af1ef96362962b0ae69fcdc2fa5222cea"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-5\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21693,
+      "sha256": "6149f502c150e2bffb9891347b40e583c64f9068d0fd9740aaf95042f8c14d0f"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-5\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "f53158e5d0f6aa2b6da6292594495510b982b9ae6df42da3f907eaa4551e6db4"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-5\\build-helper.json": {
+      "bytes": 1301,
+      "sha256": "518820c795746b75fb644c1b14dec921f1d0334040e023eeadff02c36fc89302"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-5\\gpu-helper.json": {
+      "bytes": 1074,
+      "sha256": "88d2776b4cc292b92baa8ab745703243705e8ef939774f904f0fba03496dea40"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-11\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21555,
+      "sha256": "7b70d3314255ea188311be21baba374bd4c372e5f475d3485deac08f0b5076e1"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-11\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "13f19f06edf9379c022e5718891aaca85340d3908897f31923a86ab3dc862ea3"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-11\\build-helper.json": {
+      "bytes": 1303,
+      "sha256": "9c93a118ad558fb0a7f1ea52b50a9678f7eb942358713760ecd829fdf3b44b81"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-11\\gpu-helper.json": {
+      "bytes": 1078,
+      "sha256": "4886a490b188f6e02e85e94cc36679e921d051b83e89685d6c7e2f42f2d99a70"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-14\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21651,
+      "sha256": "26f2be9815e75e5aa819a4c6d2a0e54df2dc6af8e7dd78ccb5fbd7f4c178c624"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-14\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "8aa2f3d26ae1e2f62c54c35463c40f128b73df281c7cf93f92dda1cf906ea56a"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-14\\build-helper.json": {
+      "bytes": 1303,
+      "sha256": "1f40536b8d82b51624348d9fc10f21fad635601e0dadbbdf2f2a41ccb761468a"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-14\\gpu-helper.json": {
+      "bytes": 1079,
+      "sha256": "b61898278b91adfa0547db89505fa98725bab02f63b4cb3b5009ad0b4f1d3a49"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-remeasure-baseline\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21791,
+      "sha256": "82462dc1e647c434562be2427dee1b7f7d93a33d89dc646f3beef0cd264844ef"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-remeasure-baseline\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "2c80b0ac085386b15eceb32f1fc9920bd0551fc5e4311f18b7a42d54aebaa20a"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-remeasure-baseline\\build-helper.json": {
+      "bytes": 1335,
+      "sha256": "6f216ad9f51ccda7c79325a0d615e0eaf479bdd8a75ae24f625483c06d8c2dfb"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-remeasure-baseline\\gpu-helper.json": {
+      "bytes": 1141,
+      "sha256": "abb5972bb28904d24d289e61f4b9992017e769e7327111363d12bfb28b866da5"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-remeasure-winner\\gpu-evaluation\\evaluation.json": {
+      "bytes": 21743,
+      "sha256": "7ac65f403379f9daec8dd6495076e9085a2b9fc2c72335edd62093ab94d343be"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-remeasure-winner\\gpu-evaluation\\correctness.json": {
+      "bytes": 7020,
+      "sha256": "fd0c1143b7ffc2a1fb43c7f4753e2d13472c4bcd483f8dd9e17702c06b5e4817"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-remeasure-winner\\build-helper.json": {
+      "bytes": 1330,
+      "sha256": "8206486cf6ab98d41e584a8816934bd2fa9cdc6cba6bded5c9c473c91f44151d"
+    },
+    "G:\\ResumeProject\\platforms\\tinyinfer\\results\\v2\\20261102T234500Z-m2-autotune-compact-history\\seed-73\\random\\candidate-remeasure-winner\\gpu-helper.json": {
+      "bytes": 1134,
+      "sha256": "a3bd0f9cc42f2357efcb77240a67a0769574f3f309dca1907fac65b73bec79f8"
+    }
+  }
+}

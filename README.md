@@ -118,7 +118,7 @@ The compiler history and the kernel subtree were merged without squash. Both ori
 
 ## Native decoder experiments
 
-I added [WMMA GEMM and tiled attention](kernels/src/cuda/tc/README.md), a [native GPT-2 decoder](llm/README.md), an [epoll server](server/README.md), and a [test-gated kernel search](autotune/README.md). The decoder and server share the native C ABI and per-request contiguous KV slots. INT8 stores weights and dequantizes them for FP16 WMMA compute. Shared staging buffers use synchronous copies.
+I added [WMMA GEMM and tiled attention](kernels/src/cuda/tc/README.md), a [native GPT-2 decoder](llm/README.md), an [epoll server](server/README.md), and a [test-gated kernel search](autotune/README.md). The decoder and server share the native C ABI and per-request contiguous KV slots. INT8 stores weights and dequantizes them for FP16 WMMA compute. Shared staging buffers use synchronous copies. The [experiment report](results/M2_DELIVERY_REPORT.md) collects the full result tables and reproduction details.
 
 Measured in WSL2 on an i7-12700KF and RTX 3080 12 GB, with PyTorch 2.15.0+cu132, Triton 3.9.0 and a standalone CUDA 12.4.131 build at source `3edcfeb`. Displayed decimals are rounded; linked JSON retains full precision. The compiler measurements above remain their original experiment.
 
@@ -166,7 +166,15 @@ The standalone Nsight Compute 2024.1 captures give:
 
 [Raw counters, summary and plots](bench/v2/profiling/README.md#measured-profiles) use size 1024/config0, with D64 for attention. Each point is one profiler-replayed launch with `--cache-control all` and `--clock-control none`. GEMM/weight-only INT8 use SM86 Tensor x512 instruction accounting; attention uses predicated FP32 FADD+FMUL+2×FFMA. These counted rooflines are separate from the algorithmic GEMM TFLOP/s table above.
 
-The [first autotuner attempt](results/v2/20261102T132951Z-m2-native-headers-autotune/search.json) stopped at its initial baseline build/correctness gate. The three-seed local-LLM versus random comparison is pending a fresh run; no accepted search speedup exists yet. Paged KV and speculative decoding remain unimplemented stretch work.
+I also ran the [three-seed kernel search](autotune/README.md#measured-search) with the local Qwen proposer and random search. Each method had a cap of 64 proposals and 8 unique nonbaseline evaluations; selected configurations were then rebuilt and remeasured independently.
+
+| Seed | Unique evaluations, random / LLM | Random independent speedup | LLM independent speedup |
+| --- | ---: | ---: | ---: |
+| 17 | 8 / 5 | 0.977273× | 0.846154× |
+| 41 | 8 / 5 | 1.131579× | 1.000000× |
+| 73 | 8 / 4 | 1.162162× | 1.000000× |
+
+The LLM reached the proposal cap in every seed. None of its independent remeasurements passed the 3% improvement gate; random search passed it in seeds 41 and 73. Actual evaluation counts differ, so there is no matched-budget aggregate speedup. [Raw outcomes](results/v2/20261102T234500Z-m2-autotune-compact-history/search.json) retain invalid and duplicate proposals as well as the selection-stage timings. The earlier build, output-transport and history-capacity failures remain in the [result index](results/v2/README.md). Paged KV and speculative decoding remain unimplemented stretch work.
 
 ## Robustness checks
 

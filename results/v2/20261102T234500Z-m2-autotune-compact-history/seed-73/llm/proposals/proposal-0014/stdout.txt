@@ -1,0 +1,3 @@
+ [{"config_id": 9, "tile": [32, 32, 16, 4], "stages": 1, "epilogue": "separate"}] [end of text]
+
+

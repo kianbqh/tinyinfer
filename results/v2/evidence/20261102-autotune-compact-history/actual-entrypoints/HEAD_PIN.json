@@ -1,0 +1,22 @@
+{
+  "state": "root_released_actual_preflight_only",
+  "expected_head": "6b1b9f665052e05715b15427f0a9a4777d0414fb",
+  "formal_search_released": false,
+  "config_sha256": "1af32f7d69b598ee92ccd4484031eccb07aa1f1f2a24dc1b0b57658be3aea31e",
+  "root_reported_capacity_max": 4518,
+  "root_reported_capacity_limit": 8188,
+  "source_edits": [
+    {
+      "file": "preflight.py",
+      "preimage_sha256": "ce5f5a7cd97ceb3b437c72d2fe8f33cd12632eb304f41abdab393741dcbc2397",
+      "postimage_sha256": "43229e2bfe040db1f2c65e02a55b7a883f4ca74d6a4c83b823a4e483a883713e",
+      "placeholder_replacements": 1
+    },
+    {
+      "file": "record_autotune.sh",
+      "preimage_sha256": "a3b3b2acde086d6ab7b9f4729bc7aaaedd510817fdd5905c03548c1c6919ebd1",
+      "postimage_sha256": "4cb915653070143c643248c50102280a5f35dc27a88ae86bfd198abd4214c66c",
+      "placeholder_replacements": 1
+    }
+  ]
+}

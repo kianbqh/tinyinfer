@@ -1,0 +1,13 @@
+[
+  "/usr/bin/env",
+  "LD_LIBRARY_PATH=/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers:/opt/codex-resume/cpp-cuda-inference-kernels/cuda-12.4/lib:/usr/lib/wsl/lib",
+  "PYTHONPATH=/opt/codex-resume/all-modules-v2/m2/builds/20261102T132951Z-m2-native-headers:/mnt/g/ResumeProject/platforms/tinyinfer",
+  "PYTHONDONTWRITEBYTECODE=1",
+  "TINYC_GIT=/opt/codex-resume/all-modules-v2/m1a/tools/git-native/usr/bin/git",
+  "/usr/bin/env",
+  "CPATH=/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include/python3.12:/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include",
+  "CXXFLAGS=-I/opt/codex-resume/cpp-cuda-inference-kernels/python-dev/usr/include",
+  "/opt/codex-resume/all-modules-v2/m2/venv/bin/python",
+  "-B",
+  "/mnt/g/ResumeProject/.runtime/all-modules-v2/m2/runtime/autotune-next-20261102T234500Z/preflight.py"
+]

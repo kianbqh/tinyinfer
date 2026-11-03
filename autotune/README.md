@@ -2,7 +2,35 @@
 
 This module compares a local llama.cpp proposer with seeded random search over the same12 GEMM choices. Proposals contain data only: exact catalog ID, tile, stages and epilogue. Candidate text never becomes code, shell or compiler flags.
 
-**Status:** a fresh three-seed comparison is next after fixing the history table's input size. The earlier [output-transport failure](../results/v2/20261102T224446Z-m2-autotune-venvfix/interrupted.json) and [context-capacity failure](../results/v2/20261102T230756Z-m2-autotune-transportfix/interrupted.json) retain their original outputs. The latter reached 8,206 input tokens against the CLI's 8,188-token input limit. Both methods and all three seeds restart from scratch with the compact table; the interrupted runs are separate from that comparison.
+The predefined three-seed experiment is complete. The LLM reached its proposal cap before filling the evaluation budget in every seed, so the run has no matched-budget aggregate. The selected configurations were rebuilt and remeasured; none of the LLM's three independent measurements retained the 3% improvement gate.
+
+## Measured search
+
+The [closed run](../results/v2/20261102T234500Z-m2-autotune-compact-history/search.json) used source `6b1b9f6`, seeds 17/41/73, 64 proposals and up to eight unique nonbaseline evaluations per method. Each method shares its seed's initial baseline. The fixture is 512³, seed 193, with nonzero FP16 bias, FP32 accumulation and FP16 output. Timings use 20 warmups, 101 CUDA-event samples and 21 separate synchronized host samples. Model proposal inference runs on the CPU and exits before GPU evaluation.
+
+| Seed | Method | Proposals | Unique evaluations | Invalid | Duplicate | Valid compiles / test passes | Accepted updates | Selected config |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 17 | random | 12 | 8 | 0 | 4 | 8 / 8 | 1 | 10 |
+| 17 | LLM | 64 | 5 | 47 | 12 | 5 / 5 | 1 | 10 |
+| 41 | random | 9 | 8 | 0 | 1 | 8 / 8 | 1 | 4 |
+| 41 | LLM | 64 | 5 | 44 | 15 | 5 / 5 | 0 | 0 |
+| 73 | random | 15 | 8 | 0 | 7 | 8 / 8 | 1 | 4 |
+| 73 | LLM | 64 | 4 | 43 | 17 | 4 / 4 | 0 | 0 |
+
+| Seed | Method | Selection speedup | Fresh independent speedup | Independent 3% gate |
+| --- | --- | ---: | ---: | --- |
+| 17 | random | 1.048781× | 0.977273× | fail |
+| 17 | LLM | 1.048781× | 0.846154× | fail |
+| 41 | random | 1.162162× | 1.131579× | pass |
+| 41 | LLM | 1.000000× | 1.000000× | fail |
+| 73 | random | 1.162162× | 1.162162× | pass |
+| 73 | LLM | 1.000000× | 1.000000× | fail |
+
+The six independent baseline/selected pairs passed correctness checks. Only random seeds 41 and 73 kept a performance gain above the gate. Seed 17 selected the same config in both methods, but its gain disappeared in fresh measurements. Selection and independent speedups use their own measured baselines; [the complete table](../results/M2_DELIVERY_REPORT.md#38-test-gated-local-llm-versus-random-autotuner) includes those raw medians.
+
+Proposal-process, compile, correctness-test and evaluation errors were all zero. Invalid JSON/schema outputs and duplicates consumed proposal budget normally. The final status is `incomplete_incomparable`, with `summary={}`, because the actual unique evaluation counts differ. The bounded run took 2,289.234 seconds; proposal and build overhead are outside the kernel timing samples. [Independent checks and build/proposer receipts](../results/v2/evidence/20261102-autotune-compact-history/) retain all 53 evaluations, including fresh remeasurements.
+
+The earlier [output-transport failure](../results/v2/20261102T224446Z-m2-autotune-venvfix/interrupted.json) and [context-capacity failure](../results/v2/20261102T230756Z-m2-autotune-transportfix/interrupted.json) retain their original outputs. The latter reached 8,206 input tokens against the CLI's 8,188-token input limit. The final compact-table run restarted both methods and all three seeds from scratch; it added no proposals after the preset caps.
 
 ## Setup and execution
 
@@ -39,6 +67,6 @@ The LLM receives the unchanged catalog and a table containing the baseline and e
 
 Every attempt retains prompt, raw stdout/stderr, command/exit/timeout, tuple validation, build logs, correctness records, all samples, acceptance and errors. Counts separate proposals, duplicates/invalids, unique evaluations, valid compiles, test passes, compile/test/evaluation/proposal failures and accepted updates. No parse/build/test failure is converted to a speedup.
 
-After selection, the selected winner and initial baseline are recompiled and remeasured in fresh processes on the identical fixture. Those two measurements are outside the search budget. The report preserves selection speedup and independent speedup separately, including a regression or loss of the3% gate. Summary means and population standard deviations use the three-or-more fixed search seeds only when both methods completed matched budgets and independent measurements passed. The final comparison is pending.
+After selection, the selected winner and initial baseline are recompiled and remeasured in fresh processes on the identical fixture. Those two measurements are outside the search budget. The report preserves selection speedup and independent speedup separately, including a regression or loss of the3% gate. Summary means and population standard deviations use the three-or-more fixed search seeds only when both methods completed matched budgets and independent measurements passed. That matching condition was not met in this run.
 
 Tests using a fake proposer establish parsing, failure accounting and gate logic. They are not local-LLM execution or learning-quality evidence. Missing CLI/model/GPU/toolchain access is a real unmet gate, never replaced with synthetic performance data.
